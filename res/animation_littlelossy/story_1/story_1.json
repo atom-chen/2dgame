@@ -1,0 +1,624 @@
+{
+  "content_scale": 1.0,
+  "armature_data": [
+    {
+      "strVersion": "1.6.0.0",
+      "version": 1.6,
+      "name": "story_1",
+      "bone_data": [
+        {
+          "name": "story_1_cshenti-3",
+          "parent": "",
+          "dI": 0,
+          "x": 28.385217666625977,
+          "y": 122.16845703125,
+          "z": 2,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -1.48214042,
+          "kY": 1.48214042,
+          "arrow_x": 75.295730590820312,
+          "arrow_y": -1.3431861589197069E-05,
+          "effectbyskeleton": true,
+          "bl": 75,
+          "display_data": [
+            {
+              "name": "story_1_cshenti-3.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": -4.03964233,
+                  "y": -20.4379311,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.48214114,
+                  "kY": -1.48214042
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_1_cshou-2",
+          "parent": "story_1_cshenti-3",
+          "dI": 0,
+          "x": 25.762199401855469,
+          "y": -12.171611785888672,
+          "z": 5,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -1.50385749,
+          "kY": 1.50385749,
+          "arrow_x": 86.039398193359375,
+          "arrow_y": -2.7092057280242443E-05,
+          "effectbyskeleton": true,
+          "bl": 86,
+          "display_data": [
+            {
+              "name": "story_1_cshou-2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 27.5309944,
+                  "y": -0.7425306,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.98599744,
+                  "kY": -2.985998
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_1_dan",
+          "parent": "story_1_cshou-2",
+          "dI": 0,
+          "x": 62.905693054199219,
+          "y": -7.9307861328125,
+          "z": 3,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 1.05956566,
+          "kY": -1.05956566,
+          "arrow_x": 62.227210998535156,
+          "arrow_y": 1.7819838831201196E-05,
+          "effectbyskeleton": true,
+          "bl": 62,
+          "display_data": [
+            {
+              "name": "story_1_dan.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 3.61581421,
+                  "y": -2.23197174,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.92643225,
+                  "kY": -1.92643225
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_1_ctou_1",
+          "parent": "story_1_cshenti-3",
+          "dI": 0,
+          "x": 26.575141906738281,
+          "y": -12.577415466308594,
+          "z": 4,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.392533779,
+          "kY": -0.392533779,
+          "arrow_x": 106.22955322265625,
+          "arrow_y": -4.1589228203520179E-06,
+          "effectbyskeleton": true,
+          "bl": 106,
+          "display_data": [
+            {
+              "name": "story_1_ctou_1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 39.32222,
+                  "y": -13.5805645,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.08960688,
+                  "kY": -1.08960688
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_1_cdan-5",
+          "parent": "",
+          "dI": 0,
+          "x": 46.647071838378906,
+          "y": 91.251785278320312,
+          "z": 1,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -3.14159274,
+          "kY": 3.14159274,
+          "arrow_x": 85.8333511352539,
+          "arrow_y": -7.53491713112453E-06,
+          "effectbyskeleton": true,
+          "bl": 85,
+          "display_data": [
+            {
+              "name": "story_1_cdan-5.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 14.5,
+                  "y": 1.16665649,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.14159274,
+                  "kY": 3.1415925
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "animation_data": [
+    {
+      "name": "story_1",
+      "mov_data": [
+        {
+          "name": "Animation1",
+          "dr": 51,
+          "lp": true,
+          "to": 0,
+          "drTW": 0,
+          "twE": 0,
+          "sc": 1.0,
+          "mov_bone_data": [
+            {
+              "name": "story_1_cshou-2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.110585853,
+                  "kY": -0.110585853,
+                  "fi": 15,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.263915718,
+                  "kY": 0.263915718,
+                  "fi": 35,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_1_ctou_1",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0719377249,
+                  "kY": -0.0719377249,
+                  "fi": 15,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.07621612,
+                  "kY": 0.07621612,
+                  "fi": 40,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_1_dan",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 4.23150634765625,
+                  "y": -26.525339126586914,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.2238297,
+                  "kY": 0.2238297,
+                  "fi": 10,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": -2.4979248046875,
+                  "y": -0.103668212890625,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.160320327,
+                  "kY": -0.160320327,
+                  "fi": 25,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": -1.665283203125,
+                  "y": -0.0691121369600296,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.5149798,
+                  "kY": -0.5149798,
+                  "fi": 35,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_1_cshenti-3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 9.7666664123535156,
+                  "z": 0,
+                  "cX": 1.021,
+                  "cY": 1.0,
+                  "kX": -0.02443461,
+                  "kY": 0.02443461,
+                  "fi": 7,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": -62.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 25,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": -59.833320617675781,
+                  "z": 0,
+                  "cX": 0.979999959,
+                  "cY": 1.0,
+                  "kX": -0.017453298,
+                  "kY": 0.017453298,
+                  "fi": 30,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": -51.666664123535156,
+                  "z": 0,
+                  "cX": 0.96,
+                  "cY": 1.0,
+                  "kX": -0.0349065848,
+                  "kY": 0.0349065848,
+                  "fi": 35,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_1_cdan-5",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.1,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.13888931274414063,
+                  "y": -10.55555534362793,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.1,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 10,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.83333587646484375,
+                  "y": -68.333328247070312,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 0.9,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 25,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.69444656372070312,
+                  "y": -56.944438934326172,
+                  "z": 0,
+                  "cX": 0.94,
+                  "cY": 1.1,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 35,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.1,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texture_data": [
+    {
+      "name": "story_1_cdan-5",
+      "width": 150.0,
+      "height": 115.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_1_cshenti-3",
+      "width": 84.0,
+      "height": 69.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_1_cshou-2",
+      "width": 60.0,
+      "height": 27.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_1_ctou_1",
+      "width": 103.0,
+      "height": 71.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_1_dan",
+      "width": 43.0,
+      "height": 49.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    }
+  ],
+  "config_file_path": [],
+  "config_png_path": []
+}

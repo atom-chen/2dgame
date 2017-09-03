@@ -1,0 +1,41 @@
+
+benglong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+benglong_dan5
+  rotate: false
+  xy: 2, 219
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+benglong_dan5_danke
+  rotate: false
+  xy: 185, 352
+  size: 151, 108
+  orig: 151, 108
+  offset: 0, 0
+  index: -1
+benglong_dan5_shenti
+  rotate: false
+  xy: 2, 61
+  size: 115, 156
+  orig: 115, 156
+  offset: 0, 0
+  index: -1
+benglong_dan5_tou
+  rotate: false
+  xy: 185, 242
+  size: 129, 108
+  orig: 129, 108
+  offset: 0, 0
+  index: -1
+benglong_dan5_xiaba
+  rotate: true
+  xy: 338, 365
+  size: 95, 122
+  orig: 95, 122
+  offset: 0, 0
+  index: -1

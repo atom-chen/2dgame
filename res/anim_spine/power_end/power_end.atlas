@@ -1,0 +1,48 @@
+
+power_end.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+beijing
+  rotate: false
+  xy: 2, 667
+  size: 914, 309
+  orig: 914, 309
+  offset: 0, 0
+  index: -1
+luwei
+  rotate: true
+  xy: 352, 442
+  size: 122, 211
+  orig: 122, 211
+  offset: 0, 0
+  index: -1
+qizhi
+  rotate: true
+  xy: 918, 749
+  size: 227, 58
+  orig: 227, 58
+  offset: 0, 0
+  index: -1
+ren
+  rotate: false
+  xy: 2, 359
+  size: 348, 205
+  orig: 348, 205
+  offset: 0, 0
+  index: -1
+yan1
+  rotate: false
+  xy: 2, 566
+  size: 735, 99
+  orig: 735, 99
+  offset: 0, 0
+  index: -1
+yan2
+  rotate: false
+  xy: 2, 223
+  size: 317, 134
+  orig: 317, 134
+  offset: 0, 0
+  index: -1

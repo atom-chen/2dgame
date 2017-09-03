@@ -1,0 +1,27 @@
+
+ui_battlevictory.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+laba1
+  rotate: false
+  xy: 2, 130
+  size: 141, 124
+  orig: 141, 124
+  offset: 0, 0
+  index: -1
+laba2
+  rotate: false
+  xy: 145, 159
+  size: 109, 95
+  orig: 109, 95
+  offset: 0, 0
+  index: -1
+piaodai
+  rotate: false
+  xy: 2, 15
+  size: 57, 113
+  orig: 57, 113
+  offset: 0, 0
+  index: -1

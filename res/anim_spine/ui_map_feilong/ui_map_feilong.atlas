@@ -1,0 +1,209 @@
+
+ui_map_feilong.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box1
+  rotate: false
+  xy: 375, 315
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+dabaoxiang
+  rotate: false
+  xy: 445, 343
+  size: 64, 55
+  orig: 64, 55
+  offset: 0, 0
+  index: -1
+dan
+  rotate: false
+  xy: 471, 465
+  size: 39, 45
+  orig: 39, 45
+  offset: 0, 0
+  index: -1
+liubei_body
+  rotate: false
+  xy: 135, 2
+  size: 43, 25
+  orig: 43, 25
+  offset: 0, 0
+  index: -1
+liubei_head
+  rotate: true
+  xy: 327, 246
+  size: 52, 37
+  orig: 52, 37
+  offset: 0, 0
+  index: -1
+liubei_kuzi
+  rotate: true
+  xy: 417, 328
+  size: 27, 14
+  orig: 27, 14
+  offset: 0, 0
+  index: -1
+liubei_r_arm
+  rotate: false
+  xy: 2, 5
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+liubei_youjiao
+  rotate: false
+  xy: 433, 332
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+liubei_zuojiao
+  rotate: false
+  xy: 168, 186
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+long_biyan
+  rotate: true
+  xy: 433, 344
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+long_body
+  rotate: false
+  xy: 340, 357
+  size: 103, 48
+  orig: 103, 48
+  offset: 0, 0
+  index: -1
+long_head
+  rotate: true
+  xy: 471, 400
+  size: 63, 37
+  orig: 63, 37
+  offset: 0, 0
+  index: -1
+long_l_chibang01
+  rotate: false
+  xy: 85, 29
+  size: 71, 155
+  orig: 71, 155
+  offset: 0, 0
+  index: -1
+long_l_chibang02
+  rotate: false
+  xy: 254, 198
+  size: 71, 155
+  orig: 71, 155
+  offset: 0, 0
+  index: -1
+long_l_chibang03
+  rotate: false
+  xy: 168, 355
+  size: 84, 155
+  orig: 84, 155
+  offset: 0, 0
+  index: -1
+long_l_chibang04
+  rotate: false
+  xy: 168, 198
+  size: 84, 155
+  orig: 84, 155
+  offset: 0, 0
+  index: -1
+long_l_chibang05
+  rotate: false
+  xy: 254, 355
+  size: 84, 155
+  orig: 84, 155
+  offset: 0, 0
+  index: -1
+long_l_leg
+  rotate: false
+  xy: 366, 249
+  size: 34, 30
+  orig: 34, 30
+  offset: 0, 0
+  index: -1
+long_r_chibang01
+  rotate: false
+  xy: 2, 349
+  size: 81, 161
+  orig: 81, 161
+  offset: 0, 0
+  index: -1
+long_r_chibang02
+  rotate: false
+  xy: 2, 186
+  size: 81, 161
+  orig: 81, 161
+  offset: 0, 0
+  index: -1
+long_r_chibang03
+  rotate: false
+  xy: 85, 349
+  size: 81, 161
+  orig: 81, 161
+  offset: 0, 0
+  index: -1
+long_r_chibang04
+  rotate: false
+  xy: 2, 23
+  size: 81, 161
+  orig: 81, 161
+  offset: 0, 0
+  index: -1
+long_r_chibang05
+  rotate: false
+  xy: 85, 186
+  size: 81, 161
+  orig: 81, 161
+  offset: 0, 0
+  index: -1
+long_r_leg
+  rotate: false
+  xy: 375, 281
+  size: 43, 32
+  orig: 43, 32
+  offset: 0, 0
+  index: -1
+long_xiaba
+  rotate: false
+  xy: 85, 2
+  size: 48, 25
+  orig: 48, 25
+  offset: 0, 0
+  index: -1
+pao1
+  rotate: false
+  xy: 327, 195
+  size: 30, 49
+  orig: 30, 49
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 158, 156
+  size: 28, 8
+  orig: 28, 8
+  offset: 0, 0
+  index: -1
+wang1
+  rotate: false
+  xy: 340, 407
+  size: 129, 103
+  orig: 129, 103
+  offset: 0, 0
+  index: -1
+wang2
+  rotate: false
+  xy: 327, 300
+  size: 46, 53
+  orig: 46, 53
+  offset: 0, 0
+  index: -1

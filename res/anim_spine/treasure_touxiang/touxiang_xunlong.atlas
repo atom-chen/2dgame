@@ -1,0 +1,55 @@
+
+touxiang_xunlong.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xunlong_biyan
+  rotate: false
+  xy: 2, 79
+  size: 71, 32
+  orig: 71, 32
+  offset: 0, 0
+  index: -1
+xunlong_chibang
+  rotate: false
+  xy: 281, 370
+  size: 161, 136
+  orig: 161, 136
+  offset: 0, 0
+  index: -1
+xunlong_shenti
+  rotate: false
+  xy: 2, 318
+  size: 131, 188
+  orig: 131, 188
+  offset: 0, 0
+  index: -1
+xunlong_tou
+  rotate: false
+  xy: 135, 350
+  size: 144, 156
+  orig: 144, 156
+  offset: 0, 0
+  index: -1
+xunlong_toufa
+  rotate: false
+  xy: 2, 211
+  size: 104, 105
+  orig: 104, 105
+  offset: 0, 0
+  index: -1
+xunlong_xiaba
+  rotate: false
+  xy: 2, 113
+  size: 81, 96
+  orig: 81, 96
+  offset: 0, 0
+  index: -1
+xunlong_zhua
+  rotate: false
+  xy: 444, 446
+  size: 62, 60
+  orig: 62, 60
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,132 @@
+
+biaoche3.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+biaoche3_caidao,caiban
+  rotate: true
+  xy: 354, 437
+  size: 66, 85
+  orig: 66, 85
+  offset: 0, 0
+  index: -1
+biaoche3_cheshen
+  rotate: false
+  xy: 2, 378
+  size: 285, 73
+  orig: 285, 73
+  offset: 0, 0
+  index: -1
+biaoche3_cheshenhou
+  rotate: true
+  xy: 266, 192
+  size: 184, 28
+  orig: 184, 28
+  offset: 0, 0
+  index: -1
+biaoche3_cheshouhou
+  rotate: false
+  xy: 2, 4
+  size: 174, 40
+  orig: 174, 40
+  offset: 0, 0
+  index: -1
+biaoche3_gutou
+  rotate: false
+  xy: 296, 345
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+biaoche3_houtui
+  rotate: false
+  xy: 289, 404
+  size: 42, 47
+  orig: 42, 47
+  offset: 0, 0
+  index: -1
+biaoche3_houtui2
+  rotate: false
+  xy: 207, 143
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+biaoche3_huowu
+  rotate: false
+  xy: 2, 256
+  size: 171, 120
+  orig: 171, 120
+  offset: 0, 0
+  index: -1
+biaoche3_longqianshou
+  rotate: true
+  xy: 289, 378
+  size: 24, 30
+  orig: 24, 30
+  offset: 0, 0
+  index: -1
+biaoche3_lunzi
+  rotate: false
+  xy: 441, 447
+  size: 62, 56
+  orig: 62, 56
+  offset: 0, 0
+  index: -1
+biaoche3_lunzi2
+  rotate: false
+  xy: 159, 134
+  size: 46, 42
+  orig: 46, 42
+  offset: 0, 0
+  index: -1
+biaoche3_qianshou2
+  rotate: false
+  xy: 296, 315
+  size: 24, 28
+  orig: 24, 28
+  offset: 0, 0
+  index: -1
+biaoche3_qizi
+  rotate: false
+  xy: 2, 46
+  size: 104, 93
+  orig: 104, 93
+  offset: 0, 0
+  index: -1
+biaoche3_shange
+  rotate: false
+  xy: 159, 178
+  size: 104, 76
+  orig: 104, 76
+  offset: 0, 0
+  index: -1
+biaoche3_shengzi
+  rotate: true
+  xy: 108, 67
+  size: 72, 32
+  orig: 72, 32
+  offset: 0, 0
+  index: -1
+biaoche3_shenti
+  rotate: false
+  xy: 2, 141
+  size: 155, 113
+  orig: 155, 113
+  offset: 0, 0
+  index: -1
+biaoche3_xiaba
+  rotate: true
+  xy: 175, 256
+  size: 120, 89
+  orig: 120, 89
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 453
+  size: 350, 50
+  orig: 350, 50
+  offset: 0, 0
+  index: -1

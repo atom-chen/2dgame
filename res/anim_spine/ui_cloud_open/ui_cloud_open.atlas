@@ -1,0 +1,90 @@
+
+ui_cloud_open.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_cloud_open_cao1
+  rotate: true
+  xy: 360, 321
+  size: 175, 87
+  orig: 175, 87
+  offset: 0, 0
+  index: -1
+ui_cloud_open_cao2
+  rotate: false
+  xy: 100, 86
+  size: 126, 90
+  orig: 126, 90
+  offset: 0, 0
+  index: -1
+ui_cloud_open_chibang1
+  rotate: false
+  xy: 2, 26
+  size: 34, 27
+  orig: 34, 27
+  offset: 0, 0
+  index: -1
+ui_cloud_open_chibang2
+  rotate: true
+  xy: 100, 55
+  size: 29, 32
+  orig: 29, 32
+  offset: 0, 0
+  index: -1
+ui_cloud_open_ditu
+  rotate: false
+  xy: 2, 178
+  size: 224, 40
+  orig: 224, 40
+  offset: 0, 0
+  index: -1
+ui_cloud_open_fangdajing
+  rotate: false
+  xy: 2, 55
+  size: 96, 121
+  orig: 96, 121
+  offset: 0, 0
+  index: -1
+ui_cloud_open_niao
+  rotate: false
+  xy: 228, 140
+  size: 89, 78
+  orig: 89, 78
+  offset: 0, 0
+  index: -1
+ui_cloud_open_piaocong
+  rotate: false
+  xy: 449, 468
+  size: 47, 28
+  orig: 47, 28
+  offset: 0, 0
+  index: -1
+ui_cloud_open_yanjing1
+  rotate: false
+  xy: 360, 262
+  size: 48, 57
+  orig: 48, 57
+  offset: 0, 0
+  index: -1
+ui_cloud_open_yanjing2
+  rotate: false
+  xy: 228, 119
+  size: 42, 19
+  orig: 42, 19
+  offset: 0, 0
+  index: -1
+ui_cloud_open_zhengti
+  rotate: false
+  xy: 2, 220
+  size: 356, 276
+  orig: 356, 276
+  offset: 0, 0
+  index: -1
+ui_cloud_open_zui
+  rotate: false
+  xy: 319, 185
+  size: 28, 33
+  orig: 28, 33
+  offset: 0, 0
+  index: -1

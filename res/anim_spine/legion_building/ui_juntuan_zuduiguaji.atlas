@@ -1,0 +1,13 @@
+
+ui_juntuan_zuduiguaji.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_juntuan_zuduiguaji
+  rotate: false
+  xy: 2, 60
+  size: 232, 174
+  orig: 232, 174
+  offset: 0, 0
+  index: -1

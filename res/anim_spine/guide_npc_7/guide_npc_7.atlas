@@ -1,0 +1,76 @@
+
+guide_npc_7.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guide_npc_7_qunbai
+  rotate: true
+  xy: 200, 157
+  size: 48, 41
+  orig: 48, 41
+  offset: 0, 0
+  index: -1
+guide_npc_7_shenti
+  rotate: false
+  xy: 2, 25
+  size: 196, 229
+  orig: 196, 229
+  offset: 0, 0
+  index: -1
+guide_npc_7_toufa
+  rotate: false
+  xy: 200, 207
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+guide_npc_7_xiuzi
+  rotate: true
+  xy: 200, 104
+  size: 51, 32
+  orig: 51, 32
+  offset: 0, 0
+  index: -1
+guide_npc_7_yan1
+  rotate: false
+  xy: 200, 72
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+guide_npc_7_yan2
+  rotate: false
+  xy: 200, 41
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+guide_npc_7_yangmao
+  rotate: true
+  xy: 200, 15
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+guide_npc_7_yangtui
+  rotate: false
+  xy: 234, 127
+  size: 20, 28
+  orig: 20, 28
+  offset: 0, 0
+  index: -1
+guide_npc_7_yangtui1
+  rotate: true
+  xy: 2, 8
+  size: 15, 28
+  orig: 15, 28
+  offset: 0, 0
+  index: -1
+guide_npc_7_zui
+  rotate: false
+  xy: 32, 10
+  size: 23, 13
+  orig: 23, 13
+  offset: 0, 0
+  index: -1

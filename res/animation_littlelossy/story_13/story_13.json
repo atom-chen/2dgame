@@ -1,0 +1,401 @@
+{
+  "content_scale": 1.0,
+  "armature_data": [
+    {
+      "strVersion": "1.6.0.0",
+      "version": 1.6,
+      "name": "story_13",
+      "bone_data": [
+        {
+          "name": "story_13_shou3",
+          "parent": "",
+          "dI": 0,
+          "x": 56.522041320800781,
+          "y": 80.952720642089844,
+          "z": 4,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.814801455,
+          "kY": -0.814801455,
+          "arrow_x": 28.296440124511719,
+          "arrow_y": -1.1826734407804906E-05,
+          "effectbyskeleton": true,
+          "bl": 28,
+          "display_data": [
+            {
+              "name": "story_13_shou3.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 18.46466,
+                  "y": -1.9172821,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.814800858,
+                  "kY": 0.8148019
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_13_shou2",
+          "parent": "",
+          "dI": 0,
+          "x": 11.110261917114258,
+          "y": 44.3644905090332,
+          "z": 3,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -2.39539,
+          "kY": 2.39539,
+          "arrow_x": 42.459060668945312,
+          "arrow_y": -1.2733202311210334E-05,
+          "effectbyskeleton": true,
+          "bl": 42,
+          "display_data": [
+            {
+              "name": "story_13_shou2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 20.784729,
+                  "y": 2.85325623,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.39538956,
+                  "kY": -2.39539
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_13_shou",
+          "parent": "",
+          "dI": 0,
+          "x": 61.580841064453125,
+          "y": 42.835079193115234,
+          "z": 2,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -0.6168012,
+          "kY": 0.6168012,
+          "arrow_x": 39.661106109619141,
+          "arrow_y": 7.636834925506264E-05,
+          "effectbyskeleton": true,
+          "bl": 39,
+          "display_data": [
+            {
+              "name": "story_13_shou.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 19.11267,
+                  "y": -0.770874,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.616800845,
+                  "kY": -0.616801143
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_13_guangxiao-3",
+          "parent": "",
+          "dI": 0,
+          "x": 44.110286712646484,
+          "y": 109.36451721191406,
+          "z": 1,
+          "cX": 1.25,
+          "cY": 1.25,
+          "kX": 1.41520154,
+          "kY": -1.41520154,
+          "arrow_x": 30.366832733154297,
+          "arrow_y": -9.168460383079946E-05,
+          "effectbyskeleton": true,
+          "bl": 30,
+          "display_data": [
+            {
+              "name": "story_13_guangxiao-3.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 10.7329426,
+                  "y": -13.8527527,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -1.415202,
+                  "kY": 1.415202
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "animation_data": [
+    {
+      "name": "story_13",
+      "mov_data": [
+        {
+          "name": "Animation1",
+          "dr": 21,
+          "lp": true,
+          "to": 0,
+          "drTW": 0,
+          "twE": 0,
+          "sc": 1.0,
+          "mov_bone_data": [
+            {
+              "name": "story_13_shou3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 20,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_13_shou2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.04,
+                  "cY": 1.0,
+                  "kX": -0.210702,
+                  "kY": 0.210702,
+                  "fi": 10,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 20,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_13_shou",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.04,
+                  "cY": 1.0,
+                  "kX": 0.191235289,
+                  "kY": -0.191235289,
+                  "fi": 10,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 20,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_13_guangxiao-3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "color": {
+                    "a": 255,
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 1.0,
+                  "y": 6.0,
+                  "z": 0,
+                  "cX": 1.04,
+                  "cY": 1.04,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 10,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "color": {
+                    "a": 150,
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 20,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "color": {
+                    "a": 255,
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  },
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texture_data": [
+    {
+      "name": "story_13_guangxiao-3",
+      "width": 226.0,
+      "height": 64.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_13_shou",
+      "width": 40.0,
+      "height": 35.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_13_shou2",
+      "width": 39.0,
+      "height": 47.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_13_shou3",
+      "width": 47.0,
+      "height": 58.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    }
+  ],
+  "config_file_path": [],
+  "config_png_path": []
+}

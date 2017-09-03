@@ -1,0 +1,111 @@
+
+ui_map_award2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dimian
+  rotate: false
+  xy: 2, 261
+  size: 392, 249
+  orig: 392, 249
+  offset: 0, 0
+  index: -1
+jizhe_gebohou
+  rotate: false
+  xy: 310, 184
+  size: 48, 75
+  orig: 48, 75
+  offset: 0, 0
+  index: -1
+jizhe_huatong
+  rotate: false
+  xy: 456, 287
+  size: 41, 63
+  orig: 41, 63
+  offset: 0, 0
+  index: -1
+jizhe_shenti
+  rotate: false
+  xy: 2, 23
+  size: 105, 95
+  orig: 105, 95
+  offset: 0, 0
+  index: -1
+jizhe_tou
+  rotate: false
+  xy: 2, 120
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1
+jizhepai
+  rotate: false
+  xy: 396, 281
+  size: 58, 69
+  orig: 58, 69
+  offset: 0, 0
+  index: -1
+konglong3
+  rotate: false
+  xy: 150, 152
+  size: 158, 107
+  orig: 158, 107
+  offset: 0, 0
+  index: -1
+konglong4
+  rotate: true
+  xy: 396, 352
+  size: 158, 114
+  orig: 158, 114
+  offset: 0, 0
+  index: -1
+meimao
+  rotate: false
+  xy: 2, 7
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+xiaobing_gebo
+  rotate: true
+  xy: 150, 125
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+xiaobing_gebo hou
+  rotate: false
+  xy: 109, 37
+  size: 33, 36
+  orig: 33, 36
+  offset: 0, 0
+  index: -1
+xiaobing_shenti
+  rotate: false
+  xy: 360, 221
+  size: 37, 38
+  orig: 37, 38
+  offset: 0, 0
+  index: -1
+xiaobing_tou
+  rotate: false
+  xy: 109, 75
+  size: 33, 43
+  orig: 33, 43
+  offset: 0, 0
+  index: -1
+xiaobing_tui
+  rotate: false
+  xy: 310, 159
+  size: 39, 23
+  orig: 39, 23
+  offset: 0, 0
+  index: -1
+zuiba
+  rotate: false
+  xy: 396, 261
+  size: 45, 18
+  orig: 45, 18
+  offset: 0, 0
+  index: -1

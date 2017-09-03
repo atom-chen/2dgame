@@ -1,0 +1,34 @@
+
+honglong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+honglong_dan4
+  rotate: false
+  xy: 2, 202
+  size: 200, 241
+  orig: 200, 241
+  offset: 0, 0
+  index: -1
+honglong_dan4_danke
+  rotate: false
+  xy: 204, 337
+  size: 122, 106
+  orig: 122, 106
+  offset: 0, 0
+  index: -1
+honglong_dan4_shenti
+  rotate: false
+  xy: 2, 2
+  size: 103, 57
+  orig: 103, 57
+  offset: 0, 0
+  index: -1
+honglong_dan4_tou
+  rotate: false
+  xy: 2, 61
+  size: 105, 139
+  orig: 105, 139
+  offset: 0, 0
+  index: -1

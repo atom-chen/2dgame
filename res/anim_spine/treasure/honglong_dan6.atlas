@@ -1,0 +1,83 @@
+
+honglong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+honglong_shenti
+  rotate: false
+  xy: 2, 153
+  size: 160, 107
+  orig: 160, 107
+  offset: 0, 0
+  index: -1
+honglong_shetou
+  rotate: false
+  xy: 69, 107
+  size: 59, 44
+  orig: 59, 44
+  offset: 0, 0
+  index: -1
+honglong_tou
+  rotate: false
+  xy: 2, 262
+  size: 166, 138
+  orig: 166, 138
+  offset: 0, 0
+  index: -1
+honglong_weiba
+  rotate: false
+  xy: 2, 94
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+honglong_xiaba
+  rotate: false
+  xy: 170, 336
+  size: 96, 64
+  orig: 96, 64
+  offset: 0, 0
+  index: -1
+honglong_youhoujiao
+  rotate: false
+  xy: 232, 300
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+honglong_youhoutui
+  rotate: false
+  xy: 2, 45
+  size: 58, 47
+  orig: 58, 47
+  offset: 0, 0
+  index: -1
+honglong_youqianjiao
+  rotate: false
+  xy: 333, 349
+  size: 49, 51
+  orig: 49, 51
+  offset: 0, 0
+  index: -1
+honglong_zuohoujiao
+  rotate: false
+  xy: 2, 2
+  size: 39, 41
+  orig: 39, 41
+  offset: 0, 0
+  index: -1
+honglong_zuohoutui
+  rotate: false
+  xy: 268, 343
+  size: 63, 57
+  orig: 63, 57
+  offset: 0, 0
+  index: -1
+honglong_zuoqianjiao
+  rotate: false
+  xy: 170, 272
+  size: 60, 62
+  orig: 60, 62
+  offset: 0, 0
+  index: -1

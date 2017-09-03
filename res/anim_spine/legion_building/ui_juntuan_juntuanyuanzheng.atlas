@@ -1,0 +1,13 @@
+
+ui_juntuan_juntuanyuanzheng.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_juntuan_juntuanyuanzheng
+  rotate: false
+  xy: 2, 16
+  size: 162, 148
+  orig: 162, 148
+  offset: 0, 0
+  index: -1

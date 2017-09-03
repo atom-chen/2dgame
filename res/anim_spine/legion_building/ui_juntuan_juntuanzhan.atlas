@@ -1,0 +1,13 @@
+
+ui_juntuan_juntuanzhan.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_juntuan_juntuanzhan
+  rotate: false
+  xy: 2, 2
+  size: 191, 195
+  orig: 191, 195
+  offset: 0, 0
+  index: -1

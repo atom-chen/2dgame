@@ -1,0 +1,76 @@
+
+ui_tavern_girl.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lian1
+  rotate: true
+  xy: 338, 8
+  size: 234, 150
+  orig: 234, 150
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: true
+  xy: 350, 244
+  size: 262, 156
+  orig: 262, 156
+  offset: 0, 0
+  index: -1
+shiwu
+  rotate: true
+  xy: 140, 2
+  size: 41, 75
+  orig: 41, 75
+  offset: 0, 0
+  index: -1
+shiwu1
+  rotate: false
+  xy: 229, 4
+  size: 68, 136
+  orig: 68, 136
+  offset: 0, 0
+  index: -1
+shiwu2
+  rotate: true
+  xy: 2, 37
+  size: 65, 136
+  orig: 65, 136
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: true
+  xy: 2, 104
+  size: 230, 225
+  orig: 230, 225
+  offset: 0, 0
+  index: -1
+toufa1
+  rotate: false
+  xy: 2, 336
+  size: 346, 170
+  orig: 346, 170
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: true
+  xy: 229, 142
+  size: 192, 107
+  orig: 192, 107
+  offset: 0, 0
+  index: -1
+zui
+  rotate: true
+  xy: 299, 98
+  size: 42, 23
+  orig: 42, 23
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: false
+  xy: 140, 45
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1

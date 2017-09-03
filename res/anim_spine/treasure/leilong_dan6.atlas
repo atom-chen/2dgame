@@ -1,0 +1,90 @@
+
+leilong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+leilong-bozi
+  rotate: false
+  xy: 238, 443
+  size: 78, 66
+  orig: 78, 66
+  offset: 0, 0
+  index: -1
+leilong-head
+  rotate: false
+  xy: 2, 289
+  size: 127, 106
+  orig: 127, 106
+  offset: 0, 0
+  index: -1
+leilong-shenti
+  rotate: false
+  xy: 2, 397
+  size: 141, 112
+  orig: 141, 112
+  offset: 0, 0
+  index: -1
+leilong-shetou
+  rotate: false
+  xy: 318, 469
+  size: 69, 40
+  orig: 69, 40
+  offset: 0, 0
+  index: -1
+leilong-weiba
+  rotate: false
+  xy: 145, 405
+  size: 91, 104
+  orig: 91, 104
+  offset: 0, 0
+  index: -1
+leilong-xiaba
+  rotate: false
+  xy: 2, 208
+  size: 105, 79
+  orig: 105, 79
+  offset: 0, 0
+  index: -1
+leilong-youjiao
+  rotate: false
+  xy: 238, 406
+  size: 53, 35
+  orig: 53, 35
+  offset: 0, 0
+  index: -1
+leilong-youshou
+  rotate: false
+  xy: 2, 2
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: -1
+leilong-youtui
+  rotate: false
+  xy: 2, 98
+  size: 59, 49
+  orig: 59, 49
+  offset: 0, 0
+  index: -1
+leilong-zuojiao
+  rotate: false
+  xy: 2, 149
+  size: 61, 57
+  orig: 61, 57
+  offset: 0, 0
+  index: -1
+leilong-zuoshou
+  rotate: false
+  xy: 65, 169
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+leilong-zuotui
+  rotate: false
+  xy: 2, 49
+  size: 56, 47
+  orig: 56, 47
+  offset: 0, 0
+  index: -1

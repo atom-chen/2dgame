@@ -1,0 +1,104 @@
+
+huolong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+huolong_bozi
+  rotate: true
+  xy: 2, 68
+  size: 94, 73
+  orig: 94, 73
+  offset: 0, 0
+  index: -1
+huolong_shenti
+  rotate: false
+  xy: 231, 397
+  size: 91, 77
+  orig: 91, 77
+  offset: 0, 0
+  index: -1
+huolong_shetou
+  rotate: false
+  xy: 133, 329
+  size: 60, 45
+  orig: 60, 45
+  offset: 0, 0
+  index: -1
+huolong_tou
+  rotate: false
+  xy: 2, 349
+  size: 129, 125
+  orig: 129, 125
+  offset: 0, 0
+  index: -1
+huolong_weiba
+  rotate: false
+  xy: 324, 414
+  size: 87, 60
+  orig: 87, 60
+  offset: 0, 0
+  index: -1
+huolong_xiaba
+  rotate: false
+  xy: 2, 164
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+huolong_youchibang5
+  rotate: false
+  xy: 2, 253
+  size: 110, 94
+  orig: 110, 94
+  offset: 0, 0
+  index: -1
+huolong_youhoudatui
+  rotate: false
+  xy: 160, 277
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+huolong_youjiao
+  rotate: true
+  xy: 212, 281
+  size: 46, 40
+  orig: 46, 40
+  offset: 0, 0
+  index: -1
+huolong_youqiantui
+  rotate: false
+  xy: 2, 2
+  size: 55, 64
+  orig: 55, 64
+  offset: 0, 0
+  index: -1
+huolong_zuochibang5
+  rotate: false
+  xy: 133, 376
+  size: 96, 98
+  orig: 96, 98
+  offset: 0, 0
+  index: -1
+huolong_zuohoudatui
+  rotate: true
+  xy: 413, 422
+  size: 52, 61
+  orig: 52, 61
+  offset: 0, 0
+  index: -1
+huolong_zuojiao
+  rotate: false
+  xy: 195, 329
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+huolong_zuoqiantui
+  rotate: false
+  xy: 114, 268
+  size: 44, 59
+  orig: 44, 59
+  offset: 0, 0
+  index: -1

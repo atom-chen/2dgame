@@ -1,0 +1,125 @@
+
+touxiang_lanlong.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+touxiang_lanlong_biyan
+  rotate: false
+  xy: 134, 259
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_bozi
+  rotate: false
+  xy: 2, 247
+  size: 130, 132
+  orig: 130, 132
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_meimao1
+  rotate: false
+  xy: 2, 11
+  size: 68, 40
+  orig: 68, 40
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_meimao2
+  rotate: true
+  xy: 281, 433
+  size: 14, 33
+  orig: 14, 33
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_tou
+  rotate: false
+  xy: 2, 381
+  size: 181, 124
+  orig: 181, 124
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf1
+  rotate: false
+  xy: 2, 184
+  size: 103, 61
+  orig: 103, 61
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf2
+  rotate: false
+  xy: 281, 449
+  size: 106, 56
+  orig: 106, 56
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf3
+  rotate: true
+  xy: 468, 452
+  size: 53, 37
+  orig: 53, 37
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf4
+  rotate: false
+  xy: 185, 432
+  size: 94, 73
+  orig: 94, 73
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf5
+  rotate: false
+  xy: 2, 130
+  size: 95, 52
+  orig: 95, 52
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf6
+  rotate: true
+  xy: 134, 287
+  size: 92, 46
+  orig: 92, 46
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_touf7
+  rotate: false
+  xy: 185, 382
+  size: 74, 48
+  orig: 74, 48
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_toumao
+  rotate: false
+  xy: 389, 443
+  size: 77, 62
+  orig: 77, 62
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_xiae
+  rotate: false
+  xy: 2, 53
+  size: 72, 75
+  orig: 72, 75
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_yanj
+  rotate: true
+  xy: 261, 403
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_zhuazi1
+  rotate: false
+  xy: 107, 182
+  size: 60, 63
+  orig: 60, 63
+  offset: 0, 0
+  index: -1
+touxiang_lanlong_zhuazi2
+  rotate: true
+  xy: 99, 118
+  size: 62, 63
+  orig: 62, 63
+  offset: 0, 0
+  index: -1

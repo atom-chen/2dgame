@@ -1,0 +1,27 @@
+
+mainscene_animal_3.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mainscene_animal_3_1
+  rotate: false
+  xy: 2, 73
+  size: 96, 51
+  orig: 96, 51
+  offset: 0, 0
+  index: -1
+mainscene_animal_3_2
+  rotate: false
+  xy: 2, 23
+  size: 83, 48
+  orig: 83, 48
+  offset: 0, 0
+  index: -1
+mainscene_animal_3_3
+  rotate: false
+  xy: 100, 79
+  size: 24, 45
+  orig: 24, 45
+  offset: 0, 0
+  index: -1

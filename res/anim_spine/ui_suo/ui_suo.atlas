@@ -1,0 +1,125 @@
+
+ui_suo.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 33
+  size: 33, 51
+  orig: 33, 51
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 428, 438
+  size: 33, 36
+  orig: 33, 36
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 480, 485
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 286, 187
+  size: 13, 18
+  orig: 13, 18
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 2, 3
+  size: 28, 33
+  orig: 28, 33
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 37, 33
+  size: 32, 51
+  orig: 32, 51
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 428, 476
+  size: 50, 34
+  orig: 50, 34
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 399, 347
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 286, 207
+  size: 44, 40
+  orig: 44, 40
+  offset: 0, 0
+  index: -1
+jiesuo_00063
+  rotate: false
+  xy: 2, 370
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+jiesuo_00064
+  rotate: false
+  xy: 2, 228
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+jiesuo_00065
+  rotate: false
+  xy: 144, 370
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+jiesuo_00066
+  rotate: false
+  xy: 2, 86
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+jiesuo_00067
+  rotate: false
+  xy: 144, 228
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+jiesuo_00068
+  rotate: false
+  xy: 286, 370
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+jiesuo_00069
+  rotate: false
+  xy: 144, 86
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+wanzheng
+  rotate: false
+  xy: 286, 249
+  size: 111, 119
+  orig: 111, 119
+  offset: 0, 0
+  index: -1

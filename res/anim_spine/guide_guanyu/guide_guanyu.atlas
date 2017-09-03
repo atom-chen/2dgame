@@ -1,0 +1,125 @@
+
+guide_guanyu.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guanyu_body
+  rotate: false
+  xy: 2, 28
+  size: 67, 54
+  orig: 67, 54
+  offset: 0, 0
+  index: -1
+guanyu_head
+  rotate: false
+  xy: 2, 170
+  size: 124, 84
+  orig: 124, 84
+  offset: 0, 0
+  index: -1
+guanyu_head_2
+  rotate: false
+  xy: 2, 84
+  size: 124, 84
+  orig: 124, 84
+  offset: 0, 0
+  index: -1
+guanyu_jianjia
+  rotate: false
+  xy: 71, 38
+  size: 35, 44
+  orig: 35, 44
+  offset: 0, 0
+  index: -1
+guanyu_kuzi
+  rotate: false
+  xy: 128, 192
+  size: 63, 27
+  orig: 63, 27
+  offset: 0, 0
+  index: -1
+guanyu_l_arm
+  rotate: false
+  xy: 226, 218
+  size: 28, 36
+  orig: 28, 36
+  offset: 0, 0
+  index: -1
+guanyu_r_arm
+  rotate: false
+  xy: 128, 153
+  size: 36, 37
+  orig: 36, 37
+  offset: 0, 0
+  index: -1
+guanyu_youjiao
+  rotate: false
+  xy: 128, 133
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+guanyu_zuojiao
+  rotate: false
+  xy: 108, 64
+  size: 17, 18
+  orig: 17, 18
+  offset: 0, 0
+  index: -1
+hanshui
+  rotate: false
+  xy: 193, 201
+  size: 23, 18
+  orig: 23, 18
+  offset: 0, 0
+  index: -1
+liubei_jiao1
+  rotate: false
+  xy: 145, 139
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+liubei_jiao2
+  rotate: false
+  xy: 166, 176
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+liubei_jiao3
+  rotate: false
+  xy: 166, 163
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+liubei_jiao4
+  rotate: false
+  xy: 108, 48
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+liubei_jiao5
+  rotate: false
+  xy: 128, 119
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 11
+  size: 56, 15
+  orig: 56, 15
+  offset: 0, 0
+  index: -1
+suduxian
+  rotate: false
+  xy: 128, 221
+  size: 96, 33
+  orig: 96, 33
+  offset: 0, 0
+  index: -1

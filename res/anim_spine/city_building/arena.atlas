@@ -1,0 +1,90 @@
+
+arena.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+caiqi1
+  rotate: false
+  xy: 613, 697
+  size: 212, 120
+  orig: 212, 120
+  offset: 0, 0
+  index: -1
+caiqi2
+  rotate: false
+  xy: 614, 428
+  size: 196, 58
+  orig: 196, 58
+  offset: 0, 0
+  index: -1
+cheng
+  rotate: false
+  xy: 2, 106
+  size: 450, 531
+  orig: 450, 531
+  offset: 0, 0
+  index: -1
+chui1
+  rotate: false
+  xy: 190, 4
+  size: 281, 100
+  orig: 281, 100
+  offset: 0, 0
+  index: -1
+chui2
+  rotate: false
+  xy: 613, 819
+  size: 235, 203
+  orig: 235, 203
+  offset: 0, 0
+  index: -1
+fangzi
+  rotate: false
+  xy: 2, 639
+  size: 609, 383
+  orig: 609, 383
+  offset: 0, 0
+  index: -1
+gu
+  rotate: false
+  xy: 614, 488
+  size: 201, 207
+  orig: 201, 207
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 955, 960
+  size: 54, 62
+  orig: 54, 62
+  offset: 0, 0
+  index: -1
+qigan1
+  rotate: false
+  xy: 454, 148
+  size: 134, 72
+  orig: 134, 72
+  offset: 0, 0
+  index: -1
+qigan2
+  rotate: false
+  xy: 454, 222
+  size: 158, 415
+  orig: 158, 415
+  offset: 0, 0
+  index: -1
+qizhi1
+  rotate: false
+  xy: 850, 837
+  size: 103, 185
+  orig: 103, 185
+  offset: 0, 0
+  index: -1
+qizhi2
+  rotate: true
+  xy: 2, 2
+  size: 102, 186
+  orig: 102, 186
+  offset: 0, 0
+  index: -1

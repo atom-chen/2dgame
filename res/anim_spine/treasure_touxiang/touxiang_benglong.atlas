@@ -1,0 +1,48 @@
+
+touxiang_benglong.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+benglong_biyan
+  rotate: false
+  xy: 163, 215
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+benglong_shenti
+  rotate: false
+  xy: 2, 201
+  size: 159, 145
+  orig: 159, 145
+  offset: 0, 0
+  index: -1
+benglong_tou
+  rotate: false
+  xy: 2, 61
+  size: 135, 138
+  orig: 135, 138
+  offset: 0, 0
+  index: -1
+benglong_xiaba
+  rotate: false
+  xy: 163, 247
+  size: 110, 99
+  orig: 110, 99
+  offset: 0, 0
+  index: -1
+benglong_zhua1
+  rotate: false
+  xy: 275, 295
+  size: 52, 51
+  orig: 52, 51
+  offset: 0, 0
+  index: -1
+benglong_zhua2
+  rotate: false
+  xy: 2, 2
+  size: 48, 57
+  orig: 48, 57
+  offset: 0, 0
+  index: -1

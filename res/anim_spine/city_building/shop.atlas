@@ -1,0 +1,181 @@
+
+shop.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shenmishangren_gebo
+  rotate: false
+  xy: 348, 83
+  size: 27, 30
+  orig: 27, 30
+  offset: 0, 0
+  index: -1
+shenmishangren_gebohou
+  rotate: false
+  xy: 142, 2
+  size: 49, 70
+  orig: 49, 70
+  offset: 0, 0
+  index: -1
+shenmishangren_head
+  rotate: true
+  xy: 2, 30
+  size: 108, 138
+  orig: 108, 138
+  offset: 0, 0
+  index: -1
+shenmishangren_hulu
+  rotate: true
+  xy: 193, 10
+  size: 62, 65
+  orig: 62, 65
+  offset: 0, 0
+  index: -1
+shenmishangren_long_head
+  rotate: false
+  xy: 260, 70
+  size: 86, 68
+  orig: 86, 68
+  offset: 0, 0
+  index: -1
+shenmishangren_long_houtuihou
+  rotate: false
+  xy: 454, 228
+  size: 25, 35
+  orig: 25, 35
+  offset: 0, 0
+  index: -1
+shenmishangren_long_houtuiqian
+  rotate: false
+  xy: 481, 229
+  size: 23, 34
+  orig: 23, 34
+  offset: 0, 0
+  index: -1
+shenmishangren_long_qiantuihou
+  rotate: true
+  xy: 414, 196
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+shenmishangren_long_qiantuiqian
+  rotate: true
+  xy: 260, 2
+  size: 21, 32
+  orig: 21, 32
+  offset: 0, 0
+  index: -1
+shenmishangren_long_shangyanpi
+  rotate: false
+  xy: 348, 68
+  size: 23, 13
+  orig: 23, 13
+  offset: 0, 0
+  index: -1
+shenmishangren_long_shenti
+  rotate: false
+  xy: 142, 74
+  size: 116, 64
+  orig: 116, 64
+  offset: 0, 0
+  index: -1
+shenmishangren_long_xiayanpi
+  rotate: false
+  xy: 377, 102
+  size: 23, 13
+  orig: 23, 13
+  offset: 0, 0
+  index: -1
+shenmishangren_long_zui
+  rotate: true
+  xy: 454, 265
+  size: 74, 51
+  orig: 74, 51
+  offset: 0, 0
+  index: -1
+shenmishangren_muzhi
+  rotate: false
+  xy: 320, 9
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+shenmishangren_qigan
+  rotate: true
+  xy: 2, 6
+  size: 22, 125
+  orig: 22, 125
+  offset: 0, 0
+  index: -1
+shenmishangren_qizi
+  rotate: false
+  xy: 344, 252
+  size: 108, 87
+  orig: 108, 87
+  offset: 0, 0
+  index: -1
+shenmishangren_shadow
+  rotate: false
+  xy: 2, 140
+  size: 360, 54
+  orig: 360, 54
+  offset: 0, 0
+  index: -1
+shenmishangren_shenti
+  rotate: true
+  xy: 344, 341
+  size: 169, 163
+  orig: 169, 163
+  offset: 0, 0
+  index: -1
+shenmishangren_shizhi
+  rotate: false
+  xy: 294, 5
+  size: 24, 18
+  orig: 24, 18
+  offset: 0, 0
+  index: -1
+shenmishangren_shou
+  rotate: false
+  xy: 260, 25
+  size: 79, 43
+  orig: 79, 43
+  offset: 0, 0
+  index: -1
+shenmishangren_shouqian
+  rotate: false
+  xy: 414, 220
+  size: 38, 30
+  orig: 38, 30
+  offset: 0, 0
+  index: -1
+shenmishangren_xiaoche
+  rotate: false
+  xy: 2, 196
+  size: 340, 314
+  orig: 340, 314
+  offset: 0, 0
+  index: -1
+shenmishangren_xiaozhi
+  rotate: true
+  xy: 348, 115
+  size: 23, 14
+  orig: 23, 14
+  offset: 0, 0
+  index: -1
+shenmishangren_xiuzihou
+  rotate: true
+  xy: 344, 196
+  size: 54, 68
+  orig: 54, 68
+  offset: 0, 0
+  index: -1
+shenmishangren_xiuziqian
+  rotate: false
+  xy: 364, 117
+  size: 74, 77
+  orig: 74, 77
+  offset: 0, 0
+  index: -1

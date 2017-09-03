@@ -1,0 +1,41 @@
+
+zulong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zulong_dan5
+  rotate: false
+  xy: 2, 217
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+zulong_dan5_danke
+  rotate: false
+  xy: 2, 2
+  size: 149, 68
+  orig: 149, 68
+  offset: 0, 0
+  index: -1
+zulong_dan5_shenti
+  rotate: false
+  xy: 185, 298
+  size: 150, 160
+  orig: 150, 160
+  offset: 0, 0
+  index: -1
+zulong_dan5_tou
+  rotate: false
+  xy: 2, 72
+  size: 172, 143
+  orig: 172, 143
+  offset: 0, 0
+  index: -1
+zulong_dan5_xiaba
+  rotate: false
+  xy: 185, 230
+  size: 83, 66
+  orig: 83, 66
+  offset: 0, 0
+  index: -1

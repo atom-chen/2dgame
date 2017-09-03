@@ -1,0 +1,27 @@
+
+baolong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baolong_dan4
+  rotate: false
+  xy: 2, 92
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+baolong_dan4_shou
+  rotate: false
+  xy: 185, 294
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+baolong_dan4_tou
+  rotate: false
+  xy: 2, 2
+  size: 122, 88
+  orig: 122, 88
+  offset: 0, 0
+  index: -1

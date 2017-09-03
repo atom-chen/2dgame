@@ -1,0 +1,41 @@
+
+honglong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+honglong_dan5
+  rotate: false
+  xy: 2, 174
+  size: 200, 241
+  orig: 200, 241
+  offset: 0, 0
+  index: -1
+honglong_dan5_shenti
+  rotate: false
+  xy: 204, 306
+  size: 113, 109
+  orig: 113, 109
+  offset: 0, 0
+  index: -1
+honglong_dan5_shou
+  rotate: true
+  xy: 141, 108
+  size: 64, 50
+  orig: 64, 50
+  offset: 0, 0
+  index: -1
+honglong_dan5_tou
+  rotate: false
+  xy: 2, 65
+  size: 137, 107
+  orig: 137, 107
+  offset: 0, 0
+  index: -1
+honglong_dan5_xiaba
+  rotate: false
+  xy: 2, 2
+  size: 77, 61
+  orig: 77, 61
+  offset: 0, 0
+  index: -1

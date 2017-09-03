@@ -1,0 +1,13 @@
+
+city_shake_8_5.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+8-5
+  rotate: false
+  xy: 2, 34
+  size: 115, 83
+  orig: 115, 83
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+ui_juntuan_huodongdating.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_juntuan_huodongdating
+  rotate: false
+  xy: 2, 5
+  size: 178, 175
+  orig: 178, 175
+  offset: 0, 0
+  index: -1

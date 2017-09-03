@@ -1,0 +1,146 @@
+
+ui_npc_zhaoyun.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 462
+  size: 497, 520
+  orig: 497, 520
+  offset: 0, 0
+  index: -1
+jianjia
+  rotate: true
+  xy: 864, 935
+  size: 47, 75
+  orig: 47, 75
+  offset: 0, 0
+  index: -1
+long_mei
+  rotate: false
+  xy: 658, 900
+  size: 116, 82
+  orig: 116, 82
+  offset: 0, 0
+  index: -1
+long_weiba
+  rotate: false
+  xy: 501, 817
+  size: 155, 165
+  orig: 155, 165
+  offset: 0, 0
+  index: -1
+long_xu1
+  rotate: false
+  xy: 776, 922
+  size: 86, 60
+  orig: 86, 60
+  offset: 0, 0
+  index: -1
+long_xu2
+  rotate: false
+  xy: 539, 594
+  size: 49, 90
+  orig: 49, 90
+  offset: 0, 0
+  index: -1
+long_xu3
+  rotate: false
+  xy: 501, 686
+  size: 110, 129
+  orig: 110, 129
+  offset: 0, 0
+  index: -1
+long_xu4
+  rotate: false
+  xy: 2, 2
+  size: 62, 78
+  orig: 62, 78
+  offset: 0, 0
+  index: -1
+long_xu5
+  rotate: false
+  xy: 158, 171
+  size: 89, 96
+  orig: 89, 96
+  offset: 0, 0
+  index: -1
+long_xu6
+  rotate: false
+  xy: 66, 16
+  size: 61, 64
+  orig: 61, 64
+  offset: 0, 0
+  index: -1
+long_xu7
+  rotate: false
+  xy: 658, 827
+  size: 77, 71
+  orig: 77, 71
+  offset: 0, 0
+  index: -1
+long_xu8
+  rotate: false
+  xy: 380, 372
+  size: 72, 88
+  orig: 72, 88
+  offset: 0, 0
+  index: -1
+long_zhua
+  rotate: false
+  xy: 281, 288
+  size: 97, 172
+  orig: 97, 172
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: false
+  xy: 2, 269
+  size: 277, 191
+  orig: 277, 191
+  offset: 0, 0
+  index: -1
+toufaqian
+  rotate: true
+  xy: 454, 390
+  size: 70, 45
+  orig: 70, 45
+  offset: 0, 0
+  index: -1
+toufaqian2
+  rotate: false
+  xy: 613, 751
+  size: 30, 64
+  orig: 30, 64
+  offset: 0, 0
+  index: -1
+yan1
+  rotate: true
+  xy: 501, 565
+  size: 119, 36
+  orig: 119, 36
+  offset: 0, 0
+  index: -1
+yan2
+  rotate: false
+  xy: 2, 82
+  size: 128, 66
+  orig: 128, 66
+  offset: 0, 0
+  index: -1
+yan3
+  rotate: false
+  xy: 380, 306
+  size: 72, 64
+  orig: 72, 64
+  offset: 0, 0
+  index: -1
+yan4
+  rotate: false
+  xy: 2, 150
+  size: 154, 117
+  orig: 154, 117
+  offset: 0, 0
+  index: -1

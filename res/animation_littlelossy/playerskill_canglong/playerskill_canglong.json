@@ -1,0 +1,2565 @@
+{
+  "content_scale": 1.0,
+  "armature_data": [
+    {
+      "strVersion": "1.6.0.0",
+      "version": 1.6,
+      "name": "playerskill_canglong",
+      "bone_data": [
+        {
+          "name": "canglong_dan6_shenti_5",
+          "parent": "",
+          "dI": 0,
+          "x": 30.490974426269531,
+          "y": 114.29477691650391,
+          "z": 14,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -1.63681591,
+          "kY": 1.63681591,
+          "arrow_x": 67.368980407714844,
+          "arrow_y": -1.4376064427779056E-05,
+          "effectbyskeleton": true,
+          "bl": 67,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_5.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 6.2077713,
+                  "y": 1.25987244,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.63681591,
+                  "kY": -1.63681614
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_zuoqianqi2",
+          "parent": "canglong_dan6_shenti_5",
+          "dI": 0,
+          "x": -14.738037109375,
+          "y": 6.9611320495605469,
+          "z": 25,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 3.7502737,
+          "kY": -3.7502737,
+          "arrow_x": 84.9872817993164,
+          "arrow_y": -1.2714105650957208E-05,
+          "effectbyskeleton": true,
+          "bl": 84,
+          "display_data": [
+            {
+              "name": "canglong_dan6_zuoqianqi2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 40.1185455,
+                  "y": -3.05419922,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 4.16972828,
+                  "kY": 2.113459
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_12",
+          "parent": "canglong_dan6_zuoqianqi2",
+          "dI": 1,
+          "x": 1.52587890625E-05,
+          "y": 0.0,
+          "z": 26,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 84.9872817993164,
+          "arrow_y": -1.2714105650957208E-05,
+          "effectbyskeleton": true,
+          "bl": 84,
+          "display_data": [
+            {
+              "name": "canglong_dan6_zuoqianqi2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 40.1185455,
+                  "y": -3.05419922,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 4.16972828,
+                  "kY": 2.113459
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_zuoqianqi2_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 43.1367264,
+                  "y": -3.99789238,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 4.16972828,
+                  "kY": -4.16972828
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_tou",
+          "parent": "canglong_dan6_shenti_5",
+          "dI": 0,
+          "x": 24.624153137207031,
+          "y": -42.300006866455078,
+          "z": 18,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 1.37023878,
+          "kY": -1.37023878,
+          "arrow_x": 117.12117767333984,
+          "arrow_y": -1.296366099268198E-05,
+          "effectbyskeleton": true,
+          "bl": 117,
+          "display_data": [
+            {
+              "name": "canglong_dan6_tou.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 60.0755,
+                  "y": -8.455147,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.505025268,
+                  "kY": -0.5050244
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_xiaba",
+          "parent": "canglong_dan6_tou",
+          "dI": 0,
+          "x": -2.8255538940429688,
+          "y": -15.577583312988281,
+          "z": 21,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.7818717,
+          "kY": -0.7818717,
+          "arrow_x": 105.62635040283203,
+          "arrow_y": -2.6482623070478439E-05,
+          "effectbyskeleton": true,
+          "bl": 105,
+          "display_data": [
+            {
+              "name": "canglong_dan6_xiaba.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 57.5140076,
+                  "y": 5.69355,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.594566941,
+                  "kY": 0.5945665
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_10",
+          "parent": "canglong_dan6_xiaba",
+          "dI": 1,
+          "x": -1.1920928955078125E-07,
+          "y": -1.52587890625E-05,
+          "z": 22,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -1.1920929E-07,
+          "kY": 1.1920929E-07,
+          "arrow_x": 105.62635040283203,
+          "arrow_y": -2.6482623070478439E-05,
+          "effectbyskeleton": true,
+          "bl": 105,
+          "display_data": [
+            {
+              "name": "canglong_dan6_xiaba.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 57.5140076,
+                  "y": 5.69355,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.594566941,
+                  "kY": 0.5945665
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_xiaba_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 58.8818,
+                  "y": 8.10993,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.594566941,
+                  "kY": 0.594566941
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_shetou",
+          "parent": "canglong_dan6_xiaba",
+          "dI": 0,
+          "x": 30.006114959716797,
+          "y": 2.6854705810546875,
+          "z": 17,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -0.203959912,
+          "kY": 0.203959912,
+          "arrow_x": 81.7101058959961,
+          "arrow_y": 2.1741638192906976E-05,
+          "effectbyskeleton": true,
+          "bl": 81,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shetou.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 37.6821442,
+                  "y": -2.50811768,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.390606046,
+                  "kY": 0.390606672
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_9",
+          "parent": "canglong_dan6_tou",
+          "dI": 2,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 20,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 117.12117767333984,
+          "arrow_y": -1.296366099268198E-05,
+          "effectbyskeleton": true,
+          "bl": 117,
+          "display_data": [
+            {
+              "name": "canglong_dan6_tou.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 60.0755,
+                  "y": -8.455147,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.505025268,
+                  "kY": -0.5050244
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_tou_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 59.7318954,
+                  "y": -9.713423,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.505025268,
+                  "kY": -0.505025268
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_tou_b1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 68.21611,
+                  "y": 8.702044,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.505025268,
+                  "kY": -0.505025268
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_8",
+          "parent": "canglong_dan6_tou",
+          "dI": 1,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 19,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 117.12117767333984,
+          "arrow_y": -1.296366099268198E-05,
+          "effectbyskeleton": true,
+          "bl": 117,
+          "display_data": [
+            {
+              "name": "canglong_dan6_tou.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 60.0755,
+                  "y": -8.455147,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.505025268,
+                  "kY": -0.5050244
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_tou_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 59.7318954,
+                  "y": -9.713423,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.505025268,
+                  "kY": -0.505025268
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_she",
+          "parent": "canglong_dan6_tou",
+          "dI": 0,
+          "x": 9.5095291137695312,
+          "y": -22.762527465820312,
+          "z": 3,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0413776636,
+          "kY": -0.0413776636,
+          "arrow_x": 109.77059936523438,
+          "arrow_y": -1.9654398784041405E-05,
+          "effectbyskeleton": true,
+          "bl": 109,
+          "display_data": [
+            {
+              "name": "canglong_dan6_she.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 45.7825623,
+                  "y": -1.6152916,
+                  "cX": 1.00000012,
+                  "cY": 1.00000012,
+                  "kX": 0.4636464,
+                  "kY": -0.4636472
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_7",
+          "parent": "canglong_dan6_shenti_5",
+          "dI": 2,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 16,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 67.368980407714844,
+          "arrow_y": -1.4376064427779056E-05,
+          "effectbyskeleton": true,
+          "bl": 67,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_5.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 6.2077713,
+                  "y": 1.25987244,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.63681591,
+                  "kY": -1.63681614
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_5_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 6.2077713,
+                  "y": 1.25987244,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.63681591,
+                  "kY": -1.63681591
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_5_b1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 32.90863,
+                  "y": 4.50544357,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.63681591,
+                  "kY": -1.63681591
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_6",
+          "parent": "canglong_dan6_shenti_5",
+          "dI": 1,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 15,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 67.368980407714844,
+          "arrow_y": -1.4376064427779056E-05,
+          "effectbyskeleton": true,
+          "bl": 67,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_5.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 6.2077713,
+                  "y": 1.25987244,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.63681591,
+                  "kY": -1.63681614
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_5_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 6.2077713,
+                  "y": 1.25987244,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 1.63681591,
+                  "kY": -1.63681591
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_shenti_4",
+          "parent": "canglong_dan6_shenti_5",
+          "dI": 0,
+          "x": -19.579437255859375,
+          "y": 45.31439208984375,
+          "z": 9,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 4.65956831,
+          "kY": -4.65956831,
+          "arrow_x": 88.012054443359375,
+          "arrow_y": 1.0109550203196704E-05,
+          "effectbyskeleton": true,
+          "bl": 88,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_4.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 33.1197052,
+                  "y": -1.32736969,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.260433,
+                  "kY": 3.02275229
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_zuohouqi",
+          "parent": "canglong_dan6_shenti_4",
+          "dI": 0,
+          "x": 74.067825317382812,
+          "y": 6.5505905151367188,
+          "z": 23,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -0.4962492,
+          "kY": 0.4962492,
+          "arrow_x": 62.580860137939453,
+          "arrow_y": 1.4233199181035161E-05,
+          "effectbyskeleton": true,
+          "bl": 62,
+          "display_data": [
+            {
+              "name": "canglong_dan6_zuohouqi.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 34.68106,
+                  "y": -0.0147857666,
+                  "cX": 1.00000012,
+                  "cY": 1.00000012,
+                  "kX": 3.756681,
+                  "kY": 2.52650356
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_11",
+          "parent": "canglong_dan6_zuohouqi",
+          "dI": 1,
+          "x": 1.9073486328125E-05,
+          "y": 3.0517578125E-05,
+          "z": 24,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 62.580860137939453,
+          "arrow_y": 1.4233199181035161E-05,
+          "effectbyskeleton": true,
+          "bl": 62,
+          "display_data": [
+            {
+              "name": "canglong_dan6_zuohouqi.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 34.68106,
+                  "y": -0.0147857666,
+                  "cX": 1.00000012,
+                  "cY": 1.00000012,
+                  "kX": 3.756681,
+                  "kY": 2.52650356
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_zuohouqi_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 34.68106,
+                  "y": -0.0147857666,
+                  "cX": 1.00000012,
+                  "cY": 1.00000012,
+                  "kX": 3.756681,
+                  "kY": -3.756681
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_5",
+          "parent": "canglong_dan6_shenti_4",
+          "dI": 2,
+          "x": 7.62939453125E-06,
+          "y": -1.52587890625E-05,
+          "z": 11,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 88.012054443359375,
+          "arrow_y": 1.0109550203196704E-05,
+          "effectbyskeleton": true,
+          "bl": 88,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_4.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 33.1197052,
+                  "y": -1.32736969,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.260433,
+                  "kY": 3.02275229
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_4_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 34.3999939,
+                  "y": -2.31949329,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.260433,
+                  "kY": -3.260433
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_4_b1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 34.3999939,
+                  "y": -2.31949329,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.260433,
+                  "kY": -3.260433
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_4",
+          "parent": "canglong_dan6_shenti_4",
+          "dI": 1,
+          "x": 7.62939453125E-06,
+          "y": -1.52587890625E-05,
+          "z": 10,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 88.012054443359375,
+          "arrow_y": 1.0109550203196704E-05,
+          "effectbyskeleton": true,
+          "bl": 88,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_4.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 33.1197052,
+                  "y": -1.32736969,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.260433,
+                  "kY": 3.02275229
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_4_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 34.3999939,
+                  "y": -2.31949329,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 3.260433,
+                  "kY": -3.260433
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_shenti_3",
+          "parent": "canglong_dan6_shenti_4",
+          "dI": 0,
+          "x": 85.754013061523438,
+          "y": 7.9809494018554688,
+          "z": 7,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -5.44435549,
+          "kY": 5.44435549,
+          "arrow_x": 70.554092407226562,
+          "arrow_y": -2.4573091650381684E-06,
+          "effectbyskeleton": true,
+          "bl": 70,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_3.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 28.3443565,
+                  "y": -0.008037567,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.42160368,
+                  "kY": -2.42160273
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_3",
+          "parent": "canglong_dan6_shenti_3",
+          "dI": 1,
+          "x": 3.0517578125E-05,
+          "y": -3.4332275390625E-05,
+          "z": 8,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 70.554092407226562,
+          "arrow_y": -2.4573091650381684E-06,
+          "effectbyskeleton": true,
+          "bl": 70,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_3.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 28.3443565,
+                  "y": -0.008037567,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.42160368,
+                  "kY": -2.42160273
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_3_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 29.48183,
+                  "y": -0.6730633,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.42160368,
+                  "kY": -2.42160368
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_shenti_2",
+          "parent": "canglong_dan6_shenti_3",
+          "dI": 0,
+          "x": 61.208694458007812,
+          "y": 0.28457260131835938,
+          "z": 5,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.190500736,
+          "kY": -0.190500736,
+          "arrow_x": 51.746425628662109,
+          "arrow_y": 2.9533010092563927E-05,
+          "effectbyskeleton": true,
+          "bl": 51,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 28.2605286,
+                  "y": -5.43217468,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.23110247,
+                  "kY": -2.23110318
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_shenti_1",
+          "parent": "canglong_dan6_shenti_2",
+          "dI": 0,
+          "x": 32.5177001953125,
+          "y": 3.15771484375,
+          "z": 12,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -0.2721703,
+          "kY": 0.2721703,
+          "arrow_x": 35.091403961181641,
+          "arrow_y": -9.06895729713142E-06,
+          "effectbyskeleton": true,
+          "bl": 35,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 16.7449417,
+                  "y": 3.36782837,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.50327349,
+                  "kY": -2.50327253
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_1",
+          "parent": "canglong_dan6_shenti_1",
+          "dI": 1,
+          "x": 6.103515625E-05,
+          "y": -2.288818359375E-05,
+          "z": 13,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -2.38418579E-07,
+          "kY": 2.38418579E-07,
+          "arrow_x": 35.091403961181641,
+          "arrow_y": -9.06895729713142E-06,
+          "effectbyskeleton": true,
+          "bl": 35,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 16.7449417,
+                  "y": 3.36782837,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.50327349,
+                  "kY": -2.50327253
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_1_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 16.7449417,
+                  "y": 3.36782837,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.50327349,
+                  "kY": -2.50327349
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "advanced_2",
+          "parent": "canglong_dan6_shenti_2",
+          "dI": 1,
+          "x": 3.0517578125E-05,
+          "y": 1.52587890625E-05,
+          "z": 6,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 51.746425628662109,
+          "arrow_y": 2.9533010092563927E-05,
+          "effectbyskeleton": true,
+          "bl": 51,
+          "display_data": [
+            {
+              "name": "canglong_dan6_shenti_2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 28.2605286,
+                  "y": -5.43217468,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.23110247,
+                  "kY": -2.23110318
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_2_a1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 28.2605286,
+                  "y": -5.43217468,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 2.23110247,
+                  "kY": -2.23110247
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_youhouqi",
+          "parent": "canglong_dan6_shenti_4",
+          "dI": 0,
+          "x": 56.444622039794922,
+          "y": 20.078498840332031,
+          "z": 1,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -1.60084593,
+          "kY": 1.60084593,
+          "arrow_x": 50.559368133544922,
+          "arrow_y": 8.2452461356297135E-06,
+          "effectbyskeleton": true,
+          "bl": 50,
+          "display_data": [
+            {
+              "name": "canglong_dan6_youhouqi.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 19.11943,
+                  "y": 3.87333679,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -1.42190588,
+                  "kY": 1.42190659
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_dan6_youqianqi2",
+          "parent": "canglong_dan6_shenti_5",
+          "dI": 0,
+          "x": -11.450904846191406,
+          "y": -25.338268280029297,
+          "z": 2,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 3.12999058,
+          "kY": -3.12999058,
+          "arrow_x": 50.1510124206543,
+          "arrow_y": 1.6270381820504554E-05,
+          "effectbyskeleton": true,
+          "bl": 50,
+          "display_data": [
+            {
+              "name": "canglong_dan6_youqianqi2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 21.564497,
+                  "y": 5.009552,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -1.49317467,
+                  "kY": 1.49317515
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canglong_shadow",
+          "parent": "",
+          "dI": 0,
+          "x": 0.0,
+          "y": 0.67333984375,
+          "z": 4,
+          "cX": 4.0,
+          "cY": 3.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 0.0,
+          "arrow_y": 0.0,
+          "effectbyskeleton": false,
+          "bl": 0,
+          "display_data": [
+            {
+              "name": "canglong_shadow.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "animation_data": [
+    {
+      "name": "playerskill_canglong",
+      "mov_data": [
+        {
+          "name": "idle",
+          "dr": 101,
+          "lp": true,
+          "to": 0,
+          "drTW": 0,
+          "twE": 0,
+          "sc": 1.0,
+          "mov_bone_data": [
+            {
+              "name": "advanced_12",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_zuoqianqi2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.523949862,
+                  "kY": 0.523949862,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.490625024,
+                  "kY": -0.490625024,
+                  "fi": 26,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 0.954717,
+                  "cY": 1.0,
+                  "kX": -0.14719218,
+                  "kY": 0.1550955,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 0.9,
+                  "cY": 1.0,
+                  "kX": -1.83433127,
+                  "kY": 1.85178459,
+                  "fi": 79,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.523949862,
+                  "kY": 0.523949862,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_11",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_zuohouqi",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.288336724,
+                  "kY": 0.288336724,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.591142058,
+                  "kY": -0.591142058,
+                  "fi": 17,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -1.53809571,
+                  "kY": 1.53809571,
+                  "fi": 59,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.288336724,
+                  "kY": 0.288336724,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_10",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_xiaba",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.127422959,
+                  "kY": -0.127422959,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_9",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 2,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 2,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_8",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_tou",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0258227848,
+                  "kY": -0.0258227848,
+                  "fi": 25,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.15743725,
+                  "kY": 0.15743725,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.08216673,
+                  "kY": 0.08216673,
+                  "fi": 75,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shetou",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_7",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 2,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 2,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_6",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_5",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 9.5454559326171875,
+                  "y": 7.1818161010742188,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0684912,
+                  "kY": -0.0684912,
+                  "fi": 25,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 19.090911865234375,
+                  "y": 6.3636322021484375,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.1369824,
+                  "kY": -0.1369824,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 9.5454559326171875,
+                  "y": -0.81818389892578125,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0684912,
+                  "kY": -0.0684912,
+                  "fi": 75,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_1",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_1",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 1.8541526794433594,
+                  "y": 0.64575004577636719,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.6031919,
+                  "kY": -0.6031919,
+                  "fi": 29,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 1.2071975469589233,
+                  "y": -1.6585652828216553,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.44484514,
+                  "kY": 0.44484514,
+                  "fi": 78,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_5",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 2,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 2,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_4",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_4",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.185896426,
+                  "kY": 0.185896426,
+                  "fi": 25,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0601509847,
+                  "kY": -0.0601509847,
+                  "fi": 75,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.398710519,
+                  "kY": 0.398710519,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "advanced_2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 1,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_shenti_2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.1271820068359375,
+                  "y": 2.400334358215332,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.378749132,
+                  "kY": -0.378749132,
+                  "fi": 12,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": -3.7327547073364258,
+                  "y": -2.1837348937988281,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.392488718,
+                  "kY": 0.392488718,
+                  "fi": 62,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_shadow",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_she",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_youqianqi2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.160806522,
+                  "kY": 0.160806522,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.917034566,
+                  "kY": -0.917034566,
+                  "fi": 42,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -1.13773358,
+                  "kY": 1.13773358,
+                  "fi": 79,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.160806522,
+                  "kY": 0.160806522,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "canglong_dan6_youhouqi",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 13.221645355224609,
+                  "y": -3.7367820739746094,
+                  "z": 0,
+                  "cX": 0.6999999,
+                  "cY": 1.0,
+                  "kX": 0.856509,
+                  "kY": -0.856509,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.6328259,
+                  "kY": 0.6328259,
+                  "fi": 50,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 12.754680633544922,
+                  "y": -2.1598834991455078,
+                  "z": 0,
+                  "cX": 0.868,
+                  "cY": 1.0,
+                  "kX": 1.2940315,
+                  "kY": -1.2940315,
+                  "fi": 88,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 13.221645355224609,
+                  "y": -3.7367820739746094,
+                  "z": 0,
+                  "cX": 0.6999999,
+                  "cY": 1.0,
+                  "kX": 0.856509,
+                  "kY": -0.856509,
+                  "fi": 100,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texture_data": [
+    {
+      "name": "canglong_shadow",
+      "width": 56.0,
+      "height": 15.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_she",
+      "width": 112.0,
+      "height": 69.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_1",
+      "width": 41.0,
+      "height": 27.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_2",
+      "width": 43.0,
+      "height": 73.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_3",
+      "width": 78.0,
+      "height": 73.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_4",
+      "width": 130.0,
+      "height": 95.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_5",
+      "width": 152.0,
+      "height": 144.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shetou",
+      "width": 96.0,
+      "height": 55.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_tou",
+      "width": 153.0,
+      "height": 83.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_xiaba",
+      "width": 141.0,
+      "height": 80.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_youhouqi",
+      "width": 32.0,
+      "height": 61.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_youqianqi2",
+      "width": 35.0,
+      "height": 67.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_zuohouqi",
+      "width": 68.0,
+      "height": 49.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_zuoqianqi2",
+      "width": 84.0,
+      "height": 95.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_1_a1",
+      "width": 41.0,
+      "height": 27.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_2_a1",
+      "width": 43.0,
+      "height": 72.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_3_a1",
+      "width": 78.0,
+      "height": 70.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_4_a1",
+      "width": 130.0,
+      "height": 93.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_4_b1",
+      "width": 130.0,
+      "height": 92.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_5_a1",
+      "width": 152.0,
+      "height": 145.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_shenti_5_b1",
+      "width": 163.0,
+      "height": 198.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_tou_a1",
+      "width": 151.0,
+      "height": 81.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_tou_b1",
+      "width": 152.0,
+      "height": 118.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_xiaba_a1",
+      "width": 137.0,
+      "height": 78.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_zuohouqi_a1",
+      "width": 68.0,
+      "height": 49.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "canglong_dan6_zuoqianqi2_a1",
+      "width": 79.0,
+      "height": 89.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    }
+  ],
+  "config_file_path": [],
+  "config_png_path": []
+}

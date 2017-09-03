@@ -1,0 +1,20 @@
+
+map_fight.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jian1
+  rotate: false
+  xy: 2, 63
+  size: 64, 59
+  orig: 64, 59
+  offset: 0, 0
+  index: -1
+jian2
+  rotate: false
+  xy: 2, 2
+  size: 64, 59
+  orig: 64, 59
+  offset: 0, 0
+  index: -1

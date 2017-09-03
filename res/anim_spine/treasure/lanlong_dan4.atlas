@@ -1,0 +1,48 @@
+
+lanlong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lanlong_dan4
+  rotate: false
+  xy: 2, 198
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+lanlong_dan4_chibang
+  rotate: true
+  xy: 110, 119
+  size: 77, 64
+  orig: 77, 64
+  offset: 0, 0
+  index: -1
+lanlong_dan4_danke
+  rotate: false
+  xy: 2, 2
+  size: 81, 68
+  orig: 81, 68
+  offset: 0, 0
+  index: -1
+lanlong_dan4_di
+  rotate: false
+  xy: 185, 361
+  size: 140, 78
+  orig: 140, 78
+  offset: 0, 0
+  index: -1
+lanlong_dan4_head
+  rotate: false
+  xy: 2, 72
+  size: 106, 124
+  orig: 106, 124
+  offset: 0, 0
+  index: -1
+lanlong_dan4_zhuazi
+  rotate: false
+  xy: 185, 320
+  size: 47, 39
+  orig: 47, 39
+  offset: 0, 0
+  index: -1

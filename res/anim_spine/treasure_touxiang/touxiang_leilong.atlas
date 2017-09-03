@@ -1,0 +1,41 @@
+
+touxiang_leilong.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+leilong_biyan
+  rotate: false
+  xy: 2, 4
+  size: 14, 17
+  orig: 14, 17
+  offset: 0, 0
+  index: -1
+leilong_tou
+  rotate: false
+  xy: 2, 70
+  size: 147, 184
+  orig: 147, 184
+  offset: 0, 0
+  index: -1
+lelong_xiaba
+  rotate: true
+  xy: 151, 148
+  size: 106, 103
+  orig: 106, 103
+  offset: 0, 0
+  index: -1
+lelong_zhua1
+  rotate: false
+  xy: 2, 23
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+lelong_zhua2
+  rotate: false
+  xy: 151, 99
+  size: 42, 47
+  orig: 42, 47
+  offset: 0, 0
+  index: -1

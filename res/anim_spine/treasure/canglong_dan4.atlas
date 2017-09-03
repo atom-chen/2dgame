@@ -1,0 +1,41 @@
+
+canglong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+canglong_dan4
+  rotate: false
+  xy: 2, 235
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+canglong_dan4_di
+  rotate: false
+  xy: 185, 363
+  size: 142, 113
+  orig: 142, 113
+  offset: 0, 0
+  index: -1
+canglong_dan4_ke
+  rotate: false
+  xy: 2, 2
+  size: 117, 92
+  orig: 117, 92
+  offset: 0, 0
+  index: -1
+canglong_dan4_shou
+  rotate: false
+  xy: 134, 165
+  size: 44, 68
+  orig: 44, 68
+  offset: 0, 0
+  index: -1
+canglong_dan4_tou
+  rotate: false
+  xy: 2, 96
+  size: 130, 137
+  orig: 130, 137
+  offset: 0, 0
+  index: -1

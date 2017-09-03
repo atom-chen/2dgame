@@ -1,0 +1,48 @@
+
+blacksmith.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 538
+  size: 459, 445
+  orig: 459, 445
+  offset: 0, 0
+  index: -1
+denglong
+  rotate: true
+  xy: 463, 600
+  size: 51, 123
+  orig: 51, 123
+  offset: 0, 0
+  index: -1
+tiejiangpu-idle_1
+  rotate: false
+  xy: 292, 406
+  size: 150, 130
+  orig: 150, 130
+  offset: 0, 0
+  index: -1
+tiejiangpu_denglong
+  rotate: false
+  xy: 2, 2
+  size: 92, 194
+  orig: 92, 194
+  offset: 0, 0
+  index: -1
+tiejiangpu_yan_00
+  rotate: false
+  xy: 463, 653
+  size: 280, 330
+  orig: 280, 330
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 2, 198
+  size: 288, 338
+  orig: 288, 338
+  offset: 0, 0
+  index: -1

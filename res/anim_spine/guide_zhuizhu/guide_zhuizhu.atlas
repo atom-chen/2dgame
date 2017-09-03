@@ -1,0 +1,174 @@
+
+guide_zhuizhu.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dan
+  rotate: false
+  xy: 2, 247
+  size: 228, 263
+  orig: 228, 263
+  offset: 0, 0
+  index: -1
+hanshui
+  rotate: false
+  xy: 483, 417
+  size: 23, 18
+  orig: 23, 18
+  offset: 0, 0
+  index: -1
+liubei_body
+  rotate: true
+  xy: 338, 307
+  size: 86, 50
+  orig: 86, 50
+  offset: 0, 0
+  index: -1
+liubei_head
+  rotate: false
+  xy: 232, 320
+  size: 104, 73
+  orig: 104, 73
+  offset: 0, 0
+  index: -1
+liubei_jiao1
+  rotate: false
+  xy: 209, 175
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+liubei_jiao2
+  rotate: false
+  xy: 191, 133
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+liubei_jiao3
+  rotate: false
+  xy: 372, 294
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+liubei_jiao4
+  rotate: false
+  xy: 104, 67
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+liubei_jiao5
+  rotate: true
+  xy: 483, 402
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: -1
+liubei_r_arm
+  rotate: false
+  xy: 390, 314
+  size: 63, 31
+  orig: 63, 31
+  offset: 0, 0
+  index: -1
+long_body
+  rotate: false
+  xy: 2, 149
+  size: 205, 96
+  orig: 205, 96
+  offset: 0, 0
+  index: -1
+long_chibang
+  rotate: false
+  xy: 232, 395
+  size: 151, 115
+  orig: 151, 115
+  offset: 0, 0
+  index: -1
+long_head
+  rotate: false
+  xy: 385, 437
+  size: 125, 73
+  orig: 125, 73
+  offset: 0, 0
+  index: -1
+long_huo
+  rotate: false
+  xy: 72, 10
+  size: 49, 52
+  orig: 49, 52
+  offset: 0, 0
+  index: -1
+long_l_leg
+  rotate: false
+  xy: 2, 2
+  size: 68, 60
+  orig: 68, 60
+  offset: 0, 0
+  index: -1
+long_r_leg
+  rotate: false
+  xy: 104, 83
+  size: 85, 64
+  orig: 85, 64
+  offset: 0, 0
+  index: -1
+long_xiaba
+  rotate: false
+  xy: 232, 268
+  size: 95, 50
+  orig: 95, 50
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 209, 189
+  size: 56, 15
+  orig: 56, 15
+  offset: 0, 0
+  index: -1
+suduxian
+  rotate: false
+  xy: 385, 402
+  size: 96, 33
+  orig: 96, 33
+  offset: 0, 0
+  index: -1
+zhangfei_body
+  rotate: false
+  xy: 390, 347
+  size: 75, 53
+  orig: 75, 53
+  offset: 0, 0
+  index: -1
+zhangfei_head
+  rotate: false
+  xy: 2, 64
+  size: 100, 83
+  orig: 100, 83
+  offset: 0, 0
+  index: -1
+zhangfei_huo
+  rotate: true
+  xy: 467, 331
+  size: 69, 43
+  orig: 69, 43
+  offset: 0, 0
+  index: -1
+zhangfei_l_arm
+  rotate: true
+  xy: 232, 240
+  size: 26, 36
+  orig: 26, 36
+  offset: 0, 0
+  index: -1
+zhangfei_r_arm
+  rotate: false
+  xy: 329, 268
+  size: 41, 37
+  orig: 41, 37
+  offset: 0, 0
+  index: -1

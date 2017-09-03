@@ -1,0 +1,13 @@
+
+ui_juntuan_weikaiqi2.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_juntuan_weikaiqi2
+  rotate: false
+  xy: 2, 31
+  size: 198, 169
+  orig: 198, 169
+  offset: 0, 0
+  index: -1

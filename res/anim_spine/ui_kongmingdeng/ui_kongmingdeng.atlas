@@ -1,0 +1,188 @@
+
+ui_kongmingdeng.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BIAOQING 2
+  rotate: true
+  xy: 387, 316
+  size: 56, 62
+  orig: 56, 62
+  offset: 0, 0
+  index: -1
+DANGBU
+  rotate: true
+  xy: 473, 435
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+HAN
+  rotate: true
+  xy: 83, 148
+  size: 55, 33
+  orig: 55, 33
+  offset: 0, 0
+  index: -1
+HUZI
+  rotate: false
+  xy: 387, 299
+  size: 46, 15
+  orig: 46, 15
+  offset: 0, 0
+  index: -1
+JITAI BU
+  rotate: false
+  xy: 83, 102
+  size: 39, 44
+  orig: 39, 44
+  offset: 0, 0
+  index: -1
+KONGMINGDENG DICENG
+  rotate: false
+  xy: 294, 401
+  size: 93, 109
+  orig: 93, 109
+  offset: 0, 0
+  index: -1
+KONGMINGDENG HUOYAN
+  rotate: true
+  xy: 83, 91
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+KONGMINGDENG SHANGCENG
+  rotate: false
+  xy: 2, 2
+  size: 72, 86
+  orig: 72, 86
+  offset: 0, 0
+  index: -1
+PIFENG
+  rotate: true
+  xy: 2, 90
+  size: 113, 79
+  orig: 113, 79
+  offset: 0, 0
+  index: -1
+SHENTI
+  rotate: false
+  xy: 389, 437
+  size: 82, 73
+  orig: 82, 73
+  offset: 0, 0
+  index: -1
+TOU
+  rotate: false
+  xy: 2, 205
+  size: 101, 107
+  orig: 101, 107
+  offset: 0, 0
+  index: -1
+TUI
+  rotate: false
+  xy: 192, 260
+  size: 84, 52
+  orig: 84, 52
+  offset: 0, 0
+  index: -1
+YANJING
+  rotate: true
+  xy: 278, 261
+  size: 51, 25
+  orig: 51, 25
+  offset: 0, 0
+  index: -1
+YOUSHOU
+  rotate: true
+  xy: 192, 207
+  size: 51, 77
+  orig: 51, 77
+  offset: 0, 0
+  index: -1
+ZUIBA
+  rotate: false
+  xy: 153, 193
+  size: 36, 22
+  orig: 36, 22
+  offset: 0, 0
+  index: -1
+ZUOHUJIA
+  rotate: false
+  xy: 473, 475
+  size: 37, 35
+  orig: 37, 35
+  offset: 0, 0
+  index: -1
+ZUOSHOU
+  rotate: true
+  xy: 294, 324
+  size: 75, 91
+  orig: 75, 91
+  offset: 0, 0
+  index: -1
+beijing
+  rotate: false
+  xy: 2, 314
+  size: 290, 196
+  orig: 290, 196
+  offset: 0, 0
+  index: -1
+deng1
+  rotate: true
+  xy: 389, 374
+  size: 61, 67
+  orig: 61, 67
+  offset: 0, 0
+  index: -1
+deng2
+  rotate: true
+  xy: 451, 318
+  size: 54, 59
+  orig: 54, 59
+  offset: 0, 0
+  index: -1
+huo/huo1
+  rotate: false
+  xy: 350, 295
+  size: 35, 27
+  orig: 35, 27
+  offset: 0, 0
+  index: -1
+huo/huo2
+  rotate: false
+  xy: 305, 257
+  size: 36, 31
+  orig: 36, 31
+  offset: 0, 0
+  index: -1
+huo/huo3
+  rotate: false
+  xy: 305, 290
+  size: 43, 32
+  orig: 43, 32
+  offset: 0, 0
+  index: -1
+huo/huo4
+  rotate: true
+  xy: 118, 148
+  size: 29, 32
+  orig: 29, 32
+  offset: 0, 0
+  index: -1
+huo/huo5
+  rotate: false
+  xy: 118, 179
+  size: 33, 36
+  orig: 33, 36
+  offset: 0, 0
+  index: -1
+zhuozi
+  rotate: false
+  xy: 105, 217
+  size: 85, 95
+  orig: 85, 95
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,97 @@
+
+worldwar.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+daqiao_gongjian
+  rotate: true
+  xy: 2, 7
+  size: 14, 64
+  orig: 14, 64
+  offset: 0, 0
+  index: -1
+long
+  rotate: false
+  xy: 207, 111
+  size: 32, 46
+  orig: 32, 46
+  offset: 0, 0
+  index: -1
+qizi1
+  rotate: false
+  xy: 158, 160
+  size: 51, 90
+  orig: 51, 90
+  offset: 0, 0
+  index: -1
+qizi2
+  rotate: false
+  xy: 58, 36
+  size: 45, 90
+  orig: 45, 90
+  offset: 0, 0
+  index: -1
+qizi3
+  rotate: false
+  xy: 102, 152
+  size: 54, 98
+  orig: 54, 98
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 164, 85
+  size: 50, 14
+  orig: 50, 14
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 128
+  size: 98, 122
+  orig: 98, 122
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 105, 5
+  size: 63, 68
+  orig: 63, 68
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: false
+  xy: 170, 58
+  size: 40, 25
+  orig: 40, 25
+  offset: 0, 0
+  index: -1
+youjiao
+  rotate: false
+  xy: 105, 75
+  size: 57, 75
+  orig: 57, 75
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: false
+  xy: 2, 23
+  size: 54, 103
+  orig: 54, 103
+  offset: 0, 0
+  index: -1
+zuojiao
+  rotate: false
+  xy: 164, 101
+  size: 41, 57
+  orig: 41, 57
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: false
+  xy: 211, 159
+  size: 39, 91
+  orig: 39, 91
+  offset: 0, 0
+  index: -1

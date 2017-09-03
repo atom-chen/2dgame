@@ -1,0 +1,83 @@
+
+benglong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+benglong_bozi
+  rotate: false
+  xy: 2, 145
+  size: 108, 109
+  orig: 108, 109
+  offset: 0, 0
+  index: -1
+benglong_shenti
+  rotate: false
+  xy: 2, 382
+  size: 260, 128
+  orig: 260, 128
+  offset: 0, 0
+  index: -1
+benglong_shetou
+  rotate: true
+  xy: 159, 267
+  size: 113, 87
+  orig: 113, 87
+  offset: 0, 0
+  index: -1
+benglong_tou
+  rotate: false
+  xy: 264, 401
+  size: 168, 109
+  orig: 168, 109
+  offset: 0, 0
+  index: -1
+benglong_xiaba
+  rotate: false
+  xy: 2, 256
+  size: 155, 124
+  orig: 155, 124
+  offset: 0, 0
+  index: -1
+benglong_youdatui
+  rotate: true
+  xy: 112, 180
+  size: 74, 57
+  orig: 74, 57
+  offset: 0, 0
+  index: -1
+benglong_youjiao
+  rotate: false
+  xy: 171, 211
+  size: 73, 54
+  orig: 73, 54
+  offset: 0, 0
+  index: -1
+benglong_youqianzhua
+  rotate: true
+  xy: 2, 2
+  size: 56, 60
+  orig: 56, 60
+  offset: 0, 0
+  index: -1
+benglong_zuodatui
+  rotate: true
+  xy: 434, 419
+  size: 91, 74
+  orig: 91, 74
+  offset: 0, 0
+  index: -1
+benglong_zuojiao
+  rotate: false
+  xy: 2, 60
+  size: 85, 83
+  orig: 85, 83
+  offset: 0, 0
+  index: -1
+benglong_zuoqianzhua
+  rotate: false
+  xy: 112, 118
+  size: 59, 60
+  orig: 59, 60
+  offset: 0, 0
+  index: -1

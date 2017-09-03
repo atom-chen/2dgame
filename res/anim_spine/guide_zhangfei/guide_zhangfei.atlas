@@ -1,0 +1,125 @@
+
+guide_zhangfei.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hanshui
+  rotate: false
+  xy: 175, 201
+  size: 23, 18
+  orig: 23, 18
+  offset: 0, 0
+  index: -1
+liubei_jiao1
+  rotate: false
+  xy: 104, 102
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+liubei_jiao2
+  rotate: true
+  xy: 240, 238
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+liubei_jiao3
+  rotate: false
+  xy: 123, 124
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+liubei_jiao4
+  rotate: true
+  xy: 240, 221
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+liubei_jiao5
+  rotate: false
+  xy: 175, 187
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 79, 28
+  size: 56, 15
+  orig: 56, 15
+  offset: 0, 0
+  index: -1
+suduxian
+  rotate: false
+  xy: 104, 221
+  size: 96, 33
+  orig: 96, 33
+  offset: 0, 0
+  index: -1
+zhangfei_body
+  rotate: false
+  xy: 2, 31
+  size: 75, 53
+  orig: 75, 53
+  offset: 0, 0
+  index: -1
+zhangfei_head
+  rotate: false
+  xy: 2, 171
+  size: 100, 83
+  orig: 100, 83
+  offset: 0, 0
+  index: -1
+zhangfei_head_2
+  rotate: false
+  xy: 2, 86
+  size: 100, 83
+  orig: 100, 83
+  offset: 0, 0
+  index: -1
+zhangfei_huo
+  rotate: false
+  xy: 104, 176
+  size: 69, 43
+  orig: 69, 43
+  offset: 0, 0
+  index: -1
+zhangfei_kuzi
+  rotate: false
+  xy: 2, 3
+  size: 65, 26
+  orig: 65, 26
+  offset: 0, 0
+  index: -1
+zhangfei_l_arm
+  rotate: true
+  xy: 202, 228
+  size: 26, 36
+  orig: 26, 36
+  offset: 0, 0
+  index: -1
+zhangfei_r_arm
+  rotate: false
+  xy: 104, 137
+  size: 41, 37
+  orig: 41, 37
+  offset: 0, 0
+  index: -1
+zhangfei_youjiao
+  rotate: false
+  xy: 147, 156
+  size: 17, 18
+  orig: 17, 18
+  offset: 0, 0
+  index: -1
+zhangfei_zuojiao
+  rotate: false
+  xy: 104, 116
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1

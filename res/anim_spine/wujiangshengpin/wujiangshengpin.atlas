@@ -1,0 +1,97 @@
+
+wujiangshengpin.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+N03/N03_00068
+  rotate: false
+  xy: 2, 1546
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00069
+  rotate: false
+  xy: 2, 1160
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00070
+  rotate: false
+  xy: 580, 1546
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00071
+  rotate: false
+  xy: 2, 774
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00072
+  rotate: false
+  xy: 580, 1160
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00073
+  rotate: false
+  xy: 1158, 1546
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00074
+  rotate: false
+  xy: 2, 388
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00075
+  rotate: false
+  xy: 580, 774
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00076
+  rotate: false
+  xy: 1158, 1160
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00077
+  rotate: false
+  xy: 2, 2
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00078
+  rotate: false
+  xy: 580, 388
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+N03/N03_00079
+  rotate: false
+  xy: 1158, 774
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1
+background1
+  rotate: false
+  xy: 580, 2
+  size: 576, 384
+  orig: 576, 384
+  offset: 0, 0
+  index: -1

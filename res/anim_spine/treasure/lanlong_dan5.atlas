@@ -1,0 +1,48 @@
+
+lanlong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lanlong_dan5
+  rotate: false
+  xy: 2, 250
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+lanlong_dan5_chibang
+  rotate: false
+  xy: 2, 2
+  size: 107, 84
+  orig: 107, 84
+  offset: 0, 0
+  index: -1
+lanlong_dan5_danke
+  rotate: false
+  xy: 299, 393
+  size: 144, 98
+  orig: 144, 98
+  offset: 0, 0
+  index: -1
+lanlong_dan5_shenti
+  rotate: false
+  xy: 2, 88
+  size: 132, 160
+  orig: 132, 160
+  offset: 0, 0
+  index: -1
+lanlong_dan5_tou
+  rotate: false
+  xy: 185, 346
+  size: 112, 145
+  orig: 112, 145
+  offset: 0, 0
+  index: -1
+lanlong_dan5_xiaba
+  rotate: false
+  xy: 185, 275
+  size: 73, 69
+  orig: 73, 69
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+honglong_dan3.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+honglong_dan3
+  rotate: false
+  xy: 2, 2
+  size: 200, 241
+  orig: 200, 241
+  offset: 0, 0
+  index: -1

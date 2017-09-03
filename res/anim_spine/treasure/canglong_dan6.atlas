@@ -1,0 +1,62 @@
+
+canglong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+canglong_dan6_shenti
+  rotate: false
+  xy: 2, 307
+  size: 385, 203
+  orig: 385, 203
+  offset: 0, 0
+  index: -1
+canglong_dan6_shetou
+  rotate: false
+  xy: 198, 172
+  size: 142, 133
+  orig: 142, 133
+  offset: 0, 0
+  index: -1
+canglong_dan6_tou
+  rotate: false
+  xy: 2, 199
+  size: 194, 106
+  orig: 194, 106
+  offset: 0, 0
+  index: -1
+canglong_dan6_xiaba
+  rotate: false
+  xy: 2, 95
+  size: 180, 102
+  orig: 180, 102
+  offset: 0, 0
+  index: -1
+canglong_dan6_youhouqi
+  rotate: false
+  xy: 342, 225
+  size: 42, 80
+  orig: 42, 80
+  offset: 0, 0
+  index: -1
+canglong_dan6_youqianqi2
+  rotate: false
+  xy: 2, 7
+  size: 54, 86
+  orig: 54, 86
+  offset: 0, 0
+  index: -1
+canglong_dan6_zuohouqi
+  rotate: false
+  xy: 389, 338
+  size: 87, 63
+  orig: 87, 63
+  offset: 0, 0
+  index: -1
+canglong_dan6_zuoqianqi2
+  rotate: true
+  xy: 389, 403
+  size: 107, 121
+  orig: 107, 121
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,48 @@
+
+daocaoren.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+daocaoren_dun
+  rotate: false
+  xy: 2, 2
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+daocaoren_jian
+  rotate: false
+  xy: 84, 134
+  size: 29, 53
+  orig: 29, 53
+  offset: 0, 0
+  index: -1
+daocaoren_l_shou
+  rotate: false
+  xy: 59, 85
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+daocaoren_r_shou
+  rotate: false
+  xy: 115, 162
+  size: 38, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+daocaoren_shenti
+  rotate: false
+  xy: 2, 106
+  size: 80, 81
+  orig: 80, 81
+  offset: 0, 0
+  index: -1
+daocaoren_tou
+  rotate: false
+  xy: 2, 41
+  size: 55, 63
+  orig: 55, 63
+  offset: 0, 0
+  index: -1

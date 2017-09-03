@@ -1,0 +1,41 @@
+
+baolong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baolong_dan5
+  rotate: false
+  xy: 2, 264
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+baolong_dan5_danke
+  rotate: false
+  xy: 185, 347
+  size: 123, 158
+  orig: 123, 158
+  offset: 0, 0
+  index: -1
+baolong_dan5_shenti
+  rotate: false
+  xy: 2, 89
+  size: 116, 173
+  orig: 116, 173
+  offset: 0, 0
+  index: -1
+baolong_dan5_tou
+  rotate: false
+  xy: 310, 385
+  size: 117, 120
+  orig: 117, 120
+  offset: 0, 0
+  index: -1
+baolong_dan5_xiaba
+  rotate: true
+  xy: 2, 2
+  size: 85, 99
+  orig: 85, 99
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,97 @@
+
+ui_map_box.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box1
+  rotate: false
+  xy: 2, 63
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+dabaoxiang
+  rotate: false
+  xy: 2, 145
+  size: 128, 109
+  orig: 128, 109
+  offset: 0, 0
+  index: -1
+dan
+  rotate: true
+  xy: 132, 101
+  size: 78, 89
+  orig: 78, 89
+  offset: 0, 0
+  index: -1
+liubei_body
+  rotate: false
+  xy: 2, 9
+  size: 86, 50
+  orig: 86, 50
+  offset: 0, 0
+  index: -1
+liubei_head
+  rotate: false
+  xy: 132, 181
+  size: 104, 73
+  orig: 104, 73
+  offset: 0, 0
+  index: -1
+liubei_kuzi
+  rotate: true
+  xy: 223, 61
+  size: 53, 27
+  orig: 53, 27
+  offset: 0, 0
+  index: -1
+liubei_r_arm
+  rotate: true
+  xy: 223, 116
+  size: 63, 31
+  orig: 63, 31
+  offset: 0, 0
+  index: -1
+liubei_youjiao
+  rotate: false
+  xy: 84, 103
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+liubei_zuojiao
+  rotate: true
+  xy: 84, 124
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 238, 198
+  size: 56, 15
+  orig: 56, 15
+  offset: 0, 0
+  index: -1
+suip_1
+  rotate: true
+  xy: 90, 2
+  size: 57, 53
+  orig: 57, 53
+  offset: 0, 0
+  index: -1
+suip_2
+  rotate: true
+  xy: 145, 6
+  size: 53, 48
+  orig: 53, 48
+  offset: 0, 0
+  index: -1
+suip_3
+  rotate: true
+  xy: 195, 6
+  size: 53, 48
+  orig: 53, 48
+  offset: 0, 0
+  index: -1

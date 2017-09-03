@@ -1,0 +1,167 @@
+
+ui_map_award1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+beijing
+  rotate: false
+  xy: 2, 711
+  size: 491, 311
+  orig: 491, 311
+  offset: 0, 0
+  index: -1
+biti
+  rotate: false
+  xy: 1017, 1015
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+dun
+  rotate: false
+  xy: 737, 845
+  size: 71, 29
+  orig: 71, 29
+  offset: 0, 0
+  index: -1
+duzi
+  rotate: false
+  xy: 607, 817
+  size: 128, 57
+  orig: 128, 57
+  offset: 0, 0
+  index: -1
+gebo
+  rotate: true
+  xy: 570, 628
+  size: 49, 34
+  orig: 49, 34
+  offset: 0, 0
+  index: -1
+gebo hou
+  rotate: false
+  xy: 2, 133
+  size: 61, 95
+  orig: 61, 95
+  offset: 0, 0
+  index: -1
+gebo3
+  rotate: true
+  xy: 2, 2
+  size: 60, 32
+  orig: 60, 32
+  offset: 0, 0
+  index: -1
+houmianderen yingzi
+  rotate: false
+  xy: 2, 573
+  size: 491, 136
+  orig: 491, 136
+  offset: 0, 0
+  index: -1
+jianjia
+  rotate: false
+  xy: 98, 263
+  size: 52, 47
+  orig: 52, 47
+  offset: 0, 0
+  index: -1
+jizheshenti
+  rotate: true
+  xy: 895, 890
+  size: 132, 120
+  orig: 132, 120
+  offset: 0, 0
+  index: -1
+jizhetou
+  rotate: false
+  xy: 2, 397
+  size: 183, 174
+  orig: 183, 174
+  offset: 0, 0
+  index: -1
+jizhezheng
+  rotate: false
+  xy: 495, 591
+  size: 73, 86
+  orig: 73, 86
+  offset: 0, 0
+  index: -1
+jushou ren
+  rotate: false
+  xy: 2, 230
+  size: 94, 165
+  orig: 94, 165
+  offset: 0, 0
+  index: -1
+meimao
+  rotate: false
+  xy: 287, 510
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+qizhi
+  rotate: false
+  xy: 495, 679
+  size: 110, 195
+  orig: 110, 195
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 187, 400
+  size: 75, 65
+  orig: 75, 65
+  offset: 0, 0
+  index: -1
+shenti3
+  rotate: false
+  xy: 2, 64
+  size: 61, 67
+  orig: 61, 67
+  offset: 0, 0
+  index: -1
+shou
+  rotate: false
+  xy: 607, 736
+  size: 52, 79
+  orig: 52, 79
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 187, 467
+  size: 98, 104
+  orig: 98, 104
+  offset: 0, 0
+  index: -1
+tou3
+  rotate: false
+  xy: 98, 312
+  size: 68, 83
+  orig: 68, 83
+  offset: 0, 0
+  index: -1
+tui
+  rotate: false
+  xy: 287, 530
+  size: 108, 41
+  orig: 108, 41
+  offset: 0, 0
+  index: -1
+yan
+  rotate: false
+  xy: 495, 876
+  size: 398, 146
+  orig: 398, 146
+  offset: 0, 0
+  index: -1
+zuiba
+  rotate: true
+  xy: 65, 172
+  size: 56, 23
+  orig: 56, 23
+  offset: 0, 0
+  index: -1

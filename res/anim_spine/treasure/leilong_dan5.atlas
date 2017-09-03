@@ -1,0 +1,41 @@
+
+leilong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+leilong_dan5
+  rotate: false
+  xy: 2, 236
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+leilong_dan5_bozi
+  rotate: false
+  xy: 2, 2
+  size: 93, 113
+  orig: 93, 113
+  offset: 0, 0
+  index: -1
+leilong_dan5_di
+  rotate: false
+  xy: 2, 117
+  size: 167, 117
+  orig: 167, 117
+  offset: 0, 0
+  index: -1
+leilong_dan5_tou
+  rotate: false
+  xy: 185, 353
+  size: 124, 124
+  orig: 124, 124
+  offset: 0, 0
+  index: -1
+leilong_dan5_xiazui
+  rotate: false
+  xy: 185, 260
+  size: 81, 91
+  orig: 81, 91
+  offset: 0, 0
+  index: -1

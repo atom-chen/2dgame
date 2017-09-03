@@ -1,0 +1,34 @@
+
+ui_battlefailure.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+laba1
+  rotate: false
+  xy: 2, 148
+  size: 152, 91
+  orig: 152, 91
+  offset: 0, 0
+  index: -1
+laba2
+  rotate: false
+  xy: 2, 71
+  size: 152, 75
+  orig: 152, 75
+  offset: 0, 0
+  index: -1
+piaodai1
+  rotate: false
+  xy: 156, 33
+  size: 83, 90
+  orig: 83, 90
+  offset: 0, 0
+  index: -1
+piaodai2
+  rotate: false
+  xy: 156, 125
+  size: 78, 114
+  orig: 78, 114
+  offset: 0, 0
+  index: -1

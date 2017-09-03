@@ -1,0 +1,41 @@
+
+xunlong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xunlong_dan5
+  rotate: false
+  xy: 2, 244
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+xunlong_dan5_l_chibang
+  rotate: false
+  xy: 326, 382
+  size: 43, 103
+  orig: 43, 103
+  offset: 0, 0
+  index: -1
+xunlong_dan5_r_chibang
+  rotate: true
+  xy: 2, 2
+  size: 240, 156
+  orig: 240, 156
+  offset: 0, 0
+  index: -1
+xunlong_dan5_tou
+  rotate: false
+  xy: 185, 373
+  size: 139, 112
+  orig: 139, 112
+  offset: 0, 0
+  index: -1
+xunlong_dan5_xiazui
+  rotate: false
+  xy: 185, 288
+  size: 105, 83
+  orig: 105, 83
+  offset: 0, 0
+  index: -1

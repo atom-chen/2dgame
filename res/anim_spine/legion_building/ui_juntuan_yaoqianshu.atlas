@@ -1,0 +1,13 @@
+
+ui_juntuan_yaoqianshu.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ui_juntuan_yaoqianshu
+  rotate: false
+  xy: 2, 2
+  size: 100, 112
+  orig: 100, 112
+  offset: 0, 0
+  index: -1

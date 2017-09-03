@@ -1,0 +1,41 @@
+
+canglong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+canglong_dan5
+  rotate: false
+  xy: 2, 260
+  size: 226, 241
+  orig: 226, 241
+  offset: 0, 0
+  index: -1
+canglong_dan5_danke
+  rotate: false
+  xy: 230, 405
+  size: 144, 96
+  orig: 144, 96
+  offset: 0, 0
+  index: -1
+canglong_dan5_shenti
+  rotate: false
+  xy: 2, 69
+  size: 120, 189
+  orig: 120, 189
+  offset: 0, 0
+  index: -1
+canglong_dan5_tou
+  rotate: false
+  xy: 2, 2
+  size: 102, 65
+  orig: 102, 65
+  offset: 0, 0
+  index: -1
+canglong_dan5_xiaba
+  rotate: false
+  xy: 124, 161
+  size: 102, 97
+  orig: 102, 97
+  offset: 0, 0
+  index: -1

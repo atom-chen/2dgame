@@ -1,0 +1,83 @@
+
+statue.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chibang1
+  rotate: false
+  xy: 281, 304
+  size: 20, 14
+  orig: 20, 14
+  offset: 0, 0
+  index: -1
+chinbang
+  rotate: false
+  xy: 110, 72
+  size: 20, 14
+  orig: 20, 14
+  offset: 0, 0
+  index: -1
+guanyujiao
+  rotate: true
+  xy: 2, 11
+  size: 46, 72
+  orig: 46, 72
+  offset: 0, 0
+  index: -1
+jiao
+  rotate: false
+  xy: 303, 308
+  size: 18, 10
+  orig: 18, 10
+  offset: 0, 0
+  index: -1
+longshenti
+  rotate: false
+  xy: 110, 320
+  size: 211, 188
+  orig: 211, 188
+  offset: 0, 0
+  index: -1
+longtou
+  rotate: false
+  xy: 281, 77
+  size: 130, 120
+  orig: 130, 120
+  offset: 0, 0
+  index: -1
+shengti
+  rotate: false
+  xy: 444, 284
+  size: 29, 15
+  orig: 29, 15
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 110, 88
+  size: 169, 230
+  orig: 169, 230
+  offset: 0, 0
+  index: -1
+shidun2
+  rotate: false
+  xy: 323, 301
+  size: 185, 207
+  orig: 185, 207
+  offset: 0, 0
+  index: -1
+shou
+  rotate: false
+  xy: 281, 199
+  size: 161, 100
+  orig: 161, 100
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 59
+  size: 106, 449
+  orig: 106, 449
+  offset: 0, 0
+  index: -1

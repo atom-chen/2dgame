@@ -1,0 +1,322 @@
+{
+  "content_scale": 1.0,
+  "armature_data": [
+    {
+      "strVersion": "1.6.0.0",
+      "version": 1.6,
+      "name": "story_3",
+      "bone_data": [
+        {
+          "name": "story_3_lian3",
+          "parent": "",
+          "dI": 0,
+          "x": 34.911724090576172,
+          "y": 141.614501953125,
+          "z": 2,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -0.9928944,
+          "kY": 0.9928944,
+          "arrow_x": 32.304786682128906,
+          "arrow_y": 3.9479826227761805E-05,
+          "effectbyskeleton": true,
+          "bl": 32,
+          "display_data": [
+            {
+              "name": "story_3_lian3.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": -24.5498962,
+                  "y": -7.583496,
+                  "cX": 1.00000012,
+                  "cY": 1.00000012,
+                  "kX": 0.992894053,
+                  "kY": -0.992893636
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_3_shou1",
+          "parent": "",
+          "dI": 0,
+          "x": 33.1666259765625,
+          "y": 119.34002685546875,
+          "z": 1,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 2.83708167,
+          "kY": -2.83708167,
+          "arrow_x": 73.375801086425781,
+          "arrow_y": -1.5771482139825821E-05,
+          "effectbyskeleton": true,
+          "bl": 73,
+          "display_data": [
+            {
+              "name": "story_3_shou1.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 21.2422256,
+                  "y": 3.10730076,
+                  "cX": 1.00000012,
+                  "cY": 1.00000012,
+                  "kX": 3.44610453,
+                  "kY": 2.83708215
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "story_3_youyiku-2",
+          "parent": "story_3_shou1",
+          "dI": 0,
+          "x": 30.2252197265625,
+          "y": -14.362152099609375,
+          "z": 3,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": -0.5617912,
+          "kY": 0.5617912,
+          "arrow_x": 108.08332061767578,
+          "arrow_y": -4.7498178901150823E-06,
+          "effectbyskeleton": true,
+          "bl": 108,
+          "display_data": [
+            {
+              "name": "story_3_youyiku-2.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 49.7469444,
+                  "y": 10.6319447,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 4.007895,
+                  "kY": 2.2752924
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "animation_data": [
+    {
+      "name": "story_3",
+      "mov_data": [
+        {
+          "name": "Animation1",
+          "dr": 31,
+          "lp": true,
+          "to": 0,
+          "drTW": 0,
+          "twE": 0,
+          "sc": 1.0,
+          "mov_bone_data": [
+            {
+              "name": "story_3_youyiku-2",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 0.97,
+                  "kX": 0.3449587,
+                  "kY": -0.3449587,
+                  "fi": 5,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 0.9,
+                  "kX": 0.08403358,
+                  "kY": -0.08403358,
+                  "fi": 15,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 0.93,
+                  "kX": -0.125513718,
+                  "kY": 0.125513718,
+                  "fi": 20,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 30,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_3_lian3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 30,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            },
+            {
+              "name": "story_3_shou1",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": -0.371711731,
+                  "kY": 0.371711731,
+                  "fi": 15,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                },
+                {
+                  "dI": 0,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0,
+                  "fi": 30,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "bd_src": 1,
+                  "bd_dst": 771
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texture_data": [
+    {
+      "name": "story_3_shou1",
+      "width": 43.0,
+      "height": 34.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_3_lian3",
+      "width": 92.0,
+      "height": 106.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    },
+    {
+      "name": "story_3_youyiku-2",
+      "width": 89.0,
+      "height": 93.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    }
+  ],
+  "config_file_path": [],
+  "config_png_path": []
+}

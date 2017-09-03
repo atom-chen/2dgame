@@ -1,0 +1,76 @@
+
+email.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+biyan
+  rotate: false
+  xy: 439, 418
+  size: 27, 20
+  orig: 27, 20
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 128
+  size: 273, 378
+  orig: 273, 378
+  offset: 0, 0
+  index: -1
+book1
+  rotate: true
+  xy: 413, 306
+  size: 51, 20
+  orig: 51, 20
+  offset: 0, 0
+  index: -1
+book2
+  rotate: false
+  xy: 206, 104
+  size: 56, 22
+  orig: 56, 22
+  offset: 0, 0
+  index: -1
+bozi
+  rotate: false
+  xy: 439, 440
+  size: 45, 66
+  orig: 45, 66
+  offset: 0, 0
+  index: -1
+chibang_l
+  rotate: false
+  xy: 277, 140
+  size: 123, 100
+  orig: 123, 100
+  offset: 0, 0
+  index: -1
+chibang_r
+  rotate: false
+  xy: 2, 31
+  size: 202, 95
+  orig: 202, 95
+  offset: 0, 0
+  index: -1
+shuzhuang
+  rotate: true
+  xy: 2, 2
+  size: 27, 62
+  orig: 27, 62
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 277, 359
+  size: 160, 147
+  orig: 160, 147
+  offset: 0, 0
+  index: -1
+tou1
+  rotate: false
+  xy: 277, 242
+  size: 134, 115
+  orig: 134, 115
+  offset: 0, 0
+  index: -1

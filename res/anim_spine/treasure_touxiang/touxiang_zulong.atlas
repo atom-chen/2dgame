@@ -1,0 +1,97 @@
+
+touxiang_zulong.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zulong_biyan
+  rotate: false
+  xy: 2, 2
+  size: 25, 20
+  orig: 25, 20
+  offset: 0, 0
+  index: -1
+zulong_shou1
+  rotate: false
+  xy: 2, 24
+  size: 61, 51
+  orig: 61, 51
+  offset: 0, 0
+  index: -1
+zulong_shou2
+  rotate: false
+  xy: 287, 407
+  size: 59, 55
+  orig: 59, 55
+  offset: 0, 0
+  index: -1
+zulong_tou
+  rotate: false
+  xy: 2, 255
+  size: 170, 207
+  orig: 170, 207
+  offset: 0, 0
+  index: -1
+zulong_toufa1
+  rotate: false
+  xy: 2, 77
+  size: 90, 93
+  orig: 90, 93
+  offset: 0, 0
+  index: -1
+zulong_toufa2
+  rotate: false
+  xy: 2, 172
+  size: 161, 81
+  orig: 161, 81
+  offset: 0, 0
+  index: -1
+zulong_toufa3
+  rotate: false
+  xy: 174, 286
+  size: 72, 97
+  orig: 72, 97
+  offset: 0, 0
+  index: -1
+zulong_xu1
+  rotate: false
+  xy: 348, 419
+  size: 38, 43
+  orig: 38, 43
+  offset: 0, 0
+  index: -1
+zulong_xu2
+  rotate: true
+  xy: 174, 265
+  size: 19, 44
+  orig: 19, 44
+  offset: 0, 0
+  index: -1
+zulong_xu3
+  rotate: true
+  xy: 287, 394
+  size: 11, 36
+  orig: 11, 36
+  offset: 0, 0
+  index: -1
+zulong_yanjing
+  rotate: false
+  xy: 248, 360
+  size: 25, 23
+  orig: 25, 23
+  offset: 0, 0
+  index: -1
+zulong_yumao1
+  rotate: false
+  xy: 174, 385
+  size: 111, 77
+  orig: 111, 77
+  offset: 0, 0
+  index: -1
+zulong_yumao2
+  rotate: false
+  xy: 94, 101
+  size: 24, 69
+  orig: 24, 69
+  offset: 0, 0
+  index: -1

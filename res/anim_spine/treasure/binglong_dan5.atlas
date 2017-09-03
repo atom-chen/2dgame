@@ -1,0 +1,62 @@
+
+binglong_dan5.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+binglong_dan5
+  rotate: false
+  xy: 2, 267
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+binglong_dan5_danke
+  rotate: false
+  xy: 2, 151
+  size: 149, 114
+  orig: 149, 114
+  offset: 0, 0
+  index: -1
+binglong_dan5_shenti
+  rotate: true
+  xy: 309, 438
+  size: 70, 94
+  orig: 70, 94
+  offset: 0, 0
+  index: -1
+binglong_dan5_tou
+  rotate: false
+  xy: 185, 429
+  size: 122, 79
+  orig: 122, 79
+  offset: 0, 0
+  index: -1
+binglong_dan5_xiaba
+  rotate: true
+  xy: 185, 268
+  size: 75, 79
+  orig: 75, 79
+  offset: 0, 0
+  index: -1
+binglong_dan5_youchibang1
+  rotate: false
+  xy: 185, 345
+  size: 96, 82
+  orig: 96, 82
+  offset: 0, 0
+  index: -1
+binglong_dan5_youchibang2
+  rotate: true
+  xy: 2, 2
+  size: 50, 99
+  orig: 50, 99
+  offset: 0, 0
+  index: -1
+binglong_dan5_zuochibang
+  rotate: false
+  xy: 2, 54
+  size: 99, 95
+  orig: 99, 95
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,41 @@
+
+altar.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+beike
+  rotate: false
+  xy: 2, 106
+  size: 174, 137
+  orig: 174, 137
+  offset: 0, 0
+  index: -1
+di
+  rotate: false
+  xy: 2, 245
+  size: 332, 76
+  orig: 332, 76
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 379, 379
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+yanshi
+  rotate: false
+  xy: 2, 323
+  size: 375, 99
+  orig: 375, 99
+  offset: 0, 0
+  index: -1
+zhuzi
+  rotate: false
+  xy: 2, 61
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1

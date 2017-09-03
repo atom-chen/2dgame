@@ -1,0 +1,48 @@
+
+ui_xunluozhong.png
+size: 64,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian1
+  rotate: false
+  xy: 30, 18
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+dian2
+  rotate: false
+  xy: 30, 5
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+dian3
+  rotate: false
+  xy: 30, 5
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+luo
+  rotate: false
+  xy: 2, 2
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+xun
+  rotate: false
+  xy: 30, 31
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+zhong
+  rotate: false
+  xy: 2, 30
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+city_shake_1_2.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhucheng
+  rotate: false
+  xy: 2, 48
+  size: 190, 144
+  orig: 190, 144
+  offset: 0, 0
+  index: -1

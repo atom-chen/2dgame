@@ -1,0 +1,41 @@
+
+xunlong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xunlong_dan4
+  rotate: false
+  xy: 2, 236
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+xunlong_dan4_di
+  rotate: true
+  xy: 2, 45
+  size: 189, 165
+  orig: 189, 165
+  offset: 0, 0
+  index: -1
+xunlong_dan4_ke
+  rotate: false
+  xy: 185, 362
+  size: 158, 115
+  orig: 158, 115
+  offset: 0, 0
+  index: -1
+xunlong_dan4_tou
+  rotate: false
+  xy: 185, 256
+  size: 151, 104
+  orig: 151, 104
+  offset: 0, 0
+  index: -1
+xunlong_dan4_zhuazi
+  rotate: false
+  xy: 2, 2
+  size: 52, 41
+  orig: 52, 41
+  offset: 0, 0
+  index: -1

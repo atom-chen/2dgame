@@ -1,0 +1,83 @@
+
+baolong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baolong_bozi
+  rotate: false
+  xy: 2, 197
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+baolong_shenti
+  rotate: false
+  xy: 2, 397
+  size: 219, 107
+  orig: 219, 107
+  offset: 0, 0
+  index: -1
+baolong_shetou
+  rotate: true
+  xy: 135, 300
+  size: 95, 73
+  orig: 95, 73
+  offset: 0, 0
+  index: -1
+baolong_tou
+  rotate: false
+  xy: 223, 413
+  size: 142, 91
+  orig: 142, 91
+  offset: 0, 0
+  index: -1
+baolong_xiaba
+  rotate: false
+  xy: 2, 290
+  size: 131, 105
+  orig: 131, 105
+  offset: 0, 0
+  index: -1
+baolong_youdatui
+  rotate: false
+  xy: 441, 455
+  size: 63, 49
+  orig: 63, 49
+  offset: 0, 0
+  index: -1
+baolong_youjiao
+  rotate: false
+  xy: 2, 86
+  size: 62, 46
+  orig: 62, 46
+  offset: 0, 0
+  index: -1
+baolong_youqianzhua
+  rotate: false
+  xy: 95, 237
+  size: 47, 51
+  orig: 47, 51
+  offset: 0, 0
+  index: -1
+baolong_zuodatui
+  rotate: false
+  xy: 2, 134
+  size: 76, 61
+  orig: 76, 61
+  offset: 0, 0
+  index: -1
+baolong_zuojiao
+  rotate: false
+  xy: 367, 434
+  size: 72, 70
+  orig: 72, 70
+  offset: 0, 0
+  index: -1
+baolong_zuoqianzhua
+  rotate: false
+  xy: 2, 35
+  size: 51, 49
+  orig: 51, 49
+  offset: 0, 0
+  index: -1

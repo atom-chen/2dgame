@@ -1,0 +1,90 @@
+
+boat.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ban
+  rotate: false
+  xy: 2, 73
+  size: 335, 176
+  orig: 335, 176
+  offset: 0, 0
+  index: -1
+biyan
+  rotate: false
+  xy: 858, 233
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 251
+  size: 517, 746
+  orig: 517, 746
+  offset: 0, 0
+  index: -1
+bozi
+  rotate: false
+  xy: 858, 269
+  size: 129, 263
+  orig: 129, 263
+  offset: 0, 0
+  index: -1
+bozi_l
+  rotate: false
+  xy: 339, 2
+  size: 101, 247
+  orig: 101, 247
+  offset: 0, 0
+  index: -1
+bozi_r
+  rotate: true
+  xy: 2, 7
+  size: 64, 250
+  orig: 64, 250
+  offset: 0, 0
+  index: -1
+chuanban
+  rotate: false
+  xy: 648, 120
+  size: 137, 58
+  orig: 137, 58
+  offset: 0, 0
+  index: -1
+fan1
+  rotate: false
+  xy: 521, 232
+  size: 335, 300
+  orig: 335, 300
+  offset: 0, 0
+  index: -1
+fan1zhuzi
+  rotate: false
+  xy: 521, 534
+  size: 402, 463
+  orig: 402, 463
+  offset: 0, 0
+  index: -1
+qizi1
+  rotate: true
+  xy: 925, 822
+  size: 175, 50
+  orig: 175, 50
+  offset: 0, 0
+  index: -1
+qizi2
+  rotate: false
+  xy: 648, 180
+  size: 153, 50
+  orig: 153, 50
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 442, 16
+  size: 204, 214
+  orig: 204, 214
+  offset: 0, 0
+  index: -1

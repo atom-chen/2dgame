@@ -1,0 +1,13 @@
+
+xunlong_dan1.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xunlong_dan1
+  rotate: false
+  xy: 2, 2
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1

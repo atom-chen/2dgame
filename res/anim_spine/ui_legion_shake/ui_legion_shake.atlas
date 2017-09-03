@@ -1,0 +1,174 @@
+
+ui_legion_shake.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JB_00
+  rotate: false
+  xy: 2, 362
+  size: 158, 233
+  orig: 158, 233
+  offset: 0, 0
+  index: -1
+JB_01
+  rotate: true
+  xy: 564, 855
+  size: 158, 233
+  orig: 158, 233
+  offset: 0, 0
+  index: -1
+JB_02
+  rotate: false
+  xy: 2, 127
+  size: 158, 233
+  orig: 158, 233
+  offset: 0, 0
+  index: -1
+JB_03
+  rotate: false
+  xy: 162, 362
+  size: 158, 233
+  orig: 158, 233
+  offset: 0, 0
+  index: -1
+JB_04
+  rotate: false
+  xy: 162, 127
+  size: 158, 233
+  orig: 158, 233
+  offset: 0, 0
+  index: -1
+JB_05
+  rotate: true
+  xy: 331, 681
+  size: 158, 233
+  orig: 158, 233
+  offset: 0, 0
+  index: -1
+di
+  rotate: false
+  xy: 2, 789
+  size: 327, 224
+  orig: 327, 224
+  offset: 0, 0
+  index: -1
+jinbi_00060_02
+  rotate: false
+  xy: 270, 87
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_04
+  rotate: false
+  xy: 179, 7
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_06
+  rotate: false
+  xy: 269, 616
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_08
+  rotate: false
+  xy: 566, 815
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_10
+  rotate: false
+  xy: 566, 775
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_12
+  rotate: false
+  xy: 606, 815
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_14
+  rotate: false
+  xy: 566, 735
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+jinbi_00060_16
+  rotate: false
+  xy: 606, 775
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+piaodai_1
+  rotate: false
+  xy: 269, 656
+  size: 25, 55
+  orig: 25, 55
+  offset: 0, 0
+  index: -1
+piaodai_2
+  rotate: false
+  xy: 179, 47
+  size: 33, 78
+  orig: 33, 78
+  offset: 0, 0
+  index: -1
+piaodai_3
+  rotate: false
+  xy: 214, 50
+  size: 24, 75
+  orig: 24, 75
+  offset: 0, 0
+  index: -1
+piaodai_4
+  rotate: false
+  xy: 269, 713
+  size: 36, 74
+  orig: 36, 74
+  offset: 0, 0
+  index: -1
+piaodai_5
+  rotate: false
+  xy: 240, 75
+  size: 28, 50
+  orig: 28, 50
+  offset: 0, 0
+  index: -1
+shu_1
+  rotate: false
+  xy: 2, 597
+  size: 265, 190
+  orig: 265, 190
+  offset: 0, 0
+  index: -1
+shu_2
+  rotate: true
+  xy: 331, 841
+  size: 172, 231
+  orig: 172, 231
+  offset: 0, 0
+  index: -1
+shu_3
+  rotate: false
+  xy: 799, 873
+  size: 203, 140
+  orig: 203, 140
+  offset: 0, 0
+  index: -1
+shugan
+  rotate: false
+  xy: 2, 2
+  size: 175, 123
+  orig: 175, 123
+  offset: 0, 0
+  index: -1

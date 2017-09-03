@@ -1,0 +1,111 @@
+
+lanlong_dan6.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lanlong_bozi
+  rotate: true
+  xy: 396, 380
+  size: 130, 107
+  orig: 130, 107
+  offset: 0, 0
+  index: -1
+lanlong_shenti
+  rotate: false
+  xy: 2, 25
+  size: 116, 127
+  orig: 116, 127
+  offset: 0, 0
+  index: -1
+lanlong_shetou
+  rotate: false
+  xy: 120, 21
+  size: 68, 53
+  orig: 68, 53
+  offset: 0, 0
+  index: -1
+lanlong_tou
+  rotate: false
+  xy: 237, 85
+  size: 178, 173
+  orig: 178, 173
+  offset: 0, 0
+  index: -1
+lanlong_weiba
+  rotate: false
+  xy: 120, 76
+  size: 113, 76
+  orig: 113, 76
+  offset: 0, 0
+  index: -1
+lanlong_xiaba
+  rotate: false
+  xy: 396, 283
+  size: 94, 95
+  orig: 94, 95
+  offset: 0, 0
+  index: -1
+lanlong_youchibang1
+  rotate: false
+  xy: 237, 260
+  size: 157, 250
+  orig: 157, 250
+  offset: 0, 0
+  index: -1
+lanlong_youjiao
+  rotate: false
+  xy: 246, 53
+  size: 53, 30
+  orig: 53, 30
+  offset: 0, 0
+  index: -1
+lanlong_youshou
+  rotate: true
+  xy: 417, 76
+  size: 36, 55
+  orig: 36, 55
+  offset: 0, 0
+  index: -1
+lanlong_youtui
+  rotate: false
+  xy: 190, 21
+  size: 54, 53
+  orig: 54, 53
+  offset: 0, 0
+  index: -1
+lanlong_zuobi
+  rotate: true
+  xy: 478, 169
+  size: 49, 32
+  orig: 49, 32
+  offset: 0, 0
+  index: -1
+lanlong_zuochibang1
+  rotate: false
+  xy: 2, 154
+  size: 233, 356
+  orig: 233, 356
+  offset: 0, 0
+  index: -1
+lanlong_zuojiao
+  rotate: false
+  xy: 417, 114
+  size: 58, 50
+  orig: 58, 50
+  offset: 0, 0
+  index: -1
+lanlong_zuoshou
+  rotate: false
+  xy: 417, 166
+  size: 59, 52
+  orig: 59, 52
+  offset: 0, 0
+  index: -1
+lanlong_zuotui
+  rotate: false
+  xy: 417, 220
+  size: 60, 61
+  orig: 60, 61
+  offset: 0, 0
+  index: -1

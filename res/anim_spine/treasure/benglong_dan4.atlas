@@ -1,0 +1,41 @@
+
+benglong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+benglong_dan4
+  rotate: false
+  xy: 2, 259
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+benglong_dan4_ke
+  rotate: false
+  xy: 2, 2
+  size: 95, 70
+  orig: 95, 70
+  offset: 0, 0
+  index: -1
+benglong_dan4_shenti
+  rotate: true
+  xy: 2, 74
+  size: 183, 127
+  orig: 183, 127
+  offset: 0, 0
+  index: -1
+benglong_dan4_shou
+  rotate: false
+  xy: 131, 221
+  size: 40, 36
+  orig: 40, 36
+  offset: 0, 0
+  index: -1
+benglong_dan4_tou
+  rotate: false
+  xy: 185, 376
+  size: 116, 124
+  orig: 116, 124
+  offset: 0, 0
+  index: -1

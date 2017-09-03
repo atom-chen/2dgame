@@ -1,0 +1,34 @@
+
+mainscene_animal_1.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 65, 95
+  size: 61, 31
+  orig: 61, 31
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 65, 69
+  size: 61, 24
+  orig: 61, 24
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 86
+  size: 61, 40
+  orig: 61, 40
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 63
+  size: 61, 21
+  orig: 61, 21
+  offset: 0, 0
+  index: -1

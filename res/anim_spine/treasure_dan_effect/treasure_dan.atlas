@@ -1,0 +1,971 @@
+
+treasure_dan.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dan_light/dan_light_00
+  rotate: true
+  xy: 1774, 708
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dan_light/dan_light_01
+  rotate: true
+  xy: 1774, 486
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dansui1/dansui1_00
+  rotate: true
+  xy: 743, 68
+  size: 370, 150
+  orig: 370, 150
+  offset: 0, 0
+  index: -1
+dansui1/dansui1_01
+  rotate: false
+  xy: 927, 1494
+  size: 370, 150
+  orig: 370, 150
+  offset: 0, 0
+  index: -1
+dansui1/dansui1_02
+  rotate: false
+  xy: 1299, 1494
+  size: 370, 150
+  orig: 370, 150
+  offset: 0, 0
+  index: -1
+dansui1/dansui1_03
+  rotate: false
+  xy: 1671, 1494
+  size: 370, 150
+  orig: 370, 150
+  offset: 0, 0
+  index: -1
+dansui2/dansui2_00
+  rotate: false
+  xy: 1542, 526
+  size: 220, 80
+  orig: 220, 80
+  offset: 0, 0
+  index: -1
+dansui3/dansui3_00
+  rotate: true
+  xy: 1817, 1212
+  size: 280, 220
+  orig: 280, 220
+  offset: 0, 0
+  index: -1
+dansui3/dansui3_01
+  rotate: true
+  xy: 1817, 930
+  size: 280, 220
+  orig: 280, 220
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_00
+  rotate: false
+  xy: 806, 1564
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_01
+  rotate: false
+  xy: 806, 1482
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_02
+  rotate: true
+  xy: 927, 10
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_03
+  rotate: true
+  xy: 1009, 10
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_04
+  rotate: true
+  xy: 1091, 10
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_05
+  rotate: false
+  xy: 1745, 60
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_00
+  rotate: false
+  xy: 806, 444
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_01
+  rotate: false
+  xy: 958, 444
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_02
+  rotate: false
+  xy: 1048, 934
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_03
+  rotate: false
+  xy: 1200, 938
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_04
+  rotate: true
+  xy: 1110, 456
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_05
+  rotate: true
+  xy: 1182, 456
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_06
+  rotate: true
+  xy: 1254, 456
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_07
+  rotate: true
+  xy: 1326, 456
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_08
+  rotate: true
+  xy: 1398, 456
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen2/liewen2_09
+  rotate: true
+  xy: 1470, 456
+  size: 150, 70
+  orig: 150, 70
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_00
+  rotate: true
+  xy: 1048, 1372
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_01
+  rotate: true
+  xy: 1048, 1250
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_02
+  rotate: true
+  xy: 1048, 1128
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_03
+  rotate: true
+  xy: 1048, 1006
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_04
+  rotate: false
+  xy: 1501, 10
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_05
+  rotate: false
+  xy: 1623, 18
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+lizi1/lizi1_00
+  rotate: true
+  xy: 1173, 2
+  size: 130, 80
+  orig: 130, 80
+  offset: 0, 0
+  index: -1
+lizi1/lizi1_01
+  rotate: true
+  xy: 1255, 2
+  size: 130, 80
+  orig: 130, 80
+  offset: 0, 0
+  index: -1
+lizi1/lizi1_02
+  rotate: true
+  xy: 1337, 2
+  size: 130, 80
+  orig: 130, 80
+  offset: 0, 0
+  index: -1
+lizi1/lizi1_03
+  rotate: true
+  xy: 1419, 2
+  size: 130, 80
+  orig: 130, 80
+  offset: 0, 0
+  index: -1
+lizi2/lizi2_00
+  rotate: false
+  xy: 1634, 464
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+lizi2/lizi2_01
+  rotate: false
+  xy: 1352, 948
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+lizi2/lizi2_02
+  rotate: false
+  xy: 1434, 948
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+lizi2/lizi2_03
+  rotate: false
+  xy: 1516, 948
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+lizi3/lizi3_00
+  rotate: true
+  xy: 743, 6
+  size: 60, 90
+  orig: 60, 90
+  offset: 0, 0
+  index: -1
+lizi3/lizi3_01
+  rotate: true
+  xy: 835, 6
+  size: 60, 90
+  orig: 60, 90
+  offset: 0, 0
+  index: -1
+lizi3/lizi3_02
+  rotate: false
+  xy: 1048, 516
+  size: 60, 90
+  orig: 60, 90
+  offset: 0, 0
+  index: -1
+lizi3/lizi3_03
+  rotate: true
+  xy: 1542, 464
+  size: 60, 90
+  orig: 60, 90
+  offset: 0, 0
+  index: -1
+treasure_dan_effect00
+  rotate: false
+  xy: 1863, 264
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect01
+  rotate: false
+  xy: 1863, 42
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_halo
+  rotate: false
+  xy: 404, 53
+  size: 337, 385
+  orig: 337, 385
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin00
+  rotate: false
+  xy: 806, 1160
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin01
+  rotate: false
+  xy: 806, 838
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin02
+  rotate: false
+  xy: 806, 516
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin03
+  rotate: false
+  xy: 895, 122
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin04
+  rotate: true
+  xy: 1173, 1252
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin05
+  rotate: true
+  xy: 1495, 1252
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin06
+  rotate: true
+  xy: 1173, 1010
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin07
+  rotate: true
+  xy: 1495, 1010
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin08
+  rotate: false
+  xy: 1048, 608
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin09
+  rotate: false
+  xy: 1137, 134
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin10
+  rotate: false
+  xy: 1290, 608
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin11
+  rotate: false
+  xy: 1379, 134
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin12
+  rotate: false
+  xy: 1532, 608
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin13
+  rotate: false
+  xy: 1621, 142
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_00
+  rotate: false
+  xy: 2, 1646
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_01
+  rotate: false
+  xy: 2, 1244
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_02
+  rotate: false
+  xy: 2, 842
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_03
+  rotate: false
+  xy: 2, 440
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_04
+  rotate: false
+  xy: 2, 38
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_05
+  rotate: false
+  xy: 404, 1646
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_06
+  rotate: false
+  xy: 806, 1646
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_07
+  rotate: false
+  xy: 1208, 1646
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_08
+  rotate: false
+  xy: 1610, 1646
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_09
+  rotate: false
+  xy: 404, 1244
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_10
+  rotate: false
+  xy: 404, 842
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+zhongji/zhongji_11
+  rotate: false
+  xy: 404, 440
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+
+treasure_dan2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dan_light/dan_light_02
+  rotate: false
+  xy: 977, 1786
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dan_light/dan_light_03
+  rotate: false
+  xy: 244, 860
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dan_light/dan_light_04
+  rotate: false
+  xy: 2, 216
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dan_light/dan_light_05
+  rotate: false
+  xy: 1199, 1786
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dan_light/dan_light_06
+  rotate: false
+  xy: 1421, 1786
+  size: 220, 260
+  orig: 220, 260
+  offset: 0, 0
+  index: -1
+dansui2/dansui2_01
+  rotate: true
+  xy: 1925, 1826
+  size: 220, 80
+  orig: 220, 80
+  offset: 0, 0
+  index: -1
+dansui2/dansui2_02
+  rotate: false
+  xy: 224, 314
+  size: 220, 80
+  orig: 220, 80
+  offset: 0, 0
+  index: -1
+dansui3/dansui3_02
+  rotate: true
+  xy: 244, 1122
+  size: 280, 220
+  orig: 280, 220
+  offset: 0, 0
+  index: -1
+dansui3/dansui3_03
+  rotate: true
+  xy: 486, 1444
+  size: 280, 220
+  orig: 280, 220
+  offset: 0, 0
+  index: -1
+dansui3/dansui3_04
+  rotate: true
+  xy: 2, 478
+  size: 280, 220
+  orig: 280, 220
+  offset: 0, 0
+  index: -1
+guangshu1/guangshu1_00
+  rotate: false
+  xy: 1925, 1602
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+guangshu1/guangshu1_01
+  rotate: false
+  xy: 1032, 608
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+guangshu1/guangshu1_02
+  rotate: false
+  xy: 1032, 506
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+guangshu2/guangshu2_00
+  rotate: false
+  xy: 1541, 1664
+  size: 100, 120
+  orig: 100, 120
+  offset: 0, 0
+  index: -1
+guangshu2/guangshu2_01
+  rotate: true
+  xy: 1274, 954
+  size: 100, 120
+  orig: 100, 120
+  offset: 0, 0
+  index: -1
+guangshu2/guangshu2_02
+  rotate: true
+  xy: 1396, 954
+  size: 100, 120
+  orig: 100, 120
+  offset: 0, 0
+  index: -1
+guangshu2/guangshu2_03
+  rotate: false
+  xy: 1925, 1704
+  size: 100, 120
+  orig: 100, 120
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_06
+  rotate: true
+  xy: 486, 2
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_07
+  rotate: true
+  xy: 568, 2
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen1/liewen1_08
+  rotate: true
+  xy: 1516, 1250
+  size: 110, 80
+  orig: 110, 80
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_06
+  rotate: false
+  xy: 1092, 834
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_07
+  rotate: false
+  xy: 1274, 1056
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_08
+  rotate: false
+  xy: 1396, 1056
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+liewen3/liewen3_09
+  rotate: false
+  xy: 1092, 710
+  size: 120, 122
+  orig: 120, 122
+  offset: 0, 0
+  index: -1
+treasure_dan_effect02
+  rotate: true
+  xy: 244, 678
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect05
+  rotate: false
+  xy: 628, 456
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect06
+  rotate: false
+  xy: 688, 234
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect07
+  rotate: false
+  xy: 688, 12
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect08
+  rotate: true
+  xy: 728, 1567
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect09
+  rotate: true
+  xy: 708, 1385
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect10
+  rotate: false
+  xy: 890, 1163
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect11
+  rotate: false
+  xy: 910, 941
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect12
+  rotate: false
+  xy: 910, 719
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect13
+  rotate: true
+  xy: 930, 1385
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect14
+  rotate: false
+  xy: 1374, 1362
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect15
+  rotate: false
+  xy: 870, 275
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect16
+  rotate: false
+  xy: 870, 53
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect17
+  rotate: true
+  xy: 1072, 1180
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect18
+  rotate: true
+  xy: 1294, 1180
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_effect19
+  rotate: false
+  xy: 1092, 958
+  size: 180, 220
+  orig: 180, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin14
+  rotate: false
+  xy: 2, 1726
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin15
+  rotate: false
+  xy: 2, 1404
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin16
+  rotate: false
+  xy: 244, 1726
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin17
+  rotate: false
+  xy: 2, 1082
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin18
+  rotate: false
+  xy: 244, 1404
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin19
+  rotate: false
+  xy: 486, 1726
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightin20
+  rotate: false
+  xy: 2, 760
+  size: 240, 320
+  orig: 240, 320
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout00
+  rotate: true
+  xy: 1643, 1846
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout01
+  rotate: true
+  xy: 2, 14
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout02
+  rotate: true
+  xy: 1643, 1644
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout03
+  rotate: false
+  xy: 224, 396
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout04
+  rotate: false
+  xy: 426, 396
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout05
+  rotate: true
+  xy: 977, 1584
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout06
+  rotate: true
+  xy: 1259, 1584
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout07
+  rotate: false
+  xy: 284, 32
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout08
+  rotate: false
+  xy: 486, 114
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lightout09
+  rotate: false
+  xy: 466, 1122
+  size: 200, 280
+  orig: 200, 280
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_00
+  rotate: false
+  xy: 466, 900
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_01
+  rotate: false
+  xy: 466, 678
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_02
+  rotate: false
+  xy: 668, 1163
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_03
+  rotate: false
+  xy: 688, 941
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_04
+  rotate: false
+  xy: 688, 719
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_05
+  rotate: false
+  xy: 810, 497
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_lizi_06
+  rotate: false
+  xy: 1152, 1362
+  size: 220, 220
+  orig: 220, 220
+  offset: 0, 0
+  index: -1
+treasure_dan_shine
+  rotate: false
+  xy: 728, 1749
+  size: 247, 297
+  orig: 247, 297
+  offset: 0, 0
+  index: -1

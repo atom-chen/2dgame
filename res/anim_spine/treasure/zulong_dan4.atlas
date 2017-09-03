@@ -1,0 +1,41 @@
+
+zulong_dan4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zulong_dan4
+  rotate: false
+  xy: 2, 225
+  size: 181, 241
+  orig: 181, 241
+  offset: 0, 0
+  index: -1
+zulong_dan4_ke
+  rotate: false
+  xy: 2, 2
+  size: 100, 70
+  orig: 100, 70
+  offset: 0, 0
+  index: -1
+zulong_dan4_shenti
+  rotate: false
+  xy: 2, 74
+  size: 146, 149
+  orig: 146, 149
+  offset: 0, 0
+  index: -1
+zulong_dan4_shou
+  rotate: false
+  xy: 185, 264
+  size: 55, 50
+  orig: 55, 50
+  offset: 0, 0
+  index: -1
+zulong_dan4_tou
+  rotate: false
+  xy: 185, 316
+  size: 127, 150
+  orig: 127, 150
+  offset: 0, 0
+  index: -1

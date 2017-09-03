@@ -1,0 +1,62 @@
+
+stable.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+caodian
+  rotate: true
+  xy: 353, 103
+  size: 495, 156
+  orig: 495, 156
+  offset: 0, 0
+  index: -1
+fangyan1
+  rotate: false
+  xy: 2, 600
+  size: 578, 412
+  orig: 578, 412
+  offset: 0, 0
+  index: -1
+jiao1
+  rotate: false
+  xy: 511, 179
+  size: 235, 334
+  orig: 235, 334
+  offset: 0, 0
+  index: -1
+jiao2
+  rotate: false
+  xy: 748, 231
+  size: 211, 282
+  orig: 211, 282
+  offset: 0, 0
+  index: -1
+long
+  rotate: false
+  xy: 582, 515
+  size: 406, 231
+  orig: 406, 231
+  offset: 0, 0
+  index: -1
+piaodai
+  rotate: false
+  xy: 511, 28
+  size: 266, 149
+  orig: 266, 149
+  offset: 0, 0
+  index: -1
+wuding
+  rotate: false
+  xy: 582, 748
+  size: 375, 264
+  orig: 375, 264
+  offset: 0, 0
+  index: -1
+wuyan
+  rotate: true
+  xy: 2, 2
+  size: 596, 349
+  orig: 596, 349
+  offset: 0, 0
+  index: -1
