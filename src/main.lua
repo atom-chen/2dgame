@@ -7,7 +7,7 @@ require "preboy.init"
 
 -- zcg.logTable(debug.getregistry(), "c:/reg.txt")
 
--- 加载自定义全局库
+-- 录脫脭脴脳脭露篓脪氓脠芦戮脰驴芒
 require "app.OpCode"
 require "app.BaseUI"
 require "app.UIManager"
