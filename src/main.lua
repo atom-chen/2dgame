@@ -7,7 +7,7 @@ require "preboy.init"
 
 -- zcg.logTable(debug.getregistry(), "c:/reg.txt")
 
--- ¼ÓÔØ×Ô¶¨ÒåÈ«¾Ö¿â
+-- import project file
 require "app.OpCode"
 require "app.BaseUI"
 require "app.UIManager"

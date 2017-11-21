@@ -1,5 +1,5 @@
 
--- ÓÎÏ·ÖĞ¿É¼ûµÄ³¡¾°¶ÔÏó£º°üÀ¨¹Ö¡¢²É¼¯Îï¡¢
+-- æ¸¸æˆä¸­å¯è§çš„åœºæ™¯å¯¹è±¡ï¼šåŒ…æ‹¬æ€ªã€é‡‡é›†ç‰©ã€
 cc.exports.Creature =
 {
 
@@ -15,12 +15,12 @@ local meta_creature =
         elseif c.type == 3 then
             return ObjectType.TyItem
         else
-            assert(false, "Î´ÖªµÄ¶ÔÏóÀàĞÍ")
+            assert(false, "æœªçŸ¥çš„å¯¹è±¡ç±»å‹")
         end
     end,
 
 
-    -- Ã°ÅİËµ»°
+    -- å†’æ³¡è¯´è¯
     say = function(c, text)
 
     end,
@@ -30,29 +30,29 @@ local meta_creature =
 meta_creature.__index = meta_creature
 
 
--- ĞÂ½¨Ò»¸ö¶ÔÏó
+-- æ–°å»ºä¸€ä¸ªå¯¹è±¡
 local function new_creature()
     local c =
     {
-        entry       = 0,            -- ¹ÖÎïÎ¨Ò»ID/Ô­ĞÍID
+        entry       = 0,            -- æ€ªç‰©å”¯ä¸€ID/åŸå‹ID
         pid         = 0,
-        name        = "",           -- Ãû³Æ
-        hp          = 0,            -- ÉúÃü/ÉúÃüÉÏÏŞ
+        name        = "",           -- åç§°
+        hp          = 0,            -- ç”Ÿå‘½/ç”Ÿå‘½ä¸Šé™
         hp_max      = 0,
-        type        = 0,            -- ÀàĞÍ: 1:Íæ¼Ò 2:¹Ö¡¢3:µÀ¾ß
-        dir         = 0,            -- ³¯Ïò:    0:×ó  1:ÓÒ
-        pos_x       = 0,            -- Î»ÖÃ
+        type        = 0,            -- ç±»å‹: 1:ç©å®¶ 2:æ€ªã€3:é“å…·
+        dir         = 0,            -- æœå‘:    0:å·¦  1:å³
+        pos_x       = 0,            -- ä½ç½®
         pos_y       = 0,
-        mod_id      = 0,            -- Ä£ĞÍID
-        mod_st      = 0,            -- µ±Ç°×´Ì¬:idle ? walk ? attack? death?
-        auras       = {},           -- ¹â»·ĞÅÏ¢
+        mod_id      = 0,            -- æ¨¡å‹ID
+        mod_st      = 0,            -- å½“å‰çŠ¶æ€:idle ? walk ? attack? death?
+        auras       = {},           -- å…‰ç¯ä¿¡æ¯
     }
     setmetatable(c, mt_creature)
     return c
 end
 
 
--- ½ÇÉ«¹ÜÀíÆ÷   µ±Ç°µØÍ¼¿É¼ûµÄ¹Ö
+-- è§’è‰²ç®¡ç†å™¨   å½“å‰åœ°å›¾å¯è§çš„æ€ª
 cc.exports.CreatureMgr =
 {
     objs = {},

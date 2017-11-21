@@ -1,10 +1,10 @@
 
--- 对象类型
+-- 瀵硅薄绫诲瀷
 cc.exports.ObjectType =
 {
-    TySelf      = 0,        -- 自己
-    TyPlayer    = 1,        -- 其它玩家
-    TyCreature  = 2,        -- 怪物
-    TyItem      = 3,        -- 道具
-    TyUnknown   = 4,        -- 未知
+    TySelf      = 0,        -- 鑷繁
+    TyPlayer    = 1,        -- 鍏跺畠鐜╁
+    TyCreature  = 2,        -- 鎬墿
+    TyItem      = 3,        -- 閬撳叿
+    TyUnknown   = 4,        -- 鏈煡
 }

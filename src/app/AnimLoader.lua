@@ -3,8 +3,8 @@ cc.exports.AnimLoader = {}
 
 
 --[[
-    ¼ÓÔØÖ¡¶¯»­(moling×ÊÔ´)
-    moling×ÊÔ´¿ÉÒÔÓëcocos2dxÏàÍ¬
+    åŠ è½½å¸§åŠ¨ç”»(molingèµ„æº)
+    molingèµ„æºå¯ä»¥ä¸cocos2dxç›¸åŒ
 --]]
 function AnimLoader:loadFrame(name, number, interval)
     assert(false, "Don't use this function !")
@@ -28,7 +28,7 @@ end
 
 
 --[[
-    -- armatureÀà¶¯»­(moling×ÊÔ´) 
+    -- armatureç±»åŠ¨ç”»(molingèµ„æº) 
 --]]
 function AnimLoader:loadArmature(name)
     local url = string.format("anim_armature/%s/%s", name, name)
@@ -40,9 +40,9 @@ end
 
 
 --[[
-    spineÀà¶¯»­
-    ¼ÓÔØ¹Ç÷À¶¯»­(moling×ÊÔ´£ºĞèÒª¸Ä*.plistÀïÃæµÄskinnedmesh --> linkedmesh) 
-    cocos2dx×ÊÔ´²»ĞèÒªÌØ±ğ´¦Àí
+    spineç±»åŠ¨ç”»
+    åŠ è½½éª¨éª¼åŠ¨ç”»(molingèµ„æºï¼šéœ€è¦æ”¹*.plisté‡Œé¢çš„skinnedmesh --> linkedmesh) 
+    cocos2dxèµ„æºä¸éœ€è¦ç‰¹åˆ«å¤„ç†
 --]]
 function AnimLoader:loadSpine(name)
     local url = string.format("anim_spine/%s/%s", name, name)

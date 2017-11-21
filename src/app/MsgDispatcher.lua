@@ -2,7 +2,7 @@
 cc.exports.MsgDispatcher =
 {
     handler = {},
-    -- Ҫ��Ҫ��Ϣ hook �����أ���ʱ���ٿ���
+    -- 要不要消息 hook 功能呢？到时候再看吧
 }
 
 
