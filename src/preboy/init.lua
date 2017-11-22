@@ -49,7 +49,7 @@ end
 
 
 --------------------- dump table ----------------------
-local max_depth = 4
+local max_depth = 16
 
 local function _print_prefix(str, n)
     for i = 1, n do
@@ -58,7 +58,20 @@ local function _print_prefix(str, n)
     io.write(str)
 end
 
-local function _print_table(tab, depth)
+
+local function _print_table(tab, depth, e)
+    if e then
+        if e[tab] then
+            _print_prefix("-- [[Already Printed]]", depth+1)
+            io.write("\n")
+            _print_prefix("},", depth)
+            io.write("\n")
+            return
+        else
+            e[tab] = true
+        end
+    end
+
     for k, v in pairs(tab) do
         local key
         if type(k) ~= "string" then
@@ -71,11 +84,11 @@ local function _print_table(tab, depth)
         if type_ == "number" then
             io.write(v .. ",\n")
         elseif type_ == "string" then
-            io.write("\"" .. v .. "\",\n")
+            io.write("'" .. v .. "',\n")
         elseif type_ == "table" then
             if depth + 1 <= max_depth then
                 io.write("{\t-- ", tostring(v), "\n")
-                _print_table(v, depth + 1)
+                _print_table(v, depth + 1, e)
             else
                 io.write("{...},\t-- ", tostring(v), " [[max-depth]]\n")
             end
@@ -90,8 +103,12 @@ local function _print_table(tab, depth)
 end
 
 -- print table to output or file
-zcg.logTable = function(tab, filename)
+zcg.logTable = function(tab, filename, print_exist_table)
+    local e
     local f
+    if not print_exist_table then
+        e = {}
+    end
     if filename then
         f = io.open(filename, "w+")
         io.output(f)
@@ -106,7 +123,7 @@ zcg.logTable = function(tab, filename)
     else
         io.write("ROOT = {\n")
         local depth = 0
-        _print_table(tab, depth)
+        _print_table(tab, depth, e)
     end
     if f then
         f:flush()

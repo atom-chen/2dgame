@@ -5,7 +5,7 @@ require "config"
 require "cocos.init"
 require "preboy.init"
 
--- zcg.logTable(debug.getregistry(), "c:/reg.txt")
+zcg.logTable(debug.getregistry(), "e:/reg.txt")
 
 -- import project file
 require "app.OpCode"
