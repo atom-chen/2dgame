@@ -14,67 +14,73 @@ function MainScene:onCreate()
     layer:addChild(bg)
     layer:setContentSize(bg_size)
     layer:setPosition(bg_size.width/2, bg_size.height/2)
-    -- layer:move(display.cx, display.cy)
     layer:addTo(self)
 
-    -- add label
-    local label = cc.Label:createWithSystemFont("Hello, Preboy.ZHANG!", "Arial", 40)
-    label:setColor(cc.YELLOW)
-    label:setPosition(-1000, 0)
-    layer:addChild(label)
-
     -- 加触摸事件
-    local touchBeginPoint = nil
+    local beginLocation = nil
+    local beginX,beginY = nil, nil
     local win_size = cc.Director:getInstance():getWinSize()
 
     local function onTouchBegan(touch, event)
-        local location = touch:getLocation()
-        -- local locationv = touch:getLocationInView()      -- 屏幕坐标
-        local cx, cy = layer:getPosition()
-        local v = layer:getContentSize()
-        touchBeginPoint = {x = location.x, y = location.y}
+        beginLocation = touch:getLocation()
+        beginX,beginY = layer:getPosition()
         -- CCTOUCHBEGAN event must return true
         return true
     end
 
     local function onTouchMoved(touch, event)
-        local location = touch:getLocation()
         local cx, cy = layer:getPosition()
-
         local top = cy + bg_size.height / 2
         local bot = cy - bg_size.height / 2
         local lef = cx - bg_size.width / 2
         local rig = cx + bg_size.width / 2
 
-        local mx = location.x - touchBeginPoint.x
-        local my = location.y - touchBeginPoint.y
+        local currLocation = touch:getLocation()
+        local mx = currLocation.x - beginLocation.x
+        local my = currLocation.y - beginLocation.y
 
-        if top < win_size.height then
-            my = my + (win_size.height - top)
+        local c
+        if top + my < win_size.height then
+            my = win_size.height - top
+            c = true
         end
-        if bot > 0 then
-            my = my - bot
+        if bot + my > 0 then
+            my = 0 - bot
+            c = true
         end
-        if lef > 0 then
-            mx = mx - lef
+        if lef + mx > 0 then
+            mx = 0 - lef
+            c = true
         end
-        if rig < win_size.width then
-            mx = mx + (win_size.width - rig)
+        if rig + mx < win_size.width then
+            mx = win_size.width - rig
+            c = true
         end
-        layer:setPosition(cx + mx, cy + my)
-        touchBeginPoint = {x = location.x, y = location.y}
+
+        beginX = beginX + mx
+        beginY = beginY + my
+        layer:setPosition(beginX, beginY)
+        beginLocation = currLocation
     end
 
     local function onTouchEnded(touch, event)
-        touchBeginPoint = nil
+        beginLocation = nil
+        beginX = nil
+        beginY = nil
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
-    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    listener:registerScriptHandler(onTouchBegan, cc.Handler.EVENT_TOUCH_BEGAN)
+    listener:registerScriptHandler(onTouchMoved, cc.Handler.EVENT_TOUCH_MOVED)
+    listener:registerScriptHandler(onTouchEnded, cc.Handler.EVENT_TOUCH_ENDED)
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+    
+    -- add text label
+    local label = cc.Label:createWithSystemFont("Hello, Preboy.ZHANG!", "Arial", 40)
+    label:setColor(cc.YELLOW)
+    label:setPosition(-1000, 0)
+    layer:addChild(label)
 
     -- 功能按钮
     for i = 1, 5 do
