@@ -1,3 +1,3 @@
 
 -- press 'z' will do this file
-zcg.logTable(cc.Scheduler, "c:/a.txt")
+zcg.logTable(cc.Scheduler, "e:/a.txt")

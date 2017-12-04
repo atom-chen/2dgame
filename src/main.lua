@@ -3,21 +3,18 @@ cc.FileUtils:getInstance():setPopupNotify(false)
 
 require "config"
 require "cocos.init"
-require "preboy.init"
+require "base.init"
 
 -- zcg.logTable(debug.getregistry(), "e:/reg.txt")
 
 -- import project file
-require "app.OpCode"
-require "app.BaseUI"
-require "app.UIManager"
-require "app.MsgDispatcher"
-require "app.SocketMgr"
-require "app.AnimLoader"
 
 
+-- print("+++", type(cc.Node), cc.Node[".isclass"])
 local function main()
-    require("app.MyApp"):create():run()
+    -- require("app.MyApp"):create():run()
+    local s = require("scenes.MainScene"):new()
+    display.runScene(s)
 end
 
 local status, msg = xpcall(main, __G__TRACKBACK__)
