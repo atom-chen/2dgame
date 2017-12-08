@@ -1,14 +1,16 @@
 
-local ToolbarUI = class("ToolbarUI", BaseUI)
+local WinBase = require("core/WinBase")
+local ToolbarWin = class("ToolbarWin", WinBase)
 
 
-function ToolbarUI:ctor()
-    print("ToolbarUI:ctor")
+function ToolbarWin:ctor()
+    print("ToolbarWin:ctor")
 end
 
 
------------------------------- inhert from BaseUI ------------------------------
-function ToolbarUI:on_init()
+------------------------------ inhert from WinBase ------------------------------
+
+function ToolbarWin:OnCreate()
     local skeletonNode = AnimLoader:loadSpine("biaoche5")
     skeletonNode:setAnimation(0, "walk", true)
     -- local skeletonNode = AnimLoader:loadSpine("spineboy")
@@ -38,20 +40,20 @@ function ToolbarUI:on_init()
 end
 
 
-function ToolbarUI:on_release()
-    print("ToolbarUI:on_release")
+function ToolbarWin:OnDestroy()
+    print("ToolbarWin:OnDestroy")
     self._panel:getScheduler():unscheduleScriptEntry(self.timer_id)
 end
 
 
-function ToolbarUI:on_show()
-    print("ToolbarUI:on_show")
+function ToolbarWin:OnShow()
+    print("ToolbarWin:OnShow")
 end
 
 
-function ToolbarUI:on_hide()
-    print("ToolbarUI:on_hide")
+function ToolbarWin:OnHiden()
+    print("ToolbarWin:OnHiden")
 end
 
 
-return ToolbarUI
+return ToolbarWin
