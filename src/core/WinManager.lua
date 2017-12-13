@@ -1,8 +1,8 @@
 
 local win_list = 
 {
-    [1] = require("wins/player_info")                -- 角色信息
-    [2] = require("wins/system_setting")             -- 系统设置
+    [1] = require("src/wins/player_info"),                -- 角色信息
+    [2] = require("src/wins/system_setting"),             -- 系统设置
 }
 
 

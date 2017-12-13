@@ -1,6 +1,6 @@
 
-require "core.protobuf"
-require "core.net_events"
+require "core.network.protobuf"
+require "src.core.network.events"
 
 require "core.AnimLoader"
 require "core.WinBase"
