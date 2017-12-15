@@ -1,13 +1,17 @@
 
-require "core.network.protobuf"
+require "core.protobuf"
 require "struct"
 
 protobuf.register(cc.FileUtils:getInstance():getDataFromFile("protocol.pb"))
+
+cc.exports.MessageDispatcher = {}
+local md = MessageDispatcher
 
 ------------- Socket Event ----------------------------------
 
 cc.exports.g_connect_pass = function()
     print("g_connect_pass +++++++++++++")
+    -- 发送登录包
 end
 
 
@@ -16,17 +20,22 @@ cc.exports.g_connect_fail = function()
 end
 
 
-cc.exports.g_on_message = function(code, msg, size)
-    print("g_on_message +++++++++++++")
-    print("code:", code)
-    print("msg:", msg)
-    print("size:", size)
-  -- GameSocket.send("\x0e\x00\x02\x11", 4)
-  -- GameSocket.send(msg, 0xe)
-    print("__________")
-    local data = struct.pack(string.format("hhc%d", size), code, size, msg)
-    GameSocket.send(data)
-    print("size is equal:", size + 4 , struct.size(string.format("hhc%d", size)))
+cc.exports.g_on_message = function(code, data, size)
+    local name = code
+   
+    local tab = protobuf.decode(data)
+    protobuf.extract(tab)
+
+    local func = md[code]
+    if func then
+        func(code, tab)
+    else
+        print("unknown opcode:", code)
+    end
+
+    -- for debug
+    print("recv message: ", code)
+    table.dump(tab)
 end
 
 
@@ -61,4 +70,4 @@ end
 
 ------------- DO ----------------------------------
 
-Socket.Connect("192.168.0.5", 2040)
+Socket.Connect("192.168.0.5", 4040)
