@@ -2,16 +2,30 @@
 require "core.protobuf"
 require "struct"
 
+require "message.opcode"
+
+
 protobuf.register(cc.FileUtils:getInstance():getDataFromFile("protocol.pb"))
 
+cc.exports.Socket = {}
 cc.exports.MessageDispatcher = {}
-local md = MessageDispatcher
+
+
+local Socket    = Socket
+local md        = MessageDispatcher
+local Opcode    = Opcode
+local MsgName   = MsgName
+
 
 ------------- Socket Event ----------------------------------
 
 cc.exports.g_connect_pass = function()
     print("g_connect_pass +++++++++++++")
     -- 发送登录包
+    Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
+        acct = "zcg",
+        pass = "xx",
+    })
 end
 
 
@@ -21,21 +35,15 @@ end
 
 
 cc.exports.g_on_message = function(code, data, size)
-    local name = code
-   
-    local tab = protobuf.decode(data)
-    protobuf.extract(tab)
-
+    local name = MsgName[code]; assert(name, string.format("g_on_message: Not FOUND name for opcode=%d", code))
+    local tabl = protobuf.decode(name, data)
     local func = md[code]
     if func then
-        func(code, tab)
+        protobuf.extract(tabl)
+        func(code, tabl)
     else
         print("unknown opcode:", code)
     end
-
-    -- for debug
-    print("recv message: ", code)
-    table.dump(tab)
 end
 
 
@@ -46,20 +54,18 @@ end
 
 ------------- API ----------------------------------
 
-cc.exports.Socket = {}
-local Socket = cc.exports.Socket
-
-
 Socket.Connect = function(addr, port)
     GameSocket.connect(addr, port)
 end
 
 
-Socket.SendPacket = function(code, name, table)
-    local body, size = protobuf.encode(name, table)
-    local data = struct.pack(string.format("hhc%d", size), code, size, body)
+Socket.SendPacket = function(code, tabl)
+    local name = MsgName[code]; assert(name, string.format("SendPacket: Not FOUND name for opcode=%d", code))
+    local body = protobuf.encode(name, tabl)
+    local size = #body
+    local data = struct.pack(string.format("<hhc%d", size), size, code, body)
     GameSocket.send(data)
-    -- assert((size+4) == struct.size(string.format("hhc%d",size)), "struct.pack error !!!")
+    -- assert((size+4) == struct.size(string.format("<hhc%d",size)), "struct.pack error !!!")
 end
 
 
@@ -70,4 +76,4 @@ end
 
 ------------- DO ----------------------------------
 
-Socket.Connect("192.168.0.5", 4040)
+Socket.Connect("192.168.0.4", 4040)
