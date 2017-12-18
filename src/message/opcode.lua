@@ -3,17 +3,17 @@ cc.exports.Opcode = {}
 local Opcode = Opcode
 
 
-Opcode.MSG_CS_PING       = 1
-Opcode.MSG_SC_PING       = 2
+Opcode.MSG_CS_PING       = 0x0001
+Opcode.MSG_SC_PING       = 0x0002
 
-Opcode.MSG_CS_LOGIN      = 3
-Opcode.MSG_SC_LOGIN      = 4
+Opcode.MSG_CS_LOGIN      = 0x0003
+Opcode.MSG_SC_LOGIN      = 0x0004
 
-Opcode.MSG_CS_ENTER_GAME = 5
-Opcode.MSG_SC_ENTER_GAME = 6
+Opcode.MSG_CS_ENTER_GAME = 0x0005
+Opcode.MSG_SC_ENTER_GAME = 0x0006
 
-Opcode.MSG_CS_PlayerData = 7
-Opcode.MSG_SC_PlayerData = 8
+Opcode.MSG_CS_PlayerData = 0x0007
+Opcode.MSG_SC_PlayerData = 0x0008
 
 
 --------- protobuf map: message & name -----------------------------------------------------------
