@@ -1,8 +1,9 @@
 
 local win_list = 
 {
-    [1] = require("wins/player_info")                -- 角色信息
-    [2] = require("wins/system_setting")             -- 系统设置
+    [1] = require("src/wins/ToolbarWin"), 
+    [2] = require("src/wins/player_info"),                -- 角色信息
+    [3] = require("src/wins/system_setting"),             -- 系统设置
 }
 
 
@@ -24,14 +25,14 @@ end
 
 
 function WinManager:CreateWindow(id)
-    local win = self.FindWindow(id)
+    local win = self:FindWindow(id)
     if not win then
         local conf = win_list[id]
         if not conf then
             zcg.logWarning("WinManager:CreateWindow: unknown id=%d", id)
             return
         end
-        win = require(conf):create()
+        win = conf:create()
         self._win_whole[id] = win
     end
     if win then

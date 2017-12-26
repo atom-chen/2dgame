@@ -1,4 +1,6 @@
 
+require "src/core/WinManager"
+
 -- local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 local MainScene = class("MainScene", cc.Scene)
 
@@ -89,15 +91,15 @@ function MainScene:ctor()
         local function btn_callback(ref, type)
             if type == ccui.TouchEventType.ended then
                 if i == 1 then
-                    UIManager:createUI(UI_INDEX.UI_TOOLBAR)
+                    WinManager:CreateWindow(1)
                 elseif i == 2 then
-                    UIManager:destroyUI(UI_INDEX.UI_TOOLBAR)
+                    WinManager:DestroyWindow(1)
                 elseif i == 3 then
-                    local ui = UIManager:getUI(UI_INDEX.UI_TOOLBAR)
-                    if ui then ui:show(true) end
+                    local ui = WinManager:FindWindow(1)
+                    if ui then WinManager:ShowWindow(ui, true) end
                 elseif i == 4 then
-                    local ui = UIManager:getUI(UI_INDEX.UI_TOOLBAR)
-                    if ui then ui:show(false) end
+                    local ui = WinManager:FindWindow(1)
+                    if ui then WinManager:ShowWindow(ui, false) end
                 end
             end
         end
@@ -118,7 +120,7 @@ function MainScene:ctor()
     layer:addChild(sf1)
 
     -- UI
-    -- UIManager:init(self)
+    -- WinManager:init(self)
 
     -- 加侦听键盘事件
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_WINDOWS then
