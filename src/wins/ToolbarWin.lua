@@ -1,5 +1,6 @@
 
 require "src/core/AnimLoader"
+
 local WinBase = require("src/core/WinBase")
 
 local ToolbarWin = class("ToolbarWin", WinBase)
@@ -28,7 +29,7 @@ function ToolbarWin:OnCreate()
     local times = 0
     local function _on_timer()
         print("on timer", times)
-        SocketMgr:send(times, {"fuckyou"})
+        -- SocketMgr:send(times, {"fuckyou"})
         times = times + 1
     end
 
@@ -36,16 +37,16 @@ function ToolbarWin:OnCreate()
     local particle = cc.ParticleSystemQuad:create("particle/getitem.plist")
     particle:setPositionType(cc.POSITION_TYPE_RELATIVE)
     particle:setPosition(cc.p(360,0))
-    self.addChild(particle)
+    self:addChild(particle)
 
-    local s = self.getScheduler()
+    local s = self:getScheduler()
     self.timer_id = s:scheduleScriptFunc(_on_timer, 1, false)
 end
 
 
 function ToolbarWin:OnDestroy()
     print("ToolbarWin:OnDestroy")
-    self.getScheduler():unscheduleScriptEntry(self.timer_id)
+    self:getScheduler():unscheduleScriptEntry(self.timer_id)
 end
 
 

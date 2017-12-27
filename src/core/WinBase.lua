@@ -3,7 +3,6 @@ local WinBase = class("WinBase", cc.Node)
 
 
 function WinBase:ctor()
-
 end
 
 function WinBase:OnShow()

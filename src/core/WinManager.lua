@@ -38,7 +38,7 @@ function WinManager:CreateWindow(id)
     if win then
         win:OnCreate()
         self:ShowWindow(win, true)
-        self._layer:addChild(win)
+        self:addChild(win)
     end
     return win
 end
@@ -51,7 +51,7 @@ function WinManager:DestroyWindow(win)
     if win then
         self:ShowWindow(win, false)
         win:OnDestroy()
-        self._layer:removeChild(win)
+        self:removeChild(win)
         self._win_whole[win.id] = nil
     end
 end
