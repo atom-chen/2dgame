@@ -1,0 +1,51 @@
+// TEST FOR NET SEND AND RECV
+
+package main
+
+import (
+	"fmt"
+	//	"math/rand"
+	"net"
+	//	"time"
+)
+
+func main() {
+
+	addr, err := net.ResolveTCPAddr("tcp", ":2040")
+	ln, err := net.ListenTCP("tcp", addr)
+	if err != nil {
+		// handle error
+		fmt.Println("err")
+	}
+	for {
+		conn, err := ln.AcceptTCP()
+		if err != nil {
+			// handle error
+		}
+		go handleConnection(conn)
+	}
+}
+
+func handleConnection(c *net.TCPConn) {
+	fmt.Println("new client")
+
+	c.Write([]byte{0x0e, 0x00, 0x02, 0x11})
+	c.Write([]byte("fuckyou"))
+	c.Write([]byte{0x00})
+	c.Write([]byte("fuckme"))
+
+	for {
+		var buff = make([]byte, 4096)
+
+		n, e := c.Read(buff[:])
+		if e != nil || n == 0 {
+			fmt.Println("error:", n, e)
+			break
+		} else {
+			fmt.Println("data:", n, buff[:n])
+		}
+	}
+
+	fmt.Println("new client END")
+	c.Close()
+}

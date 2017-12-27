@@ -4,9 +4,10 @@ cc.FileUtils:getInstance():setPopupNotify(false)
 require "config"
 require "cocos.init"
 require "base.init"
+require "core.init"
+require "message.init"
 
 -- zcg.logTable(debug.getregistry(), "e:/reg.txt")
-
 -- import project file
 
 

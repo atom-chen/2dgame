@@ -1,8 +1,7 @@
 
 require "src/core/AnimLoader"
-
-
 local WinBase = require("src/core/WinBase")
+
 local ToolbarWin = class("ToolbarWin", WinBase)
 
 
