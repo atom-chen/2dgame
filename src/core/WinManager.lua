@@ -1,18 +1,20 @@
 
 local win_list = 
 {
-    [1] = require("src/wins/ToolbarWin"), 
-    [2] = require("src/wins/player_info"),                -- 角色信息
-    [3] = require("src/wins/system_setting"),             -- 系统设置
+    [1] = require("wins.ToolbarWin"), 
+   -- [2] = require("wins.player_info"),                -- 角色信息
+   -- [3] = require("wins.system_setting"),             -- 系统设置
 }
 
 
-cc.exports.WinManager = WinManager or
+cc.exports.WinManager =
 {
     _win_stack = {},
     _win_curr = nil,
-    _win_whole = {},
+    _win_whole = {},        -- id => win
 }
+
+local WinManager = cc.exports.WinManager
 
 
 function WinManager:Init()
@@ -21,37 +23,37 @@ function WinManager:Init()
     layer:setContentSize(win_size)
     layer:setPosition(win_size.width/2, win_size.height/2)
     self._layer = layer
+    print(self._layer)
 end
 
 
 function WinManager:CreateWindow(id)
     local win = self:FindWindow(id)
     if not win then
-        local conf = win_list[id]
-        if not conf then
+        local cls = win_list[id]
+        if not cls then
             zcg.logWarning("WinManager:CreateWindow: unknown id=%d", id)
             return
         end
-        win = conf:create()
+        win = cls:create()
+        print(self._layer)
+        self._layer:addChild(win)
         self._win_whole[id] = win
-    end
-    if win then
         win:OnCreate()
-        self:ShowWindow(win, true)
-        self:addChild(win)
     end
+    self:ShowWindow(win, true)
     return win
 end
 
 
 function WinManager:DestroyWindow(win)
     if type(win) == "number" then
-        win = self.FindWindow(win)
+        win = self:FindWindow(win)
     end
     if win then
         self:ShowWindow(win, false)
         win:OnDestroy()
-        self:removeChild(win)
+        self._layer:removeChild(win)
         self._win_whole[win.id] = nil
     end
 end
@@ -64,7 +66,7 @@ end
 
 function WinManager:ShowWindow(win, b)
     if type(win) == "number" then
-        win = self.FindWindow(win)
+        win = self:FindWindow(win)
     end
     if win then
         if b then
@@ -76,3 +78,7 @@ function WinManager:ShowWindow(win, b)
         end
     end
 end
+
+
+WinManager:Init()
+return WinManager

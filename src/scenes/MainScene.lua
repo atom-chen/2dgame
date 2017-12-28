@@ -1,5 +1,6 @@
 
-require "src/core/WinManager"
+local WinManager = require "core.WinManager"
+
 
 -- local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 local MainScene = class("MainScene", cc.Scene)
@@ -120,7 +121,6 @@ function MainScene:ctor()
     layer:addChild(sf1)
 
     -- UI
-    -- WinManager:init(self)
 
     -- 加侦听键盘事件
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_WINDOWS then

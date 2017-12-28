@@ -1,9 +1,8 @@
 
-require "src/core/AnimLoader"
+local WinBase       = require("core.WinBase")
+local AnimLoader    = require "core.AnimLoader"
 
-local WinBase = require("src/core/WinBase")
-
-local ToolbarWin = class("ToolbarWin", WinBase)
+local ToolbarWin    = class("ToolbarWin", WinBase)
 
 
 function ToolbarWin:ctor()
