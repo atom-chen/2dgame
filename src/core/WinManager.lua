@@ -1,7 +1,7 @@
 
-local win_list = 
+local win_list =
 {
-    [1] = require("wins.ToolbarWin"), 
+    [1] = require("wins.ToolbarWin"),
    -- [2] = require("wins.player_info"),                -- 角色信息
    -- [3] = require("wins.system_setting"),             -- 系统设置
 }
@@ -12,6 +12,8 @@ cc.exports.WinManager =
     _win_stack = {},
     _win_curr = nil,
     _win_whole = {},        -- id => win
+    _layer = nil,           -- root
+    _scene = nil,
 }
 
 local WinManager = cc.exports.WinManager
@@ -23,7 +25,12 @@ function WinManager:Init()
     layer:setContentSize(win_size)
     layer:setPosition(win_size.width/2, win_size.height/2)
     self._layer = layer
-    print(self._layer)
+    self._layer:retain()
+end
+
+
+function WinManager:Release()
+    self._layer:release()
 end
 
 
@@ -36,7 +43,6 @@ function WinManager:CreateWindow(id)
             return
         end
         win = cls:create()
-        print(self._layer)
         self._layer:addChild(win)
         self._win_whole[id] = win
         win:OnCreate()
@@ -77,6 +83,17 @@ function WinManager:ShowWindow(win, b)
             win:setVisible(true)
         end
     end
+end
+
+
+function WinManager:AttachScene(scene)
+    if self._scene then
+        self._scene.removeChild(self._layer)
+    end
+    if scene then
+        scene:addChild(self._layer)
+    end
+    self._scene = scene
 end
 
 

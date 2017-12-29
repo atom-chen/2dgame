@@ -1,5 +1,5 @@
 
-local WinBase       = require("core.WinBase")
+local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 
 local ToolbarWin    = class("ToolbarWin", WinBase)

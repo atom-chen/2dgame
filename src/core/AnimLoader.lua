@@ -1,6 +1,6 @@
 
 cc.exports.AnimLoader = {}
-
+local AnimLoader = cc.exports.AnimLoader
 
 --[[
     加载帧动画(moling资源)
@@ -52,3 +52,5 @@ function AnimLoader:loadSpine(name)
     end
     return skeletonNode
 end
+
+return AnimLoader

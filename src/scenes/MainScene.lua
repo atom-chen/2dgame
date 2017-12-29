@@ -143,6 +143,8 @@ function MainScene:ctor()
         local eventDispatcher = layer:getEventDispatcher()
         eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     end
+
+    WinManager:AttachScene(self)
 end
 
 return MainScene
