@@ -43,6 +43,7 @@ function WinManager:CreateWindow(id)
             return
         end
         win = cls:create()
+        win._id = id
         self._layer:addChild(win)
         self._win_whole[id] = win
         win:OnCreate()
@@ -59,8 +60,8 @@ function WinManager:DestroyWindow(win)
     if win then
         self:ShowWindow(win, false)
         win:OnDestroy()
+        self._win_whole[win._id] = nil
         self._layer:removeChild(win)
-        self._win_whole[win.id] = nil
     end
 end
 
@@ -80,7 +81,7 @@ function WinManager:ShowWindow(win, b)
             win:setVisible(true)
         else
             win:OnHiden()
-            win:setVisible(true)
+            win:setVisible(false)
         end
     end
 end

@@ -96,11 +96,10 @@ function MainScene:ctor()
                 elseif i == 2 then
                     WinManager:DestroyWindow(1)
                 elseif i == 3 then
-                    local ui = WinManager:FindWindow(1)
-                    if ui then WinManager:ShowWindow(ui, true) end
+                    WinManager:ShowWindow(1, true)
                 elseif i == 4 then
-                    local ui = WinManager:FindWindow(1)
-                    if ui then WinManager:ShowWindow(ui, false) end
+                    local win = WinManager:FindWindow(1)
+                    if win then WinManager:ShowWindow(win, false) end
                 end
             end
         end
