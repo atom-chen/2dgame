@@ -80,7 +80,15 @@ function MainScene:ctor()
     label:setColor(cc.YELLOW)
     label:setPosition(-1000, 0)
     layer:addChild(label)
-
+    
+    local btn_text = 
+    {
+        "创建",
+        "销毁",
+        "显示",
+        "隐藏",
+        "无反应",
+    }
     -- 功能按钮
     for i = 1, 5 do
         -- local str = {}
@@ -104,8 +112,9 @@ function MainScene:ctor()
             end
         end
         btn:addTouchEventListener(btn_callback)
-        btn:setPosition(-1800 + i * 600, -300)
-        btn:setTitleText("fuck" .. i)
+        btn:setPosition(-1800 + i * 200, -300)
+        btn:setTitleText(btn_text[i])
+        btn:setTitleFontSize(18)
         layer:addChild(btn)
     end
 
