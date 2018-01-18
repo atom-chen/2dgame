@@ -1,10 +1,30 @@
 local data = 
 {
 	[1] = {
-		id = 2001001,
+		id = 10001,
 		name = "鼠",
 		moduleid = 1,
 		level = 1,
+		skill = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+			{
+				id = 1001,
+				lv = 2,
+			},
+		},
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2001,
+				lv = 1,
+			},
+		},
 		atk = 100,
 		def = 80,
 		hp = 1000,
@@ -14,10 +34,30 @@ local data =
 	},
 
 	[2] = {
-		id = 2001002,
+		id = 10002,
 		name = "牛",
 		moduleid = 2,
-		level = 2,
+		level = 1,
+		skill = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+			{
+				id = 1001,
+				lv = 2,
+			},
+		},
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2001,
+				lv = 1,
+			},
+		},
 		atk = 120,
 		def = 90,
 		hp = 1100,
@@ -27,10 +67,30 @@ local data =
 	},
 
 	[3] = {
-		id = 2001003,
+		id = 10003,
 		name = "虎",
 		moduleid = 3,
-		level = 3,
+		level = 1,
+		skill = {
+			{
+				id = 1002,
+				lv = 1,
+			},
+			{
+				id = 1002,
+				lv = 3,
+			},
+		},
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2001,
+				lv = 2,
+			},
+		},
 		atk = 140,
 		def = 100,
 		hp = 1200,
@@ -40,10 +100,30 @@ local data =
 	},
 
 	[4] = {
-		id = 2001004,
+		id = 10004,
 		name = "兔",
 		moduleid = 4,
-		level = 4,
+		level = 1,
+		skill = {
+			{
+				id = 1002,
+				lv = 1,
+			},
+			{
+				id = 1002,
+				lv = 3,
+			},
+		},
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2001,
+				lv = 2,
+			},
+		},
 		atk = 160,
 		def = 110,
 		hp = 1300,
@@ -53,10 +133,30 @@ local data =
 	},
 
 	[5] = {
-		id = 2001005,
+		id = 10005,
 		name = "龙",
 		moduleid = 5,
-		level = 5,
+		level = 1,
+		skill = {
+			{
+				id = 1003,
+				lv = 1,
+			},
+			{
+				id = 1003,
+				lv = 4,
+			},
+		},
+		aura = {
+			{
+				id = 2002,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 3,
+			},
+		},
 		atk = 180,
 		def = 120,
 		hp = 1400,
@@ -66,10 +166,30 @@ local data =
 	},
 
 	[6] = {
-		id = 2001006,
+		id = 10006,
 		name = "蛇",
 		moduleid = 6,
-		level = 6,
+		level = 1,
+		skill = {
+			{
+				id = 1003,
+				lv = 1,
+			},
+			{
+				id = 1003,
+				lv = 4,
+			},
+		},
+		aura = {
+			{
+				id = 2002,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 3,
+			},
+		},
 		atk = 200,
 		def = 130,
 		hp = 1500,
@@ -79,10 +199,30 @@ local data =
 	},
 
 	[7] = {
-		id = 2001007,
+		id = 10007,
 		name = "马",
 		moduleid = 7,
-		level = 7,
+		level = 1,
+		skill = {
+			{
+				id = 1004,
+				lv = 1,
+			},
+			{
+				id = 1004,
+				lv = 5,
+			},
+		},
+		aura = {
+			{
+				id = 2002,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 4,
+			},
+		},
 		atk = 220,
 		def = 140,
 		hp = 1600,
@@ -92,10 +232,30 @@ local data =
 	},
 
 	[8] = {
-		id = 2001008,
+		id = 10008,
 		name = "羊",
 		moduleid = 8,
-		level = 8,
+		level = 1,
+		skill = {
+			{
+				id = 1004,
+				lv = 1,
+			},
+			{
+				id = 1004,
+				lv = 5,
+			},
+		},
+		aura = {
+			{
+				id = 2002,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 4,
+			},
+		},
 		atk = 240,
 		def = 150,
 		hp = 1700,
@@ -105,10 +265,30 @@ local data =
 	},
 
 	[9] = {
-		id = 2001009,
+		id = 10009,
 		name = "猴",
 		moduleid = 9,
-		level = 9,
+		level = 1,
+		skill = {
+			{
+				id = 1005,
+				lv = 1,
+			},
+			{
+				id = 1005,
+				lv = 2,
+			},
+		},
+		aura = {
+			{
+				id = 2003,
+				lv = 1,
+			},
+			{
+				id = 2003,
+				lv = 5,
+			},
+		},
 		atk = 260,
 		def = 160,
 		hp = 1800,
@@ -118,10 +298,30 @@ local data =
 	},
 
 	[10] = {
-		id = 2001010,
+		id = 10010,
 		name = "鸡",
 		moduleid = 10,
-		level = 10,
+		level = 1,
+		skill = {
+			{
+				id = 1005,
+				lv = 1,
+			},
+			{
+				id = 1005,
+				lv = 2,
+			},
+		},
+		aura = {
+			{
+				id = 2003,
+				lv = 1,
+			},
+			{
+				id = 2003,
+				lv = 5,
+			},
+		},
 		atk = 280,
 		def = 170,
 		hp = 1900,
@@ -131,10 +331,30 @@ local data =
 	},
 
 	[11] = {
-		id = 2001011,
+		id = 10011,
 		name = "狗",
 		moduleid = 11,
-		level = 11,
+		level = 1,
+		skill = {
+			{
+				id = 1005,
+				lv = 1,
+			},
+			{
+				id = 1005,
+				lv = 4,
+			},
+		},
+		aura = {
+			{
+				id = 2003,
+				lv = 1,
+			},
+			{
+				id = 2003,
+				lv = 2,
+			},
+		},
 		atk = 300,
 		def = 180,
 		hp = 2000,
@@ -144,10 +364,30 @@ local data =
 	},
 
 	[12] = {
-		id = 2001012,
+		id = 10012,
 		name = "猪",
 		moduleid = 12,
-		level = 12,
+		level = 1,
+		skill = {
+			{
+				id = 1005,
+				lv = 1,
+			},
+			{
+				id = 1005,
+				lv = 4,
+			},
+		},
+		aura = {
+			{
+				id = 2003,
+				lv = 1,
+			},
+			{
+				id = 2003,
+				lv = 2,
+			},
+		},
 		atk = 320,
 		def = 190,
 		hp = 2100,

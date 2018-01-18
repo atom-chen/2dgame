@@ -2,24 +2,25 @@ local data =
 {
 	[1] = {
 		id = 1001,
-		level = 1,
+		lv = 1,
 		name = "技能一",
-		object = 0,
-		cast_time = 2000,
-		cd_time = 4000,
+		target = 0,
+		itv_t = 1000,
+		last_t = 2000,
+		cd_t = 4000,
 		type = 1,
 		range = 0,
-		auras = {
+		aura = {
 			{
-				rate = 20,
-				id = 2001001,
+				id = 2001,
+				lv = 1,
 			},
 			{
-				rate = 80,
-				id = 2002001,
+				id = 2002,
+				lv = 1,
 			},
 		},
-		add_attr = {
+		attr = {
 			{
 				id = 1,
 				val = 100,
@@ -38,24 +39,25 @@ local data =
 
 	[2] = {
 		id = 1001,
-		level = 2,
+		lv = 2,
 		name = "技能一",
-		object = 0,
-		cast_time = 2000,
-		cd_time = 4000,
+		target = 0,
+		itv_t = 1000,
+		last_t = 2000,
+		cd_t = 4000,
 		type = 1,
 		range = 0,
-		auras = {
+		aura = {
 			{
-				rate = 20,
-				id = 2001002,
+				id = 2001,
+				lv = 2,
 			},
 			{
-				rate = 80,
-				id = 2002002,
+				id = 2002,
+				lv = 2,
 			},
 		},
-		add_attr = {
+		attr = {
 			{
 				id = 1,
 				val = 100,
@@ -74,24 +76,25 @@ local data =
 
 	[3] = {
 		id = 1001,
-		level = 3,
+		lv = 3,
 		name = "技能一",
-		object = 0,
-		cast_time = 2000,
-		cd_time = 4000,
+		target = 0,
+		itv_t = 1000,
+		last_t = 2000,
+		cd_t = 4000,
 		type = 1,
 		range = 0,
-		auras = {
+		aura = {
 			{
-				rate = 20,
-				id = 2001003,
+				id = 2001,
+				lv = 1,
 			},
 			{
-				rate = 80,
-				id = 2002004,
+				id = 2002,
+				lv = 4,
 			},
 		},
-		add_attr = {
+		attr = {
 			{
 				id = 1,
 				val = 100,
@@ -110,24 +113,25 @@ local data =
 
 	[4] = {
 		id = 1001,
-		level = 4,
+		lv = 4,
 		name = "技能一",
-		object = 0,
-		cast_time = 2000,
-		cd_time = 4000,
+		target = 0,
+		itv_t = 1000,
+		last_t = 2000,
+		cd_t = 4000,
 		type = 1,
 		range = 0,
-		auras = {
+		aura = {
 			{
-				rate = 20,
-				id = 2001004,
+				id = 2001,
+				lv = 1,
 			},
 			{
-				rate = 80,
-				id = 2002004,
+				id = 2002,
+				lv = 4,
 			},
 		},
-		add_attr = {
+		attr = {
 			{
 				id = 1,
 				val = 100,
@@ -146,24 +150,25 @@ local data =
 
 	[5] = {
 		id = 1001,
-		level = 5,
+		lv = 5,
 		name = "技能一",
-		object = 0,
-		cast_time = 2000,
-		cd_time = 4000,
+		target = 0,
+		itv_t = 1000,
+		last_t = 2000,
+		cd_t = 4000,
 		type = 1,
 		range = 0,
-		auras = {
+		aura = {
 			{
-				rate = 20,
-				id = 2001005,
+				id = 2001,
+				lv = 1,
 			},
 			{
-				rate = 80,
-				id = 2002005,
+				id = 2002,
+				lv = 5,
 			},
 		},
-		add_attr = {
+		attr = {
 			{
 				id = 1,
 				val = 100,
@@ -182,381 +187,401 @@ local data =
 
 	[6] = {
 		id = 1002,
-		level = 1,
+		lv = 1,
 		name = "技能二",
-		object = 1,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 1,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 1,
 		range = 1,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003001,
+				id = 2003,
+				lv = 1,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[7] = {
 		id = 1002,
-		level = 2,
+		lv = 2,
 		name = "技能二",
-		object = 1,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 1,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 1,
 		range = 1,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003002,
+				id = 2003,
+				lv = 2,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[8] = {
 		id = 1002,
-		level = 3,
+		lv = 3,
 		name = "技能二",
-		object = 1,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 1,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 1,
 		range = 1,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003003,
+				id = 2003,
+				lv = 3,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[9] = {
 		id = 1002,
-		level = 4,
+		lv = 4,
 		name = "技能二",
-		object = 1,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 1,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 1,
 		range = 1,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003004,
+				id = 2003,
+				lv = 4,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[10] = {
 		id = 1002,
-		level = 5,
+		lv = 5,
 		name = "技能二",
-		object = 1,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 1,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 1,
 		range = 1,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003005,
+				id = 2003,
+				lv = 5,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[11] = {
 		id = 1003,
-		level = 1,
+		lv = 1,
 		name = "技能3",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003001,
+				id = 2003,
+				lv = 1,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[12] = {
 		id = 1003,
-		level = 2,
+		lv = 2,
 		name = "技能3",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003002,
+				id = 2003,
+				lv = 2,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[13] = {
 		id = 1003,
-		level = 3,
+		lv = 3,
 		name = "技能3",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003003,
+				id = 2003,
+				lv = 3,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[14] = {
 		id = 1003,
-		level = 4,
+		lv = 4,
 		name = "技能3",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003004,
+				id = 2003,
+				lv = 4,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[15] = {
 		id = 1003,
-		level = 5,
+		lv = 5,
 		name = "技能3",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003005,
+				id = 2003,
+				lv = 5,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[16] = {
 		id = 1004,
-		level = 1,
+		lv = 1,
 		name = "技能4",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003001,
+				id = 2003,
+				lv = 1,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[17] = {
 		id = 1004,
-		level = 2,
+		lv = 2,
 		name = "技能4",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003002,
+				id = 2003,
+				lv = 2,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[18] = {
 		id = 1004,
-		level = 3,
+		lv = 3,
 		name = "技能4",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003003,
+				id = 2003,
+				lv = 3,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[19] = {
 		id = 1004,
-		level = 4,
+		lv = 4,
 		name = "技能4",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003004,
+				id = 2003,
+				lv = 4,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[20] = {
 		id = 1004,
-		level = 5,
+		lv = 5,
 		name = "技能4",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003005,
+				id = 2003,
+				lv = 5,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[21] = {
 		id = 1005,
-		level = 1,
+		lv = 1,
 		name = "技能5",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003001,
+				id = 2003,
+				lv = 1,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[22] = {
 		id = 1005,
-		level = 2,
+		lv = 2,
 		name = "技能5",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003002,
+				id = 2003,
+				lv = 2,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[23] = {
 		id = 1005,
-		level = 3,
-		name = "",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		lv = 3,
+		name = "技能6",
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003003,
+				id = 2003,
+				lv = 3,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[24] = {
 		id = 1005,
-		level = 4,
-		name = "",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		lv = 4,
+		name = "技能7",
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003004,
+				id = 2003,
+				lv = 4,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 
 	[25] = {
 		id = 1005,
-		level = 5,
-		name = "",
-		object = 0,
-		cast_time = 3000,
-		cd_time = 6,
+		lv = 5,
+		name = "技能8",
+		target = 0,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
 		type = 2,
 		range = 2,
-		auras = {
+		aura = {
 			{
-				rate = 100,
-				id = 2003005,
+				id = 2003,
+				lv = 5,
 			},
 		},
-		add_attr = {},
+		attr = {},
 		desc = "这里是描述",
 	},
 

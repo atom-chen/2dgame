@@ -1,7 +1,7 @@
 local data = 
 {
 	[1] = {
-		id = 1001001,
+		id = 5001,
 		name = "曹操",
 		moduleid = 1,
 		level = 1,
@@ -14,7 +14,7 @@ local data =
 	},
 
 	[2] = {
-		id = 1001001,
+		id = 5001,
 		name = "曹操",
 		moduleid = 1,
 		level = 2,
@@ -27,7 +27,7 @@ local data =
 	},
 
 	[3] = {
-		id = 1001001,
+		id = 5001,
 		name = "曹操",
 		moduleid = 1,
 		level = 3,
@@ -40,7 +40,7 @@ local data =
 	},
 
 	[4] = {
-		id = 1001001,
+		id = 5001,
 		name = "曹操",
 		moduleid = 1,
 		level = 4,
@@ -53,7 +53,7 @@ local data =
 	},
 
 	[5] = {
-		id = 1001001,
+		id = 5001,
 		name = "曹操",
 		moduleid = 1,
 		level = 5,
@@ -66,7 +66,7 @@ local data =
 	},
 
 	[6] = {
-		id = 1001002,
+		id = 5002,
 		name = "孙权",
 		moduleid = 2,
 		level = 1,
@@ -79,7 +79,7 @@ local data =
 	},
 
 	[7] = {
-		id = 1001002,
+		id = 5002,
 		name = "孙权",
 		moduleid = 2,
 		level = 2,
@@ -92,7 +92,7 @@ local data =
 	},
 
 	[8] = {
-		id = 1001002,
+		id = 5002,
 		name = "孙权",
 		moduleid = 2,
 		level = 3,
@@ -105,7 +105,7 @@ local data =
 	},
 
 	[9] = {
-		id = 1001002,
+		id = 5002,
 		name = "孙权",
 		moduleid = 2,
 		level = 4,
@@ -118,7 +118,7 @@ local data =
 	},
 
 	[10] = {
-		id = 1001002,
+		id = 5002,
 		name = "孙权",
 		moduleid = 2,
 		level = 5,
@@ -131,7 +131,7 @@ local data =
 	},
 
 	[11] = {
-		id = 1001003,
+		id = 5003,
 		name = "关羽",
 		moduleid = 3,
 		level = 1,
@@ -144,7 +144,7 @@ local data =
 	},
 
 	[12] = {
-		id = 1001003,
+		id = 5003,
 		name = "关羽",
 		moduleid = 3,
 		level = 2,
@@ -157,7 +157,7 @@ local data =
 	},
 
 	[13] = {
-		id = 1001003,
+		id = 5003,
 		name = "关羽",
 		moduleid = 3,
 		level = 3,
@@ -170,7 +170,7 @@ local data =
 	},
 
 	[14] = {
-		id = 1001003,
+		id = 5003,
 		name = "关羽",
 		moduleid = 3,
 		level = 4,
@@ -183,7 +183,7 @@ local data =
 	},
 
 	[15] = {
-		id = 1001003,
+		id = 5003,
 		name = "关羽",
 		moduleid = 3,
 		level = 5,
@@ -196,7 +196,7 @@ local data =
 	},
 
 	[16] = {
-		id = 1001004,
+		id = 5004,
 		name = "魏延",
 		moduleid = 4,
 		level = 1,
@@ -209,7 +209,7 @@ local data =
 	},
 
 	[17] = {
-		id = 1001004,
+		id = 5004,
 		name = "魏延",
 		moduleid = 4,
 		level = 2,
@@ -222,7 +222,7 @@ local data =
 	},
 
 	[18] = {
-		id = 1001004,
+		id = 5004,
 		name = "魏延",
 		moduleid = 4,
 		level = 3,
@@ -235,7 +235,7 @@ local data =
 	},
 
 	[19] = {
-		id = 1001004,
+		id = 5004,
 		name = "魏延",
 		moduleid = 4,
 		level = 4,
@@ -248,7 +248,7 @@ local data =
 	},
 
 	[20] = {
-		id = 1001004,
+		id = 5004,
 		name = "魏延",
 		moduleid = 4,
 		level = 5,
@@ -261,7 +261,7 @@ local data =
 	},
 
 	[21] = {
-		id = 1001005,
+		id = 5005,
 		name = "周瑜",
 		moduleid = 5,
 		level = 1,
@@ -274,7 +274,7 @@ local data =
 	},
 
 	[22] = {
-		id = 1001005,
+		id = 5005,
 		name = "周瑜",
 		moduleid = 5,
 		level = 2,
@@ -287,7 +287,7 @@ local data =
 	},
 
 	[23] = {
-		id = 1001005,
+		id = 5005,
 		name = "周瑜",
 		moduleid = 5,
 		level = 3,
@@ -300,7 +300,7 @@ local data =
 	},
 
 	[24] = {
-		id = 1001005,
+		id = 5005,
 		name = "周瑜",
 		moduleid = 5,
 		level = 4,
@@ -313,7 +313,7 @@ local data =
 	},
 
 	[25] = {
-		id = 1001005,
+		id = 5005,
 		name = "周瑜",
 		moduleid = 5,
 		level = 5,
