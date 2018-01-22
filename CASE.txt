@@ -49,3 +49,7 @@ func handleConnection(c *net.TCPConn) {
 	fmt.Println("new client END")
 	c.Close()
 }
+
+
+这个网站，检测json正确性
+https://jsonlint.com/

@@ -5,6 +5,13 @@ local data =
 		name = "曹操",
 		moduleid = 1,
 		level = 1,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 100,
 		def = 80,
 		hp = 1000,
@@ -18,6 +25,13 @@ local data =
 		name = "曹操",
 		moduleid = 1,
 		level = 2,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 120,
 		def = 90,
 		hp = 1100,
@@ -31,6 +45,13 @@ local data =
 		name = "曹操",
 		moduleid = 1,
 		level = 3,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 140,
 		def = 100,
 		hp = 1200,
@@ -44,6 +65,13 @@ local data =
 		name = "曹操",
 		moduleid = 1,
 		level = 4,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 160,
 		def = 110,
 		hp = 1300,
@@ -57,6 +85,13 @@ local data =
 		name = "曹操",
 		moduleid = 1,
 		level = 5,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 180,
 		def = 120,
 		hp = 1400,
@@ -70,6 +105,13 @@ local data =
 		name = "孙权",
 		moduleid = 2,
 		level = 1,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 100,
 		def = 80,
 		hp = 1000,
@@ -83,6 +125,13 @@ local data =
 		name = "孙权",
 		moduleid = 2,
 		level = 2,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 120,
 		def = 90,
 		hp = 1100,
@@ -96,6 +145,13 @@ local data =
 		name = "孙权",
 		moduleid = 2,
 		level = 3,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 140,
 		def = 100,
 		hp = 1200,
@@ -109,6 +165,13 @@ local data =
 		name = "孙权",
 		moduleid = 2,
 		level = 4,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 160,
 		def = 110,
 		hp = 1300,
@@ -122,6 +185,13 @@ local data =
 		name = "孙权",
 		moduleid = 2,
 		level = 5,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 180,
 		def = 120,
 		hp = 1400,
@@ -135,6 +205,13 @@ local data =
 		name = "关羽",
 		moduleid = 3,
 		level = 1,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 100,
 		def = 80,
 		hp = 1000,
@@ -148,6 +225,13 @@ local data =
 		name = "关羽",
 		moduleid = 3,
 		level = 2,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 120,
 		def = 90,
 		hp = 1100,
@@ -161,6 +245,13 @@ local data =
 		name = "关羽",
 		moduleid = 3,
 		level = 3,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 140,
 		def = 100,
 		hp = 1200,
@@ -174,6 +265,13 @@ local data =
 		name = "关羽",
 		moduleid = 3,
 		level = 4,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 160,
 		def = 110,
 		hp = 1300,
@@ -187,6 +285,13 @@ local data =
 		name = "关羽",
 		moduleid = 3,
 		level = 5,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 180,
 		def = 120,
 		hp = 1400,
@@ -200,6 +305,13 @@ local data =
 		name = "魏延",
 		moduleid = 4,
 		level = 1,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 100,
 		def = 80,
 		hp = 1000,
@@ -213,6 +325,13 @@ local data =
 		name = "魏延",
 		moduleid = 4,
 		level = 2,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 120,
 		def = 90,
 		hp = 1100,
@@ -226,6 +345,13 @@ local data =
 		name = "魏延",
 		moduleid = 4,
 		level = 3,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 140,
 		def = 100,
 		hp = 1200,
@@ -239,6 +365,13 @@ local data =
 		name = "魏延",
 		moduleid = 4,
 		level = 4,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 160,
 		def = 110,
 		hp = 1300,
@@ -252,6 +385,13 @@ local data =
 		name = "魏延",
 		moduleid = 4,
 		level = 5,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 180,
 		def = 120,
 		hp = 1400,
@@ -265,6 +405,13 @@ local data =
 		name = "周瑜",
 		moduleid = 5,
 		level = 1,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 100,
 		def = 80,
 		hp = 1000,
@@ -278,6 +425,13 @@ local data =
 		name = "周瑜",
 		moduleid = 5,
 		level = 2,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 120,
 		def = 90,
 		hp = 1100,
@@ -291,6 +445,13 @@ local data =
 		name = "周瑜",
 		moduleid = 5,
 		level = 3,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 140,
 		def = 100,
 		hp = 1200,
@@ -304,6 +465,13 @@ local data =
 		name = "周瑜",
 		moduleid = 5,
 		level = 4,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 160,
 		def = 110,
 		hp = 1300,
@@ -317,6 +485,13 @@ local data =
 		name = "周瑜",
 		moduleid = 5,
 		level = 5,
+		apm = 20,
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
 		atk = 180,
 		def = 120,
 		hp = 1400,
