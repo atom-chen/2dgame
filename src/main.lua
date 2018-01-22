@@ -14,6 +14,9 @@ require "message.init"
 -- print("+++", type(cc.Node), cc.Node[".isclass"])
 local function main()
     -- require("app.MyApp"):create():run()
+    local director = cc.Director:getInstance()
+    director:setDisplayStats(true)
+    director:setAnimationInterval(1.0 / 30)
     local s = require("scenes.MainScene"):new()
     display.runScene(s)
 end
