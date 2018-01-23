@@ -16,13 +16,15 @@ function ToolbarWin:OnCreate()
     local skeletonNode = AnimLoader:loadSpine("biaoche5")
     skeletonNode:setAnimation(0, "walk", true)
     -- local skeletonNode = AnimLoader:loadSpine("spineboy")
-    skeletonNode:setPosition(cc.p(0, 0))
+    skeletonNode:setPosition(cc.p(0, -300))
     self:addChild(skeletonNode)
+    skeletonNode:setScale(0.5)
+    print("scale:", skeletonNode:getScale())
 
     local armature = AnimLoader:loadArmature("caocao")
     armature:getAnimation():play('skill2', -1, 1)
     armature:setPosition(cc.p(240, 150))
-    print("ddd", self, armature)
+
     self:addChild(armature)
 
     local times = 0

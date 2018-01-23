@@ -108,6 +108,8 @@ function MainScene:ctor()
                 elseif i == 4 then
                     local win = WinManager:FindWindow(1)
                     if win then WinManager:ShowWindow(win, false) end
+                elseif i == 5 then
+                    WinManager:CreateWindow(2)
                 end
             end
         end

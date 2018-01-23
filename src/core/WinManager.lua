@@ -2,6 +2,8 @@
 local win_list =
 {
     [1] = require("wins.ToolbarWin"),
+    [2] = require("wins.BattleWin"),
+
    -- [2] = require("wins.player_info"),                -- 角色信息
    -- [3] = require("wins.system_setting"),             -- 系统设置
 }
