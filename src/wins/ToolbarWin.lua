@@ -18,10 +18,10 @@ function ToolbarWin:OnCreate()
     -- local skeletonNode = AnimLoader:loadSpine("spineboy")
     skeletonNode:setPosition(cc.p(0, -300))
     self:addChild(skeletonNode)
-    skeletonNode:setScale(0.5)
+    skeletonNode:setScaleX(-1)
     print("scale:", skeletonNode:getScale())
 
-    local armature = AnimLoader:loadArmature("caocao")
+    local armature = AnimLoader:loadArmature("nan")
     armature:getAnimation():play('skill2', -1, 1)
     armature:setPosition(cc.p(240, 150))
 

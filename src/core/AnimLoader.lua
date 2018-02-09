@@ -28,7 +28,8 @@ end
 
 
 --[[
-    -- armature类动画(moling资源) 
+    -- armature类动画(moling资源)
+    异步加载暂时不处理
 --]]
 function AnimLoader:loadArmature(name)
     local url = string.format("anim_armature/%s/%s", name, name)
@@ -41,7 +42,7 @@ end
 
 --[[
     spine类动画
-    加载骨骼动画(moling资源：需要改*.plist里面的skinnedmesh --> linkedmesh) 
+    加载骨骼动画(moling资源：需要改*.plist里面的skinnedmesh --> linkedmesh)
     cocos2dx资源不需要特别处理
 --]]
 function AnimLoader:loadSpine(name)
