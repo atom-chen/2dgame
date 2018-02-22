@@ -30,11 +30,16 @@ end
 --[[
     -- armature类动画(moling资源) 
 --]]
-function AnimLoader:loadArmature(name)
+function AnimLoader:loadArmature(name, action)
     local url = string.format("anim_armature/%s/%s", name, name)
     ccs.ArmatureDataManager:getInstance():addArmatureFileInfo(url ..".png", url..".plist", url..".json")
     local armature = ccs.Armature:create(name)
-    armature:getAnimation():play("idle", -1, 1)
+    
+    if not action then
+        action = "idle"
+    end
+
+    armature:getAnimation():play(action, -1, 1)
     return armature
 end
 

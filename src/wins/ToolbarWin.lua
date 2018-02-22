@@ -22,7 +22,7 @@ function ToolbarWin:OnCreate()
     print("scale:", skeletonNode:getScale())
 
     local armature = AnimLoader:loadArmature("caocao")
-    armature:getAnimation():play('skill2', -1, 1)
+    -- armature:getAnimation():play('idle', -1, 1)
     armature:setPosition(cc.p(240, 150))
 
     self:addChild(armature)

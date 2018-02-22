@@ -87,7 +87,7 @@ function MainScene:ctor()
         "销毁",
         "显示",
         "隐藏",
-        "无反应",
+        "None",
     }
     -- 功能按钮
     for i = 1, 5 do
@@ -108,8 +108,11 @@ function MainScene:ctor()
                 elseif i == 4 then
                     local win = WinManager:FindWindow(1)
                     if win then WinManager:ShowWindow(win, false) end
-                elseif i == 5 then
-                    WinManager:CreateWindow(2)
+                else
+                    print("__________________")
+                    local DebugWin = require "wins.DebugWin"
+                    local dbg = DebugWin:create("haha,fuck")
+                    self:addChild(dbg)
                 end
             end
         end
