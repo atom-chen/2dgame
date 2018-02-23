@@ -19,15 +19,9 @@ function ToolbarWin:OnCreate()
     skeletonNode:setPosition(cc.p(0, -300))
     self:addChild(skeletonNode)
     skeletonNode:setScaleX(-1)
-    print("scale:", skeletonNode:getScale())
 
-<<<<<<< HEAD
     local armature = AnimLoader:loadArmature("caocao")
-    -- armature:getAnimation():play('idle', -1, 1)
-=======
-    local armature = AnimLoader:loadArmature("nan")
     armature:getAnimation():play('skill2', -1, 1)
->>>>>>> 85cd00d5f72acd05575e50b84ac9cd7ce5780caf
     armature:setPosition(cc.p(240, 150))
 
     self:addChild(armature)
