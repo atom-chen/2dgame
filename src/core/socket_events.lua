@@ -17,9 +17,13 @@ local Opcode    = Opcode
 local MsgName   = MsgName
 
 
+local __established = false
+
+
 ------------- Socket Event ----------------------------------
 
 cc.exports.g_connect_pass = function()
+    __established = true
     print("g_connect_pass +++++++++++++")
     -- 发送登录包
     Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
@@ -53,6 +57,7 @@ end
 
 
 cc.exports.g_on_closed = function()
+    __established = false
     print("g_on_closed +++++++++++++")
 end
 
@@ -60,11 +65,19 @@ end
 ------------- API ----------------------------------
 
 Socket.Connect = function(addr, port)
+    if __established then
+        print("connection already established")
+        return
+    end
     GameSocket.connect(addr, port)
 end
 
 
 Socket.SendPacket = function(code, tab)
+    if not __established then
+        print("connection was closed")
+        return
+    end
     local name = MsgName[code]; assert(name, string.format("SendPacket: Not FOUND name for opcode=%d", code))
     local body = protobuf.encode(name, tab)
     local size = #body
@@ -81,4 +94,4 @@ end
 
 ------------- DO ----------------------------------
 
-Socket.Connect("192.168.0.4", 4040)
+Socket.Connect("127.0.0.1", 4040)
