@@ -1,5 +1,6 @@
 
 require "message.opcode"
 
-require "message.msg_login"
 -- please following
+require "message.msg_login"
+require "message.msg_ping"

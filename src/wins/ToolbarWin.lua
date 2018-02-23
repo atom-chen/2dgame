@@ -29,11 +29,15 @@ function ToolbarWin:OnCreate()
     local times = 0
     local function _on_timer()
         print("on timer", times)
-        -- SocketMgr:send(times, {"fuckyou"})
         times = times + 1
+        Socket.SendPacket(Opcode.MSG_CS_PING, {
+            time = 1234
+        }, function(tab)
+            print("ping response:", tab.time)
+        end)
     end
 
-    -- test 
+    -- test
     local particle = cc.ParticleSystemQuad:create("particle/getitem.plist")
     particle:setPositionType(cc.POSITION_TYPE_RELATIVE)
     particle:setPosition(cc.p(360,0))

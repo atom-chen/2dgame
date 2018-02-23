@@ -18,6 +18,7 @@ local MsgName   = MsgName
 
 
 local __established = false
+local __callback = {}
 
 
 ------------- Socket Event ----------------------------------
@@ -46,12 +47,19 @@ cc.exports.g_on_message = function(code, data, size)
 
     local tab, err = protobuf.decode(name, data, size)
     assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
+    -- message dispose
     local func = md[code]
     if func then
         protobuf.extract(tab)
         func(tab)
     else
         print("unknown opcode:", code)
+    end
+    -- response callback
+    local func = __callback[code]
+    if func then
+        func(tab)
+        __callback[code] = nil
     end
 end
 
@@ -73,7 +81,7 @@ Socket.Connect = function(addr, port)
 end
 
 
-Socket.SendPacket = function(code, tab)
+Socket.SendPacket = function(code, tab, func)
     if not __established then
         print("connection was closed")
         return
@@ -84,6 +92,12 @@ Socket.SendPacket = function(code, tab)
     local data = struct.pack(string.format("<hhc%d", size), size, code, body)
     GameSocket.send(data)
     -- assert((size+4) == struct.size(string.format("<hhc%d",size)), "struct.pack error !!!")
+    if func then
+        if __callback[code+1] then
+            print("exist callback will be covered")
+        end
+        __callback[code+1] = func
+    end
 end
 
 
