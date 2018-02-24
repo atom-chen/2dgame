@@ -91,7 +91,7 @@ end
 
 function WinManager:AttachScene(scene)
     if self._scene then
-        self._scene.removeChild(self._layer)
+        self._scene:removeChild(self._layer)
     end
     if scene then
         scene:addChild(self._layer)

@@ -160,4 +160,14 @@ function MainScene:ctor()
     WinManager:AttachScene(self)
 end
 
+
+function MainScene:OnEnter()
+    print("MainScene:OnEnter")
+end
+
+
+function MainScene:OnLeave()
+    print("MainScene:OnLeave")
+end
+
 return MainScene

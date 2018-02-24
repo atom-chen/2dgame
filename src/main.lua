@@ -7,6 +7,9 @@ require "base.init"
 require "core.init"
 require "message.init"
 
+local SceneMgr = require "scenes.SceneMgr"
+
+
 -- zcg.logTable(debug.getregistry(), "e:/reg.txt")
 -- import project file
 
@@ -17,8 +20,7 @@ local function main()
     local director = cc.Director:getInstance()
     director:setDisplayStats(true)
     director:setAnimationInterval(1.0 / 30)
-    local s = require("scenes.LoginScene"):new()
-    display.runScene(s)
+    SceneMgr.RunScene("LoginScene")
 end
 
 local status, msg = xpcall(main, __G__TRACKBACK__)

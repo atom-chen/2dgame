@@ -5,6 +5,7 @@ local scheduler     = require "core.scheduler"
 local WinManager    = require "core.WinManager"
 local Event         = require "core.event"
 local EventMgr      = require "core.event_mgr"
+local SceneMgr      = require "scenes.SceneMgr"
 
 
 local LoginScene = class("LoginScene", cc.Scene)
@@ -29,7 +30,7 @@ function LoginScene:ctor()
     notice:setColor(cc.RED)
     notice:setPosition(0, -299)
     layer:addChild(notice)
-    
+
     self._notice = notice
 
     -- 定时器
@@ -39,17 +40,65 @@ function LoginScene:ctor()
 end
 
 
+function LoginScene:OnEnter()
+    print("LoginScene:OnEnter")
+end
+
+
+function LoginScene:OnLeave()
+    print("LoginScene:OnLeave")
+end
+
+
+function LoginScene:__enter_game()
+    self:SetLoginStatus("进入游戏...")
+
+    local _on_event_enter_game = function(event, args)
+        if event == Event.EnterGameOk then
+            self:SetLoginStatus("进入游戏成功，加载场景。。。")
+            scheduler.Once(function()
+                -- 进入主场景
+                SceneMgr.RunScene("MainScene")
+            end, 0.5)
+        else
+            self:SetLoginStatus("进入游戏失败，你登录过了吗？")
+        end
+    end
+
+    EventMgr.RegisterEvent({Event.EnterGameOk,Event.EnterGameFailed}, _on_event_enter_game, true)
+
+    Socket.SendPacket(Opcode.MSG_CS_ENTER_GAME, {
+    })
+end
+
+
+function LoginScene:__login()
+    local _on_event_login = function(event, args)
+        if event == Event.LoginOK then
+            self:SetLoginStatus("登录成功，准备进入游戏。。。")
+            scheduler.Once(function() self:__enter_game() end, 0.5)
+        else
+            self:SetLoginStatus("登录失败，请检查用户名密码。")
+        end
+    end
+
+    EventMgr.RegisterEvent({Event.LoginOK,Event.LoginFailed}, _on_event_login, true)
+
+    -- 发送登录包
+    Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
+        acct = "test001",
+        pass = "1",
+    })
+end
+
+
 function LoginScene:__connect()
     self:SetLoginStatus("开始连接...")
-    
+
     local _on_event_connect = function(event, args)
         if event == Event.ConnectOK then
-            self:SetLoginStatus("连接服务器成功")
-            -- 发送登录包
-            Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
-                acct = "test001",
-                pass = "1",
-            })
+            self:SetLoginStatus("连接服务器成功，准备登录。。。")
+            scheduler.Once(function() self:__login() end, 0.5)
         else
             self:SetLoginStatus("连接服务器失败")
         end

@@ -15,7 +15,9 @@ local Event =
     LoginOK             = seq(),        -- 登录成功
     LoginFailed         = seq(),        -- 登录失败
 
-
+    -- 进入游戏
+    EnterGameOk         = seq(),
+    EnterGameFailed     = seq(),
 }
 
 return Event
