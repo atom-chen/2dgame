@@ -4,6 +4,9 @@ require "struct"
 
 require "message.opcode"
 
+local Event     = require "core.event"
+local EventMgr  = require "core.event_mgr"
+
 
 protobuf.register(cc.FileUtils:getInstance():getDataFromFile("protocol.pb"))
 
@@ -25,17 +28,12 @@ local __callback = {}
 
 cc.exports.g_connect_pass = function()
     __established = true
-    print("g_connect_pass +++++++++++++")
-    -- 发送登录包
-    Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
-        acct = "test001",
-        pass = "1",
-    })
+    EventMgr.EmitEvent(Event.ConnectOK)
 end
 
 
 cc.exports.g_connect_fail = function()
-    print("g_connect_fail +++++++++++++")
+    EventMgr.EmitEvent(Event.ConnectFailed)
 end
 
 
@@ -67,6 +65,7 @@ end
 cc.exports.g_on_closed = function()
     __established = false
     print("g_on_closed +++++++++++++")
+    EventMgr.EmitEvent(Event.ConnectClosed)
 end
 
 
@@ -104,8 +103,3 @@ end
 Socket.Close = function()
     GameSocket.close()
 end
-
-
-------------- DO ----------------------------------
-
-Socket.Connect("127.0.0.1", 4040)

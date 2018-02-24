@@ -127,3 +127,33 @@ table.default_value = function(tab, val)
         end
     end
 end
+
+
+table.exist = function(val, tab)
+    for _, v in ipairs(tab) do
+        if v == val then
+            return true
+        end
+    end
+    return false
+end
+
+
+table.exist_key = function(key, tab)
+    for k, _ in pairs(tab) do
+        if k == key then
+            return true
+        end
+    end
+    return false
+end
+
+
+table.exist_val = function(val, tab)
+    for _, v in pairs(tab) do
+        if v == val then
+            return true
+        end
+    end
+    return false
+end

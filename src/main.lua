@@ -17,7 +17,7 @@ local function main()
     local director = cc.Director:getInstance()
     director:setDisplayStats(true)
     director:setAnimationInterval(1.0 / 30)
-    local s = require("scenes.MainScene"):new()
+    local s = require("scenes.LoginScene"):new()
     display.runScene(s)
 end
 

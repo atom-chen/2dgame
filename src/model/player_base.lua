@@ -22,12 +22,9 @@ function PlayerData.Init(root)
 end
 
 
-
 function PlayerData.InitBase(root)
     
 end
-
-
 
 
 return PlayerData

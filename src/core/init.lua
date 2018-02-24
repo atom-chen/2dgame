@@ -4,3 +4,8 @@ require "core.socket_events"
 require "core.AnimLoader"
 require "core.WinBase"
 require "core.WinManager"
+require "core.scheduler"
+
+require "core.event"
+require "core.event_mgr"
+
