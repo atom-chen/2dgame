@@ -45,19 +45,26 @@ cc.exports.g_on_message = function(code, data, size)
 
     local tab, err = protobuf.decode(name, data, size)
     assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
+
+    local undisposed = false
     -- message dispose
     local func = md[code]
     if func then
         protobuf.extract(tab)
         func(tab)
     else
-        print("unknown opcode:", code)
+        undisposed = true
     end
     -- response callback
     local func = __callback[code]
     if func then
         func(tab)
         __callback[code] = nil
+        undisposed = false
+    end
+    
+    if undisposed then
+        print("undisposed opcode:", code)
     end
 end
 

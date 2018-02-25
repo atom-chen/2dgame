@@ -26,4 +26,8 @@ function SceneMgr.RunScene(name)
 end
 
 
+function SceneMgr.SceneName()
+    return _curr_name
+end
+
 return SceneMgr

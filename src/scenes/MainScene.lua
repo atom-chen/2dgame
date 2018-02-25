@@ -163,6 +163,14 @@ end
 
 function MainScene:OnEnter()
     print("MainScene:OnEnter")
+    -- 拉取玩家数据
+    Socket.SendPacket(Opcode.MSG_CS_PlayerData, {
+        id = 2
+    }, function(tab)
+        print("get player_data response:")
+        table.print(tab)
+    end)
+
 end
 
 
