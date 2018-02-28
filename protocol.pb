@@ -28,3 +28,9 @@ error_code (R	errorCodebproto3
 EnterGameResponse
 
 error_code (R	errorCodebproto3
+r
+gm.protomsg",
+GMCommandRequest
+command (	Rcommand"+
+GMCommandResponse
+result (Rresultbproto3

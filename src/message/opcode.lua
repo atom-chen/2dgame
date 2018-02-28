@@ -15,6 +15,9 @@ Opcode.MSG_SC_ENTER_GAME = 0x0006
 Opcode.MSG_CS_PlayerData = 0x0007
 Opcode.MSG_SC_PlayerData = 0x0008
 
+Opcode.MSG_CS_GMCommand  = 0x0009
+Opcode.MSG_SC_GMCommand  = 0x000A
+
 
 --------- protobuf map: message & name -----------------------------------------------------------
 
@@ -30,3 +33,5 @@ MsgName[Opcode.MSG_CS_ENTER_GAME]   = "msg.EnterGameRequest"
 MsgName[Opcode.MSG_SC_ENTER_GAME]   = "msg.EnterGameResponse"
 MsgName[Opcode.MSG_CS_PlayerData]   = "msg.PlayerDataRequest"
 MsgName[Opcode.MSG_SC_PlayerData]   = "msg.PlayerDataResponse"
+MsgName[Opcode.MSG_CS_GMCommand]    = "msg.GMCommandRequest"
+MsgName[Opcode.MSG_SC_GMCommand]    = "msg.GMCommandResponse"
