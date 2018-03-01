@@ -96,7 +96,12 @@ Socket.SendPacket = function(code, tab, func)
     local body = protobuf.encode(name, tab)
     local size = #body
     local data = struct.pack(string.format("<hhc%d", size), size, code, body)
-    GameSocket.send(data)
+    local send = GameSocket.send(data)
+    if send == 0 then
+        print("connection in closing")
+        return
+    end
+
     -- assert((size+4) == struct.size(string.format("<hhc%d",size)), "struct.pack error !!!")
     if func then
         if __callback[code+1] then

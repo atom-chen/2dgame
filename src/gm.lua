@@ -4,7 +4,7 @@ zcg.logTable(cc.Scheduler, "e:/a.txt")
 
 
 Socket.SendPacket(Opcode.MSG_CS_GMCommand, {
-        command = "fu7ckyou,fuck me"
+        command = "exp, fuck me"
     }, function(tab)
         print(tab.result)
         table.print(tab)
