@@ -64,7 +64,7 @@ cc.exports.g_on_message = function(code, data, size)
     end
     
     if undisposed then
-        print("undisposed opcode:", code)
+        zcg.logWarning("undisposed opcode: %d", code)
     end
 end
 
