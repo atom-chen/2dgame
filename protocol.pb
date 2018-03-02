@@ -15,17 +15,52 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-†
+›
 
 game.protomsg"#
 PlayerDataRequest
-id (Rid"p
+id (Rid"<
+Item
+flag (Rflag
+id (Rid
+cnt (Rcnt";
+	Equipment
+quality (Rquality
+level (Rlevel"I
+Skill
+id (Rid
+level (Rlevel
+effectId (ReffectId",
+Aura
+id (Rid
+level (Rlevel"•
+Hero
+id (Rid
+level (Rlevel
+quality (Rquality
+power (Rpower&
+equips (2.msg.EquipmentRequips"
+skills (2
+.msg.SkillRskills
+auras (2	.msg.AuraRauras
+status (Rstatus
+
+statusData	 (R
+statusData
+dead
+ (Rdead"ø
 PlayerDataResponse
 acct (	Racct
 name (	Rname
 pid (Rpid
 sid (Rsid
-id (Rid",
+id (Rid
+level (Rlevel
+vipLevel (RvipLevel
+Male (RMale
+items	 (2	.msg.ItemRitems
+heros
+ (2	.msg.HeroRheros",
 GMCommandRequest
 command (	Rcommand"+
 GMCommandResponse
