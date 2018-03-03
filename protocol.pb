@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-›
+¼
 
 game.protomsg"#
 PlayerDataRequest
@@ -48,7 +48,7 @@ game.protomsg"#
 statusData	 (R
 statusData
 dead
- (Rdead"ø
+ (Rdead"™
 PlayerDataResponse
 acct (	Racct
 name (	Rname
@@ -57,10 +57,11 @@ statusData
 id (Rid
 level (Rlevel
 vipLevel (RvipLevel
-Male (RMale
+male (Rmale
 items	 (2	.msg.ItemRitems
 heros
- (2	.msg.HeroRheros",
+ (2	.msg.HeroRheros
+auras (2	.msg.AuraRauras",
 GMCommandRequest
 command (	Rcommand"+
 GMCommandResponse

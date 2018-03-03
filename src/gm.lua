@@ -1,6 +1,6 @@
 
 -- press 'z' will do this file
-zcg.logTable(cc.Scheduler, "e:/a.txt")
+zcg.logTable(cc.Scheduler, "d:/a.txt")
 
 
 local gm_str = 

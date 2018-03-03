@@ -10,7 +10,7 @@ require "message.init"
 local SceneMgr = require "scenes.SceneMgr"
 
 
--- zcg.logTable(debug.getregistry(), "e:/reg.txt")
+-- zcg.logTable(debug.getregistry(), "d:/reg.txt")
 -- import project file
 
 

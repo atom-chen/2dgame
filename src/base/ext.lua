@@ -157,3 +157,45 @@ table.exist_val = function(val, tab)
     end
     return false
 end
+
+
+local function __print_table(tab, lv)
+    local prefix_item = string.rep("  ", lv+1)
+    local prefix_head = ""
+    if lv > 0 then
+        prefix_head = string.rep("  ", lv)
+    end
+
+    print(prefix_head .. "{")
+
+    for k, v in pairs(tab) do
+        local k_type = type(k)
+        if type(v) ~= "table" then
+            if k_type == "number" then
+                print(prefix_item .. string.format("[%d] = %s,", k, v))
+            else
+                print(prefix_item .. string.format("%s = %s", k, v))
+            end
+        else
+            if k_type == "number" then
+                print(prefix_item .. string.format("[%d] =", k))
+            else
+                print(prefix_item .. string.format("%s =", k))
+            end
+            __print_table(v, lv+1)
+        end
+    end
+
+    print(prefix_head .. "},")
+end
+
+
+table.print_r = function(tab, tag)
+    if not tag then
+        print(string.format("================ [%s] print_table ================", tab))
+    else
+        print(string.format("================ [%s] print_table ================", tag))
+    end
+
+    __print_table(tab, 0)
+end

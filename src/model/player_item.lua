@@ -1,13 +1,9 @@
 
--- 道具
-
-local _items = {}
-
-
-local PlayerItem = {}
+local _items        = {}
+local PlayerItem    = {}
 
 
-function PlayerItem.Reset()
+function PlayerItem.Clear()
     _items = {}
 end
 
@@ -28,6 +24,11 @@ end
 -- 设置道具数量
 function PlayerItem.SetItemCount(id, cnt)
     _items[id] = cnt
+end
+
+
+function PlayerItem.Dump()
+    table.print_r(_items)
 end
 
 

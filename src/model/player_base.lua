@@ -1,30 +1,20 @@
 
-
--- 玩家数据
-
-
-
-local PlayerData = {}
+local _base         = {}
+local PlayerBase    = {}
 
 
-
-function PlayerData.Reset()
-
-    _player_root._base      = {}    -- 基本信息
-    _player_root._bag       = {}    -- 道具
-    _player_root._active    = {}    -- 活动数据
-
+function PlayerBase.Clear()
+    _base = {}
 end
 
 
-function PlayerData.Init(root)
-
+function PlayerBase.GetBase()
+    return _base
 end
 
 
-function PlayerData.InitBase(root)
-    
+function PlayerBase.Dump()
+    table.print_r(_base, "player base")
 end
 
-
-return PlayerData
+return PlayerBase

@@ -106,12 +106,17 @@ end
 zcg.logTable = function(tab, filename, print_exist_table)
     local e
     local f
+    local p
     if not print_exist_table then
         e = {}
     end
+
     if filename then
+        p = io.output()
         f = io.open(filename, "w+")
         io.output(f)
+    else
+        io.output(io.stdout)
     end
     if not tab then
         io.write("tab = nil\n")
@@ -125,7 +130,9 @@ zcg.logTable = function(tab, filename, print_exist_table)
         local depth = 0
         _print_table(tab, depth, e)
     end
+
     if f then
+        io.output(p)
         f:flush()
         f:close()
     end
