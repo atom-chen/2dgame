@@ -3,16 +3,33 @@ local data =
 	[1] = {
 		id = 1,
 		desc = "一级怪物",
-		top = {},
-		mid = {
+		l_pioneer = {
 			{
 				id = 10001,
 				lv = 1,
 			},
 		},
-		btm = {
+		r_pioneer = {
 			{
-				id = 10001,
+				id = 10002,
+				lv = 1,
+			},
+		},
+		commander = {
+			{
+				id = 10003,
+				lv = 1,
+			},
+		},
+		l_guarder = {
+			{
+				id = 10004,
+				lv = 1,
+			},
+		},
+		r_guarder = {
+			{
+				id = 10005,
 				lv = 1,
 			},
 		},
@@ -21,16 +38,33 @@ local data =
 	[2] = {
 		id = 2,
 		desc = "二级怪物",
-		top = {},
-		mid = {
+		l_pioneer = {
+			{
+				id = 10005,
+				lv = 1,
+			},
+		},
+		r_pioneer = {
+			{
+				id = 10004,
+				lv = 1,
+			},
+		},
+		commander = {
+			{
+				id = 10003,
+				lv = 1,
+			},
+		},
+		l_guarder = {
 			{
 				id = 10002,
 				lv = 1,
 			},
 		},
-		btm = {
+		r_guarder = {
 			{
-				id = 10002,
+				id = 10001,
 				lv = 1,
 			},
 		},
@@ -39,14 +73,21 @@ local data =
 	[3] = {
 		id = 3,
 		desc = "3级怪物",
-		top = {},
-		mid = {
+		l_pioneer = {},
+		r_pioneer = {
 			{
 				id = 10003,
 				lv = 1,
 			},
 		},
-		btm = {
+		commander = {
+			{
+				id = 10003,
+				lv = 1,
+			},
+		},
+		l_guarder = {},
+		r_guarder = {
 			{
 				id = 10003,
 				lv = 1,
@@ -57,14 +98,21 @@ local data =
 	[4] = {
 		id = 4,
 		desc = "4级怪物",
-		top = {},
-		mid = {
+		l_pioneer = {},
+		r_pioneer = {
 			{
 				id = 10004,
 				lv = 1,
 			},
 		},
-		btm = {
+		commander = {
+			{
+				id = 10004,
+				lv = 1,
+			},
+		},
+		l_guarder = {},
+		r_guarder = {
 			{
 				id = 10004,
 				lv = 1,
@@ -75,19 +123,31 @@ local data =
 	[5] = {
 		id = 5,
 		desc = "5级怪物",
-		top = {
+		l_pioneer = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
-		mid = {
+		r_pioneer = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
-		btm = {
+		commander = {
+			{
+				id = 10005,
+				lv = 1,
+			},
+		},
+		l_guarder = {
+			{
+				id = 10005,
+				lv = 1,
+			},
+		},
+		r_guarder = {
 			{
 				id = 10005,
 				lv = 1,
@@ -98,19 +158,31 @@ local data =
 	[6] = {
 		id = 6,
 		desc = "6级怪物",
-		top = {
+		l_pioneer = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		mid = {
+		r_pioneer = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		btm = {
+		commander = {
+			{
+				id = 10006,
+				lv = 1,
+			},
+		},
+		l_guarder = {
+			{
+				id = 10006,
+				lv = 1,
+			},
+		},
+		r_guarder = {
 			{
 				id = 10006,
 				lv = 1,
