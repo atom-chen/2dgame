@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-¼
+Ô
 
 game.protomsg"#
 PlayerDataRequest
@@ -71,4 +71,40 @@ statusData
 notice (	Rnotice"<
 NoticeResponse
 flag (Rflag
-notice (	Rnoticebproto3
+notice (	Rnotice"-
+BattleSkill
+id (Rid
+lv (Rlv",
+
+BattleAura
+id (Rid
+lv (Rlv"»
+
+BattleUnit
+type (Rtype
+id (Rid
+lv (Rlv
+pos (Rpos
+atk (Ratk
+def (Rdef
+hp_cur (RhpCur
+hp_max (RhpMax
+crit	 (Rcrit
+	crit_hurt
+ (RcritHurt$
+comm (2.msg.BattleSkillRcomm&
+skill (2.msg.BattleSkillRskill0
+aux_s_chief (2.msg.BattleSkillR	auxSChief/
+aux_a_chief (2.msg.BattleAuraR	auxAChief3
+aux_a_guarder (2.msg.BattleAuraRauxAGuarder"^
+BattleDetail
+a_pos (RaPos
+d_pos (RdPos
+a_hp (RaHp
+d_hp (RdHp"#
+MakeBattleRequest
+id (Rid"v
+MakeBattleResponse%
+uints (2.msg.BattleUnitRuints'
+cases (2.msg.BattleDetailRcases
+win (Rwinbproto3

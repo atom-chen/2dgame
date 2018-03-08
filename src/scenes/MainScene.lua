@@ -109,9 +109,8 @@ function MainScene:ctor()
                     local win = WinManager:FindWindow(1)
                     if win then WinManager:ShowWindow(win, false) end
                 else
-                    print("__________________")
                     local DebugWin = require "wins.DebugWin"
-                    local dbg = DebugWin:create("haha,fuck")
+                    local dbg = DebugWin:create("preboy.ZHANG")
                     self:addChild(dbg)
                 end
             end

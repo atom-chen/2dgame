@@ -21,6 +21,9 @@ Opcode.MSG_SC_GMCommand         = 0x000A
 Opcode.MSG_CS_Notice            = 0x000B
 Opcode.MSG_SC_Notice            = 0x000C
 
+Opcode.MSG_CS_MakeBattle        = 0x000D
+Opcode.MSG_SC_MakeBattle        = 0x000E
+
 
 --------- protobuf map: message & name -----------------------------------------------------------
 
