@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-Ô
+‹
 
 game.protomsg"#
 PlayerDataRequest
@@ -96,15 +96,18 @@ BattleUnit
 skill (2.msg.BattleSkillRskill0
 aux_s_chief (2.msg.BattleSkillR	auxSChief/
 aux_a_chief (2.msg.BattleAuraR	auxAChief3
-aux_a_guarder (2.msg.BattleAuraRauxAGuarder"^
-BattleDetail
+aux_a_guarder (2.msg.BattleAuraRauxAGuarder"\
+
+BattleStep
 a_pos (RaPos
 d_pos (RdPos
 a_hp (RaHp
-d_hp (RdHp"#
+d_hp (RdHp"n
+BattleResult%
+units (2.msg.BattleUnitRunits%
+steps (2.msg.BattleStepRsteps
+win (Rwin"#
 MakeBattleRequest
-id (Rid"v
-MakeBattleResponse%
-uints (2.msg.BattleUnitRuints'
-cases (2.msg.BattleDetailRcases
-win (Rwinbproto3
+id (Rid"?
+MakeBattleResponse)
+result (2.msg.BattleResultRresultbproto3
