@@ -43,14 +43,13 @@ cc.exports.g_on_message = function(code, data, size)
         data = ""
     end
 
-    local tab, err = protobuf.decode(name, data, size)
-    assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
+    local tab, err = protobuf.decode(name, data, size); assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
+    protobuf.extract(tab)
 
     local undisposed = false
     -- message dispose
     local func = md[code]
     if func then
-        protobuf.extract(tab)
         func(tab)
     else
         undisposed = true
@@ -62,7 +61,7 @@ cc.exports.g_on_message = function(code, data, size)
         __callback[code] = nil
         undisposed = false
     end
-    
+
     if undisposed then
         zcg.logWarning("undisposed opcode: %d", code)
     end

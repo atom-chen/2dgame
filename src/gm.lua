@@ -10,8 +10,12 @@ local gm_str =
     [3] = "hero 5001 5002",             --  增加英雄 英雄ID
 }
 
-MSG.SendGMCommand(gm_str[1])
+-- MSG.SendGMCommand(gm_str[1])
 
 
 -- MSG.SendNotice("fuck you, can i ?")
 
+
+Socket.SendPacket(Opcode.MSG_CS_MakeBattle, {
+    id = 1,
+})

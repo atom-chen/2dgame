@@ -36,7 +36,7 @@ function WinManager:Release()
 end
 
 
-function WinManager:CreateWindow(id)
+function WinManager:CreateWindow(id, ...)
     local win = self:FindWindow(id)
     if not win then
         local cls = win_list[id]
@@ -44,7 +44,7 @@ function WinManager:CreateWindow(id)
             zcg.logWarning("WinManager:CreateWindow: unknown id=%d", id)
             return
         end
-        win = cls:create()
+        win = cls:create(...)
         win._id = id
         self._layer:addChild(win)
         self._win_whole[id] = win

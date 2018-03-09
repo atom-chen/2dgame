@@ -28,7 +28,7 @@ end
 
 
 function PlayerItem.Dump()
-    table.print_r(_items)
+    table.print_r(_items, "player item")
 end
 
 

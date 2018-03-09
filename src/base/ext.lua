@@ -172,15 +172,15 @@ local function __print_table(tab, lv)
         local k_type = type(k)
         if type(v) ~= "table" then
             if k_type == "number" then
-                print(prefix_item .. string.format("[%d] = %s,", k, v))
+                print(prefix_item .. string.format("[%d] = %s,", tonumber(k), tostring(v)))
             else
-                print(prefix_item .. string.format("%s = %s", k, v))
+                print(prefix_item .. string.format("%s = %s", tostring(k), tostring(v)))
             end
         else
             if k_type == "number" then
-                print(prefix_item .. string.format("[%d] =", k))
+                print(prefix_item .. string.format("[%d] =", tonumber(k)))
             else
-                print(prefix_item .. string.format("%s =", k))
+                print(prefix_item .. string.format("%s =", tostring(k)))
             end
             __print_table(v, lv+1)
         end
@@ -189,12 +189,11 @@ local function __print_table(tab, lv)
     print(prefix_head .. "},")
 end
 
-
 table.print_r = function(tab, tag)
     if not tag then
-        print(string.format("================ [%s] print_table ================", tab))
+        print(string.format("================ [%s] ================", tostring(tab)))
     else
-        print(string.format("================ [%s] print_table ================", tag))
+        print(string.format("================ [%s] ================", tag))
     end
 
     __print_table(tab, 0)

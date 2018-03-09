@@ -3,6 +3,8 @@ cc.FileUtils:getInstance():setPopupNotify(false)
 
 require "config"
 require "cocos.init"
+
+require "game"
 require "base.init"
 require "core.init"
 require "message.init"

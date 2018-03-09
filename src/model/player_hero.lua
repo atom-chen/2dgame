@@ -56,7 +56,7 @@ end
 
 
 function Hero:Dump()
-    table.print_r(self._data)
+    table.print_r(self._data, "hero:" .. self._data.id)
 end
 
 
