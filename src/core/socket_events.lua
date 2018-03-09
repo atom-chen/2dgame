@@ -92,7 +92,7 @@ Socket.SendPacket = function(code, tab, func)
         print("connection was closed")
         return
     end
-    local name = MsgName[code]; assert(name, string.format("SendPacket: Not FOUND name for opcode=%d", code))
+    local name = MsgName[code]; assert(name, string.format("Opcode=0x%.4X, MsgName=nil", code))
     local body = protobuf.encode(name, tab)
     local size = #body
     local data = struct.pack(string.format("<hhc%d", size), size, code, body)
