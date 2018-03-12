@@ -2,7 +2,7 @@ local data =
 {
 	[1] = {
 		id = 1001,
-		lv = 1,
+		level = 1,
 		name = "技能一",
 		target = 0,
 		itv_t = 1000,
@@ -39,7 +39,7 @@ local data =
 
 	[2] = {
 		id = 1001,
-		lv = 2,
+		level = 2,
 		name = "技能一",
 		target = 0,
 		itv_t = 1000,
@@ -76,7 +76,7 @@ local data =
 
 	[3] = {
 		id = 1001,
-		lv = 3,
+		level = 3,
 		name = "技能一",
 		target = 0,
 		itv_t = 1000,
@@ -113,7 +113,7 @@ local data =
 
 	[4] = {
 		id = 1001,
-		lv = 4,
+		level = 4,
 		name = "技能一",
 		target = 0,
 		itv_t = 1000,
@@ -150,7 +150,7 @@ local data =
 
 	[5] = {
 		id = 1001,
-		lv = 5,
+		level = 5,
 		name = "技能一",
 		target = 0,
 		itv_t = 1000,
@@ -187,7 +187,7 @@ local data =
 
 	[6] = {
 		id = 1002,
-		lv = 1,
+		level = 1,
 		name = "技能二",
 		target = 1,
 		itv_t = 0,
@@ -207,7 +207,7 @@ local data =
 
 	[7] = {
 		id = 1002,
-		lv = 2,
+		level = 2,
 		name = "技能二",
 		target = 1,
 		itv_t = 0,
@@ -227,7 +227,7 @@ local data =
 
 	[8] = {
 		id = 1002,
-		lv = 3,
+		level = 3,
 		name = "技能二",
 		target = 1,
 		itv_t = 0,
@@ -247,7 +247,7 @@ local data =
 
 	[9] = {
 		id = 1002,
-		lv = 4,
+		level = 4,
 		name = "技能二",
 		target = 1,
 		itv_t = 0,
@@ -267,7 +267,7 @@ local data =
 
 	[10] = {
 		id = 1002,
-		lv = 5,
+		level = 5,
 		name = "技能二",
 		target = 1,
 		itv_t = 0,
@@ -287,7 +287,7 @@ local data =
 
 	[11] = {
 		id = 1003,
-		lv = 1,
+		level = 1,
 		name = "技能3",
 		target = 0,
 		itv_t = 1000,
@@ -307,7 +307,7 @@ local data =
 
 	[12] = {
 		id = 1003,
-		lv = 2,
+		level = 2,
 		name = "技能3",
 		target = 0,
 		itv_t = 1000,
@@ -327,7 +327,7 @@ local data =
 
 	[13] = {
 		id = 1003,
-		lv = 3,
+		level = 3,
 		name = "技能3",
 		target = 0,
 		itv_t = 1000,
@@ -347,7 +347,7 @@ local data =
 
 	[14] = {
 		id = 1003,
-		lv = 4,
+		level = 4,
 		name = "技能3",
 		target = 0,
 		itv_t = 1000,
@@ -367,7 +367,7 @@ local data =
 
 	[15] = {
 		id = 1003,
-		lv = 5,
+		level = 5,
 		name = "技能3",
 		target = 0,
 		itv_t = 1000,
@@ -387,7 +387,7 @@ local data =
 
 	[16] = {
 		id = 1004,
-		lv = 1,
+		level = 1,
 		name = "技能4",
 		target = 0,
 		itv_t = 1000,
@@ -407,7 +407,7 @@ local data =
 
 	[17] = {
 		id = 1004,
-		lv = 2,
+		level = 2,
 		name = "技能4",
 		target = 0,
 		itv_t = 1000,
@@ -427,7 +427,7 @@ local data =
 
 	[18] = {
 		id = 1004,
-		lv = 3,
+		level = 3,
 		name = "技能4",
 		target = 0,
 		itv_t = 1000,
@@ -447,7 +447,7 @@ local data =
 
 	[19] = {
 		id = 1004,
-		lv = 4,
+		level = 4,
 		name = "技能4",
 		target = 0,
 		itv_t = 1000,
@@ -467,7 +467,7 @@ local data =
 
 	[20] = {
 		id = 1004,
-		lv = 5,
+		level = 5,
 		name = "技能4",
 		target = 0,
 		itv_t = 1000,
@@ -487,7 +487,7 @@ local data =
 
 	[21] = {
 		id = 1005,
-		lv = 1,
+		level = 1,
 		name = "技能5",
 		target = 0,
 		itv_t = 1000,
@@ -507,7 +507,7 @@ local data =
 
 	[22] = {
 		id = 1005,
-		lv = 2,
+		level = 2,
 		name = "技能5",
 		target = 0,
 		itv_t = 1000,
@@ -527,7 +527,7 @@ local data =
 
 	[23] = {
 		id = 1005,
-		lv = 3,
+		level = 3,
 		name = "技能6",
 		target = 0,
 		itv_t = 1000,
@@ -547,7 +547,7 @@ local data =
 
 	[24] = {
 		id = 1005,
-		lv = 4,
+		level = 4,
 		name = "技能7",
 		target = 0,
 		itv_t = 1000,
@@ -567,7 +567,7 @@ local data =
 
 	[25] = {
 		id = 1005,
-		lv = 5,
+		level = 5,
 		name = "技能8",
 		target = 0,
 		itv_t = 1000,
