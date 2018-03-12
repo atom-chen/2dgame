@@ -1,10 +1,7 @@
 
 local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
-
-
-local HeroProto     = require "config.HeroProto"
-local CreatureProto = require "config.CreatureProto"
+local config        = require "configs_grace"
 
 
 local BattleUnit    = class("BattleUnit")
@@ -23,24 +20,30 @@ function BattleUnit:ctor(u)
     self._hp_max    = u.hp_max
     self._crit      = u.crit
     self._crit_hurt = u.crit_hurt
-    
-    --[[ 
+
+    --[[
     BattleSkill comm            = 11;   // 普攻
     repeated BattleSkill skill  = 12;   // 技能
     BattleSkill aux_s_chief     = 13;   // 主帅技能
     BattleAura  aux_a_chief     = 14;   // 主帅光环
     BattleAura  aux_a_guarder   = 15;   // 辅将光环
     --]]
-    
+
     local name
-    if self._type == 1 then -- hero
-        name = HeroProto[self._id].module_name      -- 这个地方不对哈，_id是英雄ID，而表中的id是序列ID
-    else    -- creature
-        name = CreatureProto[self._id].module_name
+        print("xxxxxxxxxxxxxxxxxx", "type", self._type)
+
+    if self._type == 1 then
+        local conf = config.GetHeroProto(self._id, self._lv)
+        name = conf.module_name
+    else
+        local conf = config.GetCreatureProto(self._id, self._lv)
+        name = conf.module_name
+        table.print_r(conf)
     end
-        
+    print("xxxxxxxxxxxxxxxxxx", "name", name)
+
     self._anim = AnimLoader:loadArmature(name)
-    
+
 end
 
 
@@ -55,7 +58,7 @@ function BattleWin:ctor(r)
     for _, u in pairs(r.units) do
         self._units[u.id] = BattleUnit:create(u)
     end
-    --        local 
+
 
 
 end
@@ -68,10 +71,10 @@ function BattleWin:OnCreate()
     -- 创建背景
     local bg = display.newSprite("battle/background.png")
     self:addChild(bg)
-    
 
-        
-    
+
+
+
 end
 
 

@@ -10,6 +10,11 @@ local gm_str =
     [3] = "hero 5001 5002",             --  增加英雄 英雄ID
 }
 
+
+-- zcg.logTable(debug.getregistry(), "d:/reg.txt")
+-- print("+++", type(cc.Node), cc.Node[".isclass"])
+
+
 -- MSG.SendGMCommand(gm_str[1])
 
 
