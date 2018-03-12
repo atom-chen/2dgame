@@ -8,6 +8,20 @@ local BattleUnit    = class("BattleUnit")
 local BattleWin     = class("BattleWin", WinBase)
 
 
+--
+local _anim_pos = {
+    [1] = { -100,   100},
+    [2] = { -100,   -100},
+    [3] = { -200,   0},
+    [4] = { -300,   100},
+    [5] = { -300,   -100},
+    [6] = { 100,    100},
+    [7] = { 100,    -100},
+    [8] = { 200,    0},
+    [9] = { 300,    100},
+    [10] = {300,    -100},
+}
+
 --------------------- BattleUnit -------------------------------------------------
 function BattleUnit:ctor(u)
     self._type      = u.type
@@ -29,38 +43,32 @@ function BattleUnit:ctor(u)
     BattleAura  aux_a_guarder   = 15;   // 辅将光环
     --]]
 
-    local name
-        print("xxxxxxxxxxxxxxxxxx", "type", self._type)
-
+    self._name = ""
     if self._type == 1 then
         local conf = config.GetHeroProto(self._id, self._lv)
-        name = conf.module_name
+        self._name = conf.module_name
     else
         local conf = config.GetCreatureProto(self._id, self._lv)
-        name = conf.module_name
-        table.print_r(conf)
+        self._name = conf.module_name
     end
-    print("xxxxxxxxxxxxxxxxxx", "name", name)
 
-    self._anim = AnimLoader:loadArmature(name)
-
+    self._anim = AnimLoader:loadArmature(self._name)
+    if self._pos > 5 then
+        self._anim:setScaleX(-1)
+    end
 end
-
 
 
 
 --------------------- BattleWin -------------------------------------------------
 
 function BattleWin:ctor(r)
-    print("BattleWin:ctor", r.win)
+    print("BattleWin:ctor")
     self._result = r
     self._units = {}
     for _, u in pairs(r.units) do
-        self._units[u.id] = BattleUnit:create(u)
+        self._units[u.pos] = BattleUnit:create(u)
     end
-
-
-
 end
 
 
@@ -72,8 +80,12 @@ function BattleWin:OnCreate()
     local bg = display.newSprite("battle/background.png")
     self:addChild(bg)
 
-
-
+    -- 设置动画位置
+    for _, u in pairs(self._units) do
+        local pos = _anim_pos[u._pos]
+        u._anim:setPosition(pos[1], pos[2])
+        self:addChild(u._anim)
+    end
 
 end
 
