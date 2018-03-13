@@ -50,13 +50,10 @@ function BattleUnit:ctor(u)
         self._proto = config.GetCreatureProto(self._id, self._lv)
     end
 
-
     self._root = cc.Node:create()
-
     local anim = AnimLoader:loadArmature(self._proto.module_name)
     local info = _anim_info[self._pos]
     anim:setScale(info[3])
-
     if self._pos > 5 then
         anim:setScaleX(-1*anim:getScaleX())
     end

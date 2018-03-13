@@ -1,5 +1,5 @@
 
-local WinBase = class("WinBase", cc.Node)
+local WinBase = class("WinBase", cc.Layer)
 
 
 function WinBase:ctor()
