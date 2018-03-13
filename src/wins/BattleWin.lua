@@ -9,17 +9,17 @@ local BattleWin     = class("BattleWin", WinBase)
 
 
 --
-local _anim_pos = {
-    [1] = { -100,   100},
-    [2] = { -100,   -100},
-    [3] = { -200,   0},
-    [4] = { -300,   100},
-    [5] = { -300,   -100},
-    [6] = { 100,    100},
-    [7] = { 100,    -100},
-    [8] = { 200,    0},
-    [9] = { 300,    100},
-    [10] = {300,    -100},
+local _anim_info = {
+    [1] = { -150,   100,   0.8, },
+    [2] = { -150,   -100,  0.8, },
+    [3] = { -300,   0,     1.0, },
+    [4] = { -450,   100,   0.6, },
+    [5] = { -450,   -100,  0.6, },
+    [6] = { 150,    100,   0.8, },
+    [7] = { 150,    -100,  0.8, },
+    [8] = { 300,    0,     1.0, },
+    [9] = { 450,    100,   0.6, },
+    [10] ={ 450,    -100,  0.6, },
 }
 
 --------------------- BattleUnit -------------------------------------------------
@@ -43,19 +43,31 @@ function BattleUnit:ctor(u)
     BattleAura  aux_a_guarder   = 15;   // 辅将光环
     --]]
 
-    self._name = ""
+    self._proto = nil
     if self._type == 1 then
-        local conf = config.GetHeroProto(self._id, self._lv)
-        self._name = conf.module_name
+        self._proto = config.GetHeroProto(self._id, self._lv)
     else
-        local conf = config.GetCreatureProto(self._id, self._lv)
-        self._name = conf.module_name
+        self._proto = config.GetCreatureProto(self._id, self._lv)
     end
 
-    self._anim = AnimLoader:loadArmature(self._name)
+
+    self._root = cc.Node:create()
+
+    local anim = AnimLoader:loadArmature(self._proto.module_name)
+    local info = _anim_info[self._pos]
+    anim:setScale(info[3])
+
     if self._pos > 5 then
-        self._anim:setScaleX(-1)
+        anim:setScaleX(-1*anim:getScaleX())
     end
+    self._root:addChild(anim)
+
+    local name = cc.Label:createWithSystemFont(self._proto.name, "Arial", 16)
+    name:setPosition(-30, 0)
+    self._root:addChild(name)
+
+    -- hp
+
 end
 
 
@@ -65,9 +77,29 @@ end
 function BattleWin:ctor(r)
     print("BattleWin:ctor")
     self._result = r
+
+    -- 创建背景
+    local bg = display.newSprite("battle/background.png")
+    self:addChild(bg)
+
     self._units = {}
-    for _, u in pairs(r.units) do
-        self._units[u.pos] = BattleUnit:create(u)
+    for _, v in ipairs(r.units) do
+        local u = BattleUnit:create(v)
+        local p = _anim_info[u._pos]
+        u._root:setPosition(p[1], p[2])
+        self:addChild(u._root)
+        self._units[v.pos] = u
+    end
+
+    self._steps = {}
+    for i, s in ipairs(r.steps) do
+        self._steps[i] =
+        {
+            a_pos = s.a_pos,
+            d_pos = s.d_pos,
+            a_hp  = s.a_hp,
+            d_hp  = s.d_hp,
+        }
     end
 end
 
@@ -76,17 +108,7 @@ end
 
 function BattleWin:OnCreate()
     print("BattleWin:OnCreate")
-    -- 创建背景
-    local bg = display.newSprite("battle/background.png")
-    self:addChild(bg)
-
-    -- 设置动画位置
-    for _, u in pairs(self._units) do
-        local pos = _anim_pos[u._pos]
-        u._anim:setPosition(pos[1], pos[2])
-        self:addChild(u._anim)
-    end
-
+    -- 设置倒计时
 end
 
 
