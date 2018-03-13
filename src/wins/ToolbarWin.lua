@@ -28,14 +28,12 @@ function ToolbarWin:OnCreate()
 
     local times = 0
     local function _on_timer()
-        print("on timer", times)
         times = times + 1
         local r = math.random(0x1000)
         Socket.SendPacket(Opcode.MSG_CS_PING, {
             time = r
         }, function(tab)
-            print("ping response:", r, tab.time)
-            table.print(tab)
+            print("ping response:", times, r, tab.time)
         end)
     end
 

@@ -10,17 +10,18 @@ local BattleWin     = class("BattleWin", WinBase)
 
 --
 local _anim_info = {
-    [1] = { -150,   100,   0.8, },
-    [2] = { -150,   -100,  0.8, },
-    [3] = { -300,   0,     1.0, },
-    [4] = { -450,   100,   0.6, },
-    [5] = { -450,   -100,  0.6, },
-    [6] = { 150,    100,   0.8, },
-    [7] = { 150,    -100,  0.8, },
-    [8] = { 300,    0,     1.0, },
-    [9] = { 450,    100,   0.6, },
-    [10] ={ 450,    -100,  0.6, },
+    [1] = { -150,    100,   0.8, },
+    [2] = { -150,   -100,   0.8, },
+    [3] = { -300,    0,     1.0, },
+    [4] = { -450,    100,   0.6, },
+    [5] = { -450,   -100,   0.6, },
+    [6] = {  150,    100,   0.8, },
+    [7] = {  150,   -100,   0.8, },
+    [8] = {  300,    0,     1.0, },
+    [9] = {  450,    100,   0.6, },
+    [10]= {  450,   -100,   0.6, },
 }
+
 
 --------------------- BattleUnit -------------------------------------------------
 function BattleUnit:ctor(u)
@@ -35,6 +36,7 @@ function BattleUnit:ctor(u)
     self._crit      = u.crit
     self._crit_hurt = u.crit_hurt
 
+
     --[[
     BattleSkill comm            = 11;   // 普攻
     repeated BattleSkill skill  = 12;   // 技能
@@ -42,6 +44,9 @@ function BattleUnit:ctor(u)
     BattleAura  aux_a_chief     = 14;   // 主帅光环
     BattleAura  aux_a_guarder   = 15;   // 辅将光环
     --]]
+
+    -- local property
+    self._dead = false
 
     self._proto = nil
     if self._type == 1 then
@@ -67,9 +72,20 @@ function BattleUnit:ctor(u)
 
 end
 
+function BattleUnit:init_campaign()
 
+end
 
 --------------------- BattleWin -------------------------------------------------
+
+--[[
+
+    ctor()      一次性初始化
+
+    init()      多次初始化，支持多次播放
+
+
+--]]
 
 function BattleWin:ctor(r)
     print("BattleWin:ctor")
@@ -106,6 +122,18 @@ end
 function BattleWin:OnCreate()
     print("BattleWin:OnCreate")
     -- 设置倒计时
+    local tid
+    local times = 3
+    local cb_count_down = function()
+        times = times - 1
+        print("times:", times)
+        if times == 0 then
+            self:getScheduler():unscheduleScriptEntry(tid)
+            -- 开启战斗
+            self:PlayBattle()
+        end
+    end
+    tid = self:getScheduler():scheduleScriptFunc(cb_count_down, 1, false)
 end
 
 
@@ -121,6 +149,60 @@ end
 
 function BattleWin:OnHiden()
     print("BattleWin:OnHiden")
+end
+
+function BattleWin:PlayBattle()
+    self._campaigns = 0
+    self:do_campaign()
+end
+
+
+function BattleWin:ReplayBattle()
+end
+
+
+function BattleWin:BattleEnd()
+end
+
+
+-- 开启下一场战斗
+function BattleWin:campaign_end()
+    -- 检测是否已决出胜负
+    if self._campaigns >= #self._steps then
+        self.BattleEnd()
+        return
+    end
+
+    -- 休息3秒
+    local cb_wait = function()
+        -- 播放一下挑衅的动画
+        self:do_campaign()
+    end
+    self:getScheduler():scheduleScriptFunc(cb_wait, 3, false)
+end
+
+function BattleWin:do_campaign()
+    if self._campaigns >= #self._steps then
+        return
+    end
+    self._campaigns = self._campaigns + 1
+    local step = self._steps[self._campaigns]
+
+    local ua = self._units[step.a_pos]
+    local ud = self._units[step.d_pos]
+    ua:init_campaign()
+    ud:init_campaign()
+
+    local tid
+    local cb_update = function()
+        ua:update()
+        ud:update()
+        if ua._dead or ud._dead then
+            self:getScheduler():unscheduleScriptEntry(tid)
+            self:campaign_end()
+        end
+    end
+    tid = self:getScheduler():scheduleScriptFunc(cb_update, 100, false)
 end
 
 
