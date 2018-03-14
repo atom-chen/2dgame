@@ -35,6 +35,9 @@ function BattleSkill:IsFinish()
 end
 
 function BattleSkill:Cast(target, time)
+    -- 播放动画
+    local module = self._proto.module
+    target._root:getAnimation():play(module, -1, 1)
 end
 
 function BattleSkill:IsFree(time)
@@ -42,7 +45,8 @@ end
 
 
 --------------------- BattleAura -------------------------------------------------
-function BattleAura:ctor()
+function BattleAura:ctor(id, lv)
+    self._proto = config.GetAuraProto(id, lv)
 end
 
 function BattleAura:update(time)
@@ -261,7 +265,7 @@ function BattleWin:campaign_begin(step)
             if not u:dead() then
                 -- layer:setCascadeOpacityEnabled(true)
                 -- layer:setOpacity(255 * 0.4)
-                u._root:setOpacity(255*0.9)
+                u._root:setOpacity(255*0.3)
             end
         end
     end
@@ -297,7 +301,7 @@ function BattleWin:do_campaign()
     if self._campaigns >= #self._steps then
         return
     end
-
+print("ssssssssss")
     self._campaigns = self._campaigns + 1
     local step = self._steps[self._campaigns]
 

@@ -4,12 +4,12 @@ local data =
 		id = 1001,
 		level = 1,
 		name = "技能一",
-		target = 0,
-		itv_t = 1000,
+		module = "skill2",
+		target = 1,
+		itv_t = 0,
 		last_t = 2000,
 		cd_t = 4000,
 		type = 1,
-		range = 0,
 		aura = {
 			{
 				id = 2001,
@@ -17,6 +17,222 @@ local data =
 			},
 			{
 				id = 2002,
+				lv = 1,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[2] = {
+		id = 1001,
+		level = 2,
+		name = "技能一",
+		module = "skill2",
+		target = 1,
+		itv_t = 0,
+		last_t = 2000,
+		cd_t = 4000,
+		type = 1,
+		aura = {
+			{
+				id = 2001,
+				lv = 2,
+			},
+			{
+				id = 2002,
+				lv = 2,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[3] = {
+		id = 1001,
+		level = 3,
+		name = "技能一",
+		module = "skill2",
+		target = 1,
+		itv_t = 0,
+		last_t = 2000,
+		cd_t = 4000,
+		type = 1,
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 4,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[4] = {
+		id = 1001,
+		level = 4,
+		name = "技能一",
+		module = "skill2",
+		target = 1,
+		itv_t = 0,
+		last_t = 2000,
+		cd_t = 4000,
+		type = 1,
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 4,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[5] = {
+		id = 1001,
+		level = 5,
+		name = "技能一",
+		module = "skill2",
+		target = 1,
+		itv_t = 0,
+		last_t = 2000,
+		cd_t = 4000,
+		type = 1,
+		aura = {
+			{
+				id = 2001,
+				lv = 1,
+			},
+			{
+				id = 2002,
+				lv = 5,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[6] = {
+		id = 1002,
+		level = 1,
+		name = "技能二",
+		module = "skill2",
+		target = 2,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 1,
+		aura = {
+			{
+				id = 2003,
+				lv = 1,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[7] = {
+		id = 1002,
+		level = 2,
+		name = "技能二",
+		module = "skill2",
+		target = 2,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 1,
+		aura = {
+			{
+				id = 2003,
+				lv = 2,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[8] = {
+		id = 1002,
+		level = 3,
+		name = "技能二",
+		module = "skill2",
+		target = 2,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 1,
+		aura = {
+			{
+				id = 2003,
+				lv = 3,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[9] = {
+		id = 1002,
+		level = 4,
+		name = "技能二",
+		module = "skill2",
+		target = 2,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 1,
+		aura = {
+			{
+				id = 2003,
+				lv = 4,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[10] = {
+		id = 1002,
+		level = 5,
+		name = "技能二",
+		module = "skill2",
+		target = 2,
+		itv_t = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 1,
+		aura = {
+			{
+				id = 2003,
+				lv = 5,
+			},
+		},
+		attr = {},
+		desc = "这个技能很叼",
+	},
+
+	[11] = {
+		id = 1003,
+		level = 1,
+		name = "技能3",
+		module = "skill2",
+		target = 2,
+		itv_t = 1000,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 2,
+		aura = {
+			{
+				id = 2003,
 				lv = 1,
 			},
 		},
@@ -34,26 +250,22 @@ local data =
 				val = 20,
 			},
 		},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
-	[2] = {
-		id = 1001,
+	[12] = {
+		id = 1003,
 		level = 2,
-		name = "技能一",
-		target = 0,
+		name = "技能3",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
-		last_t = 2000,
-		cd_t = 4000,
-		type = 1,
-		range = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 2,
 		aura = {
 			{
-				id = 2001,
-				lv = 2,
-			},
-			{
-				id = 2002,
+				id = 2003,
 				lv = 2,
 			},
 		},
@@ -71,27 +283,23 @@ local data =
 				val = 21,
 			},
 		},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
-	[3] = {
-		id = 1001,
+	[13] = {
+		id = 1003,
 		level = 3,
-		name = "技能一",
-		target = 0,
+		name = "技能3",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
-		last_t = 2000,
-		cd_t = 4000,
-		type = 1,
-		range = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 2,
 		aura = {
 			{
-				id = 2001,
-				lv = 1,
-			},
-			{
-				id = 2002,
-				lv = 4,
+				id = 2003,
+				lv = 3,
 			},
 		},
 		attr = {
@@ -108,26 +316,22 @@ local data =
 				val = 22,
 			},
 		},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
-	[4] = {
-		id = 1001,
+	[14] = {
+		id = 1003,
 		level = 4,
-		name = "技能一",
-		target = 0,
+		name = "技能3",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
-		last_t = 2000,
-		cd_t = 4000,
-		type = 1,
-		range = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 2,
 		aura = {
 			{
-				id = 2001,
-				lv = 1,
-			},
-			{
-				id = 2002,
+				id = 2003,
 				lv = 4,
 			},
 		},
@@ -145,26 +349,22 @@ local data =
 				val = 23,
 			},
 		},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
-	[5] = {
-		id = 1001,
+	[15] = {
+		id = 1003,
 		level = 5,
-		name = "技能一",
-		target = 0,
+		name = "技能3",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
-		last_t = 2000,
-		cd_t = 4000,
-		type = 1,
-		range = 0,
+		last_t = 3000,
+		cd_t = 6000,
+		type = 2,
 		aura = {
 			{
-				id = 2001,
-				lv = 1,
-			},
-			{
-				id = 2002,
+				id = 2003,
 				lv = 5,
 			},
 		},
@@ -182,219 +382,19 @@ local data =
 				val = 24,
 			},
 		},
-		desc = "这里是描述",
-	},
-
-	[6] = {
-		id = 1002,
-		level = 1,
-		name = "技能二",
-		target = 1,
-		itv_t = 0,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 1,
-		range = 1,
-		aura = {
-			{
-				id = 2003,
-				lv = 1,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[7] = {
-		id = 1002,
-		level = 2,
-		name = "技能二",
-		target = 1,
-		itv_t = 0,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 1,
-		range = 1,
-		aura = {
-			{
-				id = 2003,
-				lv = 2,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[8] = {
-		id = 1002,
-		level = 3,
-		name = "技能二",
-		target = 1,
-		itv_t = 0,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 1,
-		range = 1,
-		aura = {
-			{
-				id = 2003,
-				lv = 3,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[9] = {
-		id = 1002,
-		level = 4,
-		name = "技能二",
-		target = 1,
-		itv_t = 0,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 1,
-		range = 1,
-		aura = {
-			{
-				id = 2003,
-				lv = 4,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[10] = {
-		id = 1002,
-		level = 5,
-		name = "技能二",
-		target = 1,
-		itv_t = 0,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 1,
-		range = 1,
-		aura = {
-			{
-				id = 2003,
-				lv = 5,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[11] = {
-		id = 1003,
-		level = 1,
-		name = "技能3",
-		target = 0,
-		itv_t = 1000,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 2,
-		range = 2,
-		aura = {
-			{
-				id = 2003,
-				lv = 1,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[12] = {
-		id = 1003,
-		level = 2,
-		name = "技能3",
-		target = 0,
-		itv_t = 1000,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 2,
-		range = 2,
-		aura = {
-			{
-				id = 2003,
-				lv = 2,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[13] = {
-		id = 1003,
-		level = 3,
-		name = "技能3",
-		target = 0,
-		itv_t = 1000,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 2,
-		range = 2,
-		aura = {
-			{
-				id = 2003,
-				lv = 3,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[14] = {
-		id = 1003,
-		level = 4,
-		name = "技能3",
-		target = 0,
-		itv_t = 1000,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 2,
-		range = 2,
-		aura = {
-			{
-				id = 2003,
-				lv = 4,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
-	},
-
-	[15] = {
-		id = 1003,
-		level = 5,
-		name = "技能3",
-		target = 0,
-		itv_t = 1000,
-		last_t = 3000,
-		cd_t = 6000,
-		type = 2,
-		range = 2,
-		aura = {
-			{
-				id = 2003,
-				lv = 5,
-			},
-		},
-		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[16] = {
 		id = 1004,
 		level = 1,
 		name = "技能4",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -402,19 +402,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[17] = {
 		id = 1004,
 		level = 2,
 		name = "技能4",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -422,19 +422,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[18] = {
 		id = 1004,
 		level = 3,
 		name = "技能4",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -442,19 +442,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[19] = {
 		id = 1004,
 		level = 4,
 		name = "技能4",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -462,19 +462,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[20] = {
 		id = 1004,
 		level = 5,
 		name = "技能4",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -482,19 +482,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[21] = {
 		id = 1005,
 		level = 1,
 		name = "技能5",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -502,19 +502,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[22] = {
 		id = 1005,
 		level = 2,
 		name = "技能5",
-		target = 0,
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
-		type = 2,
-		range = 2,
+		type = 1,
 		aura = {
 			{
 				id = 2003,
@@ -522,19 +522,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[23] = {
 		id = 1005,
 		level = 3,
-		name = "技能6",
-		target = 0,
+		name = "技能5",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
 		type = 2,
-		range = 2,
 		aura = {
 			{
 				id = 2003,
@@ -542,19 +542,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[24] = {
 		id = 1005,
 		level = 4,
-		name = "技能7",
-		target = 0,
+		name = "技能5",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
 		type = 2,
-		range = 2,
 		aura = {
 			{
 				id = 2003,
@@ -562,19 +562,19 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 	[25] = {
 		id = 1005,
 		level = 5,
-		name = "技能8",
-		target = 0,
+		name = "技能5",
+		module = "skill2",
+		target = 2,
 		itv_t = 1000,
 		last_t = 3000,
 		cd_t = 6000,
 		type = 2,
-		range = 2,
 		aura = {
 			{
 				id = 2003,
@@ -582,7 +582,7 @@ local data =
 			},
 		},
 		attr = {},
-		desc = "这里是描述",
+		desc = "这个技能很叼",
 	},
 
 }
