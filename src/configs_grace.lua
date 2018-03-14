@@ -1,11 +1,11 @@
 
-local AuraProto     = require "configs.AuraProto"
-local CreatureProto = require "configs.CreatureProto"
-local CreatureTeam  = require "configs.CreatureTeam"
-local HeroProto     = require "configs.HeroProto"
-local ItemProto     = require "configs.ItemProto"
-local SkillProto    = require "configs.SkillProto"
-local Global        = require "configs.global"
+local AuraProto     = require "configs_raw.AuraProto"
+local CreatureProto = require "configs_raw.CreatureProto"
+local CreatureTeam  = require "configs_raw.CreatureTeam"
+local HeroProto     = require "configs_raw.HeroProto"
+local ItemProto     = require "configs_raw.ItemProto"
+local SkillProto    = require "configs_raw.SkillProto"
+local Global        = require "configs_raw.global"
 
 
 local M = {}
