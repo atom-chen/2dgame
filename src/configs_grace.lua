@@ -5,6 +5,7 @@ local CreatureTeam  = require "configs.CreatureTeam"
 local HeroProto     = require "configs.HeroProto"
 local ItemProto     = require "configs.ItemProto"
 local SkillProto    = require "configs.SkillProto"
+local Global        = require "configs.global"
 
 
 local M = {}
@@ -83,6 +84,8 @@ sort_by__id_level(_configs.SkillProto, SkillProto)
 
 
 --------------------------------------------------------------------------------
+
+M.Global            = Global
 
 M.GetAuraProto      = get_by__id_level(_configs.AuraProto)
 M.GetSkillProto     = get_by__id_level(_configs.SkillProto)

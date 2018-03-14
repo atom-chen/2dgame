@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-‹
+›
 
 game.protomsg"#
 PlayerDataRequest
@@ -78,7 +78,7 @@ statusData
 
 BattleAura
 id (Rid
-lv (Rlv"»
+lv (Rlv"Ë
 
 BattleUnit
 type (Rtype
@@ -86,17 +86,16 @@ BattleUnit
 lv (Rlv
 pos (Rpos
 atk (Ratk
-def (Rdef
-hp_cur (RhpCur
-hp_max (RhpMax
-crit	 (Rcrit
-	crit_hurt
- (RcritHurt$
-comm (2.msg.BattleSkillRcomm&
-skill (2.msg.BattleSkillRskill0
-aux_s_chief (2.msg.BattleSkillR	auxSChief/
-aux_a_chief (2.msg.BattleAuraR	auxAChief3
-aux_a_guarder (2.msg.BattleAuraRauxAGuarder"\
+def (Rdef
+hp (Rhp
+crit (Rcrit
+	crit_hurt	 (RcritHurt$
+comm
+ (2.msg.BattleSkillRcomm&
+skill (2.msg.BattleSkillRskillB
+career_general_skill (2.msg.BattleSkillRcareerGeneralSkill?
+career_general_aura (2.msg.BattleAuraRcareerGeneralAura?
+career_guarder_aura (2.msg.BattleAuraRcareerGuarderAura"\
 
 BattleStep
 a_pos (RaPos
