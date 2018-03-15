@@ -1,12 +1,17 @@
 
-local win_list =
+local windows =
 {
-    [1] = require("wins.ToolbarWin"),
-    [2] = require("wins.BattleWin"),
+    [1] = { "wins.ToolbarWin",      },
+    [2] = { "wins.BattleWin",       },
+    [3] = { "wins.BattleWin",       },
 
-   -- [2] = require("wins.player_info"),                -- 角色信息
-   -- [3] = require("wins.system_setting"),             -- 系统设置
+    -- [2] = { "wins.player_info",  },          -- 角色信息
+    -- [3] = { "wins.system_setting"},          -- 系统设置
 }
+
+for _, v in pairs(windows) do
+    v[2] = require(v[1])
+end
 
 
 cc.exports.WinManager =
@@ -36,10 +41,19 @@ function WinManager:Release()
 end
 
 
+function WinManager:CreateWindowHot(id, ...)
+    local v = windows[id]
+    local s = v[1]
+    package.loaded[s] = nil
+    v[2] = require(s)
+    self:CreateWindow(id, ...)
+end
+
+
 function WinManager:CreateWindow(id, ...)
     local win = self:FindWindow(id)
     if not win then
-        local cls = win_list[id]
+        local cls = windows[id][2]
         if not cls then
             zcg.logWarning("WinManager:CreateWindow: unknown id=%d", id)
             return

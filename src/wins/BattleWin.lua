@@ -10,17 +10,17 @@ local BattleWin     = class("BattleWin", WinBase)
 
 
 --
-local _anim_info = {
-    [1] = { -150,    0,     0.8, },
-    [2] = { -150,   -200,   0.8, },
-    [3] = { -300,   -100,   1.0, },
-    [4] = { -450,    0,     0.6, },
-    [5] = { -450,   -200,   0.6, },
-    [6] = {  150,    0,     0.8, },
-    [7] = {  150,   -200,   0.8, },
-    [8] = {  300,   -100,   1.0, },
-    [9] = {  450,    0,     0.6, },
-    [10]= {  450,   -200,   0.6, },
+local actor_info = {
+    [1] = { -150,    0,     0.8,    "攻-左先锋", },
+    [2] = { -150,   -200,   0.8,    "攻-右先锋", },
+    [3] = { -300,   -100,   1.0,    "攻-主帅",   },
+    [4] = { -450,    0,     0.6,    "攻-左辅将", },
+    [5] = { -450,   -200,   0.6,    "攻-右辅将", },
+    [6] = {  150,    0,     0.8,    "防-左先锋", },
+    [7] = {  150,   -200,   0.8,    "防-右先锋", },
+    [8] = {  300,   -100,   1.0,    "防-主帅",   },
+    [9] = {  450,    0,     0.6,    "防-左辅将", },
+    [10]= {  450,   -200,   0.6,    "防-右辅将", },
 }
 
 --------------------- BattleSkill -------------------------------------------------
@@ -107,7 +107,7 @@ function BattleUnit:ctor(u)
 
     self._root = cc.Node:create()
     local anim = AnimLoader:loadArmature(self._proto.module_name)
-    local info = _anim_info[self._pos]
+    local info = actor_info[self._pos]
     anim:setScale(info[3])
     if self._pos > 5 then
         anim:setScaleX(-1*anim:getScaleX())
@@ -122,7 +122,11 @@ function BattleUnit:ctor(u)
 
 end
 
-function BattleUnit:dead()
+function BattleUnit:Name()
+    return string.format("%s[%s]", self._proto.name, actor_info[self._pos])
+end
+
+function BattleUnit:Dead()
     return self._hp == 0
 end
 
@@ -131,7 +135,7 @@ function BattleUnit:init_campaign(step)
 end
 
 function BattleUnit:update(time)
-    if self:dead() then
+    if self:Dead() then
         return
     end
 
@@ -192,11 +196,21 @@ function BattleWin:ctor(r)
     self._units = {}
     for _, v in ipairs(r.units) do
         local u = BattleUnit:create(v)
-        local p = _anim_info[u._pos]
+        local p = actor_info[u._pos]
         u._root:setPosition(p[1], p[2])
         self:addChild(u._root)
         self._units[v.pos] = u
     end
+
+    -- 关闭按钮
+    local btn_image = cc.Scale9Sprite:create("unKnown.png")
+    local btn_close = cc.ControlButton:create(btn_image)
+    btn_close:setPreferredSize(btn_image:getPreferredSize())
+    btn_close:setPosition(cc.p(525, 275))
+    self:addChild(btn_close)
+    btn_close:registerControlEventHandler(function()
+        WinManager:DestroyWindow(self)
+    end, 32)
 
     self._steps = {}
     for i, s in ipairs(r.steps) do
@@ -216,22 +230,28 @@ end
 function BattleWin:OnCreate()
     print("BattleWin:OnCreate")
     -- 设置倒计时
-    local tid
     local times = 4
     local cb_count_down = function()
         times = times - 1
         print("times:", times)
         if times == 0 then
-            self:getScheduler():unscheduleScriptEntry(tid)
+            self:getScheduler():unscheduleScriptEntry(self._tid_1)
+            self._tid_1 = nil
             self:PlayBattle()
         end
     end
-    tid = self:getScheduler():scheduleScriptFunc(cb_count_down, 0.8, false)
+    self._tid_1 = self:getScheduler():scheduleScriptFunc(cb_count_down, 0.8, false)
 end
 
 
 function BattleWin:OnDestroy()
     print("BattleWin:OnDestroy")
+    if self._tid_1 then
+        self:getScheduler():unscheduleScriptEntry(self._tid_1)
+    end
+    if self._tid_2 then
+        self:getScheduler():unscheduleScriptEntry(self._tid_2)
+    end
 end
 
 
@@ -260,9 +280,11 @@ end
 
 function BattleWin:campaign_begin(step)
     -- 隐藏非战斗角色  设置透明度
+    print("dddddddd# step", step, #self._units)
     for _, u in ipairs(self._units) do
+    print("u", u:Name())
         if u._pos ~= step.a_pos and u._pos ~= step.d_pos then
-            if not u:dead() then
+            if not u:Dead() then
                 -- layer:setCascadeOpacityEnabled(true)
                 -- layer:setOpacity(255 * 0.4)
                 u._root:setOpacity(255*0.3)
@@ -276,7 +298,7 @@ end
 function BattleWin:campaign_end()
     -- 显示所有非死亡角色
     for _, u in ipairs(self._units) do
-        if not u:dead() then
+        if not u:Dead() then
             u._root:setOpacity(0)
         else
             u._root:setVisible(false)
@@ -301,7 +323,7 @@ function BattleWin:do_campaign()
     if self._campaigns >= #self._steps then
         return
     end
-print("ssssssssss")
+
     self._campaigns = self._campaigns + 1
     local step = self._steps[self._campaigns]
 
@@ -319,8 +341,9 @@ print("ssssssssss")
         ua:update(time)
         ud:update(time)
         time = time + 100
-        if ua:dead() or ud:dead() then
-            self:getScheduler():unscheduleScriptEntry(tid)
+        if ua:Dead() or ud:Dead() then
+            self:getScheduler():unscheduleScriptEntry(self._tid_2)
+            self._tid_2 = nil
             -- adjust hp
             print("campaign end, LEFT hp:", ua._hp, ud._hp)
             ua._hp = step.a_hp
@@ -329,7 +352,7 @@ print("ssssssssss")
             self:campaign_end()
         end
     end
-    tid = self:getScheduler():scheduleScriptFunc(cb_update, 0.1, false)
+    self._tid_2 = self:getScheduler():scheduleScriptFunc(cb_update, 0.1, false)
 end
 
 
