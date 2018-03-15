@@ -58,18 +58,18 @@ function BattleSkill:Cast(u, time)
 	self._start_time = time
 	self._update_time = time
 	self:onStart()
-	print(self:Name(), "释放了技能:", self._proto.id, self._proto.level)
+	print(self._owner:Name(), "释放了技能:", self._proto.id, self._proto.level)
 
     -- 播放动画
     local module = self._proto.module
-    target._root:getAnimation():play(module, -1, 1)
+    u._anim:getAnimation():play(module, -1, 1)
 end
 
 function BattleSkill:update(time)
     if self._finish then
         return
     end
-    if self._proto.itv_t != 0 then
+    if self._proto.itv_t ~= 0 then
         if time-self._update_time > self._proto.itv_t then
             self._update_time = time
             self:onUpdate()
@@ -102,8 +102,8 @@ function BattleSkill:onUpdate()
             print("[WARNING]", self._owner:Name(), "要对自己造成伤害", self._proto.id)
             return
         end
-        self.do_attack(target)
-    else if type == 2 then
+        self:do_attack(target)
+    elseif type == 2 then
         for _, a in ipairs(self._proto.aura) do
             target:AddAura(self._owner, a.id, a.lv)
         end
@@ -120,51 +120,51 @@ end
 
 function BattleSkill:do_attack(target)
     local ctx = SkillContext:create(self._owner, target)
+--[[
+	ctx.caster_prop: = ctx._caster.Prop
+	ctx.target_prop = ctx._target.Prop
 
-	ctx.caster_prop = ctx.caster.Prop
-	ctx.target_prop = ctx.target.Prop
-
-	// step 1: 计算光环
-	for _, aura := range ctx.caster.Auras_battle {
-		if aura != nil {
+	-- step 1: 计算光环
+    for _, aura in ipairs(ctx._caster._auras_battle) do
+		if aura then
 			aura.OnEvent(BattleEvent_PreAtk, ctx)
-		}
-	}
+		end
+	end
 
-	// step 2: 计算输出伤害
+	-- step 2: 计算输出伤害
 	hurt := ctx.caster_prop.Atk + ctx.prop_add.Atk
 	crit := ctx.caster_prop.Crit + ctx.prop_add.Crit
 	ctx.damage_send.hurt = hurt
 	ctx.damage_send.crit = false
-	if math.RandomHitn(int(crit), 100) {
+	if math.RandomHitn(int(crit), 100) then
 		ctx.damage_send.crit = true
 		ctx.damage_send.hurt = hurt * (ctx.caster_prop.CritHurt + ctx.prop_add.CritHurt)
-	}
+	end
 
-	// step 3: 计算防御
+	-- step 3: 计算防御
 	hurt = ctx.damage_send.hurt - ctx.target_prop.Def
-	if hurt < 0 {
+	if hurt < 0 then
 		hurt = 1
-	}
+	end
 	ctx.damage_recv.hurt = hurt
 
-	// step 4: 计算光环
-	for _, aura := range target.Auras_battle {
-		if aura != nil {
+	-- step 4: 计算光环
+	for _, aura := range target.Auras_battle do
+		if aura ~= nil then
 			aura.OnEvent(BattleEvent_AftDef, ctx)
-		}
-	}
+		end
+	end
 
-	// step 5: 计算最终伤害
+	-- step 5: 计算最终伤害
 	ctx.damage.hurt = ctx.damage_recv.hurt - ctx.damage_sub.hurt
-	if ctx.damage.hurt < target.Hp {
+	if ctx.damage.hurt < target.Hp then
 		target.Hp -= ctx.damage.hurt
 		fmt.Println(ctx.caster.Name(), " <伤害了> ", ctx.target.Name(), ctx.damage.hurt)
-	} else {
+	else
 		target.Hp = 0
 		fmt.Println(ctx.caster.Name(), " <击杀了> ", ctx.target.Name(), ctx.damage.hurt)
-	}
-
+	end
+--]]
 end
 
 
@@ -222,8 +222,8 @@ function BattleUnit:ctor(u)
 	self._auras_battle  = {}    -- 战斗中产生的光环(战斗过程中产生，战斗结束之后保留)
 
     --[[
-    BattleAura  career_general_aura     = 14;   // 主帅光环
-    BattleAura  career_guarder_aura     = 15;   // 辅将光环
+    BattleAura  career_general_aura     = 14;   -- 主帅光环
+    BattleAura  career_guarder_aura     = 15;   -- 辅将光环
     --]]
 
     -- local property
@@ -243,6 +243,7 @@ function BattleUnit:ctor(u)
         anim:setScaleX(-1*anim:getScaleX())
     end
     self._root:addChild(anim)
+    self._anim = anim
 
     local name = cc.Label:createWithSystemFont(self._proto.name, "Arial", 16)
     name:setPosition(-30, 0)
@@ -253,7 +254,7 @@ function BattleUnit:ctor(u)
 end
 
 function BattleUnit:Name()
-    return string.format("%s[%s]", self._proto.name, actor_info[self._pos])
+    return string.format("%s[%s]", self._proto.name, actor_info[self._pos][4])
 end
 
 function BattleUnit:Dead()
@@ -286,7 +287,7 @@ function BattleUnit:update(time)
             self._skill_curr:Cast(self, time)
         end
     else
-        self._skill_curr.update(time)
+        self._skill_curr:update(time)
         if self._skill_curr:IsFinish() then
             self._skill_curr = nil
         end
@@ -377,7 +378,7 @@ function BattleWin:OnCreate()
             self:PlayBattle()
         end
     end
-    self._tid_1 = self:getScheduler():scheduleScriptFunc(cb_count_down, 0.8, false)
+    self._tid_1 = self:getScheduler():scheduleScriptFunc(cb_count_down, 0.2, false)
 end
 
 
@@ -424,7 +425,7 @@ function BattleWin:campaign_begin(step)
             if not u:Dead() then
                 -- layer:setCascadeOpacityEnabled(true)
                 -- layer:setOpacity(255 * 0.4)
-                u._root:setOpacity(255*0.3)
+                u._root:setOpacity(255*0.7)
             end
         end
     end
@@ -453,7 +454,7 @@ function BattleWin:campaign_end()
         -- 播放一下挑衅的动画
         self:do_campaign()
     end
-    self:getScheduler():scheduleScriptFunc(cb_wait, 3, false)
+    self:getScheduler():scheduleScriptFunc(cb_wait, 0.8, false)
 end
 
 function BattleWin:do_campaign()
