@@ -18,11 +18,11 @@ local actor_info = {
     [3] = { -300,   -100,   1.0,    "攻-主帅",   },
     [4] = { -450,    0,     0.6,    "攻-左辅将", },
     [5] = { -450,   -200,   0.6,    "攻-右辅将", },
-    [6] = {  150,    0,     0.8,    "防-左先锋", },
-    [7] = {  150,   -200,   0.8,    "防-右先锋", },
+    [6] = {  150,   -200,   0.8,    "防-左先锋", },
+    [7] = {  150,    0,     0.8,    "防-右先锋", },
     [8] = {  300,   -100,   1.0,    "防-主帅",   },
-    [9] = {  450,    0,     0.6,    "防-左辅将", },
-    [10]= {  450,   -200,   0.6,    "防-右辅将", },
+    [9] = {  450,   -200,   0.6,    "防-左辅将", },
+    [10]= {  450,    0,     0.6,    "防-右辅将", },
 }
 --------------------- SkillDamage -------------------------------------------------
 function SkillDamage:ctor()
@@ -418,14 +418,12 @@ end
 
 function BattleWin:campaign_begin(step)
     -- 隐藏非战斗角色  设置透明度
-    print("dddddddd# step", step, #self._units)
     for _, u in ipairs(self._units) do
-    print("u", u:Name())
         if u._pos ~= step.a_pos and u._pos ~= step.d_pos then
             if not u:Dead() then
-                -- layer:setCascadeOpacityEnabled(true)
-                -- layer:setOpacity(255 * 0.4)
-                u._root:setOpacity(255*0.7)
+                u._root:setCascadeOpacityEnabled(true)
+                u._root:setOpacity(255*0.1)
+                -- u._root:setVisible(false)
             end
         end
     end
