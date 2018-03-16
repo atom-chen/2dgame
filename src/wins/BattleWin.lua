@@ -122,8 +122,8 @@ end
 
 function BattleSkill:do_attack(target)
     local ctx = SkillContext:create(self._owner, target)
---[[
-	ctx.caster_prop: = ctx._caster.Prop
+
+	ctx.caster_prop = ctx._caster.Prop
 	ctx.target_prop = ctx._target.Prop
 
 	-- step 1: 计算光环
@@ -161,12 +161,12 @@ function BattleSkill:do_attack(target)
 	ctx.damage.hurt = ctx.damage_recv.hurt - ctx.damage_sub.hurt
 	if ctx.damage.hurt < target.Hp then
 		target.Hp -= ctx.damage.hurt
-		fmt.Println(ctx.caster.Name(), " <伤害了> ", ctx.target.Name(), ctx.damage.hurt)
+		print(ctx._caster:Name(), " <伤害了> ", ctx.target:Name(), ctx.damage.hurt)
 	else
 		target.Hp = 0
-		fmt.Println(ctx.caster.Name(), " <击杀了> ", ctx.target.Name(), ctx.damage.hurt)
+		print(ctx._caster:Name(), " <击杀了> ", ctx.target:Name(), ctx.damage.hurt)
 	end
---]]
+
 end
 
 
@@ -452,7 +452,7 @@ function BattleWin:campaign_end()
         -- 播放一下挑衅的动画
         self:do_campaign()
     end
-    scheduler.Once(cb_wait, 0.8)
+    scheduler.Once(cb_wait, 0.7)
 end
 
 function BattleWin:do_campaign()
@@ -493,3 +493,80 @@ end
 
 
 return BattleWin
+
+
+--[[
+
+
+
+
+-------------------------------------------------------------------------
+|方式 			玩家感受	结果		复杂度		|
+-------------------------------------------------------------------------
+|纯播放			好		一致		一边写		|
+|本地战斗+审核		好		不一定		两边写		|
+|本地战斗+纠正		好--		一致		两边写++	|
+-------------------------------------------------------------------------
+
+
+玩家感受包括：
+	技能释放	动作
+	数字增减	角色头上冒泡，战斗的反应
+	光环得失	界面上持续效果
+
+玩家感受不到：
+	具体属性值
+
+
+[]*战斗场次
+[]*每场的序列
+
+
+
+{
+
+	[200] =
+	{
+		{
+			type : 1,
+			data : nil,
+		},
+
+		{
+			type : 2,
+			data : nil,
+		},
+
+	}
+}
+
+
+
+type :
+	1:	释放技能
+		{
+			caster
+			id lv
+		}
+
+
+	2:	得失光环
+		{
+			owner
+			id lv
+			flag  : 得到 / 失去
+		}
+
+		
+		
+		伤害/恢复
+		{
+			target			HP  攻击 ...
+			attr_type
+			attr_value
+		}
+
+
+
+]]
+
