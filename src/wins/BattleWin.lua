@@ -1,7 +1,9 @@
 
+local scheduler     = require "core.scheduler"
 local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local config        = require "configs_grace"
+
 
 local SkillContext  = class("SkillContext")
 local SkillDamage   = class("SkillDamage")
@@ -40,7 +42,7 @@ function SkillContext:ctor(caster, target)
 	self._damage_send   = 0   -- SkillDamage -- 攻击者造成实际伤害
 	self._damage_recv   = 0   -- SkillDamage -- 防御者计算防御之后的伤害
 	self._damage_sub    = 0   -- SkillDamage -- 防御者计算防御之后光环减免部分
-	self._damage        = 0   -- SkillDamage --最终造成的实际伤害
+	self._damage        = 0   -- SkillDamage -- 最终造成的实际伤害
 end
 
 --------------------- BattleSkill -------------------------------------------------
@@ -368,28 +370,26 @@ end
 function BattleWin:OnCreate()
     print("BattleWin:OnCreate")
     -- 设置倒计时
-    local times = 4
-    local cb_count_down = function()
-        times = times - 1
-        print("times:", times)
-        if times == 0 then
-            self:getScheduler():unscheduleScriptEntry(self._tid_1)
-            self._tid_1 = nil
+    local cb_count_down = function(times)
+        if times == 3 then
             self:PlayBattle()
+            self._tid_1 = nil
         end
     end
-    self._tid_1 = self:getScheduler():scheduleScriptFunc(cb_count_down, 0.2, false)
+    self._tid_1 = scheduler.ScheduleN(cb_count_down, 0.2, 3)
 end
 
 
 function BattleWin:OnDestroy()
     print("BattleWin:OnDestroy")
     if self._tid_1 then
-        self:getScheduler():unscheduleScriptEntry(self._tid_1)
+        scheduler.Abort(self._tid_1)
     end
     if self._tid_2 then
-        self:getScheduler():unscheduleScriptEntry(self._tid_2)
+        scheduler.Abort(self._tid_2)
     end
+    self._tid_1 = nil
+    self._tid_2 = nil
 end
 
 
@@ -452,7 +452,7 @@ function BattleWin:campaign_end()
         -- 播放一下挑衅的动画
         self:do_campaign()
     end
-    self:getScheduler():scheduleScriptFunc(cb_wait, 0.8, false)
+    scheduler.Once(cb_wait, 0.8)
 end
 
 function BattleWin:do_campaign()
@@ -478,17 +478,17 @@ function BattleWin:do_campaign()
         ud:update(time)
         time = time + 100
         if ua:Dead() or ud:Dead() then
-            self:getScheduler():unscheduleScriptEntry(self._tid_2)
-            self._tid_2 = nil
             -- adjust hp
             print("campaign end, LEFT hp:", ua._hp, ud._hp)
             ua._hp = step.a_hp
             ud._hp = step.d_hp
             print("campaign end, ADJUST hp:", ua._hp, ud._hp)
             self:campaign_end()
+            self._tid_2 = nil
+            return true
         end
     end
-    self._tid_2 = self:getScheduler():scheduleScriptFunc(cb_update, 0.1, false)
+    self._tid_2 = scheduler.Until(cb_update, 0.1)
 end
 
 
