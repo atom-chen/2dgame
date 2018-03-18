@@ -134,8 +134,8 @@ function BattleSkill:do_attack(target)
 	end
 
 	-- step 2: 计算输出伤害
-	hurt := ctx.caster_prop.Atk + ctx.prop_add.Atk
-	crit := ctx.caster_prop.Crit + ctx.prop_add.Crit
+	local hurt = ctx.caster_prop.Atk + ctx.prop_add.Atk
+	local crit = ctx.caster_prop.Crit + ctx.prop_add.Crit
 	ctx.damage_send.hurt = hurt
 	ctx.damage_send.crit = false
 	if math.RandomHitn(int(crit), 100) then
@@ -493,80 +493,4 @@ end
 
 
 return BattleWin
-
-
---[[
-
-
-
-
--------------------------------------------------------------------------
-|方式 			玩家感受	结果		复杂度		|
--------------------------------------------------------------------------
-|纯播放			好		一致		一边写		|
-|本地战斗+审核		好		不一定		两边写		|
-|本地战斗+纠正		好--		一致		两边写++	|
--------------------------------------------------------------------------
-
-
-玩家感受包括：
-	技能释放	动作
-	数字增减	角色头上冒泡，战斗的反应
-	光环得失	界面上持续效果
-
-玩家感受不到：
-	具体属性值
-
-
-[]*战斗场次
-[]*每场的序列
-
-
-
-{
-
-	[200] =
-	{
-		{
-			type : 1,
-			data : nil,
-		},
-
-		{
-			type : 2,
-			data : nil,
-		},
-
-	}
-}
-
-
-
-type :
-	1:	释放技能
-		{
-			caster
-			id lv
-		}
-
-
-	2:	得失光环
-		{
-			owner
-			id lv
-			flag  : 得到 / 失去
-		}
-
-		
-		
-		伤害/恢复
-		{
-			target			HP  攻击 ...
-			attr_type
-			attr_value
-		}
-
-
-
-]]
 
