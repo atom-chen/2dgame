@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-›
+¤
 
 game.protomsg"#
 PlayerDataRequest
@@ -95,16 +95,26 @@ BattleUnit
 skill (2.msg.BattleSkillRskillB
 career_general_skill (2.msg.BattleSkillRcareerGeneralSkill?
 career_general_aura (2.msg.BattleAuraRcareerGeneralAura?
-career_guarder_aura (2.msg.BattleAuraRcareerGuarderAura"\
-
-BattleStep
+career_guarder_aura (2.msg.BattleAuraRcareerGuarderAura"œ
+CampaignDetail
+host (Rhost
+time (Rtime
+flag (Rflag
+arg1 (Rarg1
+arg2 (Rarg2
+arg3 (Rarg3
+arg4 (Rarg4"Á
+BattleCampaign
 a_pos (RaPos
-d_pos (RdPos
-a_hp (RaHp
-d_hp (RdHp"n
+d_pos (RdPos
+a_hp_s (RaHpS
+d_hp_s (RdHpS
+a_hp_e (RaHpE
+d_hp_e (RdHpE-
+details (2.msg.CampaignDetailRdetails"r
 BattleResult%
-units (2.msg.BattleUnitRunits%
-steps (2.msg.BattleStepRsteps
+units (2.msg.BattleUnitRunits)
+camps (2.msg.BattleCampaignRcamps
 win (Rwin"#
 MakeBattleRequest
 id (Rid"?

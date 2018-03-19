@@ -4,11 +4,6 @@ local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local config        = require "configs_grace"
 
-
-local SkillContext  = class("SkillContext")
-local SkillDamage   = class("SkillDamage")
-local BattleSkill   = class("BattleSkill")
-local BattleAura    = class("BattleAura")
 local BattleUnit    = class("BattleUnit")
 local BattleWin     = class("BattleWin", WinBase)
 
@@ -26,170 +21,12 @@ local actor_info = {
     [9] = {  450,   -200,   0.6,    "防-左辅将", },
     [10]= {  450,    0,     0.6,    "防-右辅将", },
 }
---------------------- SkillDamage -------------------------------------------------
-function SkillDamage:ctor()
-    self._hurt = 0
-	self._crit = false
-end
-
---------------------- SkillContext -------------------------------------------------
-function SkillContext:ctor(caster, target)
-    self._caster        = caster   -- *BattleUnit
-	self._target        = target   -- *BattleUnit
-	self._caster_prop   = 0   -- *Property   -- 攻击者的基本属性(只读)
-	self._target_prop   = 0   -- *Property   -- 防御者的基本属性(只读)
-	self._prop_add      = 0   -- Property    -- 攻击者光环加成
-	self._damage_send   = 0   -- SkillDamage -- 攻击者造成实际伤害
-	self._damage_recv   = 0   -- SkillDamage -- 防御者计算防御之后的伤害
-	self._damage_sub    = 0   -- SkillDamage -- 防御者计算防御之后光环减免部分
-	self._damage        = 0   -- SkillDamage -- 最终造成的实际伤害
-end
-
---------------------- BattleSkill -------------------------------------------------
-function BattleSkill:ctor(id, lv)
-    self._proto = config.GetSkillProto(id, lv)
-    self._start_time = 0
-    self._update_time = 0
-    self._cd_time = 0
-    self._finish = true
-end
-
-function BattleSkill:Cast(u, time)
-    self._owner = u
-    self._finish = false
-	self._start_time = time
-	self._update_time = time
-	self:onStart()
-	print(self._owner:Name(), "释放了技能:", self._proto.id, self._proto.level)
-
-    -- 播放动画
-    local module = self._proto.module
-    u._anim:getAnimation():play(module, -1, 1)
-end
-
-function BattleSkill:update(time)
-    if self._finish then
-        return
-    end
-    if self._proto.itv_t ~= 0 then
-        if time-self._update_time > self._proto.itv_t then
-            self._update_time = time
-            self:onUpdate()
-        end
-    end
-    if time-self._start_time >= self._proto.last_t then
-        self:onFinish()
-        self._owner = nil
-        self._finish = true
-        self._cd_time = time
-    end
-end
-
-function BattleSkill:IsFree(time)
-	return time-self._cd_time >= self._proto.cd_t
-end
-
-function BattleSkill:IsFinish()
-    return self._finish
-end
-
-function BattleSkill:onStart()
-end
-
-function BattleSkill:onUpdate()
-    local target = self._rival
-    local type = self._proto.type
-    if type == 1 then
-        if target == self._owner then
-            print("[WARNING]", self._owner:Name(), "要对自己造成伤害", self._proto.id)
-            return
-        end
-        self:do_attack(target)
-    elseif type == 2 then
-        for _, a in ipairs(self._proto.aura) do
-            target:AddAura(self._owner, a.id, a.lv)
-        end
-    else
-        print("unknown skill type:", self._proto.type)
-    end
-end
-
-function BattleSkill:onFinish()
-    if self._proto.itv_t == 0 then
-		self:onUpdate()
-	end
-end
-
-function BattleSkill:do_attack(target)
-    local ctx = SkillContext:create(self._owner, target)
-
-	ctx.caster_prop = ctx._caster.Prop
-	ctx.target_prop = ctx._target.Prop
-
-	-- step 1: 计算光环
-    for _, aura in ipairs(ctx._caster._auras_battle) do
-		if aura then
-			aura.OnEvent(BattleEvent_PreAtk, ctx)
-		end
-	end
-
-	-- step 2: 计算输出伤害
-	local hurt = ctx.caster_prop.Atk + ctx.prop_add.Atk
-	local crit = ctx.caster_prop.Crit + ctx.prop_add.Crit
-	ctx.damage_send.hurt = hurt
-	ctx.damage_send.crit = false
-	if math.RandomHitn(int(crit), 100) then
-		ctx.damage_send.crit = true
-		ctx.damage_send.hurt = hurt * (ctx.caster_prop.CritHurt + ctx.prop_add.CritHurt)
-	end
-
-	-- step 3: 计算防御
-	hurt = ctx.damage_send.hurt - ctx.target_prop.Def
-	if hurt < 0 then
-		hurt = 1
-	end
-	ctx.damage_recv.hurt = hurt
-
-	-- step 4: 计算光环
-	for _, aura := range target.Auras_battle do
-		if aura ~= nil then
-			aura.OnEvent(BattleEvent_AftDef, ctx)
-		end
-	end
-
-	-- step 5: 计算最终伤害
-	ctx.damage.hurt = ctx.damage_recv.hurt - ctx.damage_sub.hurt
-	if ctx.damage.hurt < target.Hp then
-		target.Hp -= ctx.damage.hurt
-		print(ctx._caster:Name(), " <伤害了> ", ctx.target:Name(), ctx.damage.hurt)
-	else
-		target.Hp = 0
-		print(ctx._caster:Name(), " <击杀了> ", ctx.target:Name(), ctx.damage.hurt)
-	end
-
-end
-
-
---------------------- BattleAura -------------------------------------------------
-function BattleAura:ctor(id, lv, once)
-    self._proto = config.GetAuraProto(id, lv)
-    self._once = once
-end
-
-function BattleAura:update(time)
-end
-
-function BattleAura:IsFinish()
-end
-
-function BattleAura:Init(caster, owner)
-    self._owner = owner
-	self._caster = caster
-end
 
 
 --------------------- BattleUnit -------------------------------------------------
 function BattleUnit:ctor(u)
+    self._u         = u
+
     self._type      = u.type
     self._id        = u.id
     self._lv        = u.lv
@@ -204,33 +41,33 @@ function BattleUnit:ctor(u)
     self._skill_comm = nil
     self._skill_exclusive = {}
 
+    -- local property
+    self._proto = nil
+    self._auras = {}
+    self._skills= {}
+
     local v = u.comm
     if v.id ~= 0 then
-        self._skill_comm = BattleSkill:create(v.id, v.lv)
+        table.insert(self._skills, {
+            proto = config.GetSkillProto(v.id, v.lv)
+        })
     end
 
     for k, v in ipairs(u.skill) do
         if v.id ~= 0 then
-            table.insert(self._skill_exclusive, BattleSkill:create(v.id, v.lv))
+            table.insert(self._skills, {
+                proto = config.GetSkillProto(v.id, v.lv)
+            })
         end
     end
 
     v = u.career_general_skill           -- 主帅技能
     if v.id ~= 0 then
-        table.insert(self._skill_exclusive, BattleSkill:create(v.id, v.lv))
+        table.insert(self._skills, {
+            proto = config.GetSkillProto(v.id, v.lv)
+        })
     end
 
-    -- 光环
-	self._auras_battle  = {}    -- 战斗中产生的光环(战斗过程中产生，战斗结束之后保留)
-
-    --[[
-    BattleAura  career_general_aura     = 14;   -- 主帅光环
-    BattleAura  career_guarder_aura     = 15;   -- 辅将光环
-    --]]
-
-    -- local property
-
-    self._proto = nil
     if self._type == 1 then
         self._proto = config.GetHeroProto(self._id, self._lv)
     else
@@ -251,7 +88,16 @@ function BattleUnit:ctor(u)
     name:setPosition(-30, 0)
     self._root:addChild(name)
 
+    self._is_attacker = true
+    if self._pos > 5 then
+        self._is_attacker = false
+    end
     -- hp
+
+end
+
+-- 设置HP
+function BattleUnit:SetHp()
 
 end
 
@@ -260,57 +106,99 @@ function BattleUnit:Name()
 end
 
 function BattleUnit:Dead()
-    return self._hp == 0
+    return self._hp <= 0
 end
 
-function BattleUnit:init_campaign(u, step)
+function BattleUnit:init_campaign(u, camp)
     self._rival = u
+    self._camp  = camp
+
+    if self._is_attacker then
+        if self._hp ~= camp.a_hp_s then
+            self._hp = camp.a_hp_s
+            print("_______ hp 不相等啊")
+        end
+    else
+        if self._hp ~= camp.d_hp_s then
+            self._hp = camp.d_hp_s
+            print("_______ hp 不相等啊")
+        end
+    end
+
+    self._camp_evts = {}
+    for i, v in ipairs(camp.details) do
+        if v.host == self._pos then
+            local t = self._camp_evts[v.time]
+            if not t then
+                t = {}
+                self._camp_evts[v.time] = t
+            end
+            table.insert(t, v)
+        end
+    end
 end
+
+
+function BattleUnit:clear_campaign()
+    self._rival = nil
+    self._camp  = nil
+end
+
 
 function BattleUnit:update(time)
     if self:Dead() then
         return
     end
 
-    -- cast skill
-    if not self._skill_curr then
-        for i, s in ipairs(self._skill_exclusive) do
-            if s:IsFree(time) then
-                self._skill_curr = s
-                break
-            end
-        end
-        if not self._skill_curr then
-            if self._skill_comm:IsFree(time) then
-                self._skill_curr = self._skill_comm
-            end
-        end
-        if self._skill_curr then
-            self._skill_curr:Cast(self, time)
-        end
-    else
-        self._skill_curr:update(time)
-        if self._skill_curr:IsFinish() then
-            self._skill_curr = nil
-        end
+    local t = self._camp_evts[time]
+    if not t then
+        return
     end
 
-    -- update auras
-    for i, v in ipairs(self._auras_battle) do
-        if v then
-            v:update(time)
-            if v:IsFinish() then
-                self._auras_battle[i] = nil
-            end
+    for i, v in ipairs(t) do
+        if v.flag == 1 then             -- CampaignEvent_Cast
+            local id = v.arg1
+            local lv = v.arg2
+            self:OnCast(id, lv)
+        elseif v.flag == 2 then         -- CampaignEvent_Hurt
+            local hurt = v.arg1
+            local crit = v.arg2
+            self:OnHurt(hurt, crit)
+        elseif v.flag == 3 then         -- CampaignEvent_AuraGet
+            local id = v.arg1
+            local lv = v.arg2
+            self:AddAura(id, lv)
+        elseif v.flag == 4 then         -- CampaignEvent_AuraLose
+            local id = v.arg1
+            local lv = v.arg2
+            self:DelAura(id, lv)
+        elseif v.flag == 5 then         -- CampaignEvent_AuraEffect
+            self:AuraEffect(v.arg1, v.arg2, v.arg3, v.arg4)
+        else
+            print("unknown CampaignEvent", v.flag)
         end
     end
 
 end
 
-function BattleUnit:AddAura(caster, id, lv)
-    local aura = BattleAura:create(id, lv, false)
-    aura:Init(caster, self)
-    table.insert(self._auras_battle, aura)
+
+function BattleUnit:OnCast(id, lv)
+    -- 单次播放不循环
+    self._anim:getAnimation():play(module, -1, 1, 0)
+end
+
+function BattleUnit:OnHurt(hurt, crit)
+    self._hp = self._hp - hurt
+end
+
+function BattleUnit:AddAura(id, lv)
+end
+
+function BattleUnit:DelAura(id, lv)
+end
+
+function BattleUnit:AuraEffect(arg1, arg2, arg3, arg4)
+    print("FUCK: Not IMPL")
 end
 
 
@@ -321,7 +209,6 @@ end
     ctor()      一次性初始化
 
     init()      多次初始化，支持多次播放
-
 
 --]]
 
@@ -352,16 +239,6 @@ function BattleWin:ctor(r)
         WinManager:DestroyWindow(self)
     end, 32)
 
-    self._steps = {}
-    for i, s in ipairs(r.steps) do
-        self._steps[i] =
-        {
-            a_pos = s.a_pos,
-            d_pos = s.d_pos,
-            a_hp  = s.a_hp,
-            d_hp  = s.d_hp,
-        }
-    end
 end
 
 
@@ -372,7 +249,7 @@ function BattleWin:OnCreate()
     -- 设置倒计时
     local cb_count_down = function(times)
         if times == 3 then
-            self:PlayBattle()
+            self:BattleStart()
             self._tid_1 = nil
         end
     end
@@ -403,23 +280,27 @@ function BattleWin:OnHiden()
 end
 
 -- 开始战斗
-function BattleWin:PlayBattle()
+function BattleWin:BattleStart()
+
+    -- 所有成员初始化：
+    -- self._hp    = self._u.hp
+    -- ...
+
     self._campaigns = 0
     self:do_campaign()
-end
-
-
-function BattleWin:ReplayBattle()
 end
 
 
 function BattleWin:BattleEnd()
 end
 
-function BattleWin:campaign_begin(step)
+
+function BattleWin:campaign_begin(camp)
+    self._camp_curr = camp
+
     -- 隐藏非战斗角色  设置透明度
     for _, u in ipairs(self._units) do
-        if u._pos ~= step.a_pos and u._pos ~= step.d_pos then
+        if u._pos ~= camp.a_pos and u._pos ~= camp.d_pos then
             if not u:Dead() then
                 u._root:setCascadeOpacityEnabled(true)
                 u._root:setOpacity(255*0.1)
@@ -432,6 +313,8 @@ end
 
 -- 开启下一场战斗
 function BattleWin:campaign_end()
+    self._camp_curr = nil
+
     -- 显示所有非死亡角色
     for _, u in ipairs(self._units) do
         if not u:Dead() then
@@ -442,7 +325,7 @@ function BattleWin:campaign_end()
     end
 
     -- 检测是否已决出胜负
-    if self._campaigns >= #self._steps then
+    if self._campaigns >= #self._result.camps then
         self.BattleEnd()
         return
     end
@@ -455,21 +338,22 @@ function BattleWin:campaign_end()
     scheduler.Once(cb_wait, 0.7)
 end
 
+
 function BattleWin:do_campaign()
-    if self._campaigns >= #self._steps then
+    if self._campaigns >= #self._result.camps then
         return
     end
 
     self._campaigns = self._campaigns + 1
-    local step = self._steps[self._campaigns]
+    local camp = self._result.camps[self._campaigns]
 
-    self:campaign_begin(step)
+    self:campaign_begin(camp)
 
-    local ua = self._units[step.a_pos]
-    local ud = self._units[step.d_pos]
+    local ua = self._units[camp.a_pos]
+    local ud = self._units[camp.d_pos]
 
-    ua:init_campaign(ud, step)
-    ud:init_campaign(ua, step)
+    ua:init_campaign(ud, camp)
+    ud:init_campaign(ua, camp)
 
     local tid
     local time = 0
@@ -480,10 +364,15 @@ function BattleWin:do_campaign()
         if ua:Dead() or ud:Dead() then
             -- adjust hp
             print("campaign end, LEFT hp:", ua._hp, ud._hp)
-            ua._hp = step.a_hp
-            ud._hp = step.d_hp
+            ua._hp = camp.a_hp_e
+            ud._hp = camp.d_hp_e
             print("campaign end, ADJUST hp:", ua._hp, ud._hp)
+
+            ua:clear_campaign()
+            ud:clear_campaign()
+
             self:campaign_end()
+
             self._tid_2 = nil
             return true
         end
@@ -493,4 +382,3 @@ end
 
 
 return BattleWin
-
