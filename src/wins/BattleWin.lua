@@ -68,6 +68,9 @@ function BattleUnit:ctor(u)
         })
     end
 
+table.print_r(self._skills)
+print("ddddddddd")
+
     if self._type == 1 then
         self._proto = config.GetHeroProto(self._id, self._lv)
     else
@@ -182,9 +185,22 @@ function BattleUnit:update(time)
 end
 
 
+function BattleUnit:GetSkill(id, lv)
+    for _, v in ipairs(self._skills) do
+        if v.proto.id == id and v.proto.level == lv then
+            return v
+        end
+    end
+end
+
 function BattleUnit:OnCast(id, lv)
     -- 单次播放不循环
-    self._anim:getAnimation():play(module, -1, 1, 0)
+    local skill = self:GetSkill(id, lv)
+    if not skill then
+        return
+    end
+    local module = skill.proto.module
+    self._anim:getAnimation():play(module, -1, 0)
 end
 
 function BattleUnit:OnHurt(hurt, crit)
