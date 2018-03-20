@@ -68,9 +68,6 @@ function BattleUnit:ctor(u)
         })
     end
 
-table.print_r(self._skills)
-print("ddddddddd")
-
     if self._type == 1 then
         self._proto = config.GetHeroProto(self._id, self._lv)
     else
@@ -162,21 +159,21 @@ function BattleUnit:update(time)
         if v.flag == 1 then             -- CampaignEvent_Cast
             local id = v.arg1
             local lv = v.arg2
-            self:OnCast(id, lv)
+            self:OnCast(time, id, lv)
         elseif v.flag == 2 then         -- CampaignEvent_Hurt
             local hurt = v.arg1
             local crit = v.arg2
-            self:OnHurt(hurt, crit)
+            self:OnHurt(time, hurt, crit)
         elseif v.flag == 3 then         -- CampaignEvent_AuraGet
             local id = v.arg1
             local lv = v.arg2
-            self:AddAura(id, lv)
+            self:AddAura(time, id, lv)
         elseif v.flag == 4 then         -- CampaignEvent_AuraLose
             local id = v.arg1
             local lv = v.arg2
-            self:DelAura(id, lv)
+            self:DelAura(time, id, lv)
         elseif v.flag == 5 then         -- CampaignEvent_AuraEffect
-            self:AuraEffect(v.arg1, v.arg2, v.arg3, v.arg4)
+            self:AuraEffect(time, v.arg1, v.arg2, v.arg3, v.arg4)
         else
             print("unknown CampaignEvent", v.flag)
         end
@@ -193,7 +190,7 @@ function BattleUnit:GetSkill(id, lv)
     end
 end
 
-function BattleUnit:OnCast(id, lv)
+function BattleUnit:OnCast(time, id, lv)
     -- 单次播放不循环
     local skill = self:GetSkill(id, lv)
     if not skill then
@@ -201,19 +198,26 @@ function BattleUnit:OnCast(id, lv)
     end
     local module = skill.proto.module
     self._anim:getAnimation():play(module, -1, 0)
+    print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, time))
 end
 
-function BattleUnit:OnHurt(hurt, crit)
+function BattleUnit:OnHurt(time, hurt, crit)
     self._hp = self._hp - hurt
+    if self._hp < 0 then
+        self._hp = 0
+    end
+    print(string.format("%s 受到伤害: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
-function BattleUnit:AddAura(id, lv)
+function BattleUnit:AddAura(time, id, lv)
+    print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), id, lv, time))
 end
 
-function BattleUnit:DelAura(id, lv)
+function BattleUnit:DelAura(time, id, lv)
+    print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), id, lv, time))
 end
 
-function BattleUnit:AuraEffect(arg1, arg2, arg3, arg4)
+function BattleUnit:AuraEffect(time, arg1, arg2, arg3, arg4)
     print("FUCK: Not IMPL")
 end
 
@@ -301,19 +305,20 @@ function BattleWin:BattleStart()
     -- 所有成员初始化：
     -- self._hp    = self._u.hp
     -- ...
-
+    print("整场战斗开始=============")
     self._campaigns = 0
     self:do_campaign()
 end
 
 
 function BattleWin:BattleEnd()
+    print("整场战斗结束 END =============")
 end
 
 
 function BattleWin:campaign_begin(camp)
     self._camp_curr = camp
-
+    print("小场战斗开始 ----------------------------------")
     -- 隐藏非战斗角色  设置透明度
     for _, u in ipairs(self._units) do
         if u._pos ~= camp.a_pos and u._pos ~= camp.d_pos then
@@ -330,7 +335,7 @@ end
 -- 开启下一场战斗
 function BattleWin:campaign_end()
     self._camp_curr = nil
-
+    print("小场战斗结束 END ----------------------------------")
     -- 显示所有非死亡角色
     for _, u in ipairs(self._units) do
         if not u:Dead() then
@@ -370,6 +375,8 @@ function BattleWin:do_campaign()
 
     ua:init_campaign(ud, camp)
     ud:init_campaign(ua, camp)
+
+    print( "本场是:", ua:Name(), " VS ", ud:Name() )
 
     local tid
     local time = 0
