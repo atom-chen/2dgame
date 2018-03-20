@@ -87,18 +87,32 @@ function BattleUnit:ctor(u)
     local name = cc.Label:createWithSystemFont(self._proto.name, "Arial", 16)
     name:setPosition(-30, 0)
     self._root:addChild(name)
+    
+    local hp = cc.Label:createWithSystemFont("", "Arial", 12)
+    hp:setPosition(30, 0)
+    self._root:addChild(hp)
+    self._node_hp = hp
+    self:UpdateHp()
 
     self._is_attacker = true
     if self._pos > 5 then
         self._is_attacker = false
-    end
-    -- hp
+    end   
 
 end
 
 -- 设置HP
-function BattleUnit:SetHp()
-
+function BattleUnit:UpdateHp()
+    local v = self._hp*100 / self._u.hp
+    local s = string.format("%.2f%%", v)
+    self._node_hp:setString(s)
+    if v > 70 then
+        self._node_hp:setTextColor(cc.GREEN)
+    elseif v > 30 then
+        self._node_hp:setTextColor(cc.YELLOW)
+    else
+        self._node_hp:setTextColor(cc.RED)
+    end
 end
 
 function BattleUnit:Name()
@@ -206,6 +220,7 @@ function BattleUnit:OnHurt(time, hurt, crit)
     if self._hp < 0 then
         self._hp = 0
     end
+    self:UpdateHp()
     print(string.format("%s 受到伤害: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
@@ -301,10 +316,6 @@ end
 
 -- 开始战斗
 function BattleWin:BattleStart()
-
-    -- 所有成员初始化：
-    -- self._hp    = self._u.hp
-    -- ...
     print("整场战斗开始=============")
     self._campaigns = 0
     self:do_campaign()
@@ -312,7 +323,15 @@ end
 
 
 function BattleWin:BattleEnd()
-    print("整场战斗结束 END =============")
+    print("整场战斗结束 END =============", self._units[3]._hp, self._units[8]._hp)
+
+    local u = self._units[3]
+    if u:Dead() then
+        print("防守方 获得了最终胜利")
+    else
+        print("攻击方 获得了最终胜利")
+    end
+
 end
 
 
@@ -339,7 +358,7 @@ function BattleWin:campaign_end()
     -- 显示所有非死亡角色
     for _, u in ipairs(self._units) do
         if not u:Dead() then
-            u._root:setOpacity(0)
+            u._root:setOpacity(255*1)
         else
             u._root:setVisible(false)
         end
@@ -347,7 +366,7 @@ function BattleWin:campaign_end()
 
     -- 检测是否已决出胜负
     if self._campaigns >= #self._result.camps then
-        self.BattleEnd()
+        self:BattleEnd()
         return
     end
 
@@ -390,6 +409,12 @@ function BattleWin:do_campaign()
             ua._hp = camp.a_hp_e
             ud._hp = camp.d_hp_e
             print("campaign end, ADJUST hp:", ua._hp, ud._hp)
+
+            if ua:Dead() then
+                print(ud:Name(), "胜")
+            else
+                print(ua:Name(), "胜")
+            end
 
             ua:clear_campaign()
             ud:clear_campaign()
