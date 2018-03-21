@@ -1,4 +1,7 @@
 local WinBase       = require "core.WinBase"
+local Armature      = require "core.armature"
+
+
 local HeroListWin   = class("HeroListWin", WinBase)
 
 
@@ -17,10 +20,19 @@ function HeroListWin:ctor()
 
     -- 输入框
     local editbox = ccui.EditBox:create(cc.size(600, 80), "btn_scale9.png")
---    editbox:onEditHandler(function(event)
---        print("editbox:onEditHandler:")
---        table.print(event)
---    end)
+    editbox:setPosition(0, 250)
+    editbox:setInputMode(cc.EDITBOX_INPUT_MODE_SINGLELINE)
+    editbox:onEditHandler(function(event)
+        if event.name == "return" then
+            local str = editbox:getText()
+            print("ddd, str", str)
+                if self._arm then
+                    self._arm:removeFromParent()
+                end
+                self._arm = Armature:create(str, "attack")
+                self:addChild(self._arm)
+        end
+    end)
     self:addChild(editbox)
 end
 
