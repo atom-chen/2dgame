@@ -1,5 +1,5 @@
-
-local HeroListWin = class("HeroListWin", WinBase)
+local WinBase       = require "core.WinBase"
+local HeroListWin   = class("HeroListWin", WinBase)
 
 
 function HeroListWin:ctor()
@@ -16,10 +16,11 @@ function HeroListWin:ctor()
     end, 32)
 
     -- 输入框
-    local editbox = ccui.EditBox:create(cc.size(100, 20), "btn_scale9.png", nil, nil)
-    editbox:onEditHandler(function(name, sender)
-        print("editbox:onEditHandler:", name, sender)
-    end)
+    local editbox = ccui.EditBox:create(cc.size(600, 80), "btn_scale9.png")
+--    editbox:onEditHandler(function(event)
+--        print("editbox:onEditHandler:")
+--        table.print(event)
+--    end)
     self:addChild(editbox)
 end
 
