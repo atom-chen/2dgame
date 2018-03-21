@@ -147,7 +147,7 @@ function MainScene:ctor()
                 print("---------- zcg end.")
                 preboy:set_console_color()
 	        elseif keyCode == cc.KeyCode.KEY_C then
-                SocketMgr:connect("ws://172.31.248.17:8080")
+                WinManager:CreateWindowHot(3)
             end
 	    end
         local listener = cc.EventListenerKeyboard:create()

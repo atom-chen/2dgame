@@ -1,9 +1,10 @@
+
 local HeroListWin = class("HeroListWin", WinBase)
 
 
 function HeroListWin:ctor()
     print("HeroListWin:ctor")
-    
+
     -- 关闭按钮
     local btn_image = ccui.Scale9Sprite:create("unKnown.png")
     local btn_close = cc.ControlButton:create(btn_image)
@@ -15,8 +16,11 @@ function HeroListWin:ctor()
     end, 32)
 
     -- 输入框
-    EditBox
-
+    local editbox = ccui.EditBox:create(cc.size(100, 20), "btn_scale9.png", nil, nil)
+    editbox:onEditHandler(function(name, sender)
+        print("editbox:onEditHandler:", name, sender)
+    end)
+    self:addChild(editbox)
 end
 
 
