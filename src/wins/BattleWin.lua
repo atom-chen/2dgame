@@ -1,7 +1,7 @@
 
 local scheduler     = require "core.scheduler"
 local WinBase       = require "core.WinBase"
-local AnimLoader    = require "core.AnimLoader"
+local Armature      = require "core.armature"
 local config        = require "configs_grace"
 
 local BattleUnit    = class("BattleUnit")
@@ -75,7 +75,7 @@ function BattleUnit:ctor(u)
     end
 
     self._root = cc.Node:create()
-    local anim = AnimLoader:loadArmature(self._proto.module_name)
+    local anim = Armature:create(self._proto.module_name)
     local info = actor_info[self._pos]
     anim:setScale(info[3])
     if self._pos > 5 then
@@ -211,7 +211,8 @@ function BattleUnit:OnCast(time, id, lv)
         return
     end
     local module = skill.proto.module
-    self._anim:getAnimation():play(module, -1, 0)
+    self._anim:Play(module)
+    self._rival._anim:PlayHit()
     print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, time))
 end
 
@@ -300,8 +301,12 @@ function BattleWin:OnDestroy()
     if self._tid_2 then
         scheduler.Abort(self._tid_2)
     end
+    if self._tid_3 then
+        scheduler.Abort(self._tid_3)
+    end
     self._tid_1 = nil
     self._tid_2 = nil
+    self._tid_3 = nil
 end
 
 
@@ -375,7 +380,7 @@ function BattleWin:campaign_end()
         -- 播放一下挑衅的动画
         self:do_campaign()
     end
-    scheduler.Once(cb_wait, 0.7)
+    self._tid_3 = scheduler.Once(cb_wait, 0.7)
 end
 
 

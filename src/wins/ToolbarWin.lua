@@ -1,6 +1,7 @@
 
 local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
+local Armature      = require "core.armature"
 
 local ToolbarWin    = class("ToolbarWin", WinBase)
 
@@ -20,11 +21,9 @@ function ToolbarWin:OnCreate()
     self:addChild(skeletonNode)
     skeletonNode:setScaleX(-1)
 
-    local armature = AnimLoader:loadArmature("caocao")
-    armature:getAnimation():play('skill2', -1, 1)
-    armature:setPosition(cc.p(240, 150))
-
-    self:addChild(armature)
+    local arm = Armature:create("caocao", "attack")
+    arm:setPosition(cc.p(240, 150))
+    self:addChild(arm)
 
     local times = 0
     local function _on_timer()
@@ -33,7 +32,7 @@ function ToolbarWin:OnCreate()
         Socket.SendPacket(Opcode.MSG_CS_PING, {
             time = r
         }, function(tab)
-            print("ping response:", times, r, tab.time)
+            -- print("ping response:", times, r, tab.time)
         end)
     end
 

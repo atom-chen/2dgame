@@ -28,24 +28,6 @@ end
 
 
 --[[
-    -- armature类动画(moling资源)
-    异步加载暂时不处理
---]]
-function AnimLoader:loadArmature(name, action)
-    local url = string.format("anim_armature/%s/%s", name, name)
-    ccs.ArmatureDataManager:getInstance():addArmatureFileInfo(url ..".png", url..".plist", url..".json")
-    local armature = ccs.Armature:create(name)
-    
-    if not action then
-        action = "idle"
-    end
-
-    armature:getAnimation():play(action, -1, 1)
-    return armature
-end
-
-
---[[
     spine类动画
     加载骨骼动画(moling资源：需要改*.plist里面的skinnedmesh --> linkedmesh)
     cocos2dx资源不需要特别处理

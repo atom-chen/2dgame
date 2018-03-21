@@ -100,7 +100,7 @@ function MainScene:ctor()
         local function btn_callback(ref, type)
             if type == ccui.TouchEventType.ended then
                 if i == 1 then
-                    WinManager:CreateWindow(1)
+                    WinManager:CreateWindowHot(1)
                 elseif i == 2 then
                     WinManager:DestroyWindow(1)
                 elseif i == 3 then

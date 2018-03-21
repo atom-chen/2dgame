@@ -1,6 +1,7 @@
 
 require "core.protobuf"
 require "core.socket_events"
+require "core.armature"
 require "core.AnimLoader"
 require "core.WinBase"
 require "core.WinManager"
