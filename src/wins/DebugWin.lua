@@ -17,7 +17,7 @@ function DebugWin:ctor(msg)
     bg:addChild(msg)
     -- display.align(msg, display.TOP_LEFT, 30, 480)
 
-    local egbutton = cc.Scale9Sprite:create("unKnown.png")
+    local egbutton = ccui.Scale9Sprite:create("unKnown.png")
     local close = cc.ControlButton:create(egbutton)
     close:setPreferredSize(egbutton:getPreferredSize())
     close:setPosition(cc.p(295, 20))

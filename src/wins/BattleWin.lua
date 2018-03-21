@@ -266,7 +266,7 @@ function BattleWin:ctor(r)
     end
 
     -- 关闭按钮
-    local btn_image = cc.Scale9Sprite:create("unKnown.png")
+    local btn_image = ccui.Scale9Sprite:create("unKnown.png")
     local btn_close = cc.ControlButton:create(btn_image)
     btn_close:setPreferredSize(btn_image:getPreferredSize())
     btn_close:setPosition(cc.p(525, 275))

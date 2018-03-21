@@ -1,12 +1,9 @@
 
 local windows =
 {
-    [1] = { "wins.ToolbarWin",      },
-    [2] = { "wins.BattleWin",       },
-    [3] = { "wins.BattleWin",       },
-
-    -- [2] = { "wins.player_info",  },          -- 角色信息
-    -- [3] = { "wins.system_setting"},          -- 系统设置
+    [1] = { "wins.ToolbarWin",      },      -- 这个东西迟早要被替换的
+    [2] = { "wins.BattleWin",       },      -- 战斗界面： 播放战斗
+    [3] = { "wins.HeroListWin",     },      -- 英雄列表： 查看所选择英雄的技能效果
 }
 
 for _, v in pairs(windows) do
