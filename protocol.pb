@@ -100,10 +100,10 @@ BattleUnit
 host (Rhost
 time (Rtime
 flag (Rflag
-arg1 (Rarg1
-arg2 (Rarg2
-arg3 (Rarg3
-arg4 (Rarg4"Á
+arg1 (Rarg1
+arg2 (Rarg2
+arg3 (Rarg3
+arg4 (Rarg4"Á
 BattleCampaign
 a_pos (RaPos
 d_pos (RdPos
