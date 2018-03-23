@@ -24,8 +24,9 @@ local actor_info = {
 
 
 --------------------- BattleUnit -------------------------------------------------
-function BattleUnit:ctor(u)
+function BattleUnit:ctor(u, b)
     self._u         = u
+    self._b         = b
 
     self._type      = u.type
     self._id        = u.id
@@ -210,8 +211,8 @@ function BattleUnit:OnCast(time, id, lv)
     if not skill then
         return
     end
-    local module = skill.proto.module
-    self._anim:Play(module)
+    local model = skill.proto.model
+    self._anim:Play(model)
     self._rival._anim:PlayHit()
     print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, time))
 end
@@ -222,6 +223,7 @@ function BattleUnit:OnHurt(time, hurt, crit)
         self._hp = 0
     end
     self:UpdateHp()
+    self._b:AddCloudText(self, hurt)
     print(string.format("%s 受到伤害: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
@@ -234,7 +236,7 @@ function BattleUnit:DelAura(time, id, lv)
 end
 
 function BattleUnit:AuraEffect(time, arg1, arg2, arg3, arg4)
-    print("FUCK: Not IMPL")
+    self._b:AddCloudText(self, arg2)
 end
 
 
@@ -258,7 +260,7 @@ function BattleWin:ctor(r)
 
     self._units = {}
     for _, v in ipairs(r.units) do
-        local u = BattleUnit:create(v)
+        local u = BattleUnit:create(v, self)
         local p = actor_info[u._pos]
         u._root:setPosition(p[1], p[2])
         self:addChild(u._root)
@@ -290,12 +292,36 @@ function BattleWin:ShowNotice(text, last)
     self._notice:setString(text)
     -- 渐透明动画
     self._tid_4 = scheduler.ScheduleN(function(times)
-        self._notice:setVisible(false)
         self._notice:setOpacity(255*(1-(times/16)))
         if times == 16 then
             self._tid_4 = nil
         end
     end, last/20, 16)
+end
+
+
+-- 属性变化时头上飘字
+function BattleWin:AddCloudText(unit, value)
+    local tip = cc.Label:createWithSystemFont(tostring(value), "Arial", 9)
+    if value > 0 then
+        tip:setColor(cc.GREEN)
+    else
+        tip:setColor(cc.RED)
+    end
+
+    if unit._pos > 5 then
+        tip:setPosition(-400, 200)
+    else
+        tip:setPosition(400, 200)
+    end
+
+    self:addChild(tip)
+
+    -- 向上移动/变淡
+    local action1 = cc.DelayTime:create(0.5)
+    local action2 = cc.Spawn:create(cc.FadeOut:create(2), cc.MoveBy:create(2, cc.p(0, 200)))
+    local action3 = cc.CallFunc:create(function() tip:removeFromParent() end)
+    tip:runAction(cc.Sequence:create(action1,action2,action3))
 end
 
 ------------------------------ inhert from WinBase ------------------------------
@@ -368,7 +394,6 @@ function BattleWin:campaign_begin(camp)
             if not u:Dead() then
                 u._root:setCascadeOpacityEnabled(true)
                 u._root:setOpacity(255*0.1)
-                -- u._root:setVisible(false)
             end
         end
     end
