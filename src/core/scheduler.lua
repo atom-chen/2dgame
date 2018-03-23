@@ -9,11 +9,11 @@ function scheduler.ScheduleN(func, delay, times)
     local sid
     local idx = 1
     sid = sharedScheduler:scheduleScriptFunc(function()
-        func(idx)
-        idx = idx + 1
-        if idx > times then
+        if idx >= times then
             sharedScheduler:unscheduleScriptEntry(sid)
         end
+        func(idx)
+        idx = idx + 1
     end, delay, false)
     return sid
 end

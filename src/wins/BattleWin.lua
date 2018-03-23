@@ -87,7 +87,7 @@ function BattleUnit:ctor(u)
     local name = cc.Label:createWithSystemFont(self._proto.name, "Arial", 16)
     name:setPosition(-30, 0)
     self._root:addChild(name)
-    
+
     local hp = cc.Label:createWithSystemFont("", "Arial", 12)
     hp:setPosition(30, 0)
     self._root:addChild(hp)
@@ -97,7 +97,7 @@ function BattleUnit:ctor(u)
     self._is_attacker = true
     if self._pos > 5 then
         self._is_attacker = false
-    end   
+    end
 
 end
 
@@ -275,38 +275,57 @@ function BattleWin:ctor(r)
         WinManager:DestroyWindow(self)
     end, 32)
 
+     -- notice
+    local notice = cc.Label:createWithSystemFont("", "Arial", 36)
+    notice:setColor(cc.GREEN)
+    notice:setPosition(0, 100)
+    self:addChild(notice)
+    self._notice = notice
 end
 
+
+-- 显示文本，时间为last
+function BattleWin:ShowNotice(text, last)
+    self._notice:setOpacity(255*1)
+    self._notice:setString(text)
+    -- 渐透明动画
+    self._tid_4 = scheduler.ScheduleN(function(times)
+        self._notice:setVisible(false)
+        self._notice:setOpacity(255*(1-(times/16)))
+        if times == 16 then
+            self._tid_4 = nil
+        end
+    end, last/20, 16)
+end
 
 ------------------------------ inhert from WinBase ------------------------------
 
 function BattleWin:OnCreate()
     print("BattleWin:OnCreate")
-    -- 设置倒计时
+    -- 设置倒计时:  战斗开始
     local cb_count_down = function(times)
+        if times == 1 then
+            self:ShowNotice("战斗开始了，，，", 1.5)
+        end
         if times == 3 then
             self:BattleStart()
             self._tid_1 = nil
         end
     end
-    self._tid_1 = scheduler.ScheduleN(cb_count_down, 0.2, 3)
+    self._tid_1 = scheduler.ScheduleN(cb_count_down, 1, 3)
 end
 
 
 function BattleWin:OnDestroy()
     print("BattleWin:OnDestroy")
-    if self._tid_1 then
-        scheduler.Abort(self._tid_1)
+    for i = 1, 4 do
+        local var = "_tid_" .. i
+        tid = self[var]
+        if tid then
+            scheduler.Abort(tid)
+        end
+        self[var] = nil
     end
-    if self._tid_2 then
-        scheduler.Abort(self._tid_2)
-    end
-    if self._tid_3 then
-        scheduler.Abort(self._tid_3)
-    end
-    self._tid_1 = nil
-    self._tid_2 = nil
-    self._tid_3 = nil
 end
 
 
@@ -375,12 +394,7 @@ function BattleWin:campaign_end()
         return
     end
 
-    -- 休息3秒
-    local cb_wait = function()
-        -- 播放一下挑衅的动画
-        self:do_campaign()
-    end
-    self._tid_3 = scheduler.Once(cb_wait, 0.7)
+    self:do_campaign()
 end
 
 
@@ -400,37 +414,62 @@ function BattleWin:do_campaign()
     ua:init_campaign(ud, camp)
     ud:init_campaign(ua, camp)
 
-    print( "本场是:", ua:Name(), " VS ", ud:Name() )
+    local __do_campaign = function()
+        local time = 0
+        local __campaign_update = function()
+            ua:update(time)
+            ud:update(time)
+            time = time + 100
+            if ua:Dead() or ud:Dead() then
+                print("campaign end, LEFT hp:", ua._hp, ud._hp)
+                ua._hp = camp.a_hp_e
+                ud._hp = camp.d_hp_e
+                print("campaign end, ADJUST hp:", ua._hp, ud._hp)
 
-    local tid
-    local time = 0
-    local cb_update = function()
-        ua:update(time)
-        ud:update(time)
-        time = time + 100
-        if ua:Dead() or ud:Dead() then
-            -- adjust hp
-            print("campaign end, LEFT hp:", ua._hp, ud._hp)
-            ua._hp = camp.a_hp_e
-            ud._hp = camp.d_hp_e
-            print("campaign end, ADJUST hp:", ua._hp, ud._hp)
+                local __campaign_end = function()
+                    ua:clear_campaign()
+                    ud:clear_campaign()
+                    self:campaign_end()
+                end
 
-            if ua:Dead() then
-                print(ud:Name(), "胜")
-            else
-                print(ua:Name(), "胜")
+                if ua:Dead() then
+                    print(ud:Name(), "胜")
+                    ud._anim:Play("shengli", true)
+                    ua._anim:Play("dead", false, __campaign_end)
+                else
+                    print(ua:Name(), "胜")
+                    ua._anim:Play("shengli", true)
+                    ud._anim:Play("dead", false, __campaign_end)
+                end
+
+                self._tid_2 = nil
+                return true
             end
+        end
+        self._tid_2 = scheduler.Until(__campaign_update, 0.1)
+    end
 
-            ua:clear_campaign()
-            ud:clear_campaign()
-
-            self:campaign_end()
-
-            self._tid_2 = nil
-            return true
+      -- 准备阶段
+    local cb_campaign_prepare = function(times)
+        if times == 1 then
+            local str = string.format("第 %d 场", self._campaigns)
+            self:ShowNotice(str, 1.5)
+        end
+        if times == 2 then
+            local str = string.format("%s VS %s", ua:Name(), ud:Name())
+            self:ShowNotice(str, 1.8)
+            -- TODO: hero start move to battle pos
+        end
+        if times > 2 then
+            local str = string.format("倒计时：%d", 6-times)
+            self:ShowNotice(str, 1.8)
+        end
+        if times == 5 then
+            self._tid_3 = nil
+            __do_campaign()
         end
     end
-    self._tid_2 = scheduler.Until(cb_update, 0.1)
+    self._tid_3 = scheduler.ScheduleN(cb_campaign_prepare, 2, 5)
 end
 
 
