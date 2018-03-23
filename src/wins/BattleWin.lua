@@ -75,7 +75,7 @@ function BattleUnit:ctor(u)
     end
 
     self._root = cc.Node:create()
-    local anim = Armature:create(self._proto.module_name)
+    local anim = Armature:create(self._proto.model)
     local info = actor_info[self._pos]
     anim:setScale(info[3])
     if self._pos > 5 then

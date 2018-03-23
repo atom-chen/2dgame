@@ -22,12 +22,8 @@ local gm_str =
 -- MSG.SendNotice("fuck you, can i ?")
 
 
---[[
+
 Socket.SendPacket(Opcode.MSG_CS_MakeBattle, {
     id = 1,
 })
---]]
-
-
-WinManager:CreateWindowHot(3)
 
