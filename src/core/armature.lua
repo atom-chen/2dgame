@@ -7,10 +7,9 @@
 
 local function __movement_event_callback(arm, eventType, movementID)
     if eventType == 1 then -- ccs.MovementEventType.complete
-        local host = arm._host
-        if host and host._callback then
-            host._callback()
-            host._callback = nil
+        if arm._callback then
+            arm._callback()
+            arm._callback = nil
         end
         arm:Play("idle")
     end
@@ -28,7 +27,6 @@ local Armature = class("Armature", function(name, action)
     end
     animation:play(action, -1, 0)
     arm._animation = animation
-    arm._host = self
     return arm
 end)
 

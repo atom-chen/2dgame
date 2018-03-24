@@ -223,7 +223,7 @@ function BattleUnit:OnHurt(time, hurt, crit)
         self._hp = 0
     end
     self:UpdateHp()
-    self._b:AddCloudText(self, hurt)
+    self._b:AddCloudText(self, -hurt)
     print(string.format("%s 受到伤害: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
@@ -278,8 +278,8 @@ function BattleWin:ctor(r)
     end, 32)
 
      -- notice
-    local notice = cc.Label:createWithSystemFont("", "Arial", 36)
-    notice:setColor(cc.GREEN)
+    local notice = cc.Label:createWithSystemFont("", "Arial", 48)
+    notice:setColor(cc.YELLOW)
     notice:setPosition(0, 100)
     self:addChild(notice)
     self._notice = notice
@@ -288,37 +288,32 @@ end
 
 -- 显示文本，时间为last
 function BattleWin:ShowNotice(text, last)
+    self._notice:setPosition(0, 100)
     self._notice:setOpacity(255*1)
     self._notice:setString(text)
-    -- 渐透明动画
-    self._tid_4 = scheduler.ScheduleN(function(times)
-        self._notice:setOpacity(255*(1-(times/16)))
-        if times == 16 then
-            self._tid_4 = nil
-        end
-    end, last/20, 16)
+    -- 动画: 向上移动/变淡
+    local time = last / 2
+    local action1 = cc.DelayTime:create(time)
+    local action2 = cc.Spawn:create(cc.FadeOut:create(time), cc.MoveBy:create(time, cc.p(0, 200)))
+    self._notice:runAction(cc.Sequence:create(action1,action2))
 end
 
 
 -- 属性变化时头上飘字
 function BattleWin:AddCloudText(unit, value)
-    local tip = cc.Label:createWithSystemFont(tostring(value), "Arial", 9)
+    local tip = cc.Label:createWithSystemFont(tostring(value), "Arial", 16)
     if value > 0 then
         tip:setColor(cc.GREEN)
     else
         tip:setColor(cc.RED)
     end
-
-    if unit._pos > 5 then
-        tip:setPosition(-400, 200)
-    else
-        tip:setPosition(400, 200)
-    end
-
+    
+    local x, y = unit._root:getPosition()
+    tip:setPosition(x, y+200)
     self:addChild(tip)
 
     -- 向上移动/变淡
-    local action1 = cc.DelayTime:create(0.5)
+    local action1 = cc.DelayTime:create(0.3)
     local action2 = cc.Spawn:create(cc.FadeOut:create(2), cc.MoveBy:create(2, cc.p(0, 200)))
     local action3 = cc.CallFunc:create(function() tip:removeFromParent() end)
     tip:runAction(cc.Sequence:create(action1,action2,action3))
@@ -331,7 +326,7 @@ function BattleWin:OnCreate()
     -- 设置倒计时:  战斗开始
     local cb_count_down = function(times)
         if times == 1 then
-            self:ShowNotice("战斗开始了，，，", 1.5)
+            self:ShowNotice("战斗开始", 1.5)
         end
         if times == 3 then
             self:BattleStart()
@@ -344,9 +339,9 @@ end
 
 function BattleWin:OnDestroy()
     print("BattleWin:OnDestroy")
-    for i = 1, 4 do
+    for i = 1, 3 do
         local var = "_tid_" .. i
-        tid = self[var]
+        local tid = self[var]
         if tid then
             scheduler.Abort(tid)
         end
@@ -452,6 +447,7 @@ function BattleWin:do_campaign()
                 print("campaign end, ADJUST hp:", ua._hp, ud._hp)
 
                 local __campaign_end = function()
+                   
                     ua:clear_campaign()
                     ud:clear_campaign()
                     self:campaign_end()
@@ -459,11 +455,11 @@ function BattleWin:do_campaign()
 
                 if ua:Dead() then
                     print(ud:Name(), "胜")
-                    ud._anim:Play("shengli", true)
+                    ud._anim:Play("shengli", false)
                     ua._anim:Play("dead", false, __campaign_end)
                 else
                     print(ua:Name(), "胜")
-                    ua._anim:Play("shengli", true)
+                    ua._anim:Play("shengli", false)
                     ud._anim:Play("dead", false, __campaign_end)
                 end
 
@@ -486,7 +482,10 @@ function BattleWin:do_campaign()
             -- TODO: hero start move to battle pos
         end
         if times > 2 then
-            local str = string.format("倒计时：%d", 6-times)
+            local str = string.format("倒计时：%d", 5-times)
+            if times == 5 then
+                str = string.format("Fighting")
+            end
             self:ShowNotice(str, 1.8)
         end
         if times == 5 then
