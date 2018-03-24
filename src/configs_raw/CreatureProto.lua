@@ -17,16 +17,7 @@ local data =
 				lv = 1,
 			},
 		},
-		aura = {
-			{
-				id = 2001,
-				lv = 1,
-			},
-			{
-				id = 2001,
-				lv = 1,
-			},
-		},
+		aura = {},
 		atk = 100,
 		def = 20,
 		hp = 2400,
@@ -47,20 +38,11 @@ local data =
 		},
 		skill_extra = {
 			{
-				id = 1002,
-				lv = 2,
-			},
-		},
-		aura = {
-			{
-				id = 2001,
-				lv = 1,
-			},
-			{
-				id = 2001,
+				id = 1004,
 				lv = 1,
 			},
 		},
+		aura = {},
 		atk = 120,
 		def = 22,
 		hp = 2500,
@@ -71,7 +53,7 @@ local data =
 	[3] = {
 		id = 10003,
 		level = 1,
-		name = "虎",
+		name = "虎(主帅)",
 		model = "caoren",
 		skill_common = {
 			{
@@ -81,15 +63,11 @@ local data =
 		},
 		skill_extra = {
 			{
-				id = 1002,
+				id = 1003,
 				lv = 3,
 			},
 		},
 		aura = {
-			{
-				id = 2001,
-				lv = 1,
-			},
 			{
 				id = 2001,
 				lv = 2,
@@ -113,22 +91,8 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1002,
-				lv = 4,
-			},
-		},
-		aura = {
-			{
-				id = 2001,
-				lv = 1,
-			},
-			{
-				id = 2001,
-				lv = 2,
-			},
-		},
+		skill_extra = {},
+		aura = {},
 		atk = 160,
 		def = 26,
 		hp = 2700,
@@ -147,22 +111,8 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1002,
-				lv = 5,
-			},
-		},
-		aura = {
-			{
-				id = 2002,
-				lv = 1,
-			},
-			{
-				id = 2002,
-				lv = 3,
-			},
-		},
+		skill_extra = {},
+		aura = {},
 		atk = 180,
 		def = 28,
 		hp = 2800,
@@ -183,25 +133,16 @@ local data =
 		},
 		skill_extra = {
 			{
-				id = 1003,
+				id = 1004,
 				lv = 1,
 			},
 		},
-		aura = {
-			{
-				id = 2002,
-				lv = 1,
-			},
-			{
-				id = 2002,
-				lv = 3,
-			},
-		},
-		atk = 200,
-		def = 30,
-		hp = 2900,
-		crit = 10,
-		crit_hurt = 50,
+		aura = {},
+		atk = 100,
+		def = 20,
+		hp = 2400,
+		crit = 5,
+		crit_hurt = 40,
 	},
 
 	[7] = {
@@ -217,31 +158,22 @@ local data =
 		},
 		skill_extra = {
 			{
-				id = 1003,
+				id = 1002,
 				lv = 2,
 			},
 		},
-		aura = {
-			{
-				id = 2002,
-				lv = 1,
-			},
-			{
-				id = 2002,
-				lv = 4,
-			},
-		},
-		atk = 220,
-		def = 32,
-		hp = 3000,
-		crit = 11,
-		crit_hurt = 52,
+		aura = {},
+		atk = 120,
+		def = 22,
+		hp = 2500,
+		crit = 6,
+		crit_hurt = 42,
 	},
 
 	[8] = {
 		id = 10008,
 		level = 1,
-		name = "羊",
+		name = "羊(主帅)",
 		model = "guojia",
 		skill_common = {
 			{
@@ -257,19 +189,15 @@ local data =
 		},
 		aura = {
 			{
-				id = 2002,
+				id = 2004,
 				lv = 1,
 			},
-			{
-				id = 2002,
-				lv = 4,
-			},
 		},
-		atk = 240,
-		def = 34,
-		hp = 3100,
-		crit = 12,
-		crit_hurt = 54,
+		atk = 140,
+		def = 24,
+		hp = 2600,
+		crit = 7,
+		crit_hurt = 44,
 	},
 
 	[9] = {
@@ -283,27 +211,13 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1003,
-				lv = 4,
-			},
-		},
-		aura = {
-			{
-				id = 2003,
-				lv = 1,
-			},
-			{
-				id = 2003,
-				lv = 5,
-			},
-		},
-		atk = 260,
-		def = 36,
-		hp = 3200,
-		crit = 13,
-		crit_hurt = 56,
+		skill_extra = {},
+		aura = {},
+		atk = 160,
+		def = 26,
+		hp = 2700,
+		crit = 8,
+		crit_hurt = 46,
 	},
 
 	[10] = {
@@ -317,27 +231,13 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1003,
-				lv = 5,
-			},
-		},
-		aura = {
-			{
-				id = 2003,
-				lv = 1,
-			},
-			{
-				id = 2003,
-				lv = 5,
-			},
-		},
-		atk = 280,
-		def = 38,
-		hp = 3300,
-		crit = 14,
-		crit_hurt = 58,
+		skill_extra = {},
+		aura = {},
+		atk = 180,
+		def = 28,
+		hp = 2800,
+		crit = 9,
+		crit_hurt = 48,
 	},
 
 	[11] = {
@@ -351,22 +251,8 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1004,
-				lv = 1,
-			},
-		},
-		aura = {
-			{
-				id = 2003,
-				lv = 1,
-			},
-			{
-				id = 2003,
-				lv = 2,
-			},
-		},
+		skill_extra = {},
+		aura = {},
 		atk = 300,
 		def = 40,
 		hp = 3400,
@@ -385,22 +271,8 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1005,
-				lv = 1,
-			},
-		},
-		aura = {
-			{
-				id = 2003,
-				lv = 1,
-			},
-			{
-				id = 2003,
-				lv = 2,
-			},
-		},
+		skill_extra = {},
+		aura = {},
 		atk = 320,
 		def = 42,
 		hp = 3500,

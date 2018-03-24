@@ -223,7 +223,11 @@ function BattleUnit:OnHurt(time, hurt, crit)
         self._hp = 0
     end
     self:UpdateHp()
-    self._b:AddCloudText(self, -hurt)
+    local str = string.format("%d", -hurt)
+    if crit == 1 then
+        str = string.format("%d 暴击", -hurt)
+    end
+    self._b:AddCloudText(self, -hurt, false)
     print(string.format("%s 受到伤害: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
@@ -236,7 +240,8 @@ function BattleUnit:DelAura(time, id, lv)
 end
 
 function BattleUnit:AuraEffect(time, arg1, arg2, arg3, arg4)
-    self._b:AddCloudText(self, arg2)
+    print(string.format("%s 光环效果: %d/%d   [%d]", self:Name(), arg1, arg2, arg3, arg4, time))
+    self._b:AddCloudText(self, arg2, arg2>0)
 end
 
 
@@ -294,20 +299,20 @@ function BattleWin:ShowNotice(text, last)
     -- 动画: 向上移动/变淡
     local time = last / 2
     local action1 = cc.DelayTime:create(time)
-    local action2 = cc.Spawn:create(cc.FadeOut:create(time), cc.MoveBy:create(time, cc.p(0, 200)))
+    local action2 = cc.Spawn:create(cc.FadeOut:create(time), cc.MoveBy:create(time, cc.p(0, 80)))
     self._notice:runAction(cc.Sequence:create(action1,action2))
 end
 
 
 -- 属性变化时头上飘字
-function BattleWin:AddCloudText(unit, value)
-    local tip = cc.Label:createWithSystemFont(tostring(value), "Arial", 16)
-    if value > 0 then
+function BattleWin:AddCloudText(unit, text, green)
+    local tip = cc.Label:createWithSystemFont(text, "Arial", 24)
+    if green then
         tip:setColor(cc.GREEN)
     else
         tip:setColor(cc.RED)
     end
-    
+
     local x, y = unit._root:getPosition()
     tip:setPosition(x, y+200)
     self:addChild(tip)
@@ -447,7 +452,7 @@ function BattleWin:do_campaign()
                 print("campaign end, ADJUST hp:", ua._hp, ud._hp)
 
                 local __campaign_end = function()
-                   
+
                     ua:clear_campaign()
                     ud:clear_campaign()
                     self:campaign_end()
@@ -474,11 +479,11 @@ function BattleWin:do_campaign()
     local cb_campaign_prepare = function(times)
         if times == 1 then
             local str = string.format("第 %d 场", self._campaigns)
-            self:ShowNotice(str, 1.5)
+            self:ShowNotice(str, 1.2)
         end
         if times == 2 then
             local str = string.format("%s VS %s", ua:Name(), ud:Name())
-            self:ShowNotice(str, 1.8)
+            self:ShowNotice(str, 1.2)
             -- TODO: hero start move to battle pos
         end
         if times > 2 then
@@ -486,7 +491,7 @@ function BattleWin:do_campaign()
             if times == 5 then
                 str = string.format("Fighting")
             end
-            self:ShowNotice(str, 1.8)
+            self:ShowNotice(str, 1.2)
         end
         if times == 5 then
             self._tid_3 = nil

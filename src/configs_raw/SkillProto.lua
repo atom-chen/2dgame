@@ -7,22 +7,21 @@ local data =
 		model = "attack",
 		passive = 0,
 		target = 2,
-		action = 1,
 		last_t = 1000,
 		itv_t = 0,
-		cd_t = 2000,
+		cd_t = 1000,
 		aura = {},
 		attr = {
 			{
-				id = 1,
+				id = 2,
 				val = 100,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 4,
+				val = 10,
 			},
 			{
-				id = 7,
+				id = 5,
 				val = 20,
 			},
 		},
@@ -36,10 +35,9 @@ local data =
 		model = "skill1",
 		passive = 0,
 		target = 2,
-		action = 1,
 		last_t = 3000,
 		itv_t = 1000,
-		cd_t = 4000,
+		cd_t = 3000,
 		aura = {},
 		attr = {},
 		desc = "攻击目标造成大量伤害",
@@ -52,10 +50,9 @@ local data =
 		model = "skill1",
 		passive = 0,
 		target = 2,
-		action = 1,
 		last_t = 3000,
 		itv_t = 1000,
-		cd_t = 4000,
+		cd_t = 3000,
 		aura = {},
 		attr = {},
 		desc = "攻击目标造成大量伤害",
@@ -68,10 +65,9 @@ local data =
 		model = "skill1",
 		passive = 0,
 		target = 2,
-		action = 1,
 		last_t = 3000,
 		itv_t = 1000,
-		cd_t = 4000,
+		cd_t = 3000,
 		aura = {},
 		attr = {},
 		desc = "攻击目标造成大量伤害",
@@ -84,10 +80,9 @@ local data =
 		model = "skill1",
 		passive = 0,
 		target = 2,
-		action = 1,
 		last_t = 3000,
 		itv_t = 1000,
-		cd_t = 4000,
+		cd_t = 3000,
 		aura = {},
 		attr = {},
 		desc = "攻击目标造成大量伤害",
@@ -100,10 +95,9 @@ local data =
 		model = "skill1",
 		passive = 0,
 		target = 2,
-		action = 1,
 		last_t = 3000,
 		itv_t = 1000,
-		cd_t = 4000,
+		cd_t = 3000,
 		aura = {},
 		attr = {},
 		desc = "攻击目标造成大量伤害",
@@ -116,10 +110,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 2,
-		action = 2,
 		last_t = 3000,
 		itv_t = 0,
-		cd_t = 5000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2005,
@@ -128,15 +121,15 @@ local data =
 		},
 		attr = {
 			{
-				id = 1,
+				id = 2,
 				val = 100,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 4,
+				val = 10,
 			},
 			{
-				id = 7,
+				id = 5,
 				val = 20,
 			},
 		},
@@ -150,10 +143,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 2,
-		action = 2,
 		last_t = 3000,
 		itv_t = 0,
-		cd_t = 5000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2005,
@@ -162,16 +154,16 @@ local data =
 		},
 		attr = {
 			{
-				id = 1,
-				val = 100,
+				id = 2,
+				val = 110,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 4,
+				val = 15,
 			},
 			{
-				id = 7,
-				val = 21,
+				id = 5,
+				val = 25,
 			},
 		},
 		desc = "伤害大量伤害并增加掉防光环",
@@ -184,10 +176,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 2,
-		action = 2,
 		last_t = 3000,
 		itv_t = 0,
-		cd_t = 5000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2005,
@@ -196,16 +187,16 @@ local data =
 		},
 		attr = {
 			{
-				id = 1,
-				val = 100,
+				id = 2,
+				val = 120,
 			},
 			{
-				id = 6,
+				id = 4,
 				val = 20,
 			},
 			{
-				id = 7,
-				val = 22,
+				id = 5,
+				val = 30,
 			},
 		},
 		desc = "伤害大量伤害并增加掉防光环",
@@ -218,10 +209,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 2,
-		action = 2,
 		last_t = 3000,
 		itv_t = 0,
-		cd_t = 5000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2005,
@@ -230,16 +220,16 @@ local data =
 		},
 		attr = {
 			{
-				id = 1,
-				val = 100,
+				id = 2,
+				val = 130,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 4,
+				val = 25,
 			},
 			{
-				id = 7,
-				val = 23,
+				id = 5,
+				val = 35,
 			},
 		},
 		desc = "伤害大量伤害并增加掉防光环",
@@ -252,10 +242,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 2,
-		action = 2,
 		last_t = 3000,
 		itv_t = 0,
-		cd_t = 5000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2005,
@@ -264,16 +253,16 @@ local data =
 		},
 		attr = {
 			{
-				id = 1,
-				val = 100,
+				id = 2,
+				val = 140,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 4,
+				val = 30,
 			},
 			{
-				id = 7,
-				val = 24,
+				id = 5,
+				val = 40,
 			},
 		},
 		desc = "伤害大量伤害并增加掉防光环",
@@ -286,10 +275,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 1,
-		action = 1,
 		last_t = 2000,
 		itv_t = 0,
-		cd_t = 6000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2004,
@@ -307,10 +295,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 1,
-		action = 1,
 		last_t = 2000,
 		itv_t = 0,
-		cd_t = 6000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2004,
@@ -328,10 +315,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 1,
-		action = 1,
 		last_t = 2000,
 		itv_t = 0,
-		cd_t = 6000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2004,
@@ -349,10 +335,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 1,
-		action = 1,
 		last_t = 2000,
 		itv_t = 0,
-		cd_t = 6000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2004,
@@ -370,10 +355,9 @@ local data =
 		model = "skill2",
 		passive = 0,
 		target = 1,
-		action = 1,
 		last_t = 2000,
 		itv_t = 0,
-		cd_t = 6000,
+		cd_t = 3000,
 		aura = {
 			{
 				id = 2004,
@@ -391,7 +375,6 @@ local data =
 		model = "",
 		passive = 1,
 		target = 0,
-		action = 0,
 		last_t = 0,
 		itv_t = 0,
 		cd_t = 0,
@@ -399,15 +382,23 @@ local data =
 		attr = {
 			{
 				id = 1,
-				val = 100,
+				val = 10,
 			},
 			{
-				id = 6,
+				id = 2,
 				val = 20,
 			},
 			{
-				id = 7,
-				val = 20,
+				id = 3,
+				val = 30,
+			},
+			{
+				id = 4,
+				val = 4,
+			},
+			{
+				id = 5,
+				val = 5,
 			},
 		},
 		desc = "吸天地精华，淬炼自身",
@@ -420,7 +411,6 @@ local data =
 		model = "",
 		passive = 1,
 		target = 0,
-		action = 0,
 		last_t = 0,
 		itv_t = 0,
 		cd_t = 0,
@@ -428,15 +418,23 @@ local data =
 		attr = {
 			{
 				id = 1,
-				val = 100,
-			},
-			{
-				id = 6,
 				val = 20,
 			},
 			{
-				id = 7,
-				val = 21,
+				id = 2,
+				val = 22,
+			},
+			{
+				id = 3,
+				val = 40,
+			},
+			{
+				id = 4,
+				val = 6,
+			},
+			{
+				id = 5,
+				val = 10,
 			},
 		},
 		desc = "吸天地精华，淬炼自身",
@@ -449,7 +447,6 @@ local data =
 		model = "",
 		passive = 1,
 		target = 0,
-		action = 0,
 		last_t = 0,
 		itv_t = 0,
 		cd_t = 0,
@@ -457,15 +454,23 @@ local data =
 		attr = {
 			{
 				id = 1,
-				val = 100,
+				val = 30,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 2,
+				val = 24,
 			},
 			{
-				id = 7,
-				val = 22,
+				id = 3,
+				val = 50,
+			},
+			{
+				id = 4,
+				val = 8,
+			},
+			{
+				id = 5,
+				val = 15,
 			},
 		},
 		desc = "吸天地精华，淬炼自身",
@@ -478,7 +483,6 @@ local data =
 		model = "",
 		passive = 1,
 		target = 0,
-		action = 0,
 		last_t = 0,
 		itv_t = 0,
 		cd_t = 0,
@@ -486,15 +490,23 @@ local data =
 		attr = {
 			{
 				id = 1,
-				val = 100,
+				val = 40,
 			},
 			{
-				id = 6,
+				id = 2,
+				val = 25,
+			},
+			{
+				id = 3,
+				val = 60,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
 				val = 20,
-			},
-			{
-				id = 7,
-				val = 23,
 			},
 		},
 		desc = "吸天地精华，淬炼自身",
@@ -507,7 +519,6 @@ local data =
 		model = "",
 		passive = 1,
 		target = 0,
-		action = 0,
 		last_t = 0,
 		itv_t = 0,
 		cd_t = 0,
@@ -515,15 +526,23 @@ local data =
 		attr = {
 			{
 				id = 1,
-				val = 100,
+				val = 50,
 			},
 			{
-				id = 6,
-				val = 20,
+				id = 2,
+				val = 26,
 			},
 			{
-				id = 7,
-				val = 23,
+				id = 3,
+				val = 70,
+			},
+			{
+				id = 4,
+				val = 12,
+			},
+			{
+				id = 5,
+				val = 25,
 			},
 		},
 		desc = "吸天地精华，淬炼自身",
