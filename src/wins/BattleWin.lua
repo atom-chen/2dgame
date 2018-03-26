@@ -35,6 +35,8 @@ local AuraEffectType =
 
 --------------------- BattleUnit -------------------------------------------------
 function BattleUnit:ctor(u, b)
+    WinBase.ctor(self)
+
     self._u         = u
     self._b         = b
 
@@ -399,14 +401,12 @@ end
 
 function BattleWin:BattleEnd()
     print("整场战斗结束 END =============", self._units[3]._hp, self._units[8]._hp)
-
     local u = self._units[3]
     if u:Dead() then
         print("防守方 获得了最终胜利")
     else
         print("攻击方 获得了最终胜利")
     end
-
 end
 
 

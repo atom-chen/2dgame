@@ -6,6 +6,7 @@ local ModelWin      = class("ModelWin", WinBase)
 
 
 function ModelWin:ctor()
+    WinBase.ctor(self)
     print("ModelWin:ctor")
 
     -- 背景

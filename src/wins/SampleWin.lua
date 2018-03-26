@@ -1,7 +1,9 @@
-local SampleWin = class("SampleWin", WinBase)
+local WinBase       = require "core.WinBase"
+local SampleWin     = class("SampleWin", WinBase)
 
 
 function SampleWin:ctor()
+    WinBase.ctor(self)
     print("SampleWin:ctor")
 end
 
