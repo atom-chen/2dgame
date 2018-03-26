@@ -23,6 +23,16 @@ local actor_info = {
 }
 
 
+local AuraEffectType =
+{
+    "HP",
+    "攻击",
+    "防御",
+    "暴击",
+    "暴伤",
+}
+
+
 --------------------- BattleUnit -------------------------------------------------
 function BattleUnit:ctor(u, b)
     self._u         = u
@@ -227,8 +237,8 @@ function BattleUnit:OnHurt(time, hurt, crit)
     if crit == 1 then
         str = string.format("%d 暴击", -hurt)
     end
-    self._b:AddCloudText(self, -hurt, false)
-    print(string.format("%s 受到伤害: %d/%d   [%d]", self:Name(), hurt, crit, time))
+    self._b:AddCloudText(self, str, false)
+    print(string.format("%s be hurt: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
 function BattleUnit:AddAura(time, id, lv)
@@ -240,8 +250,21 @@ function BattleUnit:DelAura(time, id, lv)
 end
 
 function BattleUnit:AuraEffect(time, arg1, arg2, arg3, arg4)
-    print(string.format("%s 光环效果: %d/%d   [%d]", self:Name(), arg1, arg2, arg3, arg4, time))
-    self._b:AddCloudText(self, arg2, arg2>0)
+    -- print(string.format("%s 光环效果: %d/%d   [%d]", self:Name(), arg1, arg2, arg3, arg4, time))
+    -- AttrType_HP       // 1 HP
+	-- AttrType_Atk      // 2 攻击
+	-- AttrType_Def      // 3 防御
+	-- AttrType_Crit     // 4 暴击
+	-- AttrType_CritHurt // 5 暴击伤害
+
+    local str
+    if arg2 < 0 then
+        str = string.format("-%s %s", tostring(arg2), AuraEffectType[arg1])
+    else
+        str = string.format("+%s %s", tostring(arg2), AuraEffectType[arg1])
+    end
+
+    self._b:AddCloudText(self, str, arg2>0)
 end
 
 
@@ -307,13 +330,15 @@ end
 -- 属性变化时头上飘字
 function BattleWin:AddCloudText(unit, text, green)
     local tip = cc.Label:createWithSystemFont(text, "Arial", 24)
+    local x,y = unit._root:getPosition()
     if green then
         tip:setColor(cc.GREEN)
+        x = x + 20
+        y = y + 20
     else
+        x = x - 20
         tip:setColor(cc.RED)
     end
-
-    local x, y = unit._root:getPosition()
     tip:setPosition(x, y+200)
     self:addChild(tip)
 
