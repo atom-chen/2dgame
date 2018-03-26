@@ -238,7 +238,7 @@ function BattleUnit:OnHurt(time, hurt, crit)
         str = string.format("%d 暴击", -hurt)
     end
     self._b:AddCloudText(self, str, false)
-    print(string.format("%s be hurt: %d/%d   [%d]", self:Name(), hurt, crit, time))
+    -- print(string.format("%s be hurt: %d/%d   [%d]", self:Name(), hurt, crit, time))
 end
 
 function BattleUnit:AddAura(time, id, lv)
@@ -356,7 +356,7 @@ function BattleWin:OnCreate()
     -- 设置倒计时:  战斗开始
     local cb_count_down = function(times)
         if times == 1 then
-            self:ShowNotice("战斗开始", 1.5)
+            self:ShowNotice("战斗开始", 1)
         end
         if times == 3 then
             self:BattleStart()
@@ -471,13 +471,14 @@ function BattleWin:do_campaign()
             ud:update(time)
             time = time + 100
             if ua:Dead() or ud:Dead() then
-                print("campaign end, LEFT hp:", ua._hp, ud._hp)
-                ua._hp = camp.a_hp_e
-                ud._hp = camp.d_hp_e
-                print("campaign end, ADJUST hp:", ua._hp, ud._hp)
+                if ua._hp ~= camp.a_hp_e then
+                    ua._hp = camp.a_hp_e
+                end
+                if ud._hp ~= camp.d_hp_e then
+                    ud._hp = camp.d_hp_e
+                end
 
                 local __campaign_end = function()
-
                     ua:clear_campaign()
                     ud:clear_campaign()
                     self:campaign_end()
@@ -504,11 +505,11 @@ function BattleWin:do_campaign()
     local cb_campaign_prepare = function(times)
         if times == 1 then
             local str = string.format("第 %d 场", self._campaigns)
-            self:ShowNotice(str, 1.2)
+            self:ShowNotice(str, 1)
         end
         if times == 2 then
             local str = string.format("%s VS %s", ua:Name(), ud:Name())
-            self:ShowNotice(str, 1.2)
+            self:ShowNotice(str, 1)
             -- TODO: hero start move to battle pos
         end
         if times > 2 then
@@ -516,7 +517,7 @@ function BattleWin:do_campaign()
             if times == 5 then
                 str = string.format("Fighting")
             end
-            self:ShowNotice(str, 1.2)
+            self:ShowNotice(str, 1)
         end
         if times == 5 then
             self._tid_3 = nil

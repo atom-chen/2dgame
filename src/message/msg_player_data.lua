@@ -36,8 +36,8 @@ md[Opcode.MSG_SC_PlayerData] = function(tab)
         hero:Init(v)
     end
     
-    PlayerBase.Dump()
-    PlayerItem.Dump()
-    PlayerHero.Dump()
+    -- PlayerBase.Dump()
+    -- PlayerItem.Dump()
+    -- PlayerHero.Dump()
 
 end
