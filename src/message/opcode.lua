@@ -59,5 +59,5 @@ MsgName[Opcode.MSG_SC_ItemCntChanged]   = "msg.ItemCntChangedNotice"
 MsgName[Opcode.MSG_CS_UseItem]      = "msg.UseItemRequest"
 MsgName[Opcode.MSG_SC_UseItem]      = "msg.UseItemResponse"
 
-MsgName[Opcode.MSG_CS_MarketBuy]      = "msg.MarketBuyResponse"
+MsgName[Opcode.MSG_CS_MarketBuy]      = "msg.MarketBuyRequest"
 MsgName[Opcode.MSG_SC_MarketBuy]      = "msg.MarketBuyResponse"

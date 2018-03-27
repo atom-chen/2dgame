@@ -35,8 +35,6 @@ local AuraEffectType =
 
 --------------------- BattleUnit -------------------------------------------------
 function BattleUnit:ctor(u, b)
-    WinBase.ctor(self)
-
     self._u         = u
     self._b         = b
 
@@ -281,6 +279,7 @@ end
 --]]
 
 function BattleWin:ctor(r)
+    WinBase.ctor(self)
     print("BattleWin:ctor")
     self._result = r
 

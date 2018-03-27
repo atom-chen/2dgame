@@ -10,7 +10,7 @@ local data =
 				cnt = 1,
 			},
 		},
-		dest = {
+		dst = {
 			{
 				id = 4106,
 				cnt = 3,
@@ -28,7 +28,7 @@ local data =
 				cnt = 2,
 			},
 		},
-		dest = {
+		dst = {
 			{
 				id = 4110,
 				cnt = 2,
@@ -46,7 +46,7 @@ local data =
 				cnt = 3,
 			},
 		},
-		dest = {
+		dst = {
 			{
 				id = 4109,
 				cnt = 1,
