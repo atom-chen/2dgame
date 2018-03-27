@@ -15,8 +15,6 @@ function WinBase:ctor()
 end
 
 
-
-
 function WinBase:OnShow()
     print("WinBase:OnShow")
 end

@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-¤
+ƒ
 
 game.protomsg"#
 PlayerDataRequest
@@ -119,4 +119,9 @@ BattleUnit
 MakeBattleRequest
 id (Rid"?
 MakeBattleResponse)
-result (2.msg.BattleResultRresultbproto3
+result (2.msg.BattleResultRresult"2
+UseItemRequest
+id (Rid
+cnt (Rcnt")
+UseItemResponse
+result (Rresultbproto3

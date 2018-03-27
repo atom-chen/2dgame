@@ -11,7 +11,7 @@ local PlayerHero = require "model.player_hero"
 local md         = MessageDispatcher
 local Opcode     = Opcode
 
--- ping response
+
 md[Opcode.MSG_SC_PlayerData] = function(tab)
     local base      = PlayerBase.GetBase()
     base.acct       = tab.acct

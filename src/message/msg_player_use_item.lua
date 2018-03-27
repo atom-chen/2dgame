@@ -8,6 +8,6 @@ local md         = MessageDispatcher
 local Opcode     = Opcode
 
 
-md[Opcode.MSG_SC_MakeBattle] = function(tab)
-    PlayBattle(tab.result)
+md[Opcode.MSG_SC_UseItem] = function(tab)
+    print("您使用了道具的结果:", tab.result)
 end

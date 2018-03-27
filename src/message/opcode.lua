@@ -24,6 +24,10 @@ Opcode.MSG_SC_Notice            = 0x000C
 Opcode.MSG_CS_MakeBattle        = 0x000D
 Opcode.MSG_SC_MakeBattle        = 0x000E
 
+Opcode.MSG_SC_ItemCntChanged    = 0x000F
+Opcode.MSG_CS_UseItem           = 0x0010
+Opcode.MSG_SC_UseItem           = 0x0011
+
 
 --------- protobuf map: message & name -----------------------------------------------------------
 
@@ -45,3 +49,8 @@ MsgName[Opcode.MSG_CS_Notice]       = "msg.NoticeRequest"
 MsgName[Opcode.MSG_SC_Notice]       = "msg.NoticeResponse"
 MsgName[Opcode.MSG_CS_MakeBattle]   = "msg.MakeBattleRequest"
 MsgName[Opcode.MSG_SC_MakeBattle]   = "msg.MakeBattleResponse"
+
+MsgName[Opcode.MSG_SC_ItemCntChanged]   = "msg.ItemCntChangedNotice"
+
+MsgName[Opcode.MSG_CS_UseItem]      = "msg.UseItemRequest"
+MsgName[Opcode.MSG_SC_UseItem]      = "msg.UseItemResponse"
