@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-ƒ
+ø
 
 game.protomsg"#
 PlayerDataRequest
@@ -124,4 +124,16 @@ BattleUnit
 id (Rid
 cnt (Rcnt")
 UseItemResponse
-result (Rresultbproto3
+result (Rresult"A
+ItemCntInfo
+add (Radd
+id (Rid
+cnt (Rcnt"<
+ItemCntChangedNotice$
+info (2.msg.ItemCntInfoRinfo">
+MarketBuyRequest
+index (Rindex
+count (Rcount"2
+MarketBuyResponse
+
+error_code (R	errorCodebproto3

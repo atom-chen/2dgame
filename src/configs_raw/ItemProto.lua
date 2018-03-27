@@ -77,7 +77,7 @@ local data =
 
 	[6] = {
 		id = 4106,
-		name = "道具名称",
+		name = "印度神油",
 		desc = "",
 		qulity = 3,
 		type_p = 1,
@@ -92,7 +92,7 @@ local data =
 
 	[7] = {
 		id = 4107,
-		name = "道具名称",
+		name = "诛仙令",
 		desc = "",
 		qulity = 4,
 		type_p = 1,
@@ -107,7 +107,7 @@ local data =
 
 	[8] = {
 		id = 4108,
-		name = "道具名称",
+		name = "兑换钥匙",
 		desc = "",
 		qulity = 4,
 		type_p = 1,
@@ -122,7 +122,7 @@ local data =
 
 	[9] = {
 		id = 4109,
-		name = "道具名称",
+		name = "请假条",
 		desc = "",
 		qulity = 5,
 		type_p = 1,
@@ -137,37 +137,7 @@ local data =
 
 	[10] = {
 		id = 4110,
-		name = "道具名称",
-		desc = "",
-		qulity = 5,
-		type_p = 1,
-		type_s = 0,
-		usable = 0,
-		script_id = 0,
-		param1 = 0,
-		param2 = 0,
-		param3 = { 0, },
-		param4 = "",
-	},
-
-	[11] = {
-		id = 4111,
-		name = "道具名称",
-		desc = "",
-		qulity = 5,
-		type_p = 1,
-		type_s = 0,
-		usable = 0,
-		script_id = 0,
-		param1 = 0,
-		param2 = 0,
-		param3 = { 0, },
-		param4 = "",
-	},
-
-	[12] = {
-		id = 4112,
-		name = "道具名称",
+		name = "减免券",
 		desc = "",
 		qulity = 5,
 		type_p = 1,

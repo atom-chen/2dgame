@@ -31,9 +31,18 @@ end
 
 
 -- 使用道具
-MsgRequest.SendNotice = function(id, cnt)
+MsgRequest.SendItemUse = function(id, cnt)
     Socket.SendPacket(Opcode.MSG_CS_UseItem, {
         id = id,
         cnt = cnt,
+    })
+end
+
+
+-- 集市购买
+MsgRequest.SendMarketBuy = function(idx, cnt)
+    Socket.SendPacket(Opcode.MSG_CS_MarketBuy, {
+        index = idx,
+        count = cnt,
     })
 end
