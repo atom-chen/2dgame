@@ -15,40 +15,40 @@ function Hero:Init(tab)
     self._data = {}
     local data = self._data
 
-    data.id         = tab.id
-    data.level      = tab.level
-    data.quality    = tab.quality
-    data.power      = tab.power
-    data.status     = tab.status
-    data.statusData = tab.statusData
-    data.dead       = tab.dead
 
-    data.equips     = {}
-    data.skills     = {}
-    data.auras      = {}
 
+
+
+  --  repeated Skill active       = 7;
+ --   repeated Skill passive      = 8;
+
+
+    data.id             = tab.id
+    data.level          = tab.level
+    data.exp            = tab.exp
+    data.refine         = tab.refine
+    data.refineTimes    = tab.refineTimes
+    data.refineSuper    = tab.refineSuper
+    data.power          = tab.power
+    data.status         = tab.status
+    data.lifePoint      = tab.lifePoint
+    data.lifePointMax   = tab.lifePointMax
+
+    data.active         = {}
+    data.passive        = {}
+
+    for i = 1, 2 do
+        data.active[i] =
+        {
+            id      = tab.active[i].id,
+            level   = tab.active[i].level,
+        }
+    end
     for i = 1, 4 do
-        data.equips[i] =
+        data.passive[i] =
         {
-            quality = tab.equips[i].quality,
-            level   = tab.equips[i].level,
-        }
-    end
-
-    for i = 1, 2 do
-        data.skills[i] =
-        {
-            id      = tab.skills[i].id,
-            level   = tab.skills[i].level,
-            effectId= tab.skills[i].effectId,
-        }
-    end
-
-    for i = 1, 2 do
-        data.auras[i] =
-        {
-            id      = tab.auras[i].id,
-            level   = tab.auras[i].level,
+            id      = tab.passive[i].id,
+            level   = tab.passive[i].level,
         }
     end
 
