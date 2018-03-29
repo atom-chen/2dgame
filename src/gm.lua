@@ -24,7 +24,7 @@ local gm_str =
 
 
 -- 打一架
-Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { id = 1, })
+-- Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { id = 1, })
 
 
 -- 集市购买
@@ -33,3 +33,6 @@ Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { id = 1, })
 
 -- 使用道具（有脚本的那种）
 -- MSG.SendItemUse(4105, 2)
+
+
+WinManager:CreateWindowHot(4)
