@@ -1,7 +1,7 @@
 
 local _heros        = {}
+local _heros_index  = {}
 local PlayerHero    = {}
-
 local Hero          = class("Hero")
 
 
@@ -14,14 +14,6 @@ end
 function Hero:Init(tab)
     self._data = {}
     local data = self._data
-
-
-
-
-
-  --  repeated Skill active       = 7;
- --   repeated Skill passive      = 8;
-
 
     data.id             = tab.id
     data.level          = tab.level
@@ -44,6 +36,7 @@ function Hero:Init(tab)
             level   = tab.active[i].level,
         }
     end
+
     for i = 1, 4 do
         data.passive[i] =
         {
@@ -81,6 +74,30 @@ function PlayerHero.Dump()
     for _, hero in pairs(_heros) do
         hero:Dump()
     end
+end
+
+
+function PlayerHero.Sort()
+    _heros_index = {}
+    for _, hero in pairs(_heros) do
+        table.insrt(_heros_index, hero)
+    end
+    table.sort(_heros_index, function(l, r)
+        return l.power > r.power
+    end)
+    for i, v in ipairs(_heros_index) do
+        v.sort_index = i
+    end
+end
+
+
+function PlayerHero.GetHeroCount()
+    return #_heros_index
+end
+
+
+function PlayerHero.GetHeroByIndex(index)
+    return _heros_index[index]
 end
 
 

@@ -34,4 +34,9 @@ function HeroWin:OnHiden()
 end
 
 
+---------------------------------------------------------
+function HeroWin:ShowHeroDetail(index)
+end
+
+
 return HeroWin
