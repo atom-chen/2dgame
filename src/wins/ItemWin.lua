@@ -1,6 +1,21 @@
 local WinBase       = require "core.WinBase"
 local PlayerItem    = require "model.player_item"
+local config        = require "configs_grace"
+
 local ItemWin       = class("ItemWin", WinBase)
+
+
+local function create_item_image(item_id)
+    local image = ccui.ImageView:create(config.GetItemProto(item_id).icon)
+    image:onTouch(function(event)
+        if event.name == "ended" then
+            print("_________",event)
+        end
+    end)
+
+    image.item_id = item_id
+    return image
+end
 
 
 function ItemWin:ctor()
@@ -22,29 +37,29 @@ function ItemWin:ctor()
         WinManager:DestroyWindow(self)
     end, 32)
 
-    
+
    --[[
    removeAllItems
 
     ]]
-    
-    self.list_view = ccui.ListView:create();  
+
+    self.list_view = ccui.ListView:create();
     self.list_view:setPosition(cc.p(-230, 10));
-    self.list_view:setContentSize(cc.size(616, 250));  
+    self.list_view:setContentSize(cc.size(616, 250));
     self.list_view:setDirection(1);  --cc.SCROLLVIEW_DIRECTION_BOTH
-    self.list_view:setBounceEnabled(true);  
-    self.list_view:setItemsMargin(20)  
-    
+    self.list_view:setBounceEnabled(true);
+    self.list_view:setItemsMargin(20)
+
     self.list_view:setBackGroundImageScale9Enabled(true)
     self.list_view:setBackGroundImage("arena_slat_004.png")
 
-    for i = 1, 4 do  
-        local layout = ccui.Layout:create();  
-        layout:setContentSize(cc.size(48, 48));  
-        layout:setBackGroundColorType(ccui.LayoutBackGroundColorType.solid);  
-        layout:setBackGroundColor(cc.c3b(125, 66, 126));  
-        self.list_view:pushBackCustomItem(layout);  
-    end  
+    for i = 1, 4 do
+        local layout = ccui.Layout:create();
+        layout:setContentSize(cc.size(48, 48));
+        layout:setBackGroundColorType(ccui.LayoutBackGroundColorType.solid);
+        layout:setBackGroundColor(cc.c3b(125, 66, 126));
+        self.list_view:pushBackCustomItem(layout);
+    end
 
     self:addChild(self.list_view);
 
