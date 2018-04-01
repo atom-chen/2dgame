@@ -4,7 +4,7 @@ local windows =
     [1] = { "wins.ToolbarWin",      },      -- 这个东西迟早要被替换的
     [2] = { "wins.BattleWin",       },      -- 战斗界面： 播放战斗
     [3] = { "wins.ModelWin",        },      -- 模型列表： 查看所选择的模型以及技能效果
-    [4] = { "wins.ItemWin",         },      -- 道具窗口
+    [4] = { "wins.BagWin",          },      -- 道具窗口
 
 }
 
@@ -42,7 +42,6 @@ end
 
 function WinManager:CreateWindowHot(id, ...)
     local v = windows[id]
-    print("id", id, v, ...)
     local s = v[1]
     package.loaded[s] = nil
     v[2] = require(s)
