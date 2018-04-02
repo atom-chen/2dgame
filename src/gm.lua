@@ -14,8 +14,8 @@ local gm_str =
     [2] = "item 4105|5",                -- 增加道具 道具ID|数量
     [3] = "hero 5001 5002",             -- 增加英雄 英雄ID
     [4] = "hero_up 5001 5002",          -- 增加英雄 英雄ID
-
 }
+
 --  MSG.SendGMCommand(gm_str[2])
 
 

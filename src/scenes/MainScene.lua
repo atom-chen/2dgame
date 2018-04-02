@@ -26,6 +26,34 @@ function MainScene:ctor()
         -- CCTOUCHBEGAN event must return true
         return true
     end
+    
+
+    --------------------------- GM功能按钮 ---------------------------
+    -- HeroModel
+    local btn = ccui.Button:create("public_button_001.png")
+    layer:addChild(btn)
+    btn:setSize(162, 40)
+    btn:setTitleText("HeroModel")
+    btn:getTitleLabel():setSystemFontSize(24)
+    btn:setPosition(-1600, -100)
+    btn:addClickEventListener(function()
+        WinManager:CreateWindowHot(3)
+    end)
+    -- BagWin
+    local btn = ccui.Button:create("public_button_001.png")
+    layer:addChild(btn)
+    btn:setSize(162, 40)
+    btn:setTitleText("BagWin")
+    btn:getTitleLabel():setSystemFontSize(24)
+    btn:setPosition(-1400, -100)
+    btn:addClickEventListener(function()
+        WinManager:CreateWindowHot(4)
+    end)
+    
+
+
+    --------------------------- GM功能按钮 END ---------------------------
+
 
     local function onTouchMoved(touch, event)
         local cx, cy = layer:getPosition()
@@ -74,14 +102,14 @@ function MainScene:ctor()
     listener:registerScriptHandler(onTouchEnded, cc.Handler.EVENT_TOUCH_ENDED)
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
-    
+
     -- add text label
     local label = cc.Label:createWithSystemFont("Hello, Preboy.ZHANG!", "Arial", 40)
     label:setColor(cc.YELLOW)
     label:setPosition(-1000, 0)
     layer:addChild(label)
-    
-    local btn_text = 
+
+    local btn_text =
     {
         "创建",
         "销毁",
