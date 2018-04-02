@@ -2,41 +2,30 @@ local WinBase       = require "core.WinBase"
 local PlayerItem    = require "model.player_item"
 local config        = require "configs_grace"
 
-local ItemWin       = class("ItemWin", WinBase)
 
-
+------------------------------------------------------------------------------------
 
 local function bag_item_on_touch(event)
     local item = event.target
     if event.name == "ended" then
-        print("_________", item.id)
+        item.bag:OnSelected(item)
     end
 end
 
 
 local BagItem = class("BagItem",  function(bag, id, cnt)
-
-    local widget =  ccui.ImageView:create("public_item_bg.png") --  ccui.Widget:create()
+    local widget = ccui.Widget:create()
     widget:setSize(cc.size(100,100))
-    widget:setColor(cc.BLUE)
+    widget:setAnchorPoint(display.LEFT_BOTTOM)
 
---      local widget = cc.LayerColor:create( cc.BLUE,  100, 100 )
---      widget:setIgnoreAnchorPointForPosition(false)
+    local bg = ccui.ImageView:create("public_item_bg.png")
+    bg:setAnchorPoint(display.LEFT_BOTTOM)
+    widget:addChild(bg)
 
-      local p = widget:getAnchorPoint()
-      table.print(p)
+    local icon = ccui.ImageView:create(config.GetItemProto(id).icon)
+    icon:setAnchorPoint(display.LEFT_BOTTOM)
+    widget:addChild(icon)
 
-
---    local bg_image = ccui.ImageView:create("public_item_bg.png")
---    bg_image:setTouchEnabled(false)
---    widget:addChild(bg_image)
---
---    -- widget:setBackGroundColor(cc.RED)
---
---    local image = ccui.ImageView:create(config.GetItemProto(id).icon)
---    image:setTouchEnabled(false)
---    widget:addChild(image)
---
     widget.text = cc.Label:create()
     widget.text:setPosition(0, 0)
     widget.text:setTextColor(cc.GREEN)
@@ -58,12 +47,13 @@ end
 
 function BagItem:refresh_item_count()
     self.text:setString(tostring(self.cnt))
-    -- l:setAnchorPoint(1, 0)
 end
 
 
 
 ------------------------------------------------------------------------------------
+
+local ItemWin = class("ItemWin", WinBase)
 
 function ItemWin:ctor()
     WinBase.ctor(self)
@@ -84,10 +74,7 @@ function ItemWin:ctor()
         WinManager:DestroyWindow(self)
     end, 32)
 
-   --[[
-   removeAllItems
-    ]]
-
+    -- scrollview
     local scrollView = ccui.ScrollView:create()
     scrollView:setContentSize(cc.size(700, 250))
     scrollView:setPosition(cc.p(-230, 10))
@@ -97,23 +84,19 @@ function ItemWin:ctor()
 
 	scrollView:setScrollBarWidth(8)
 	scrollView:setScrollBarColor(cc.c3b(225,213,99))
-
-	--scrollView:setScrollBarPositionFromCornerForVertical(cc.p(22,20))
+	-- scrollView:setScrollBarPositionFromCornerForVertical(cc.p(22,20))
 
 	local conSize = scrollView:getInnerContainerSize()
     scrollView:setInnerContainerSize(cc.size(conSize.width,conSize.height*4))
 
-   
-    self:addChild(scrollView)
     self.scrollView = scrollView
+    self:addChild(scrollView)
+
+    self.sel_icon = ccui.ImageView:create("public_item_sel.png")
+    self.sel_icon:setAnchorPoint(display.LEFT_BOTTOM)
+    scrollView:getInnerContainer():addChild(self.sel_icon)
 
     self:Refresh()
-
-    local l = cc.Label:create()
-    l:setString("fuck")
-    l:setPosition(20, 20)
-    scrollView:addChild(l)
-
 end
 
 
@@ -134,34 +117,51 @@ end
 
 
 ---------------------------------------------------------
+
 function ItemWin:Refresh()
-    	local scrollView = self.scrollView
-        scrollView:removeAllChildren()
+    local scrollView = self.scrollView
+    scrollView:removeAllChildren()
 
+    local items = PlayerItem.GetAllItems()
+    local count = #items
 
-    for i = 1, 25 do
+    local rows
+    if count % 5 == 0 then
+        rows = count / 5
+    else
+        rows = math.floor(count/5) + 1
+    end
+    if rows < 2 then rows = 2 end
+    local height = rows * 120 + 20
+
+    local size = scrollView:getInnerContainerSize()
+    scrollView:setInnerContainerSize(cc.size(size.width,height))
+
+    local inner = scrollView:getInnerContainer()
+    for i = 1, count do
         local x, y
-
-        x = i % 5
-        if x == 0 then
-            x = 5
-        end
-
         if i % 5 == 0 then
+            x = 5
             y = i / 5
         else
-            y = math.floor(i / 5 )+ 1
+            x = i % 5
+            y = math.floor(i/5) + 1
         end
-
-        local item = BagItem:create(self, 4001, i)
-        item:setPosition(x*120, (y*120+10))
+        local info = items[i]
+        local item = BagItem:create(self, info[1], info[2])
+        item:setPosition((x-1)*120+20, height-20-y*120)
         item:refresh_item_count()
-
-        scrollView:getInnerContainer():addChild(item)
-       --  scrollView:addChild(item)
-
+        inner:addChild(item)
     end
+    self.sel_icon:setVisible(false)
+    inner:addChild(self.sel_icon)
+end
 
+function ItemWin:OnSelected(item)
+    local x, y = item:getPosition()
+    self.sel_icon:setPosition(x-7, y-7)
+    self.sel_icon:setVisible(true)
+    self.sel_item = item
 end
 
 
