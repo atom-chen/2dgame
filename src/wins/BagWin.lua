@@ -27,7 +27,7 @@ local BagItem = class("BagItem",  function(bag, id, cnt)
     widget:addChild(icon)
 
     widget.text = cc.Label:create()
-    widget.text:setPosition(0, 0)
+    widget.text:setPosition(75, 16)
     widget.text:setTextColor(cc.GREEN)
     widget:addChild(widget.text)
 
