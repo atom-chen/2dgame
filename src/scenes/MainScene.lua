@@ -59,6 +59,16 @@ function MainScene:ctor()
     btn:addClickEventListener(function()
         WinManager:CreateWindowHot(5)
     end)
+    -- 播放战斗
+    local btn = ccui.Button:create("public_button_001.png")
+    layer:addChild(btn)
+    btn:setContentSize(162, 40)
+    btn:setTitleText("播放战斗")
+    btn:getTitleLabel():setSystemFontSize(24)
+    btn:setPosition(-1000, -100)
+    btn:addClickEventListener(function()
+        Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { id = 1, })
+    end)
 
     --------------------------- GM功能按钮 END ---------------------------
 
@@ -183,7 +193,7 @@ function MainScene:ctor()
                 print("---------- zcg end.")
                 preboy:set_console_color()
 	        elseif keyCode == cc.KeyCode.KEY_C then
-                WinManager:CreateWindowHot(3)
+                -- WinManager:CreateWindowHot(3)
             end
 	    end
         local listener = cc.EventListenerKeyboard:create()

@@ -106,8 +106,8 @@ function LoginScene:__connect()
 
     EventMgr.RegisterEvent({Event.ConnectOK,Event.ConnectFailed}, _on_event_connect, true)
 
-    -- Socket.Connect("127.0.0.1", 4040)
-    Socket.Connect("118.24.48.149", 4040)
+    Socket.Connect("127.0.0.1", 4040)
+    -- Socket.Connect("118.24.48.149", 4040)
 end
 
 

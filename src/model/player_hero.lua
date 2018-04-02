@@ -18,7 +18,7 @@ function Hero:Init(tab)
     data.id             = tab.id
     data.level          = tab.level
     data.exp            = tab.exp
-    data.refine         = tab.refine
+    data.refineLv       = tab.refineLv
     data.refineTimes    = tab.refineTimes
     data.refineSuper    = tab.refineSuper
     data.power          = tab.power

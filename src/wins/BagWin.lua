@@ -158,6 +158,8 @@ function ItemWin:Refresh()
 end
 
 function ItemWin:OnSelected(item)
+    if self.sel_item == item then return end
+
     local x, y = item:getPosition()
     self.sel_icon:setPosition(x-7, y-7)
     self.sel_icon:setVisible(true)

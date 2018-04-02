@@ -23,10 +23,6 @@ local gm_str =
 -- MSG.SendNotice("fuck you, can i ?")
 
 
--- 打一架
--- Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { id = 1, })
-
-
 -- 集市购买
 -- MSG.SendMarketBuy(1, 3)
 
