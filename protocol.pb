@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-Þ
+â
 
 game.protomsg"#
 PlayerDataRequest
@@ -29,12 +29,12 @@ game.protomsg"#
 level (Rlevel",
 Aura
 id (Rid
-level (Rlevel"Ô
+level (Rlevel"Ø
 Hero
 id (Rid
 level (Rlevel
-exp (Rexp
-refine (Rrefine 
+exp (Rexp
+refineLv (RrefineLv 
 refineTimes (RrefineTimes 
 refineSuper (RrefineSuper"
 active (2

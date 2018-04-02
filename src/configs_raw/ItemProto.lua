@@ -160,6 +160,54 @@ local data =
 		param4 = "",
 	},
 
+	[11] = {
+		id = 4111,
+		name = "精炼符",
+		icon = "icon/item/item_4111.png",
+		desc = "",
+		qulity = 5,
+		type_p = 1,
+		type_s = 0,
+		usable = 0,
+		script_id = 0,
+		param1 = 0,
+		param2 = 0,
+		param3 = { 0, },
+		param4 = "",
+	},
+
+	[12] = {
+		id = 4112,
+		name = "超级精炼符",
+		icon = "icon/item/item_4112.png",
+		desc = "",
+		qulity = 5,
+		type_p = 1,
+		type_s = 0,
+		usable = 0,
+		script_id = 0,
+		param1 = 0,
+		param2 = 0,
+		param3 = { 0, },
+		param4 = "",
+	},
+
+	[13] = {
+		id = 4113,
+		name = "经验丹",
+		icon = "icon/item/item_4113.png",
+		desc = "",
+		qulity = 5,
+		type_p = 1,
+		type_s = 0,
+		usable = 0,
+		script_id = 0,
+		param1 = 1000,
+		param2 = 0,
+		param3 = { 0, },
+		param4 = "",
+	},
+
 }
 
 return data

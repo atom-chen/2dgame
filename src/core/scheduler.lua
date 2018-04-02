@@ -1,7 +1,7 @@
 
 local scheduler = {}
 
-local sharedScheduler = cc.Director:sharedDirector():getScheduler()
+local sharedScheduler = cc.Director:getInstance():getScheduler()
 
 
 -- N次定时器

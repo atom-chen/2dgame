@@ -15,7 +15,7 @@ end
 
 local BagItem = class("BagItem",  function(bag, id, cnt)
     local widget = ccui.Widget:create()
-    widget:setSize(cc.size(100,100))
+    widget:setContentSize(cc.size(100,100))
     widget:setAnchorPoint(display.LEFT_BOTTOM)
 
     local bg = ccui.ImageView:create("public_item_bg.png")

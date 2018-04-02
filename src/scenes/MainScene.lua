@@ -26,13 +26,13 @@ function MainScene:ctor()
         -- CCTOUCHBEGAN event must return true
         return true
     end
-    
+
 
     --------------------------- GM功能按钮 ---------------------------
     -- HeroModel
     local btn = ccui.Button:create("public_button_001.png")
     layer:addChild(btn)
-    btn:setSize(162, 40)
+    btn:setContentSize(162, 40)
     btn:setTitleText("HeroModel")
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1600, -100)
@@ -42,15 +42,23 @@ function MainScene:ctor()
     -- BagWin
     local btn = ccui.Button:create("public_button_001.png")
     layer:addChild(btn)
-    btn:setSize(162, 40)
+    btn:setContentSize(162, 40)
     btn:setTitleText("BagWin")
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1400, -100)
     btn:addClickEventListener(function()
         WinManager:CreateWindowHot(4)
     end)
-    
-
+    -- HeroWin
+    local btn = ccui.Button:create("public_button_001.png")
+    layer:addChild(btn)
+    btn:setContentSize(162, 40)
+    btn:setTitleText("HeroWin")
+    btn:getTitleLabel():setSystemFontSize(24)
+    btn:setPosition(-1200, -100)
+    btn:addClickEventListener(function()
+        WinManager:CreateWindowHot(5)
+    end)
 
     --------------------------- GM功能按钮 END ---------------------------
 
