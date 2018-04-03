@@ -4,6 +4,7 @@ local _heros_index  = {}
 local PlayerHero    = {}
 local Hero          = class("Hero")
 
+local config        = require "configs_grace"
 
 -------------------------------------------------------------------
 
@@ -12,24 +13,22 @@ end
 
 
 function Hero:Init(tab)
-    self._data = {}
-    local data = self._data
+    self.proto          = config.GetHeroProto(tab.id, tab.level)
+    self.id             = tab.id
+    self.level          = tab.level
+    self.refineLv       = tab.refineLv
+    self.refineTimes    = tab.refineTimes
+    self.refineSuper    = tab.refineSuper
+    self.power          = tab.power
+    self.status         = tab.status
+    self.lifePoint      = tab.lifePoint
+    self.lifePointMax   = tab.lifePointMax
 
-    data.id             = tab.id
-    data.level          = tab.level
-    data.refineLv       = tab.refineLv
-    data.refineTimes    = tab.refineTimes
-    data.refineSuper    = tab.refineSuper
-    data.power          = tab.power
-    data.status         = tab.status
-    data.lifePoint      = tab.lifePoint
-    data.lifePointMax   = tab.lifePointMax
-
-    data.active         = {}
-    data.passive        = {}
+    self.active         = {}
+    self.passive        = {}
 
     for i = 1, 2 do
-        data.active[i] =
+        self.active[i] =
         {
             id      = tab.active[i].id,
             level   = tab.active[i].level,
@@ -37,7 +36,7 @@ function Hero:Init(tab)
     end
 
     for i = 1, 4 do
-        data.passive[i] =
+        self.passive[i] =
         {
             id      = tab.passive[i].id,
             level   = tab.passive[i].level,
@@ -48,7 +47,9 @@ end
 
 
 function Hero:Dump()
-    table.print_r(self._data, "hero:" .. self._data.id)
+    print("============ Hero Start:", self.proto.name, self.id)
+    table.print(self)
+    print("============ Hero End! ==========")
 end
 
 
@@ -79,7 +80,7 @@ end
 function PlayerHero.Sort()
     _heros_index = {}
     for _, hero in pairs(_heros) do
-        table.insrt(_heros_index, hero)
+        table.insert(_heros_index, hero)
     end
     table.sort(_heros_index, function(l, r)
         return l.power > r.power

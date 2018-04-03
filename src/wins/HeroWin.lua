@@ -1,5 +1,7 @@
+local PlayerHero    = require "model.player_hero"
 local WinBase       = require "core.WinBase"
 local HeroWin       = class("HeroWin", WinBase)
+
 
 
 function HeroWin:ctor()
@@ -31,6 +33,11 @@ function HeroWin:ctor()
     label = cc.Label:createWithSystemFont("life", "Arial", 16)
     label:setName("life")
     label:setPosition(-100, 100)
+    self:addChild(label)
+    
+    label = cc.Label:createWithSystemFont("power", "Arial", 16)
+    label:setName("power")
+    label:setPosition(-100, 0)
     self:addChild(label)
     ------------ 中间 ------------
     -- 属性
@@ -80,6 +87,8 @@ function HeroWin:ctor()
 
     -- 被动技能
 
+    
+    self:ShowHeroDetail(1)
 
 end
 
@@ -102,12 +111,19 @@ end
 
 ---------------------------------------------------------
 function HeroWin:ShowHeroDetail(index)
+    local hero = PlayerHero.GetHeroByIndex(index)
 
     local label
-    label = self:getChildByName("lv")
-    label:setString("xx")
+    label = self:getChildByName("level")
+    label:setString(string.format("%s(%d)", hero.proto.name, hero.level))
+    
+    label = self:getChildByName("life")
+    label:setString(string.format("生命: %d/%d", hero.lifePoint, hero.lifePointMax))
+    
+    label = self:getChildByName("power")
+    label:setString(string.format("战斗力: %d", hero.power))
 
-
+    
 end
 
 
