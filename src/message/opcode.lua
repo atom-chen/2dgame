@@ -32,6 +32,13 @@ Opcode.MSG_SC_UseItem           = 0x0011
 Opcode.MSG_CS_MarketBuy         = 0x0012
 Opcode.MSG_SC_MarketBuy         = 0x0013
 
+Opcode.MSG_CS_HeroLevelup       = 0x0014
+Opcode.MSG_SC_HeroLevelup       = 0x0015
+
+Opcode.MSG_CS_HeroRefine        = 0x0016
+Opcode.MSG_SC_HeroRefine        = 0x0017
+
+
 
 --------- protobuf map: message & name -----------------------------------------------------------
 
@@ -59,5 +66,11 @@ MsgName[Opcode.MSG_SC_ItemCntChanged]   = "msg.ItemCntChangedNotice"
 MsgName[Opcode.MSG_CS_UseItem]      = "msg.UseItemRequest"
 MsgName[Opcode.MSG_SC_UseItem]      = "msg.UseItemResponse"
 
-MsgName[Opcode.MSG_CS_MarketBuy]      = "msg.MarketBuyRequest"
-MsgName[Opcode.MSG_SC_MarketBuy]      = "msg.MarketBuyResponse"
+MsgName[Opcode.MSG_CS_MarketBuy]    = "msg.MarketBuyRequest"
+MsgName[Opcode.MSG_SC_MarketBuy]    = "msg.MarketBuyResponse"
+
+MsgName[Opcode.MSG_CS_HeroLevelup]  = "msg.HeroLevelupRequest"
+MsgName[Opcode.MSG_SC_HeroLevelup]  = "msg.HeroLevelupResponse"
+
+MsgName[Opcode.MSG_CS_HeroRefine]   = "msg.HeroRefineRequest"
+MsgName[Opcode.MSG_SC_HeroRefine]   = "msg.HeroRefineResponse"

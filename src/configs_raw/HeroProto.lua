@@ -16,6 +16,12 @@ local data =
 		hp = 1000,
 		crit = 5,
 		crit_hurt = 40,
+		needs = {
+			{
+				id = 4113,
+				cnt = 1,
+			},
+		},
 	},
 
 	[2] = {
@@ -34,6 +40,12 @@ local data =
 		hp = 1100,
 		crit = 5,
 		crit_hurt = 45,
+		needs = {
+			{
+				id = 4113,
+				cnt = 2,
+			},
+		},
 	},
 
 	[3] = {
@@ -52,6 +64,12 @@ local data =
 		hp = 1200,
 		crit = 5,
 		crit_hurt = 50,
+		needs = {
+			{
+				id = 4113,
+				cnt = 3,
+			},
+		},
 	},
 
 	[4] = {
@@ -70,6 +88,12 @@ local data =
 		hp = 1300,
 		crit = 5,
 		crit_hurt = 55,
+		needs = {
+			{
+				id = 4113,
+				cnt = 4,
+			},
+		},
 	},
 
 	[5] = {
@@ -88,6 +112,12 @@ local data =
 		hp = 1400,
 		crit = 5,
 		crit_hurt = 60,
+		needs = {
+			{
+				id = 4113,
+				cnt = 5,
+			},
+		},
 	},
 
 	[6] = {
@@ -106,6 +136,12 @@ local data =
 		hp = 1000,
 		crit = 5,
 		crit_hurt = 40,
+		needs = {
+			{
+				id = 4113,
+				cnt = 1,
+			},
+		},
 	},
 
 	[7] = {
@@ -124,6 +160,12 @@ local data =
 		hp = 1100,
 		crit = 5,
 		crit_hurt = 45,
+		needs = {
+			{
+				id = 4113,
+				cnt = 2,
+			},
+		},
 	},
 
 	[8] = {
@@ -142,6 +184,12 @@ local data =
 		hp = 1200,
 		crit = 5,
 		crit_hurt = 50,
+		needs = {
+			{
+				id = 4113,
+				cnt = 3,
+			},
+		},
 	},
 
 	[9] = {
@@ -160,6 +208,12 @@ local data =
 		hp = 1300,
 		crit = 5,
 		crit_hurt = 55,
+		needs = {
+			{
+				id = 4113,
+				cnt = 4,
+			},
+		},
 	},
 
 	[10] = {
@@ -178,6 +232,12 @@ local data =
 		hp = 1400,
 		crit = 5,
 		crit_hurt = 60,
+		needs = {
+			{
+				id = 4113,
+				cnt = 5,
+			},
+		},
 	},
 
 	[11] = {
@@ -196,6 +256,12 @@ local data =
 		hp = 1000,
 		crit = 5,
 		crit_hurt = 40,
+		needs = {
+			{
+				id = 4113,
+				cnt = 1,
+			},
+		},
 	},
 
 	[12] = {
@@ -214,6 +280,12 @@ local data =
 		hp = 1100,
 		crit = 5,
 		crit_hurt = 45,
+		needs = {
+			{
+				id = 4113,
+				cnt = 2,
+			},
+		},
 	},
 
 	[13] = {
@@ -232,6 +304,12 @@ local data =
 		hp = 1200,
 		crit = 5,
 		crit_hurt = 50,
+		needs = {
+			{
+				id = 4113,
+				cnt = 3,
+			},
+		},
 	},
 
 	[14] = {
@@ -250,6 +328,12 @@ local data =
 		hp = 1300,
 		crit = 5,
 		crit_hurt = 55,
+		needs = {
+			{
+				id = 4113,
+				cnt = 4,
+			},
+		},
 	},
 
 	[15] = {
@@ -268,6 +352,12 @@ local data =
 		hp = 1400,
 		crit = 5,
 		crit_hurt = 60,
+		needs = {
+			{
+				id = 4113,
+				cnt = 5,
+			},
+		},
 	},
 
 	[16] = {
@@ -286,6 +376,12 @@ local data =
 		hp = 1000,
 		crit = 5,
 		crit_hurt = 40,
+		needs = {
+			{
+				id = 4113,
+				cnt = 1,
+			},
+		},
 	},
 
 	[17] = {
@@ -304,6 +400,12 @@ local data =
 		hp = 1100,
 		crit = 5,
 		crit_hurt = 45,
+		needs = {
+			{
+				id = 4113,
+				cnt = 2,
+			},
+		},
 	},
 
 	[18] = {
@@ -322,6 +424,12 @@ local data =
 		hp = 1200,
 		crit = 5,
 		crit_hurt = 50,
+		needs = {
+			{
+				id = 4113,
+				cnt = 3,
+			},
+		},
 	},
 
 	[19] = {
@@ -340,6 +448,12 @@ local data =
 		hp = 1300,
 		crit = 5,
 		crit_hurt = 55,
+		needs = {
+			{
+				id = 4113,
+				cnt = 4,
+			},
+		},
 	},
 
 	[20] = {
@@ -358,6 +472,12 @@ local data =
 		hp = 1400,
 		crit = 5,
 		crit_hurt = 60,
+		needs = {
+			{
+				id = 4113,
+				cnt = 5,
+			},
+		},
 	},
 
 	[21] = {
@@ -376,6 +496,12 @@ local data =
 		hp = 1000,
 		crit = 5,
 		crit_hurt = 40,
+		needs = {
+			{
+				id = 4113,
+				cnt = 1,
+			},
+		},
 	},
 
 	[22] = {
@@ -394,6 +520,12 @@ local data =
 		hp = 1100,
 		crit = 5,
 		crit_hurt = 45,
+		needs = {
+			{
+				id = 4113,
+				cnt = 2,
+			},
+		},
 	},
 
 	[23] = {
@@ -412,6 +544,12 @@ local data =
 		hp = 1200,
 		crit = 5,
 		crit_hurt = 50,
+		needs = {
+			{
+				id = 4113,
+				cnt = 3,
+			},
+		},
 	},
 
 	[24] = {
@@ -430,6 +568,12 @@ local data =
 		hp = 1300,
 		crit = 5,
 		crit_hurt = 55,
+		needs = {
+			{
+				id = 4113,
+				cnt = 4,
+			},
+		},
 	},
 
 	[25] = {
@@ -448,6 +592,12 @@ local data =
 		hp = 1400,
 		crit = 5,
 		crit_hurt = 60,
+		needs = {
+			{
+				id = 4113,
+				cnt = 5,
+			},
+		},
 	},
 
 }

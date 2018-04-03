@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-â
+î
 
 game.protomsg"#
 PlayerDataRequest
@@ -29,23 +29,22 @@ game.protomsg"#
 level (Rlevel",
 Aura
 id (Rid
-level (Rlevel"Ø
+level (Rlevel"Æ
 Hero
 id (Rid
-level (Rlevel
-exp (Rexp
-refineLv (RrefineLv 
-refineTimes (RrefineTimes 
-refineSuper (RrefineSuper"
-active (2
+level (Rlevel
+refineLv (RrefineLv 
+refineTimes (RrefineTimes 
+refineSuper (RrefineSuper"
+active (2
 .msg.SkillRactive$
-passive (2
+passive (2
 .msg.SkillRpassive
-power	 (Rpower
-status
- (Rstatus
-	lifePoint (R	lifePoint"
-lifePointMax (RlifePointMax"™
+power (Rpower
+status	 (Rstatus
+	lifePoint
+ (R	lifePoint"
+lifePointMax (RlifePointMax"™
 PlayerDataResponse
 acct (	Racct
 name (	Rname
@@ -116,10 +115,12 @@ BattleUnit
 MakeBattleRequest
 id (Rid"?
 MakeBattleResponse)
-result (2.msg.BattleResultRresult"2
+result (2.msg.BattleResultRresult"Z
 UseItemRequest
 id (Rid
-cnt (Rcnt")
+cnt (Rcnt
+arg1 (Rarg1
+arg2 (Rarg2")
 UseItemResponse
 result (Rresult"A
 ItemCntInfo
@@ -133,4 +134,16 @@ BattleUnit
 count (Rcount"2
 MarketBuyResponse
 
-error_code (R	errorCodebproto3
+error_code (R	errorCode"-
+HeroLevelupRequest
+hero_id (RheroId"4
+HeroLevelupResponse
+
+error_code (R	errorCode"B
+HeroRefineRequest
+hero_id (RheroId
+super (Rsuper"K
+HeroRefineResponse
+
+error_code (R	errorCode
+result (Rresultbproto3
