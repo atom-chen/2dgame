@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-¬
+§
 
 game.protomsg"#
 PlayerDataRequest
@@ -136,16 +136,16 @@ BattleUnit
 
 error_code (R	errorCode"-
 HeroLevelupRequest
-hero_id (RheroId"S
+hero_id (RheroId"4
 HeroLevelupResponse
 
-error_code (R	errorCode
-hero (2	.msg.HeroRhero"B
+error_code (R	errorCode"B
 HeroRefineRequest
 hero_id (RheroId
-super (Rsuper"j
+super (Rsuper"K
 HeroRefineResponse
 
 error_code (R	errorCode
-result (Rresult
-hero (2	.msg.HeroRherobproto3
+result (Rresult"7
+HeroInfoUpdateResponse
+hero (2	.msg.HeroRherobproto3

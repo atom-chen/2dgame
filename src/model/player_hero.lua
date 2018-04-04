@@ -1,6 +1,7 @@
 
 local _heros        = {}
 local _heros_index  = {}
+local _listeners    = {}
 local PlayerHero    = {}
 local Hero          = class("Hero")
 
@@ -60,13 +61,21 @@ function PlayerHero.Clear()
 end
 
 
-function PlayerHero.GetHero(id)
+function PlayerHero.UpdateHero(id, tab)
     local hero = _heros[id]
     if not hero then
         hero = Hero:new(id)
         _heros[id] = hero
+        PlayerHero.Notice(1, id)
+    else
+        PlayerHero.Notice(0, id)
     end
-    return hero
+    hero:Init(tab)
+end
+
+
+function PlayerHero.GetHero(id)
+    return _heros[id]
 end
 
 
@@ -98,6 +107,28 @@ end
 
 function PlayerHero.GetHeroByIndex(index)
     return _heros_index[index]
+end
+
+
+function PlayerHero.Register(win)
+    _listeners[win.id] = win
+end
+
+
+function PlayerHero.UnRegister(win)
+    _listeners[win.id] = nil
+end
+
+
+--[[
+通知监听者
+type    0: 英雄信息变化  1: 新增英雄
+id      英雄ID
+]]
+function PlayerHero.Notice(type, id)
+    for _, listener in pairs(_listeners) do
+        listener:Notice(type, id)
+    end
 end
 
 

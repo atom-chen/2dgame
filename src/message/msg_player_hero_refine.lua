@@ -15,8 +15,7 @@ md[Opcode.MSG_SC_HeroRefine] = function(tab)
         print("精炼是否成功:", tab.result)
         if tab.result == 1 then
             local v = tab.Hero
-            local hero = PlayerHero.GetHero(v.id)
-            hero:Init(v)
+            PlayerHero.UpdateHero(v.id, v)
         end
     end
 end

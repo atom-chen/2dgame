@@ -32,8 +32,7 @@ md[Opcode.MSG_SC_PlayerData] = function(tab)
     end
 
     for _, v in ipairs(tab.heros) do
-        local hero = PlayerHero.GetHero(v.id)
-        hero:Init(v)
+        PlayerHero.UpdateHero(v.id, v)
     end
     PlayerHero.Sort()
 

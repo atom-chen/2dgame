@@ -38,6 +38,8 @@ Opcode.MSG_SC_HeroLevelup       = 0x0015
 Opcode.MSG_CS_HeroRefine        = 0x0016
 Opcode.MSG_SC_HeroRefine        = 0x0017
 
+Opcode.MSG_SC_HeroInfoUpdate    = 0x0018
+
 
 
 --------- protobuf map: message & name -----------------------------------------------------------
@@ -74,3 +76,5 @@ MsgName[Opcode.MSG_SC_HeroLevelup]  = "msg.HeroLevelupResponse"
 
 MsgName[Opcode.MSG_CS_HeroRefine]   = "msg.HeroRefineRequest"
 MsgName[Opcode.MSG_SC_HeroRefine]   = "msg.HeroRefineResponse"
+
+MsgName[Opcode.MSG_SC_HeroInfoUpdate]   = "msg.HeroInfoUpdateResponse"
