@@ -9,6 +9,9 @@ local SkillProto    = require "configs_raw.SkillProto"
 local Global        = require "configs_raw.global"
 local MarketConf    = require "configs_raw.MarketConf"
 
+local RefineSuper   = require "configs_raw.RefineSuper"
+local RefineNormal  = require "configs_raw.RefineNormal"
+
 
 local M = {}
 local _configs = {}
@@ -37,6 +40,7 @@ local sort_by__id = function(cfg, tab)
 end
 
 
+-- 按id、level排序
 local get_by__id_level = function(tab)
     return function(id, lv)
         if tab[id] then
@@ -46,9 +50,18 @@ local get_by__id_level = function(tab)
 end
 
 
+-- 按id排序
 local get_by__id = function(tab)
     return function(id)
         return tab[id]
+    end
+end
+
+
+-- 不需要排序
+local get_by__index = function(tab)
+    return function(index)
+        return tab[index]
     end
 end
 
@@ -98,5 +111,8 @@ M.GetCreatureProto  = get_by__id_level(_configs.CreatureProto)
 M.GetItemProto      = get_by__id(_configs.ItemProto)
 M.GetCreatureTeam   = get_by__id(_configs.CreatureTeam)
 
+M.GetMarketConf     = get_by__index(MarketConf)
+M.GetRefineSuper    = get_by__index(RefineSuper)
+M.GetRefineNormal   = get_by__index(RefineNormal)
 
 return M

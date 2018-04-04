@@ -44,6 +44,68 @@ function Hero:Init(tab)
         }
     end
 
+    -- 基石属性
+    self.atk        = 0
+    self.def        = 0
+    self.hp         = 0
+    self.crit       = 0
+    self.crit_hurt  = 0
+
+
+    self:Calc()
+end
+
+
+function Hero:Calc()
+    local proto     = self.proto
+
+    -- base
+    self.atk        = self.atk          + proto.atk
+    self.def        = self.def          + proto.def
+    self.hp         = self.hp           + proto.hp
+    self.crit       = self.crit         + proto.crit
+    self.crit_hurt  = self.crit_hurt    + proto.crit_hurt
+
+    -- refine
+    local conf
+    if self.refineSuper then
+        conf = config.GetRefineSuper(self.refineLv)
+    else
+        conf = config.GetRefineNormal(self.refineLv)
+    end
+    if conf then
+        self.atk        = self.atk          + conf.atk
+        self.def        = self.def          + conf.def
+        self.hp         = self.hp           + conf.hp
+        self.crit       = self.crit         + conf.crit
+        self.crit_hurt  = self.crit_hurt    + conf.crit_hurt
+    end
+    -- passive skill
+    for i = 1, 4 do
+        local v = self.passive[i]
+        local proto = config.GetSkillProto(v.id, v.level)
+        if proto and proto.passive == 1 then
+            self:AddProperty(proto.attr)
+        end
+    end
+end
+
+
+
+function Hero:AddProperty(attrs)
+    for _, attr in ipairs(attrs) do
+        if attr.id == 1 then                -- AttrType_HP
+            self.hp = self.hp + attr.val
+        elseif attr.id == 2 then            -- AttrType_Atk
+            self.atk = self.atk + attr.val
+        elseif attr.id == 3 then            -- AttrType_Def
+            self.def = self.def + attr.val
+        elseif attr.id == 4 then            -- AttrType_Crit
+            self.crit = self.crit + attr.val
+        elseif attr.id == 5 then            -- AttrType_CritHurt
+            self.crit_hurt = self.crit_hurt + attr.val
+        end
+    end
 end
 
 
@@ -111,12 +173,12 @@ end
 
 
 function PlayerHero.Register(win)
-    _listeners[win.id] = win
+    _listeners[win._id] = win
 end
 
 
 function PlayerHero.UnRegister(win)
-    _listeners[win.id] = nil
+    _listeners[win._id] = nil
 end
 
 

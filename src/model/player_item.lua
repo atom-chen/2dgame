@@ -69,12 +69,12 @@ end
 
 
 function PlayerItem.Register(win)
-    _listeners[win.id] = win
+    _listeners[win._id] = win
 end
 
 
 function PlayerItem.UnRegister(win)
-    _listeners[win.id] = nil
+    _listeners[win._id] = nil
 end
 
 
