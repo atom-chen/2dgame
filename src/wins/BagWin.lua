@@ -101,10 +101,12 @@ end
 
 
 function ItemWin:OnCreate()
+    PlayerItem.Register(self)
 end
 
 
 function ItemWin:OnDestroy()
+    PlayerItem.UnRegister(self)
 end
 
 
@@ -117,6 +119,13 @@ end
 
 
 ---------------------------------------------------------
+
+-- type    0: 数量变化  1: 新增道具  2: 删除道具
+function ItemWin:Notice(type, id, cnt)
+    --费了这么大的事，是不是比较直接？
+    ItemWin:Refresh()
+end
+
 
 function ItemWin:Refresh()
     local scrollView = self.scrollView
