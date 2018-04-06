@@ -93,6 +93,7 @@ function ItemWin:ctor()
     self:addChild(scrollView)
 
     self.sel_icon = ccui.ImageView:create("public_item_sel.png")
+    self.sel_icon:retain()
     self.sel_icon:setAnchorPoint(display.LEFT_BOTTOM)
     scrollView:getInnerContainer():addChild(self.sel_icon)
 
@@ -123,7 +124,8 @@ end
 -- type    0: 数量变化  1: 新增道具  2: 删除道具
 function ItemWin:Notice(type, id, cnt)
     --费了这么大的事，是不是比较直接？
-    ItemWin:Refresh()
+    self.sel_item = nil
+    self:Refresh()
 end
 
 
@@ -162,6 +164,7 @@ function ItemWin:Refresh()
         item:refresh_item_count()
         inner:addChild(item)
     end
+
     self.sel_icon:setVisible(false)
     inner:addChild(self.sel_icon)
 end

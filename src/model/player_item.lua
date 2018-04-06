@@ -23,6 +23,7 @@ function PlayerItem.ChgItemCount(id, cnt)
         PlayerItem.Notice(1, id, cnt)
     else
         val = val + cnt
+        _items[id] = val
         if val == 0 then
             PlayerItem.Notice(2, id, cnt)
         else

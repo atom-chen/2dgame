@@ -154,7 +154,7 @@ function PlayerHero.Sort()
         table.insert(_heros_index, hero)
     end
     table.sort(_heros_index, function(l, r)
-        return l.power > r.power
+        return l.hp > r.hp
     end)
     for i, v in ipairs(_heros_index) do
         v.sort_index = i

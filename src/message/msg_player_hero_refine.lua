@@ -10,12 +10,8 @@ local Opcode     = Opcode
 
 md[Opcode.MSG_SC_HeroRefine] = function(tab)
     if tab.error_code ~= 0 then
-        print("精炼错误！", tab.error_code)
+        print("精炼失败！", tab.error_code)
     else
-        print("精炼是否成功:", tab.result)
-        if tab.result == 1 then
-            local v = tab.Hero
-            PlayerHero.UpdateHero(v.id, v)
-        end
+        print("精炼完成：是否成功:", tab.result)
     end
 end

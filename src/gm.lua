@@ -11,12 +11,12 @@
 local gm_str =
 {
     [1] = "save",                       -- 保存数据
-    [2] = "item 4105|5",                -- 增加道具 道具ID|数量
+    [2] = "item 4111|1 4112|1",                -- 增加道具 道具ID|数量
     [3] = "hero 5001 5002",             -- 增加英雄 英雄ID
     [4] = "hero_up 5001 5002",          -- 增加英雄 英雄ID
 }
 
---  MSG.SendGMCommand(gm_str[2])
+MSG.SendGMCommand(gm_str[2])
 
 
 -- 发送通知
@@ -30,5 +30,3 @@ local gm_str =
 -- 使用道具（有脚本的那种）
 -- MSG.SendItemUse(4105, 2)
 
-
-WinManager:CreateWindowHot(4)
