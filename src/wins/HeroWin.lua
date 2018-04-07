@@ -26,6 +26,32 @@ function HeroWin:ctor()
     local node
     local label
     local button
+
+    -- 上一个
+    button = ccui.Button:create("public_button_001.png")
+    button:setTitleText("上一个")
+    button:getTitleLabel():setSystemFontSize(16)
+    button:setPosition(-440, 240)
+    button:addClickEventListener(function()
+        if self.curr_index > 1 then
+            self:ShowHeroDetail(self.curr_index-1)
+        end
+    end)
+    self:addChild(button)
+    
+    -- 下一个
+    button = ccui.Button:create("public_button_001.png")
+    button:setTitleText("下一个")
+    button:getTitleLabel():setSystemFontSize(16)
+    button:setPosition(-240, 240)
+    button:addClickEventListener(function()
+        if self.curr_index < PlayerHero.GetHeroCount() then
+            self:ShowHeroDetail(self.curr_index+1)
+        end
+    end)
+    self:addChild(button)
+
+
     ------------ 左侧 ------------
     -- 动画节点
     node = cc.Node:create()
@@ -220,6 +246,7 @@ function HeroWin:ShowHeroDetail(index)
 
     label = self:getChildByName("refine_type")
     local str = "超级精炼:否"
+    print("ssss", str, hero.refineSuper)
     if hero.refineSuper then
         str = "超级精炼:是"
     end
@@ -243,9 +270,12 @@ end
 
 -- type    0: 英雄信息变化  1: 新增英雄
 function HeroWin:Notice(type, id)
+    print("HeroWin:Notice____", type, id)
+
     if type == 0 and self.curr_index then
         local hero = PlayerHero.GetHeroByIndex(self.curr_index)
         if hero.id == id then
+            print("updateing.......")
             local index = self.curr_index
             self.curr_index = nil
             self:ShowHeroDetail(index)
