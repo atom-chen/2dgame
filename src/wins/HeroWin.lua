@@ -256,7 +256,6 @@ function HeroWin:ShowHeroDetail(index)
     node:removeAllChildren()
     for i = 1, 2 do
         local v = hero.active[i]
-        v.id , v.level = 1001, 1
         if v.id ~= 0 and v.level ~= 0 then
             local proto = config.GetSkillProto(v.id, v.level)
             local image = ccui.ImageView:create(proto.icon)
