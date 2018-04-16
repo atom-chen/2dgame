@@ -38,7 +38,7 @@ function HeroWin:ctor()
         end
     end)
     self:addChild(button)
-    
+
     -- 下一个
     button = ccui.Button:create("public_button_001.png")
     button:setTitleText("下一个")
@@ -208,6 +208,9 @@ function HeroWin:ShowHeroDetail(index)
     self.curr_index = index
 
     local hero = PlayerHero.GetHeroByIndex(index)
+    if not hero then
+        return
+    end
 
     local node
     local label
