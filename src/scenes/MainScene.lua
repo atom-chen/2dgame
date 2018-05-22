@@ -192,8 +192,10 @@ function MainScene:ctor()
                 preboy:set_console_color(CONSOLE_COLOR.FOREGROUND_GREEN)
                 print("---------- zcg end.")
                 preboy:set_console_color()
-	        elseif keyCode == cc.KeyCode.KEY_C then
+	        elseif keyCode == cc.KeyCode.KEY_T then
                 -- WinManager:CreateWindowHot(3)
+            elseif keyCode == cc.KeyCode.KEY_C then
+                os.execute("cls")
             end
 	    end
         local listener = cc.EventListenerKeyboard:create()
