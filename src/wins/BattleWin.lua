@@ -10,27 +10,51 @@ local BattleWin     = class("BattleWin", WinBase)
 
 --
 local actor_info = {
-    [1] = { -150,    0,     0.8,    "攻-左先锋", },
-    [2] = { -150,   -200,   0.8,    "攻-右先锋", },
-    [3] = { -300,   -100,   1.0,    "攻-主帅",   },
-    [4] = { -450,    0,     0.6,    "攻-左辅将", },
-    [5] = { -450,   -200,   0.6,    "攻-右辅将", },
-    [6] = {  150,   -200,   0.8,    "防-左先锋", },
-    [7] = {  150,    0,     0.8,    "防-右先锋", },
-    [8] = {  300,   -100,   1.0,    "防-主帅",   },
-    [9] = {  450,   -200,   0.6,    "防-左辅将", },
-    [10]= {  450,    0,     0.6,    "防-右辅将", },
+    [1] = { -150,    0,     0.8,    "攻-前左", },
+    [2] = { -150,   -200,   0.8,    "攻-前中", },
+    [3] = { -300,   -100,   1.0,    "攻-前右", },
+    [4] = { -450,    0,     0.6,    "攻-后左", },
+    [5] = { -450,   -200,   0.6,    "攻-后中", },
+    [6] = {  150,   -200,   0.8,    "攻-后右", },
+    [7] = {  150,    0,     0.8,    "防-前左", },
+    [8] = {  300,   -100,   1.0,    "防-前中", },
+    [9] = {  450,   -200,   0.6,    "防-前右", },
+    [10]= {  450,    0,     0.6,    "防-后左", },
+    [11]= {  450,    0,     0.6,    "防-后中", },
+    [12]= {  450,    0,     0.6,    "防-后右", },
 }
 
 
-local AuraEffectType =
+-- 属性类型
+local PropType_HP               = 1 -- HP
+local PropType_Apm              = 2 -- 速度
+local PropType_Atk              = 3 -- 攻击
+local PropType_Def              = 4 -- 防御
+local PropType_Crit             = 5 -- 暴击
+local PropType_Hurt             = 6 -- 暴伤
+
+
+-- 属性名
+local PropName =
 {
-    "HP",
-    "攻击",
-    "防御",
-    "暴击",
-    "暴伤",
+    [PropType_HP]       = "HP",
+    [PropType_Apm]      = "速度",
+    [PropType_Atk]      = "攻击",
+    [PropType_Def]      = "防御",
+    [PropType_Crit]     = "暴击",
+    [PropType_Hurt]     = "暴伤",
 }
+
+
+-- 光环事件
+local AET_PropChanged   = 1       -- 属性变化： arg1:属性类型  arg2: 属性变化量
+
+
+-- 战斗事件
+local EVENT_AURA        = 1
+local EVENT_HURT        = 2
+local EVENT_SKILL       = 3
+local EVENT_EFFECT      = 4
 
 
 --------------------- BattleUnit -------------------------------------------------
@@ -43,10 +67,12 @@ function BattleUnit:ctor(u, b)
     self._lv        = u.lv
     self._hp        = u.hp
     self._pos       = u.pos
+    self._apm       = u.apm
     self._atk       = u.atk
     self._def       = u.def
     self._crit      = u.crit
-    self._crit_hurt = u.crit_hurt
+    self._hurt      = u.hurt
+    self._attacker  = u.attacker
 
     self._skill_curr = nil
     self._skill_comm = nil
@@ -72,13 +98,6 @@ function BattleUnit:ctor(u, b)
         end
     end
 
-    v = u.career_general_skill           -- 主帅技能
-    if v.id ~= 0 then
-        table.insert(self._skills, {
-            proto = config.GetSkillProto(v.id, v.lv)
-        })
-    end
-
     if self._type == 1 then
         self._proto = config.GetHeroProto(self._id, self._lv)
     else
@@ -89,7 +108,7 @@ function BattleUnit:ctor(u, b)
     local anim = Armature:create(self._proto.model)
     local info = actor_info[self._pos]
     anim:setScale(info[3])
-    if self._pos > 5 then
+    if not self:IsAttacker() then
         anim:setScaleX(-1*anim:getScaleX())
     end
     self._root:addChild(anim)
@@ -103,17 +122,25 @@ function BattleUnit:ctor(u, b)
     hp:setPosition(30, 0)
     self._root:addChild(hp)
     self._node_hp = hp
-    self:UpdateHp()
-
-    self._is_attacker = true
-    if self._pos > 5 then
-        self._is_attacker = false
-    end
-
+    self:UpdateHp(0)
 end
 
+
+function BattleUnit:IsAttacker()
+    return self._attacker == 1
+end
+
+
 -- 设置HP
-function BattleUnit:UpdateHp()
+function BattleUnit:UpdateHp(val)
+    if val ~= 0 then
+        self._hp = self._hp + val
+        if self._hp < 0 then
+            self._hp = 0
+            -- u._root:setCascadeOpacityEnabled(true);u._root:setOpacity(255*0.1)  -- 设置透明度
+            self._root:setVisible(false)
+        end
+    end
     local v = self._hp*100 / self._u.hp
     local s = string.format("%.2f%%", v)
     self._node_hp:setString(s)
@@ -126,84 +153,14 @@ function BattleUnit:UpdateHp()
     end
 end
 
+
 function BattleUnit:Name()
     return string.format("%s[%s]", self._proto.name, actor_info[self._pos][4])
 end
 
+
 function BattleUnit:Dead()
     return self._hp <= 0
-end
-
-function BattleUnit:init_campaign(u, camp)
-    self._rival = u
-    self._camp  = camp
-
-    if self._is_attacker then
-        if self._hp ~= camp.a_hp_s then
-            self._hp = camp.a_hp_s
-            print("_______ hp 不相等啊")
-        end
-    else
-        if self._hp ~= camp.d_hp_s then
-            self._hp = camp.d_hp_s
-            print("_______ hp 不相等啊")
-        end
-    end
-
-    self._camp_evts = {}
-    for i, v in ipairs(camp.details) do
-        if v.host == self._pos then
-            local t = self._camp_evts[v.time]
-            if not t then
-                t = {}
-                self._camp_evts[v.time] = t
-            end
-            table.insert(t, v)
-        end
-    end
-end
-
-
-function BattleUnit:clear_campaign()
-    self._rival = nil
-    self._camp  = nil
-end
-
-
-function BattleUnit:update(time)
-    if self:Dead() then
-        return
-    end
-
-    local t = self._camp_evts[time]
-    if not t then
-        return
-    end
-
-    for i, v in ipairs(t) do
-        if v.flag == 1 then             -- CampaignEvent_Cast
-            local id = v.arg1
-            local lv = v.arg2
-            self:OnCast(time, id, lv)
-        elseif v.flag == 2 then         -- CampaignEvent_Hurt
-            local hurt = v.arg1
-            local crit = v.arg2
-            self:OnHurt(time, hurt, crit)
-        elseif v.flag == 3 then         -- CampaignEvent_AuraGet
-            local id = v.arg1
-            local lv = v.arg2
-            self:AddAura(time, id, lv)
-        elseif v.flag == 4 then         -- CampaignEvent_AuraLose
-            local id = v.arg1
-            local lv = v.arg2
-            self:DelAura(time, id, lv)
-        elseif v.flag == 5 then         -- CampaignEvent_AuraEffect
-            self:AuraEffect(time, v.arg1, v.arg2, v.arg3, v.arg4)
-        else
-            print("unknown CampaignEvent", v.flag)
-        end
-    end
-
 end
 
 
@@ -215,86 +172,113 @@ function BattleUnit:GetSkill(id, lv)
     end
 end
 
-function BattleUnit:OnCast(time, id, lv)
-    -- 单次播放不循环
+
+function BattleUnit:OnAura(event)
+    if event.obtain then
+        print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, time))
+    else
+        print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, time))
+    end
+end
+
+
+function BattleUnit:OnHurt(event)
+    self:UpdateHp(-event.hurt)
+    local text
+    if event.crit == 1 then
+        text = string.format("%d 暴击", -event.hurt)
+    else
+        text = string.format("%d", -event.hurt)
+    end
+    self._b:AddCloudText(self, text, false)
+    self._anim:PlayHit()
+end
+
+
+function BattleUnit:OnSkill(event)
+    local id = event.skill.id
+    local iv = event.skill.lv
     local skill = self:GetSkill(id, lv)
     if not skill then
         return
     end
     local model = skill.proto.model
     self._anim:Play(model)
-    self._rival._anim:PlayHit()
-    print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, time))
+    print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, event.time))
 end
 
-function BattleUnit:OnHurt(time, hurt, crit)
-    self._hp = self._hp - hurt
-    if self._hp < 0 then
-        self._hp = 0
-    end
-    self:UpdateHp()
-    local str = string.format("%d", -hurt)
-    if crit == 1 then
-        str = string.format("%d 暴击", -hurt)
-    end
-    self._b:AddCloudText(self, str, false)
-    -- print(string.format("%s be hurt: %d/%d   [%d]", self:Name(), hurt, crit, time))
-end
 
-function BattleUnit:AddAura(time, id, lv)
-    print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), id, lv, time))
-end
-
-function BattleUnit:DelAura(time, id, lv)
-    print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), id, lv, time))
-end
-
-function BattleUnit:AuraEffect(time, arg1, arg2, arg3, arg4)
-    -- print(string.format("%s 光环效果: %d/%d   [%d]", self:Name(), arg1, arg2, arg3, arg4, time))
-    -- AttrType_HP       // 1 HP
-	-- AttrType_Atk      // 2 攻击
-	-- AttrType_Def      // 3 防御
-	-- AttrType_Crit     // 4 暴击
-	-- AttrType_CritHurt // 5 暴击伤害
-
-    local str
-    if arg2 < 0 then
-        str = string.format("-%s %s", tostring(arg2), AuraEffectType[arg1])
+function BattleUnit:OnEffect(event)
+    -- event.type in AuraEffectType
+    if event.type == AET_PropChanged then
+        local ptype = event.arg1
+        local pval  = event.arg2
+        local text  = string.format("-%d %s", tostring(pval), AuraEffectType[ptype])
+        self._b:AddCloudText(self, text, pval>0)
+        if ptype == PropType_HP then
+            self:UpdateHp(pval)
+        end
     else
-        str = string.format("+%s %s", tostring(arg2), AuraEffectType[arg1])
+        print("BattleUnit:OnEffect, unknown event.type", event.type)
     end
-
-    self._b:AddCloudText(self, str, arg2>0)
 end
+
 
 
 --------------------- BattleWin -------------------------------------------------
+local function __append(tab, key, val)
+    if not tab[key] then
+        tab[key] = {}
+    end
+    table.insert(tab[key], val)
+end
 
---[[
-
-    ctor()      一次性初始化
-
-    init()      多次初始化，支持多次播放
-
---]]
 
 function BattleWin:ctor(r)
-    WinBase.ctor(self)
     print("BattleWin:ctor")
+    WinBase.ctor(self)
     self._result = r
 
-    -- 创建背景
-    local bg = display.newSprite("battle/background.png")
-    self:addChild(bg)
-
+    -- 初始化所有战斗参与者
     self._units = {}
     for _, v in ipairs(r.units) do
         local u = BattleUnit:create(v, self)
         local p = actor_info[u._pos]
         u._root:setPosition(p[1], p[2])
         self:addChild(u._root)
-        self._units[v.pos] = u
+        self._units[u._pos] = u
     end
+
+    -- 初始化播放事件
+    local events = {}
+    self._events = events
+    for _, v in ipairs(r.aura) do
+        v.type = EVENT_AURA
+        __append(events, v.time, v)
+    end
+    for _, v in ipairs(r.hurt) do
+        v.type = EVENT_HURT
+        __append(events, v.time, v)
+    end
+    for _, v in ipairs(r.skill) do
+        v.type = EVENT_SKILL
+        __append(events, v.time, v)
+    end
+    for _, v in ipairs(r.effect) do
+        v.type = EVENT_EFFECT
+        __append(events, v.time, v)
+    end
+
+    self._max_time = 0
+    for t, _ in pairs(events) do
+        if t > self._max_time then
+            self._max_time = t
+        end
+    end
+
+    -- 创建背景
+    local bg = display.newSprite("battle/background.png")
+    self:addChild(bg)
 
     -- 关闭按钮
     local btn_image = ccui.Scale9Sprite:create("unKnown.png")
@@ -354,17 +338,20 @@ end
 
 function BattleWin:OnCreate()
     print("BattleWin:OnCreate")
+    self:PlayBattle()
+end
+
+
+function BattleWin:PlayBattle()
     -- 设置倒计时:  战斗开始
-    local cb_count_down = function(times)
-        if times == 1 then
-            self:ShowNotice("战斗开始", 1)
-        end
-        if times == 3 then
-            self:BattleStart()
+    self._tid_1 = scheduler.ScheduleN(function(N)
+        self:ShowNotice(string.format("战斗倒计时: %d", 3-N), 1)
+        if N == 3 then
             self._tid_1 = nil
+            self:play_battle()
         end
-    end
-    self._tid_1 = scheduler.ScheduleN(cb_count_down, 1, 3)
+    end, 1, 3, true)
+    self:init_battle()
 end
 
 
@@ -390,140 +377,60 @@ function BattleWin:OnHiden()
     print("BattleWin:OnHiden")
 end
 
--- 开始战斗
-function BattleWin:BattleStart()
-    print("整场战斗开始=============")
-    self._campaigns = 0
-    self:do_campaign()
-end
+------------------------------ private ------------------------------
 
 
-function BattleWin:BattleEnd()
-    print("整场战斗结束 END =============", self._units[3]._hp, self._units[8]._hp)
-    local u = self._units[3]
-    if u:Dead() then
-        print("防守方 获得了最终胜利")
-    else
-        print("攻击方 获得了最终胜利")
+-- 初始化
+function BattleWin:init_battle()
+    self._stop = false
+    -- 显示所有角色以及恢复HP
+    for _, u in pairs(self._units) do
+        u._hp = u._u.hp
+        u._root:setVisible(true)
     end
 end
 
 
-function BattleWin:campaign_begin(camp)
-    self._camp_curr = camp
-    print("小场战斗开始 ----------------------------------")
-    -- 隐藏非战斗角色  设置透明度
-    for _, u in ipairs(self._units) do
-        if u._pos ~= camp.a_pos and u._pos ~= camp.d_pos then
-            if not u:Dead() then
-                u._root:setCascadeOpacityEnabled(true)
-                u._root:setOpacity(255*0.1)
+function BattleWin:play_battle()
+    local time = 0
+    self._tid_2 = scheduler.Until(function()
+        local events = self._events[time]
+        if events then
+            for _, event in ipairs(events) do
+                self:play_event(event)
             end
         end
-    end
+
+        time = time + 100
+        if time >= self._max_time then
+            self._stop = true
+        end
+
+        return self._stop
+    end, 0.1)
 end
 
 
--- 开启下一场战斗
-function BattleWin:campaign_end()
-    self._camp_curr = nil
-    print("小场战斗结束 END ----------------------------------")
-    -- 显示所有非死亡角色
-    for _, u in ipairs(self._units) do
-        if not u:Dead() then
-            u._root:setOpacity(255*1)
-        else
-            u._root:setVisible(false)
-        end
+function BattleWin:play_event(event)
+    if event.type == EVENT_AURA then
+        local u = self._units[event.owner]
+        u:OnAura(event)
     end
 
-    -- 检测是否已决出胜负
-    if self._campaigns >= #self._result.camps then
-        self:BattleEnd()
-        return
+    if event.type == EVENT_HURT then
+        local u = self._units[event.owner]
+        u:OnHurt(event)
     end
 
-    self:do_campaign()
-end
-
-
-function BattleWin:do_campaign()
-    if self._campaigns >= #self._result.camps then
-        return
+    if event.type == EVENT_SKILL then
+        local u = self._units[event.owner]
+        u:OnSkill(event)
     end
 
-    self._campaigns = self._campaigns + 1
-    local camp = self._result.camps[self._campaigns]
-
-    self:campaign_begin(camp)
-
-    local ua = self._units[camp.a_pos]
-    local ud = self._units[camp.d_pos]
-
-    ua:init_campaign(ud, camp)
-    ud:init_campaign(ua, camp)
-
-    local __do_campaign = function()
-        local time = 0
-        local __campaign_update = function()
-            ua:update(time)
-            ud:update(time)
-            time = time + 100
-            if ua:Dead() or ud:Dead() then
-                if ua._hp ~= camp.a_hp_e then
-                    ua._hp = camp.a_hp_e
-                end
-                if ud._hp ~= camp.d_hp_e then
-                    ud._hp = camp.d_hp_e
-                end
-
-                local __campaign_end = function()
-                    ua:clear_campaign()
-                    ud:clear_campaign()
-                    self:campaign_end()
-                end
-
-                if ua:Dead() then
-                    print(ud:Name(), "胜")
-                    ud._anim:Play("shengli", false)
-                    ua._anim:Play("dead", false, __campaign_end)
-                else
-                    print(ua:Name(), "胜")
-                    ua._anim:Play("shengli", false)
-                    ud._anim:Play("dead", false, __campaign_end)
-                end
-
-                self._tid_2 = nil
-                return true
-            end
-        end
-        self._tid_2 = scheduler.Until(__campaign_update, 0.1)
+    if event.type == EVENT_EFFECT then
+        local u = self._units[event.owner]
+        u:OnEffect(event)
     end
-
-      -- 准备阶段
-    local cb_campaign_prepare = function(times)
-        if times == 1 then
-            local str = string.format("第 %d 场", self._campaigns)
-            self:ShowNotice(str, 1)
-        end
-        if times == 2 then
-            local str = string.format("%s VS %s", ua:Name(), ud:Name())
-            self:ShowNotice(str, 1)
-            -- TODO: hero start move to battle pos
-        end
-        if times > 2 then
-            local str = string.format("倒计时：%d", 5-times)
-            if times == 5 then
-                str = string.format("Fighting")
-            end
-            self:ShowNotice(str, 1)
-        end
-        if times == 5 then
-            self._tid_3 = nil
-            __do_campaign()
-        end
-    end
-    self._tid_3 = scheduler.ScheduleN(cb_campaign_prepare, 2, 5)
 end
 
 

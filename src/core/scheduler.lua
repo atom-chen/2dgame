@@ -5,41 +5,49 @@ local sharedScheduler = cc.Director:getInstance():getScheduler()
 
 
 -- N次定时器
-function scheduler.ScheduleN(func, delay, times)
+function scheduler.ScheduleN(func, interval, N, immediate)
     local sid
-    local idx = 1
+    local times = 1
     sid = sharedScheduler:scheduleScriptFunc(function()
-        if idx >= times then
+        if times >= N then
             sharedScheduler:unscheduleScriptEntry(sid)
         end
-        func(idx)
-        idx = idx + 1
-    end, delay, false)
+        func(times)
+        times = times + 1
+    end, interval, false)
+    if immediate then
+        func(0)
+    end
     return sid
 end
 
 
 -- 一次定时器
-function scheduler.Once(func, delay)
-    return scheduler.ScheduleN(func, delay, 1)
+function scheduler.Once(func, interval)
+    return scheduler.ScheduleN(func, interval, 1)
 end
 
 
 -- 直到func返回true才终止
-function scheduler.Until(func, delay)
+function scheduler.Until(func, interval)
     local sid
     sid = sharedScheduler:scheduleScriptFunc(function()
         if func() == true then
             sharedScheduler:unscheduleScriptEntry(sid)
         end
-    end, delay, false)
+    end, interval, false)
     return sid
 end
 
 
 -- 立即执行，一次性定时器
 function scheduler.Now(func)
-    return sharedScheduler:scheduleScriptFunc(func, 0, false)
+    local sid
+    sid = sharedScheduler:scheduleScriptFunc(function()
+        func()
+        sharedScheduler:unscheduleScriptEntry(sid)
+    end, 0, false)
+    return sid
 end
 
 

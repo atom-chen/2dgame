@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-ß
+ò
 
 game.protomsg"#
 PlayerDataRequest
@@ -74,44 +74,57 @@ game.protomsg"#
 
 BattleAura
 id (Rid
-lv (Rlv"À
+lv (Rlv"™
 
 BattleUnit
 type (Rtype
 id (Rid
 lv (Rlv
-pos (Rpos
-atk (Ratk
-def (Rdef
-hp (Rhp
-crit (Rcrit
-	crit_hurt	 (RcritHurt$
-comm
- (2.msg.BattleSkillRcomm&
-skill (2.msg.BattleSkillRskillB
-career_general_skill (2.msg.BattleSkillRcareerGeneralSkill?
-career_general_aura (2.msg.BattleAuraRcareerGeneralAura?
-career_guarder_aura (2.msg.BattleAuraRcareerGuarderAura"ú
-CampaignDetail
-host (Rhost
-time (Rtime
-flag (Rflag
-arg1 (Rarg1
-arg2 (Rarg2
-arg3 (Rarg3
-arg4 (Rarg4"¡
-BattleCampaign
-a_pos (RaPos
-d_pos (RdPos
-a_hp_s (RaHpS
-d_hp_s (RdHpS
-a_hp_e (RaHpE
-d_hp_e (RdHpE-
-details (2.msg.CampaignDetailRdetails"r
-BattleResult%
-units (2.msg.BattleUnitRunits)
-camps (2.msg.BattleCampaignRcamps
-win (Rwin"#
+pos (Rpos
+attacker (Rattacker
+apm (Rapm
+atk (Ratk
+def (Rdef
+hp	 (Rhp
+crit
+ (Rcrit
+hurt (Rhurt$
+comm (2.msg.BattleSkillRcomm&
+skill (2.msg.BattleSkillRskill"Ä
+BattleEventSkill
+time (Rtime
+caster (Rcaster&
+skill (2.msg.BattleSkillRskill
+targets (Rtargets"ê
+BattleEventAura
+time (Rtime
+owner (Rowner
+caster (Rcaster#
+aura (2.msg.BattleAuraRaura
+obtain (Robtain"ë
+BattleEventHurt
+time (Rtime
+caster (Rcaster
+target (Rtarget
+hurt (Rhurt
+crit (Rcrit
+type (Rtype"Ω
+BattleEventAuraEffect
+time (Rtime
+owner (Rowner
+caster (Rcaster
+type (Rtype
+arg1 (Rarg1
+arg2 (Rarg2
+arg3 (Rarg3
+arg4 (Rarg4"¸
+BattleResult
+win (Rwin%
+units (2.msg.BattleUnitRunits+
+skill (2.msg.BattleEventSkillRskill(
+aura (2.msg.BattleEventAuraRaura(
+hurt (2.msg.BattleEventHurtRhurt2
+effect (2.msg.BattleEventAuraEffectReffect"#
 MakeBattleRequest
 id (Rid"?
 MakeBattleResponse)

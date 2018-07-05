@@ -6,13 +6,42 @@ local data =
 		name = "英雄之刃",
 		model = "attack",
 		icon = "icon/skill/skill_1001.png",
-		passive = 0,
-		target = 2,
-		last_t = 1000,
+		prepare_t = 0,
+		effect_t = 1000,
 		itv_t = 0,
 		cd_t = 1000,
-		aura = {},
-		attr = {
+		type = 0,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {
+			{
+				id = 2,
+				val = 100,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
+				val = 20,
+			},
+		},
+		prop_minor = {
+			{
+				id = 2,
+				val = 100,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
+				val = 20,
+			},
+		},
+		prop_passive = {
 			{
 				id = 2,
 				val = 100,
@@ -35,13 +64,16 @@ local data =
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 1000,
 		cd_t = 3000,
-		aura = {},
-		attr = {},
+		type = 0,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "攻击目标造成大量伤害",
 	},
 
@@ -51,13 +83,16 @@ local data =
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 1000,
 		cd_t = 3000,
-		aura = {},
-		attr = {},
+		type = 0,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "攻击目标造成大量伤害",
 	},
 
@@ -67,13 +102,16 @@ local data =
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 1000,
 		cd_t = 3000,
-		aura = {},
-		attr = {},
+		type = 0,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "攻击目标造成大量伤害",
 	},
 
@@ -83,13 +121,16 @@ local data =
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 1000,
 		cd_t = 3000,
-		aura = {},
-		attr = {},
+		type = 0,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "攻击目标造成大量伤害",
 	},
 
@@ -99,13 +140,16 @@ local data =
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 1000,
 		cd_t = 3000,
-		aura = {},
-		attr = {},
+		type = 0,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "攻击目标造成大量伤害",
 	},
 
@@ -115,18 +159,54 @@ local data =
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2005,
 				lv = 1,
 			},
 		},
-		attr = {
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2005,
+				lv = 1,
+			},
+		},
+		prop_major = {
+			{
+				id = 2,
+				val = 100,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
+				val = 20,
+			},
+		},
+		prop_minor = {
+			{
+				id = 2,
+				val = 100,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
+				val = 20,
+			},
+		},
+		prop_passive = {
 			{
 				id = 2,
 				val = 100,
@@ -149,18 +229,54 @@ local data =
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2005,
 				lv = 2,
 			},
 		},
-		attr = {
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2005,
+				lv = 2,
+			},
+		},
+		prop_major = {
+			{
+				id = 2,
+				val = 110,
+			},
+			{
+				id = 4,
+				val = 15,
+			},
+			{
+				id = 5,
+				val = 25,
+			},
+		},
+		prop_minor = {
+			{
+				id = 2,
+				val = 110,
+			},
+			{
+				id = 4,
+				val = 15,
+			},
+			{
+				id = 5,
+				val = 25,
+			},
+		},
+		prop_passive = {
 			{
 				id = 2,
 				val = 110,
@@ -183,18 +299,54 @@ local data =
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2005,
 				lv = 3,
 			},
 		},
-		attr = {
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2005,
+				lv = 3,
+			},
+		},
+		prop_major = {
+			{
+				id = 2,
+				val = 120,
+			},
+			{
+				id = 4,
+				val = 20,
+			},
+			{
+				id = 5,
+				val = 30,
+			},
+		},
+		prop_minor = {
+			{
+				id = 2,
+				val = 120,
+			},
+			{
+				id = 4,
+				val = 20,
+			},
+			{
+				id = 5,
+				val = 30,
+			},
+		},
+		prop_passive = {
 			{
 				id = 2,
 				val = 120,
@@ -217,18 +369,54 @@ local data =
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2005,
 				lv = 4,
 			},
 		},
-		attr = {
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2005,
+				lv = 4,
+			},
+		},
+		prop_major = {
+			{
+				id = 2,
+				val = 130,
+			},
+			{
+				id = 4,
+				val = 25,
+			},
+			{
+				id = 5,
+				val = 35,
+			},
+		},
+		prop_minor = {
+			{
+				id = 2,
+				val = 130,
+			},
+			{
+				id = 4,
+				val = 25,
+			},
+			{
+				id = 5,
+				val = 35,
+			},
+		},
+		prop_passive = {
 			{
 				id = 2,
 				val = 130,
@@ -251,18 +439,54 @@ local data =
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
-		passive = 0,
-		target = 2,
-		last_t = 3000,
+		prepare_t = 0,
+		effect_t = 3000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2005,
 				lv = 5,
 			},
 		},
-		attr = {
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2005,
+				lv = 5,
+			},
+		},
+		prop_major = {
+			{
+				id = 2,
+				val = 140,
+			},
+			{
+				id = 4,
+				val = 30,
+			},
+			{
+				id = 5,
+				val = 40,
+			},
+		},
+		prop_minor = {
+			{
+				id = 2,
+				val = 140,
+			},
+			{
+				id = 4,
+				val = 30,
+			},
+			{
+				id = 5,
+				val = 40,
+			},
+		},
+		prop_passive = {
 			{
 				id = 2,
 				val = 140,
@@ -285,18 +509,28 @@ local data =
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
-		passive = 0,
-		target = 1,
-		last_t = 2000,
+		prepare_t = 0,
+		effect_t = 2000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2004,
 				lv = 1,
 			},
 		},
-		attr = {},
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2004,
+				lv = 1,
+			},
+		},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "增加吸血光环",
 	},
 
@@ -306,18 +540,28 @@ local data =
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
-		passive = 0,
-		target = 1,
-		last_t = 2000,
+		prepare_t = 0,
+		effect_t = 2000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2004,
 				lv = 2,
 			},
 		},
-		attr = {},
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2004,
+				lv = 2,
+			},
+		},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "增加吸血光环",
 	},
 
@@ -327,18 +571,28 @@ local data =
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
-		passive = 0,
-		target = 1,
-		last_t = 2000,
+		prepare_t = 0,
+		effect_t = 2000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2004,
 				lv = 3,
 			},
 		},
-		attr = {},
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2004,
+				lv = 3,
+			},
+		},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "增加吸血光环",
 	},
 
@@ -348,18 +602,28 @@ local data =
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
-		passive = 0,
-		target = 1,
-		last_t = 2000,
+		prepare_t = 0,
+		effect_t = 2000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2004,
 				lv = 4,
 			},
 		},
-		attr = {},
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2004,
+				lv = 4,
+			},
+		},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "增加吸血光环",
 	},
 
@@ -369,18 +633,28 @@ local data =
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
-		passive = 0,
-		target = 1,
-		last_t = 2000,
+		prepare_t = 0,
+		effect_t = 2000,
 		itv_t = 0,
 		cd_t = 3000,
-		aura = {
+		type = 0,
+		aura_major = {
 			{
+				prob = 80,
 				id = 2004,
 				lv = 5,
 			},
 		},
-		attr = {},
+		aura_minor = {
+			{
+				prob = 80,
+				id = 2004,
+				lv = 5,
+			},
+		},
+		prop_major = {},
+		prop_minor = {},
+		prop_passive = {},
 		desc = "增加吸血光环",
 	},
 
@@ -390,13 +664,58 @@ local data =
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
-		passive = 1,
-		target = 0,
-		last_t = 0,
+		prepare_t = 0,
+		effect_t = 0,
 		itv_t = 0,
 		cd_t = 0,
-		aura = {},
-		attr = {
+		type = 1,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {
+			{
+				id = 1,
+				val = 10,
+			},
+			{
+				id = 2,
+				val = 20,
+			},
+			{
+				id = 3,
+				val = 30,
+			},
+			{
+				id = 4,
+				val = 4,
+			},
+			{
+				id = 5,
+				val = 5,
+			},
+		},
+		prop_minor = {
+			{
+				id = 1,
+				val = 10,
+			},
+			{
+				id = 2,
+				val = 20,
+			},
+			{
+				id = 3,
+				val = 30,
+			},
+			{
+				id = 4,
+				val = 4,
+			},
+			{
+				id = 5,
+				val = 5,
+			},
+		},
+		prop_passive = {
 			{
 				id = 1,
 				val = 10,
@@ -427,13 +746,58 @@ local data =
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
-		passive = 1,
-		target = 0,
-		last_t = 0,
+		prepare_t = 0,
+		effect_t = 0,
 		itv_t = 0,
 		cd_t = 0,
-		aura = {},
-		attr = {
+		type = 1,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {
+			{
+				id = 1,
+				val = 20,
+			},
+			{
+				id = 2,
+				val = 22,
+			},
+			{
+				id = 3,
+				val = 40,
+			},
+			{
+				id = 4,
+				val = 6,
+			},
+			{
+				id = 5,
+				val = 10,
+			},
+		},
+		prop_minor = {
+			{
+				id = 1,
+				val = 20,
+			},
+			{
+				id = 2,
+				val = 22,
+			},
+			{
+				id = 3,
+				val = 40,
+			},
+			{
+				id = 4,
+				val = 6,
+			},
+			{
+				id = 5,
+				val = 10,
+			},
+		},
+		prop_passive = {
 			{
 				id = 1,
 				val = 20,
@@ -464,13 +828,58 @@ local data =
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
-		passive = 1,
-		target = 0,
-		last_t = 0,
+		prepare_t = 0,
+		effect_t = 0,
 		itv_t = 0,
 		cd_t = 0,
-		aura = {},
-		attr = {
+		type = 1,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {
+			{
+				id = 1,
+				val = 30,
+			},
+			{
+				id = 2,
+				val = 24,
+			},
+			{
+				id = 3,
+				val = 50,
+			},
+			{
+				id = 4,
+				val = 8,
+			},
+			{
+				id = 5,
+				val = 15,
+			},
+		},
+		prop_minor = {
+			{
+				id = 1,
+				val = 30,
+			},
+			{
+				id = 2,
+				val = 24,
+			},
+			{
+				id = 3,
+				val = 50,
+			},
+			{
+				id = 4,
+				val = 8,
+			},
+			{
+				id = 5,
+				val = 15,
+			},
+		},
+		prop_passive = {
 			{
 				id = 1,
 				val = 30,
@@ -501,13 +910,58 @@ local data =
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
-		passive = 1,
-		target = 0,
-		last_t = 0,
+		prepare_t = 0,
+		effect_t = 0,
 		itv_t = 0,
 		cd_t = 0,
-		aura = {},
-		attr = {
+		type = 1,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {
+			{
+				id = 1,
+				val = 40,
+			},
+			{
+				id = 2,
+				val = 25,
+			},
+			{
+				id = 3,
+				val = 60,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
+				val = 20,
+			},
+		},
+		prop_minor = {
+			{
+				id = 1,
+				val = 40,
+			},
+			{
+				id = 2,
+				val = 25,
+			},
+			{
+				id = 3,
+				val = 60,
+			},
+			{
+				id = 4,
+				val = 10,
+			},
+			{
+				id = 5,
+				val = 20,
+			},
+		},
+		prop_passive = {
 			{
 				id = 1,
 				val = 40,
@@ -538,13 +992,58 @@ local data =
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
-		passive = 1,
-		target = 0,
-		last_t = 0,
+		prepare_t = 0,
+		effect_t = 0,
 		itv_t = 0,
 		cd_t = 0,
-		aura = {},
-		attr = {
+		type = 1,
+		aura_major = {},
+		aura_minor = {},
+		prop_major = {
+			{
+				id = 1,
+				val = 50,
+			},
+			{
+				id = 2,
+				val = 26,
+			},
+			{
+				id = 3,
+				val = 70,
+			},
+			{
+				id = 4,
+				val = 12,
+			},
+			{
+				id = 5,
+				val = 25,
+			},
+		},
+		prop_minor = {
+			{
+				id = 1,
+				val = 50,
+			},
+			{
+				id = 2,
+				val = 26,
+			},
+			{
+				id = 3,
+				val = 70,
+			},
+			{
+				id = 4,
+				val = 12,
+			},
+			{
+				id = 5,
+				val = 25,
+			},
+		},
+		prop_passive = {
 			{
 				id = 1,
 				val = 50,
