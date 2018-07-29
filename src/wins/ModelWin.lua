@@ -32,12 +32,14 @@ function ModelWin:ctor()
     editbox:onEditHandler(function(event)
         if event.name == "return" then
             local str = editbox:getText()
-            if self._arm then
-                self._arm:removeFromParent()
-                self._arm = nil
+            if #str > 0 then
+                if self._arm then
+                    self._arm:removeFromParent()
+                    self._arm = nil
+                end           
+                self._arm = Armature:create(str, "attack")
+                self:addChild(self._arm)
             end
-            self._arm = Armature:create(str, "attack")
-            self:addChild(self._arm)
         end
     end)
     self:addChild(editbox)

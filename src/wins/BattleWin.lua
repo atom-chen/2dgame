@@ -175,9 +175,9 @@ end
 
 function BattleUnit:OnAura(event)
     if event.obtain then
-        print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, time))
+        print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, event.time))
     else
-        print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, time))
+        print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, event.time))
     end
 end
 
@@ -300,6 +300,7 @@ end
 
 
 -- 显示文本，时间为last
+-- 注意：两次调用之间的间隔，应该大于last
 function BattleWin:ShowNotice(text, last)
     self._notice:setPosition(0, 100)
     self._notice:setOpacity(255*1)
@@ -345,7 +346,7 @@ end
 function BattleWin:PlayBattle()
     -- 设置倒计时:  战斗开始
     self._tid_1 = scheduler.ScheduleN(function(N)
-        self:ShowNotice(string.format("战斗倒计时: %d", 3-N), 1)
+        self:ShowNotice(string.format("战斗倒计时: %d", 3-N), 0.9)
         if N == 3 then
             self._tid_1 = nil
             self:play_battle()
@@ -418,12 +419,12 @@ function BattleWin:play_event(event)
     end
 
     if event.type == EVENT_HURT then
-        local u = self._units[event.owner]
+        local u = self._units[event.target]
         u:OnHurt(event)
     end
 
     if event.type == EVENT_SKILL then
-        local u = self._units[event.owner]
+        local u = self._units[event.caster]
         u:OnSkill(event)
     end
 
