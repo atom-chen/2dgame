@@ -10,18 +10,18 @@ local BattleWin     = class("BattleWin", WinBase)
 
 --
 local actor_info = {
-    [1] = { -150,    0,     0.8,    "攻-前左", },
-    [2] = { -150,   -200,   0.8,    "攻-前中", },
-    [3] = { -300,   -100,   1.0,    "攻-前右", },
-    [4] = { -450,    0,     0.6,    "攻-后左", },
-    [5] = { -450,   -200,   0.6,    "攻-后中", },
-    [6] = {  150,   -200,   0.8,    "攻-后右", },
-    [7] = {  150,    0,     0.8,    "防-前左", },
-    [8] = {  300,   -100,   1.0,    "防-前中", },
-    [9] = {  450,   -200,   0.6,    "防-前右", },
-    [10]= {  450,    0,     0.6,    "防-后左", },
+    [1] = { -150,    100,   0.8,    "攻-前左", },
+    [2] = { -150,    0,     0.8,    "攻-前中", },
+    [3] = { -150,   -100,   1.0,    "攻-前右", },
+    [4] = { -450,    100,   0.6,    "攻-后左", },
+    [5] = { -450,    0,     0.6,    "攻-后中", },
+    [6] = { -450,   -100,   0.8,    "攻-后右", },
+    [7] = {  150,   -100,   0.8,    "防-前左", },
+    [8] = {  150,    0,     1.0,    "防-前中", },
+    [9] = {  150,    100,   0.6,    "防-前右", },
+    [10]= {  450,   -100,   0.6,    "防-后左", },
     [11]= {  450,    0,     0.6,    "防-后中", },
-    [12]= {  450,    0,     0.6,    "防-后右", },
+    [12]= {  450,    100,   0.6,    "防-后右", },
 }
 
 
@@ -209,11 +209,10 @@ end
 
 
 function BattleUnit:OnEffect(event)
-    -- event.type in AuraEffectType
     if event.type == AET_PropChanged then
         local ptype = event.arg1
         local pval  = event.arg2
-        local text  = string.format("-%d %s", tostring(pval), AuraEffectType[ptype])
+        local text  = string.format("%d %s", pval, PropName[ptype])
         self._b:AddCloudText(self, text, pval>0)
         if ptype == PropType_HP then
             self:UpdateHp(pval)
@@ -237,45 +236,7 @@ end
 function BattleWin:ctor(r)
     print("BattleWin:ctor")
     WinBase.ctor(self)
-    self._result = r
-
-    -- 初始化所有战斗参与者
-    self._units = {}
-    for _, v in ipairs(r.units) do
-        local u = BattleUnit:create(v, self)
-        local p = actor_info[u._pos]
-        u._root:setPosition(p[1], p[2])
-        self:addChild(u._root)
-        self._units[u._pos] = u
-    end
-
-    -- 初始化播放事件
-    local events = {}
-    self._events = events
-    for _, v in ipairs(r.aura) do
-        v.type = EVENT_AURA
-        __append(events, v.time, v)
-    end
-    for _, v in ipairs(r.hurt) do
-        v.type = EVENT_HURT
-        __append(events, v.time, v)
-    end
-    for _, v in ipairs(r.skill) do
-        v.type = EVENT_SKILL
-        __append(events, v.time, v)
-    end
-    for _, v in ipairs(r.effect) do
-        v.type = EVENT_EFFECT
-        __append(events, v.time, v)
-    end
-
-    self._max_time = 0
-    for t, _ in pairs(events) do
-        if t > self._max_time then
-            self._max_time = t
-        end
-    end
-
+    
     -- 创建背景
     local bg = display.newSprite("battle/background.png")
     self:addChild(bg)
@@ -296,6 +257,47 @@ function BattleWin:ctor(r)
     notice:setPosition(0, 100)
     self:addChild(notice)
     self._notice = notice
+    
+    ---------- for battle data --------------------------------
+    -- 初始化所有战斗参与者
+    self._result = r
+    self._units = {}
+    for _, v in ipairs(r.units) do
+        local u = BattleUnit:create(v, self)
+        local p = actor_info[u._pos]
+        u._root:setPosition(p[1], p[2])
+        self:addChild(u._root)
+        self._units[u._pos] = u
+    end
+    
+    
+    -- 初始化播放事件
+    local events = {}
+    self._events = events
+    for _, v in ipairs(r.aura) do
+        v.__type = EVENT_AURA
+        __append(events, v.time, v)
+    end
+    for _, v in ipairs(r.hurt) do
+        v.__type = EVENT_HURT
+        __append(events, v.time, v)
+    end
+    for _, v in ipairs(r.skill) do
+        v.__type = EVENT_SKILL
+        __append(events, v.time, v)
+    end
+    for _, v in ipairs(r.effect) do
+        v.__type = EVENT_EFFECT
+        __append(events, v.time, v)
+    end
+
+    self._max_time = 0
+    for t, _ in pairs(events) do
+        if t > self._max_time then
+            self._max_time = t
+        end
+    end
+
 end
 
 
@@ -322,8 +324,8 @@ function BattleWin:AddCloudText(unit, text, green)
         x = x + 20
         y = y + 20
     else
-        x = x - 20
         tip:setColor(cc.RED)
+        x = x - 20
     end
     tip:setPosition(x, y+200)
     self:addChild(tip)
@@ -413,22 +415,22 @@ end
 
 
 function BattleWin:play_event(event)
-    if event.type == EVENT_AURA then
+    if event.__type == EVENT_AURA then
         local u = self._units[event.owner]
         u:OnAura(event)
     end
 
-    if event.type == EVENT_HURT then
+    if event.__type == EVENT_HURT then
         local u = self._units[event.target]
         u:OnHurt(event)
     end
 
-    if event.type == EVENT_SKILL then
+    if event.__type == EVENT_SKILL then
         local u = self._units[event.caster]
         u:OnSkill(event)
     end
 
-    if event.type == EVENT_EFFECT then
+    if event.__type == EVENT_EFFECT then
         local u = self._units[event.owner]
         u:OnEffect(event)
     end
