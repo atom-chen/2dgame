@@ -197,7 +197,7 @@ end
 
 function BattleUnit:OnSkill(event)
     local id = event.skill.id
-    local iv = event.skill.lv
+    local lv = event.skill.lv
     local skill = self:GetSkill(id, lv)
     if not skill then
         return
@@ -234,9 +234,8 @@ end
 
 
 function BattleWin:ctor(r)
-    print("BattleWin:ctor")
     WinBase.ctor(self)
-    
+
     -- 创建背景
     local bg = display.newSprite("battle/background.png")
     self:addChild(bg)
@@ -257,7 +256,7 @@ function BattleWin:ctor(r)
     notice:setPosition(0, 100)
     self:addChild(notice)
     self._notice = notice
-    
+
     ---------- for battle data --------------------------------
     -- 初始化所有战斗参与者
     self._result = r
@@ -269,8 +268,8 @@ function BattleWin:ctor(r)
         self:addChild(u._root)
         self._units[u._pos] = u
     end
-    
-    
+
+
     -- 初始化播放事件
     local events = {}
     self._events = events
@@ -340,7 +339,6 @@ end
 ------------------------------ inhert from WinBase ------------------------------
 
 function BattleWin:OnCreate()
-    print("BattleWin:OnCreate")
     self:PlayBattle()
 end
 
@@ -359,7 +357,6 @@ end
 
 
 function BattleWin:OnDestroy()
-    print("BattleWin:OnDestroy")
     for i = 1, 3 do
         local var = "_tid_" .. i
         local tid = self[var]
@@ -372,12 +369,10 @@ end
 
 
 function BattleWin:OnShow()
-    print("BattleWin:OnShow")
 end
 
 
 function BattleWin:OnHiden()
-    print("BattleWin:OnHiden")
 end
 
 ------------------------------ private ------------------------------
@@ -409,6 +404,11 @@ function BattleWin:play_battle()
             self._stop = true
         end
 
+
+        if self._stop then
+            self:OnBattleEnd()
+        end
+
         return self._stop
     end, 0.1)
 end
@@ -434,6 +434,13 @@ function BattleWin:play_event(event)
         local u = self._units[event.owner]
         u:OnEffect(event)
     end
+end
+
+
+function BattleWin:OnBattleEnd()
+    scheduler.Once(function()
+            WinManager:DestroyWindow(self)
+        end, 3)
 end
 
 
