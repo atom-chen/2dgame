@@ -1,13 +1,13 @@
 
-local AuraProto     = require "configs_raw.AuraProto"
-local CreatureProto = require "configs_raw.CreatureProto"
+local AuraProto     = require "configs_raw.Aura"
+local CreatureProto = require "configs_raw.Creature"
 local CreatureTeam  = require "configs_raw.CreatureTeam"
-local HeroProto     = require "configs_raw.HeroProto"
-local ItemProto     = require "configs_raw.ItemProto"
-local SkillProto    = require "configs_raw.SkillProto"
+local HeroProto     = require "configs_raw.Hero"
+local ItemProto     = require "configs_raw.Item"
+local SkillProto    = require "configs_raw.Skill"
 
-local Global        = require "configs_raw.global"
-local MarketConf    = require "configs_raw.MarketConf"
+local Global        = require "configs_raw.Global"
+local MarketConf    = require "configs_raw.Market"
 
 local RefineSuper   = require "configs_raw.RefineSuper"
 local RefineNormal  = require "configs_raw.RefineNormal"
