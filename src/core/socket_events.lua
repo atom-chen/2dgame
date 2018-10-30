@@ -28,12 +28,12 @@ local __callback = {}
 
 cc.exports.g_connect_pass = function()
     __established = true
-    EventMgr.EmitEvent(Event.ConnectOK)
+    EventMgr.Emit(Event.ConnectOK)
 end
 
 
 cc.exports.g_connect_fail = function()
-    EventMgr.EmitEvent(Event.ConnectFailed)
+    EventMgr.Emit(Event.ConnectFailed)
 end
 
 
@@ -71,7 +71,7 @@ end
 cc.exports.g_on_closed = function()
     __established = false
     print("g_on_closed +++++++++++++")
-    EventMgr.EmitEvent(Event.ConnectClosed)
+    EventMgr.Emit(Event.ConnectClosed)
 end
 
 

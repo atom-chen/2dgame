@@ -1,63 +1,61 @@
 
-local _event_monitors = {}
-local _table_monitors = {}
+local _data         = {}
+local EventMgr      = {}
 
 
-local EventMgr = {}
+setmetatable(_data, {
+    __mode = "k",
+})
 
 
-function EventMgr.EmitEvent(event, args)
-    local m = _event_monitors[event]
-    if m then
-        for func, once in pairs(m) do
-            func(event, args)
-            if once then
-                m[func] = nil
-            end
-        end
-    end
-
-    for events, func in pairs(_table_monitors) do
-        if table.exist(event, events) then
-            func(event, args)
-            _table_monitors[events] = nil
+function EventMgr.Emit(evt, args)
+    for _, tab in pairs(_data) do
+        local func = tab[evt]
+        if func then
+            func(evt, args)
         end
     end
 end
 
 
-function EventMgr._register_event(event, func, once)
-    local m = _event_monitors[event]
-    if not m then
-        m = {}
-        _event_monitors[event] = m
+function EventMgr.Register(host, evts, func)
+    assert(type(evts) == "table", "evts should be type table !")
+
+    local h = _data[host]
+    if not h then
+       h = {}
+       _data[host] = h
     end
-    m[func] = once
-end
 
-
-function EventMgr.RegisterEvent(events, func, once)
-    if type(events) ~= "table" then
-        local event = events
-        EventMgr._register_event(event, func, once)
-    else
-        if once then
-            _table_monitors[events] = func
-        else
-            for _, event in ipairs(events) do
-                EventMgr._register_event(event, func, once)
-            end
-        end
+    for _, evt in ipairs(evts) do
+        h[evt] = func
     end
 end
 
 
-function EventMgr.UnregisterEvent(event, func)
-    local m = _event_monitors[event]
-    if not m then
+function EventMgr.Unregister(host, evts)
+    local h = _data[host]
+    if not h then return end
+
+    if not evts then
+        _data[host] = nil
         return
     end
-    m[func] = nil
+
+    for k, _ in pairs(h) do
+        h[k] = nil
+    end
+end
+
+
+-- 在程序结束调试，以检测未注销的事件
+function EventMgr.dump()
+    for h, v in pairs(_data) do
+        print("host:", h)
+        for evt, _ in pairs(v) do
+            print("\tevt:", evt)
+        end
+    end
 end
 
 

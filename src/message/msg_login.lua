@@ -9,12 +9,11 @@ local Opcode    = Opcode
 
 -- 登录
 md[Opcode.MSG_SC_LOGIN] = function(tab)
-
     print("on MSG_SC_LOGIN", tab.error_code)
 
     if tab.error_code == 0 then
-        EventMgr.EmitEvent(Event.LoginOK)
+        EventMgr.Emit(Event.LoginOK)
     else
-        EventMgr.EmitEvent(Event.LoginFailed)
+        EventMgr.Emit(Event.LoginFailed)
     end
 end

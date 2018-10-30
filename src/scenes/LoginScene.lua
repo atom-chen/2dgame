@@ -47,6 +47,7 @@ end
 
 function LoginScene:OnLeave()
     print("LoginScene:OnLeave")
+    EventMgr.Unregister(self)
 end
 
 
@@ -65,7 +66,7 @@ function LoginScene:__enter_game()
         end
     end
 
-    EventMgr.RegisterEvent({Event.EnterGameOk,Event.EnterGameFailed}, _on_event_enter_game, true)
+    EventMgr.Register(self, {Event.EnterGameOk,Event.EnterGameFailed}, _on_event_enter_game)
 
     Socket.SendPacket(Opcode.MSG_CS_ENTER_GAME, {
     })
@@ -82,7 +83,7 @@ function LoginScene:__login()
         end
     end
 
-    EventMgr.RegisterEvent({Event.LoginOK,Event.LoginFailed}, _on_event_login, true)
+    EventMgr.Register(self, {Event.LoginOK,Event.LoginFailed}, _on_event_login)
 
     -- 发送登录包
     Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
@@ -104,7 +105,7 @@ function LoginScene:__connect()
         end
     end
 
-    EventMgr.RegisterEvent({Event.ConnectOK,Event.ConnectFailed}, _on_event_connect, true)
+    EventMgr.Register(self, {Event.ConnectOK,Event.ConnectFailed}, _on_event_connect)
 
     Socket.Connect("127.0.0.1", 4040)
     -- Socket.Connect("118.24.48.149", 4040)
