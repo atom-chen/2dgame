@@ -178,32 +178,6 @@ function MainScene:ctor()
     local sf1 = cc.Sprite:create("button_collect.jpg", {x=0, y=0, width=400, height=400})
     layer:addChild(sf1)
 
-    -- UI
-
-    -- 加侦听键盘事件
-    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_WINDOWS then
-    	local function onKeyboardPressed(keyCode, event)
-            keyCode = tonumber(keyCode)
-	        if keyCode == cc.KeyCode.KEY_Z then
-                preboy:set_console_color(CONSOLE_COLOR.FOREGROUND_GREEN)
-                print("---------- zcg everywhere:", os.time())
-                preboy:set_console_color()
-                dofile("src/gm.lua")
-                preboy:set_console_color(CONSOLE_COLOR.FOREGROUND_GREEN)
-                print("---------- zcg end.")
-                preboy:set_console_color()
-	        elseif keyCode == cc.KeyCode.KEY_T then
-                -- WinManager:CreateWindowHot(3)
-            elseif keyCode == cc.KeyCode.KEY_C then
-                os.execute("cls")
-            end
-	    end
-        local listener = cc.EventListenerKeyboard:create()
-        listener:registerScriptHandler(onKeyboardPressed, cc.Handler.EVENT_KEYBOARD_PRESSED)
-        local eventDispatcher = layer:getEventDispatcher()
-        eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
-    end
-
     WinManager:AttachScene(self)
 end
 
