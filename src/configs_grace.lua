@@ -13,6 +13,10 @@ local RefineSuper   = require "configs_raw.RefineSuper"
 local RefineNormal  = require "configs_raw.RefineNormal"
 
 
+local Object        = require "configs_raw.Object"
+local Scene         = require "configs_raw.Scene"
+
+
 local M = {}
 local _configs = {}
 
@@ -98,6 +102,15 @@ _configs.SkillProto = {}
 sort_by__id_level(_configs.SkillProto, SkillProto)
 
 
+-- Object
+_configs.Object = {}
+sort_by__id_level(_configs.Object, Object)
+
+
+-- Scene
+_configs.Scene = {}
+sort_by__id_level(_configs.Scene, Scene)
+
 --------------------------------------------------------------------------------
 
 M.Global            = Global
@@ -110,6 +123,8 @@ M.GetCreatureProto  = get_by__id_level(_configs.CreatureProto)
 
 M.GetItemProto      = get_by__id(_configs.ItemProto)
 M.GetCreatureTeam   = get_by__id(_configs.CreatureTeam)
+M.GetObject         = get_by__id(_configs.Object)
+M.GetScene          = get_by__id(_configs.Scene)
 
 M.GetMarketConf     = get_by__index(MarketConf)
 M.GetRefineSuper    = get_by__index(RefineSuper)

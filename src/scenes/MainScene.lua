@@ -27,7 +27,54 @@ function MainScene:ctor()
         return true
     end
 
+    local function onTouchMoved(touch, event)
+        local cx, cy = layer:getPosition()
+        local top = cy + bg_size.height / 2
+        local bot = cy - bg_size.height / 2
+        local lef = cx - bg_size.width  / 2
+        local rig = cx + bg_size.width  / 2
 
+        local currLocation = touch:getLocation()
+        local mx = currLocation.x - beginLocation.x
+        local my = currLocation.y - beginLocation.y
+
+        local c
+        if top + my < win_size.height then
+            my = win_size.height - top
+            c = true
+        end
+        if bot + my > 0 then
+            my = 0 - bot
+            c = true
+        end
+        if lef + mx > 0 then
+            mx = 0 - lef
+            c = true
+        end
+        if rig + mx < win_size.width then
+            mx = win_size.width - rig
+            c = true
+        end
+
+        beginX = beginX + mx
+        beginY = beginY + my
+        layer:setPosition(beginX, beginY)
+        beginLocation = currLocation
+    end
+
+    local function onTouchEnded(touch, event)
+        beginLocation = nil
+        beginX = nil
+        beginY = nil
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan, cc.Handler.EVENT_TOUCH_BEGAN)
+    listener:registerScriptHandler(onTouchMoved, cc.Handler.EVENT_TOUCH_MOVED)
+    listener:registerScriptHandler(onTouchEnded, cc.Handler.EVENT_TOUCH_ENDED)
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+    
     --------------------------- GM功能按钮 ---------------------------
     -- HeroModel
     local btn = ccui.Button:create("public_button_001.png")
@@ -71,55 +118,6 @@ function MainScene:ctor()
     end)
 
     --------------------------- GM功能按钮 END ---------------------------
-
-
-    local function onTouchMoved(touch, event)
-        local cx, cy = layer:getPosition()
-        local top = cy + bg_size.height / 2
-        local bot = cy - bg_size.height / 2
-        local lef = cx - bg_size.width / 2
-        local rig = cx + bg_size.width / 2
-
-        local currLocation = touch:getLocation()
-        local mx = currLocation.x - beginLocation.x
-        local my = currLocation.y - beginLocation.y
-
-        local c
-        if top + my < win_size.height then
-            my = win_size.height - top
-            c = true
-        end
-        if bot + my > 0 then
-            my = 0 - bot
-            c = true
-        end
-        if lef + mx > 0 then
-            mx = 0 - lef
-            c = true
-        end
-        if rig + mx < win_size.width then
-            mx = win_size.width - rig
-            c = true
-        end
-
-        beginX = beginX + mx
-        beginY = beginY + my
-        layer:setPosition(beginX, beginY)
-        beginLocation = currLocation
-    end
-
-    local function onTouchEnded(touch, event)
-        beginLocation = nil
-        beginX = nil
-        beginY = nil
-    end
-
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan, cc.Handler.EVENT_TOUCH_BEGAN)
-    listener:registerScriptHandler(onTouchMoved, cc.Handler.EVENT_TOUCH_MOVED)
-    listener:registerScriptHandler(onTouchEnded, cc.Handler.EVENT_TOUCH_ENDED)
-    local eventDispatcher = layer:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
 
     -- add text label
     local label = cc.Label:createWithSystemFont("Hello, Preboy.ZHANG!", "Arial", 40)
