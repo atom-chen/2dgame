@@ -7,7 +7,7 @@ local ToolbarWin    = class("ToolbarWin", WinBase)
 
 
 function ToolbarWin:ctor()
-    print("ToolbarWin:ctor")
+    -- WinBase.ctor(self)
 end
 
 

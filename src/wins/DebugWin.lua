@@ -3,6 +3,8 @@ local DebugWin = class("DebugWin", function ()
 end)
 
 function DebugWin:ctor(msg)
+    WinBase.ctor(self)
+
     -- cc.Director:getInstance():pause()
 	self.msg = string.sub(msg, 1, 500)
 

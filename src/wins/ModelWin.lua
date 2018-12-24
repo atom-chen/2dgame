@@ -7,7 +7,6 @@ local ModelWin      = class("ModelWin", WinBase)
 
 function ModelWin:ctor()
     WinBase.ctor(self)
-    print("ModelWin:ctor")
 
     -- 背景
     local bg = ccui.Scale9Sprite:create("bg_scale9.png")

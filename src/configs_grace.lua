@@ -104,12 +104,12 @@ sort_by__id_level(_configs.SkillProto, SkillProto)
 
 -- Object
 _configs.Object = {}
-sort_by__id_level(_configs.Object, Object)
+sort_by__id(_configs.Object, Object)
 
 
 -- Scene
 _configs.Scene = {}
-sort_by__id_level(_configs.Scene, Scene)
+sort_by__id(_configs.Scene, Scene)
 
 --------------------------------------------------------------------------------
 

@@ -6,6 +6,7 @@ local windows =
     [3] = { "wins.ModelWin",        },      -- 模型列表： 查看所选择的模型以及技能效果
     [4] = { "wins.BagWin",          },      -- 道具界面
     [5] = { "wins.HeroWin",         },      -- 英雄界面
+    [6] = { "wins.MapWin",          },      -- 地图界面
 }
 
 for _, v in pairs(windows) do
@@ -40,16 +41,18 @@ function WinManager:Release()
 end
 
 
-function WinManager:CreateWindowHot(id, ...)
+function WinManager:_release_window(id)
     local v = windows[id]
     local s = v[1]
     package.loaded[s] = nil
     v[2] = require(s)
-    self:CreateWindow(id, ...)
 end
 
 
 function WinManager:CreateWindow(id, ...)
+    -- 发布版本时候屏蔽此行
+    self:_release_window(id)
+
     local win = self:FindWindow(id)
     if not win then
         local cls = windows[id][2]

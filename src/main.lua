@@ -37,7 +37,7 @@ local function main()
                 print("---------- zcg end.")
                 preboy:set_console_color()
             elseif keyCode == cc.KeyCode.KEY_T then
-                -- WinManager:CreateWindowHot(3)
+                -- WinManager:CreateWindow(3)
             elseif keyCode == cc.KeyCode.KEY_C then
                 os.execute("cls")
             end

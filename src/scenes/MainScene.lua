@@ -84,7 +84,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1600, -100)
     btn:addClickEventListener(function()
-        WinManager:CreateWindowHot(3)
+        WinManager:CreateWindow(3)
     end)
     -- BagWin
     local btn = ccui.Button:create("public_button_001.png")
@@ -94,7 +94,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1400, -100)
     btn:addClickEventListener(function()
-        WinManager:CreateWindowHot(4)
+        WinManager:CreateWindow(4)
     end)
     -- HeroWin
     local btn = ccui.Button:create("public_button_001.png")
@@ -104,7 +104,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1200, -100)
     btn:addClickEventListener(function()
-        WinManager:CreateWindowHot(5)
+        WinManager:CreateWindow(5)
     end)
     -- 播放战斗
     local btn = ccui.Button:create("public_button_001.png")
@@ -144,7 +144,7 @@ function MainScene:ctor()
         local function btn_callback(ref, type)
             if type == ccui.TouchEventType.ended then
                 if i == 1 then
-                    WinManager:CreateWindowHot(1)
+                    WinManager:CreateWindow(1)
                 elseif i == 2 then
                     WinManager:DestroyWindow(1)
                 elseif i == 3 then
@@ -153,9 +153,10 @@ function MainScene:ctor()
                     local win = WinManager:FindWindow(1)
                     if win then WinManager:ShowWindow(win, false) end
                 else
-                    local DebugWin = require "wins.DebugWin"
-                    local dbg = DebugWin:create("preboy.ZHANG")
-                    self:addChild(dbg)
+--                    local DebugWin = require "wins.DebugWin"
+--                    local dbg = DebugWin:create("preboy.ZHANG")
+--                    self:addChild(dbg)
+                    WinManager:CreateWindow(6, 2001)
                 end
             end
         end

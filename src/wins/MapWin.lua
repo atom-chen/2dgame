@@ -11,12 +11,14 @@ local config        = require "configs_grace"
 local MapWin    = class("MapWin", WinBase)
 
 
-function MapWin:ctor()
-    print("MapWin:ctor")
+function MapWin:ctor(mapid)
+    WinBase.ctor(self)
+
+    self.mapid = mapid
     local layer = cc.Layer:create()
     layer:addTo(self)
 
-    -- ´¥ÃþÊÂ¼þ
+    -- è§¦æ‘¸äº‹ä»¶
     self.layer          = layer
     self.beginX         = nil
     self.beginY         = nil
@@ -35,6 +37,9 @@ end
 ------------------------------ inhert from WinBase ----------------------------
 
 function MapWin:OnCreate()
+    if self.mapid then
+        self:ShowMap(self.mapid)
+    end
 end
 
 
@@ -111,19 +116,31 @@ function MapWin:ShowMap(mapid)
         return false
     end
 
-    self.SetBackground(conf)
-    self.SetObjects(conf)
+    self:SetBackground(conf)
+    self:SetObjects(conf)
 
     return true
 end
 
 
-function MapWin:SetBackground()
-    local bg = cc.Sprite:create(conf.img_bg)
+function MapWin:SetBackground(conf)
+    local bg = cc.Sprite:create("zzz.jpg")
     self.bgSize = bg:getContentSize()
     self.layer:addChild(bg)
-    self.setContentSize(self.bgSize)
-    self.setPosition(self.bgSize.width/2, self.bgSize.height/2)
+    self.layer:setContentSize(self.bgSize)
+    self.layer:setPosition(self.bgSize.width/2, self.bgSize.height/2)
+
+    print("ddd", self.bgSize.width/2, self.bgSize.height/2 )
+
+    
+    print("ddd1", self:getPosition())
+
+
+end
+
+
+function MapWin:SetObjects(conf)
+    
 end
 
 
