@@ -23,7 +23,7 @@ local _configs = {}
 
 --------------------------------------------------------------------------------
 
-local sort_by__id_level = function(cfg, tab)
+local map_by__id_level = function(cfg, tab)
     for _, v in pairs(tab) do
         local tmp = cfg[v.id]
         if not tmp then
@@ -35,7 +35,7 @@ local sort_by__id_level = function(cfg, tab)
 end
 
 
-local sort_by__id = function(cfg, tab)
+local map_by__id = function(cfg, tab)
     for _, v in pairs(tab) do
         if not cfg[v.id] then
             cfg[v.id] = v
@@ -74,42 +74,60 @@ end
 
 -- AuraProto
 _configs.AuraProto = {}
-sort_by__id_level(_configs.AuraProto, AuraProto)
+map_by__id_level(_configs.AuraProto, AuraProto)
 
 
 -- CreatureProto
 _configs.CreatureProto = {}
-sort_by__id_level(_configs.CreatureProto, CreatureProto)
+map_by__id_level(_configs.CreatureProto, CreatureProto)
 
 
 -- CreatureTeam
 _configs.CreatureTeam = {}
-sort_by__id(_configs.CreatureTeam, CreatureTeam)
+map_by__id(_configs.CreatureTeam, CreatureTeam)
 
 
 -- HeroProto
 _configs.HeroProto = {}
-sort_by__id_level(_configs.HeroProto, HeroProto)
+map_by__id_level(_configs.HeroProto, HeroProto)
 
 
 -- ItemProto
 _configs.ItemProto = {}
-sort_by__id(_configs.ItemProto, ItemProto)
+map_by__id(_configs.ItemProto, ItemProto)
 
 
 -- SkillProto
 _configs.SkillProto = {}
-sort_by__id_level(_configs.SkillProto, SkillProto)
+map_by__id_level(_configs.SkillProto, SkillProto)
 
 
 -- Object
 _configs.Object = {}
-sort_by__id(_configs.Object, Object)
+map_by__id(_configs.Object, Object)
 
 
 -- Scene
 _configs.Scene = {}
-sort_by__id(_configs.Scene, Scene)
+map_by__id(_configs.Scene, Scene)
+
+
+--------------------------------------------------------------------------------
+-- 需要特殊处理的配置
+--------------------------------------------------------------------------------
+
+
+_configs.objects_in_scene = {}
+for _, v in pairs(_configs.Object) do
+    local sid = v.sceneId
+    local tmp = _configs.objects_in_scene[sid]
+    if not tmp then
+        tmp = {}
+        _configs.objects_in_scene[sid] = tmp
+    end
+    tmp[v.id] = v
+end
+
 
 --------------------------------------------------------------------------------
 
@@ -130,4 +148,12 @@ M.GetMarketConf     = get_by__index(MarketConf)
 M.GetRefineSuper    = get_by__index(RefineSuper)
 M.GetRefineNormal   = get_by__index(RefineNormal)
 
+
+-- 获取场景内所有的对象
+M.GetSceneObjects = function(sid)
+    return _configs.objects_in_scene[sid]
+end
+
+
+--------------------------------------------------------------------------------
 return M

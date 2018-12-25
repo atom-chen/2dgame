@@ -64,7 +64,7 @@ function WinManager:CreateWindow(id, ...)
         win._id = id
         self._layer:addChild(win)
         self._win_whole[id] = win
-        win:OnCreate()
+        win:OnCreate(...)
     end
     self:ShowWindow(win, true)
     return win
