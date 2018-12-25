@@ -19,13 +19,11 @@ function MapWin:ctor()
     local btn_image = ccui.Scale9Sprite:create("unKnown.png")
     local btn_close = cc.ControlButton:create(btn_image)
     btn_close:setPreferredSize(btn_image:getPreferredSize())
-    btn_close:setPosition(cc.p(winSize.width, winSize.height))
-    print("sssssssssssssss", winSize.width/2, winSize.height/2)
-    self:addChild(btn_close)
+    btn_close:setPosition(cc.p(winSize.width/2, winSize.height/2))
     btn_close:registerControlEventHandler(function()
         WinManager:DestroyWindow(self)
     end, 32)
-
+    self:addChild(btn_close, 1)
 end
 
 
@@ -68,13 +66,6 @@ end
 function MapWin:render_background(conf)
     self.bg = cc.Sprite:create(conf.img_bg)
     self:addChild(self.bg)
-
-    local p = self.bg:getAnchorPoint()
-    for k, v in pairs(p) do
-            print( "getAnchorPoint",  k, v)
-    end
-    print( "getPosition", self.bg:getPosition() )
-
 end
 
 
@@ -89,7 +80,6 @@ function MapWin:render_objects(conf)
         obj.arm = Armature:create(v.model, "idle")
         obj.arm:setPosition(v.x, v.y)
         self.bg:addChild(obj.arm)
-        print("ddddddddddd", v.id, v.x, v.y)
     end
 end
 
