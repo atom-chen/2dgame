@@ -6,8 +6,36 @@ local Armature      = require "core.armature"
 local config        = require "configs_grace"
 
 
--------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------
+local MapUnit = class("MapUnit")
+
+
+function MapUnit:ctor(conf)
+    self.proto = conf
+    self._root = cc.Node:create()
+
+    local arm = Armature:create(conf.model, "idle")
+    arm:setPosition(conf.x, conf.y)
+    self._root:addChild(arm)
+
+    local name = cc.Label:createWithSystemFont(conf.name,  "Arial", 12)
+    name:setPosition(30, 0)
+    name:setColor(cc.RED)
+    self._root:addChild(name)
+
+    local title = cc.Label:createWithSystemFont(conf.title, "Arial", 12)
+    title:setPosition(30, -20)
+    title:setColor(cc.GREEN)
+    self._root:addChild(title)
+
+    self._root:setPosition(conf.x + 100, conf.y + 100)
+end
+
+
+
+
+-------------------------------------------------------------------------------
 local MapWin        = class("MapWin", WinBase)
 
 
@@ -53,7 +81,7 @@ end
 function MapWin:ShowMap(mapid)
     local conf = config.GetScene(mapid)
     assert(conf, "MapWin:ShowMap:mapid" .. tostring(mapid))
-    
+
     self.mapid = mapid
 
     self:render_background(conf)
@@ -72,14 +100,9 @@ end
 function MapWin:render_objects(conf)
     self.objs = {}
     for _, v in pairs(config.GetSceneObjects(conf.id)) do
-        local obj = {
-            proto = v,
-        }
+        local obj = MapUnit:create(v)
         self.objs[v.id] = obj
-
-        obj.arm = Armature:create(v.model, "idle")
-        obj.arm:setPosition(v.x, v.y)
-        self.bg:addChild(obj.arm)
+        self.bg:addChild(obj._root)
     end
 end
 

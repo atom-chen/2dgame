@@ -258,6 +258,7 @@ function BattleWin:ctor(r)
     self._notice = notice
 
     ---------- for battle data --------------------------------
+
     -- 初始化所有战斗参与者
     self._result = r
     self._units = {}
