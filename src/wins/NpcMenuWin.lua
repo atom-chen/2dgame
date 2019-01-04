@@ -3,7 +3,11 @@ local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
 
-local config        = require "configs_grace"
+
+local PlayerQuest   = require "model.player_quest"
+
+
+local conf_quest    = require "configs_json.quest"
 
 
 -------------------------------------------------------------------------------
@@ -40,17 +44,25 @@ end
 -------------------------------------------------------------------------------
 
 function NpcMenuWin:Show(npcid)
+    local qs = {}
+    local quests = conf_quest.GetNpcQuests(npcid)
 
-    local conf = config.GetQuest(npcid)
-    
+    for _, q in pairs(quests or {}) do
+        if PlayerQuest.Acceptable(q) then
+            table.insert(qs, q)
+        end
+    end
+
     -- 寻找可以接的任务
-    
-    -- 寻找可由交的任务 
+
+    -- 寻找可由交的任务
 
     assert(conf, "NpcMenuWin:ShowMap:npcid" .. tostring(npcid))
 
     self.npcid = npcid
-   
+
+    -- 添加到列表框供选择
+
     return true
 end
 

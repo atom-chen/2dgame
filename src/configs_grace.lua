@@ -149,25 +149,6 @@ M.GetRefineSuper    = get_by__index(RefineSuper)
 M.GetRefineNormal   = get_by__index(RefineNormal)
 
 
-
---------------------------------------------------------------------------------
--- json
-
-local load_from_json = function(filename)
-    local f = io.input(filename)
-    local c = io.read("*a")
-    local t = json.decode(c)
-    f:close()
-    return t
-end
-
-
-local quest = load_from_json("src/configs_json/Quest.json")
-
-_configs.Quest = {}
-map_by__id(_configs.Quest, quest)
-M.GetQuest = get_by__id(_configs.Quest)
-
 --------------------------------------------------------------------------------
 
 

@@ -5,10 +5,10 @@
         "title" : "第一章",
         "desc"  : "击败大坏蛋",
         "commit" : "你果然是个人才",
-        "accept_id" : 1001,  
+        "accept_id" : 1001,
         "commit_id" : 1002,
         "conds" : [
-            { "type" : 1, "args" : [1,2,3] }    
+            { "type" : 1, "args" : [1,2,3] }
         ],
         "rewards" : [
             { "id" : 1001, "cnt" : 1 },
@@ -55,7 +55,7 @@
                 "task_gather" :  [
                     { "id": 1001, "cnt": 3 },
                     { "id": 1002, "cnt": 5 }
-                ]                
+                ]
             }
         ]
     }

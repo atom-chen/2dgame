@@ -191,3 +191,14 @@ cc.exports.Class = Class or
         return getmetatable(getmetatable(cls))
     end,
 }
+
+
+-------------------- another class --------------------
+
+zcg.LoadFromJson = function(filename)
+    local f = io.input(filename)
+    local c = io.read("*a")
+    local t = json.decode(c)
+    f:close()
+    return t
+end
