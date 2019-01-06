@@ -5,18 +5,20 @@ local Armature      = require "core.armature"
 
 local config        = require "configs_grace"
 
-
+local NpcMenuWin    = require "wins.NpcMenuWin"
 
 -------------------------------------------------------------------------------
 local MapUnit = class("MapUnit")
 
 
-function MapUnit:ctor(conf)
-    self.proto = conf
-    self._root = cc.Node:create()
+function MapUnit:ctor(conf, parent)
+    self.proto  = conf
+    self.parent = parent
+    self._root  = cc.Node:create()
 
     local arm = Armature:create(conf.model, "idle")
     arm:setPosition(conf.x, conf.y)
+    arm:EnableTouchEvent(handler(self, self.onTouch))
     self._root:addChild(arm)
 
     local name = cc.Label:createWithSystemFont(conf.name,  "Arial", 12)
@@ -32,6 +34,12 @@ function MapUnit:ctor(conf)
     self._root:setPosition(conf.x + 100, conf.y + 100)
 end
 
+function MapUnit:onTouch()
+    print("ontouch:", self.proto.name)
+    local menu  = NpcMenuWin:create()
+    menu:setPosition(100, 200)
+    self.parent:addChild(menu)
+end
 
 
 
@@ -100,7 +108,7 @@ end
 function MapWin:render_objects(conf)
     self.objs = {}
     for _, v in pairs(config.GetSceneObjects(conf.id)) do
-        local obj = MapUnit:create(v)
+        local obj = MapUnit:create(v, self)
         self.objs[v.id] = obj
         self.bg:addChild(obj._root)
     end

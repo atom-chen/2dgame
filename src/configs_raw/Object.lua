@@ -9,6 +9,7 @@ local data =
 		x = 20,
 		y = 20,
 		model = "caocao",
+		def_text = { "不要问我从哪里来", "我的故乡在远方", },
 	},
 
 	[2] = {
@@ -20,6 +21,7 @@ local data =
 		x = 80,
 		y = 80,
 		model = "caocao",
+		def_text = { "数组文字", "没文本", },
 	},
 
 	[3] = {
@@ -31,6 +33,7 @@ local data =
 		x = 140,
 		y = 140,
 		model = "caocao",
+		def_text = { "数组文字", "不知道", },
 	},
 
 	[4] = {
@@ -42,6 +45,7 @@ local data =
 		x = 200,
 		y = 200,
 		model = "caocao",
+		def_text = { "数组文字", },
 	},
 
 	[5] = {
@@ -53,6 +57,7 @@ local data =
 		x = 260,
 		y = 260,
 		model = "caocao",
+		def_text = { "11", },
 	},
 
 	[6] = {
@@ -64,6 +69,7 @@ local data =
 		x = 0,
 		y = 0,
 		model = "sunquan",
+		def_text = { "sunquan", },
 	},
 
 	[7] = {
@@ -75,6 +81,7 @@ local data =
 		x = 100,
 		y = 100,
 		model = "sunquan",
+		def_text = { "23", },
 	},
 
 	[8] = {
@@ -86,6 +93,7 @@ local data =
 		x = 200,
 		y = 200,
 		model = "sunquan",
+		def_text = {},
 	},
 
 	[9] = {
@@ -97,6 +105,7 @@ local data =
 		x = 300,
 		y = 300,
 		model = "sunquan",
+		def_text = { "sunquan", },
 	},
 
 }

@@ -3,27 +3,39 @@ local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
 
+local conf_quest    = require "configs_json.quest"
+local config        = require "configs_grace"
 
 local PlayerQuest   = require "model.player_quest"
-
-
-local conf_quest    = require "configs_json.quest"
-
 
 -------------------------------------------------------------------------------
 
 local NpcMenuWin    = class("NpcMenuWin", WinBase)
 
 
-function NpcMenuWin:ctor()
+function NpcMenuWin:ctor(...)
     WinBase.ctor(self)
+
+    print("fuck: NpcMenuWin", ...)
+
+    self:setContentSize(cc.size(200,120))
+
+    self._text = cc.Label:createWithSystemFont("1111111111111", "Arial", 20)
+    self._text:setColor(cc.RED)
+    self._text:setPosition(0, 0)
+    self:addChild(self._text)
 end
 
 
 ------------------------------ inhert from WinBase ----------------------------
 
 function NpcMenuWin:OnCreate(npcid)
-    self:Show(npcid)
+   -- local talk = cc
+  --  self.addChild()
+   -- self:Show(npcid)
+
+    print("fuck: NpcMenuWin, oncreate")
+
 end
 
 
@@ -44,16 +56,26 @@ end
 -------------------------------------------------------------------------------
 
 function NpcMenuWin:Show(npcid)
-    local qs = {}
-    local quests = conf_quest.GetNpcQuests(npcid)
+    local npcconf = config.GetObject(npcid)
+    if not npcconf then
+        return
+    end
 
-    for _, q in pairs(quests or {}) do
-        if PlayerQuest.Acceptable(q) then
-            table.insert(qs, q)
-        end
+    local n = #npcconf.def_text
+    if n > 0 then
+        n = math.random(n)
+        self._text:setString(npcconf.def_text[n])
     end
 
     -- 寻找可以接的任务
+    local qs = {}
+
+    local quests = conf_quest.GetNpcQuests(npcid)
+    for _, q in pairs(quests or {}) do
+        if PlayerQuest.Acceptable(q) then
+            table.insert(qs, {q.title, 1})
+        end
+    end
 
     -- 寻找可由交的任务
 
@@ -63,7 +85,6 @@ function NpcMenuWin:Show(npcid)
 
     -- 添加到列表框供选择
 
-    return true
 end
 
 

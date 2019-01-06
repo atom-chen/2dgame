@@ -54,4 +54,34 @@ function Armature:PlayHit()
 end
 
 
+function Armature:EnableTouchEvent(f)
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(handler(self, self.onTouchBegan), cc.Handler.EVENT_TOUCH_BEGAN)
+    listener:registerScriptHandler(handler(self, self.onTouchMoved), cc.Handler.EVENT_TOUCH_MOVED)
+    listener:registerScriptHandler(handler(self, self.onTouchEnded), cc.Handler.EVENT_TOUCH_ENDED)
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+
+    self.on_touch = f
+end
+
+
+function Armature:onTouchBegan(touch, event)
+    local s = self:getContentSize()
+    local r = cc.rect(0, 0, s.width, s.height)
+    local p = touch:getLocation()
+    return cc.rectContainsPoint(r, p)
+end
+
+function Armature:onTouchMoved(touch, event)
+end
+
+function Armature:onTouchEnded(touch, event)
+    if self.on_touch then
+        self.on_touch()
+    end
+end
+
+
+
 return Armature

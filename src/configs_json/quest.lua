@@ -12,7 +12,7 @@ local _npc_quests   = {}
 
 
 for _, v in pairs(_tab) do
-    M._quests[v.id] = v
+    _quests[v.id] = v
 
     local npcid = v.accept_id
     if not _npc_quests[npcid] then

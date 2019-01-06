@@ -19,5 +19,6 @@ local data =
 		},
 	},
 	level = { 3, 5, 7, 911, },
+	arr_txt = { "天地不仁", "以万物为", "刍狗", },
 }
 return data

@@ -1,9 +1,14 @@
 
 local conf_quest    = require "configs_json.quest"
 
+local const         = require "const"
+
+
 local _quests       = {}
 local PlayerQuest   = {}
 
+
+-------------------------------------------------------------------------------
 
 local new_quest = function(id)
     local q =
@@ -20,6 +25,17 @@ end
 -- 检测任务条件是否满足
 local quest_cond_check = function(cond)
 
+    if cond.type == const.CondiType_Lv then
+        -- do with cond.args
+    elseif cond.type == const.CondiType_Sex then
+
+    elseif cond.type == const.CondiType_DailyDur then
+
+    elseif cond.type == const.CondiType_WeeklyDur then
+
+    end
+
+    return true
 end
 
 
