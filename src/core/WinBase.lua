@@ -6,10 +6,10 @@ function WinBase:ctor()
     print("WinBase:ctor")
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
-    listener:registerScriptHandler(self.OnTouchBegan,       cc.Handler.EVENT_TOUCH_BEGAN)
-    listener:registerScriptHandler(self.OnTouchMoved,       cc.Handler.EVENT_TOUCH_MOVED)
-    listener:registerScriptHandler(self.OnTouchEnded,       cc.Handler.EVENT_TOUCH_ENDED)
-    listener:registerScriptHandler(self.OnTouchCancelled,   cc.Handler.EVENT_TOUCH_CANCELLED)
+    listener:registerScriptHandler(handler(self, self.OnTouchBegan),       cc.Handler.EVENT_TOUCH_BEGAN)
+    listener:registerScriptHandler(handler(self, self.OnTouchMoved),       cc.Handler.EVENT_TOUCH_MOVED)
+    listener:registerScriptHandler(handler(self, self.OnTouchEnded),       cc.Handler.EVENT_TOUCH_ENDED)
+    listener:registerScriptHandler(handler(self, self.OnTouchCancelled),   cc.Handler.EVENT_TOUCH_CANCELLED)
     local eventDispatcher = cc.Director:getInstance():getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 end
@@ -37,17 +37,26 @@ end
 
 --------------------------------------------------
 
-function WinBase:OnTouchBegan()
+function WinBase:OnTouchBegan(touch, event)
     return true
 end
 
-function WinBase:OnTouchMoved()
+function WinBase:OnTouchMoved(touch, event)
 end
 
-function WinBase:OnTouchEnded()
+function WinBase:OnTouchEnded(touch, event)
+    local s = self:getContentSize()
+    local r = cc.rect(0, 0, s.width, s.height)
+    local p = touch:getLocation()
+    local b =  cc.rectContainsPoint(r, p)
+    self:OnTouch(b)
 end
 
-function WinBase:OnTouchCancelled()
+function WinBase:OnTouchCancelled(touch, event)
+end
+
+-- innor: touch end point is in dialog rect
+function WinBase:OnTouch(innor)
 end
 
 

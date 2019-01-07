@@ -7,6 +7,7 @@ local windows =
     [4] = { "wins.BagWin",          },      -- 道具界面
     [5] = { "wins.HeroWin",         },      -- 英雄界面
     [6] = { "wins.MapWin",          },      -- 地图界面
+    [7] = { "wins.NpcMenuWin",      },      -- 地图Npc菜单界面
 }
 
 for _, v in pairs(windows) do

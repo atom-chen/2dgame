@@ -16,8 +16,6 @@ local NpcMenuWin    = class("NpcMenuWin", WinBase)
 function NpcMenuWin:ctor(...)
     WinBase.ctor(self)
 
-    print("fuck: NpcMenuWin", ...)
-
     self:setContentSize(cc.size(200,120))
 
     self._text = cc.Label:createWithSystemFont("1111111111111", "Arial", 20)
@@ -30,12 +28,7 @@ end
 ------------------------------ inhert from WinBase ----------------------------
 
 function NpcMenuWin:OnCreate(npcid)
-   -- local talk = cc
-  --  self.addChild()
-   -- self:Show(npcid)
-
-    print("fuck: NpcMenuWin, oncreate")
-
+    self:Show(npcid)
 end
 
 
@@ -51,6 +44,12 @@ end
 
 function NpcMenuWin:OnHiden()
     print("NpcMenuWin:OnHiden")
+end
+
+function NpcMenuWin:OnTouch(innor)
+    if not innor then
+        WinManager:ShowWindow(1, true)
+    end
 end
 
 -------------------------------------------------------------------------------

@@ -36,9 +36,7 @@ end
 
 function MapUnit:onTouch()
     print("ontouch:", self.proto.name)
-    local menu  = NpcMenuWin:create()
-    menu:setPosition(100, 200)
-    self.parent:addChild(menu)
+    WinManager:CreateWindow(7)
 end
 
 
