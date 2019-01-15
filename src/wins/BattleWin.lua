@@ -247,7 +247,7 @@ function BattleWin:ctor(r)
     btn_close:setPosition(cc.p(525, 275))
     self:addChild(btn_close)
     btn_close:registerControlEventHandler(function()
-        WinManager:DestroyWindow(self)
+        self:Close()
     end, 32)
 
      -- notice
@@ -440,8 +440,8 @@ end
 
 function BattleWin:OnBattleEnd()
     scheduler.Once(function()
-            WinManager:DestroyWindow(self)
-        end, 3)
+        self:Close()
+    end, 3)
 end
 
 

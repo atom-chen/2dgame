@@ -56,7 +56,7 @@ function MapWin:ctor()
     btn_close:setPreferredSize(btn_image:getPreferredSize())
     btn_close:setPosition(cc.p(winSize.width/2, winSize.height/2))
     btn_close:registerControlEventHandler(function()
-        WinManager:DestroyWindow(self)
+        self:Close()
     end, 32)
     self:addChild(btn_close, 1)
 end

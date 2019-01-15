@@ -60,7 +60,7 @@ end
 function NpcMenuWin:OnTouch(innor)
     print("NpcMenuWin:OnTouch", innor)
     if not innor then
-        WinManager:DestroyWindow(self)
+        self:Close()
     end
 end
 

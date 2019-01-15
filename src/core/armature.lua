@@ -76,7 +76,9 @@ function Armature:onTouchMoved(touch, event)
 end
 
 function Armature:onTouchEnded(touch, event)
-    _ = self.on_touch and self.on_touch()
+    if self.on_touch then
+        self.on_touch()
+    end
 end
 
 

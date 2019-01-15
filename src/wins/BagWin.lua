@@ -71,7 +71,7 @@ function ItemWin:ctor()
     btn_close:setPosition(cc.p(525, 275))
     self:addChild(btn_close)
     btn_close:registerControlEventHandler(function()
-        WinManager:DestroyWindow(self)
+        self:Close()
     end, 32)
 
     -- scrollview

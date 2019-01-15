@@ -34,6 +34,11 @@ function WinBase:OnDestroy()
     print("WinBase:OnDestroy")
 end
 
+--------------------------------------------------
+
+function WinBase:Close()
+    WinManager:DestroyWindow(self)
+end
 
 --------------------------------------------------
 
