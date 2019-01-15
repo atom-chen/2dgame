@@ -46,8 +46,8 @@ end
 
 function WinBase:OnTouchEnded(touch, event)
     local s = self:getContentSize()
-    local r = cc.rect(0, 0, s.width, s.height)
-    local p = touch:getLocation()
+    local p = self:convertToNodeSpace(touch:getLocation())
+    local r = cc.rect(-s.width/2, -s.height/2, s.width, s.height)
     local b =  cc.rectContainsPoint(r, p)
     self:OnTouch(b)
 end

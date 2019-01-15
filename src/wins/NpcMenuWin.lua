@@ -16,9 +16,19 @@ local NpcMenuWin    = class("NpcMenuWin", WinBase)
 function NpcMenuWin:ctor(...)
     WinBase.ctor(self)
 
-    self:setContentSize(cc.size(200,120))
+    local width  = 200
+    local height = 100
 
-    self._text = cc.Label:createWithSystemFont("1111111111111", "Arial", 20)
+    local bg = ccui.Scale9Sprite:create("bg_scale9.png")
+    bg:setCapInsets(cc.rect(6, 6, 52, 52))
+
+    -- bg:setContentSize(cc.size(display.width, display.height))
+    bg:setContentSize(cc.size(width, height))
+    self:addChild(bg)
+
+    self:setContentSize(cc.size(width, height))
+
+    self._text = cc.Label:createWithSystemFont("x", "Arial", 20)
     self._text:setColor(cc.RED)
     self._text:setPosition(0, 0)
     self:addChild(self._text)
@@ -27,8 +37,8 @@ end
 
 ------------------------------ inhert from WinBase ----------------------------
 
-function NpcMenuWin:OnCreate(npcid)
-    self:Show(npcid)
+function NpcMenuWin:OnCreate()
+    print("NpcMenuWin:OnCreate")
 end
 
 
@@ -37,8 +47,9 @@ function NpcMenuWin:OnDestroy()
 end
 
 
-function NpcMenuWin:OnShow()
+function NpcMenuWin:OnShow(npcid)
     print("NpcMenuWin:OnShow")
+    self:Show(npcid)
 end
 
 
@@ -47,8 +58,9 @@ function NpcMenuWin:OnHiden()
 end
 
 function NpcMenuWin:OnTouch(innor)
+    print("NpcMenuWin:OnTouch", innor)
     if not innor then
-        WinManager:ShowWindow(1, true)
+        WinManager:DestroyWindow(self)
     end
 end
 
@@ -76,9 +88,11 @@ function NpcMenuWin:Show(npcid)
         end
     end
 
-    -- 寻找可由交的任务
+    print("quest count", #qs)
 
-    assert(conf, "NpcMenuWin:ShowMap:npcid" .. tostring(npcid))
+
+    -- 寻找可由交的任务
+    -- assert(conf, "NpcMenuWin:ShowMap:npcid" .. tostring(npcid))
 
     self.npcid = npcid
 

@@ -20,6 +20,7 @@ function MapUnit:ctor(conf, parent)
     arm:setPosition(conf.x, conf.y)
     arm:EnableTouchEvent(handler(self, self.onTouch))
     self._root:addChild(arm)
+    self._arm = arm
 
     local name = cc.Label:createWithSystemFont(conf.name,  "Arial", 12)
     name:setPosition(30, 0)
@@ -35,8 +36,8 @@ function MapUnit:ctor(conf, parent)
 end
 
 function MapUnit:onTouch()
-    print("ontouch:", self.proto.name)
-    WinManager:CreateWindow(7)
+    print("ontouch:", self.proto.name, self.proto.id)
+    WinManager:CreateWindow(7, self.proto.id)
 end
 
 

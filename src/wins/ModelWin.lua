@@ -10,7 +10,7 @@ function ModelWin:ctor()
 
     -- 背景
     local bg = ccui.Scale9Sprite:create("bg_scale9.png")
-    -- bg:setCapInsets(CCRectMake(10, 10, 46, 34))
+    -- bg:setCapInsets(cc.rect(10, 10, 46, 34))
     bg:setContentSize(cc.size(display.width, display.height))
     self:addChild(bg)
 

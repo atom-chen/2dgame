@@ -67,10 +67,9 @@ end
 
 
 function Armature:onTouchBegan(touch, event)
-    local s = self:getContentSize()
-    local r = cc.rect(0, 0, s.width, s.height)
-    local p = touch:getLocation()
-    return cc.rectContainsPoint(r, p)
+    local p = self:convertToNodeSpace(touch:getLocation())
+    local b = self:getBoundingBox()
+    return cc.rectContainsPoint(b, p)
 end
 
 function Armature:onTouchMoved(touch, event)
@@ -81,7 +80,6 @@ function Armature:onTouchEnded(touch, event)
         self.on_touch()
     end
 end
-
 
 
 return Armature

@@ -67,7 +67,7 @@ function WinManager:CreateWindow(id, ...)
         self._win_whole[id] = win
         win:OnCreate(...)
     end
-    self:ShowWindow(win, true)
+    self:ShowWindow(win, true, ...)
     return win
 end
 
@@ -90,16 +90,16 @@ function WinManager:FindWindow(id)
 end
 
 
-function WinManager:ShowWindow(win, b)
+function WinManager:ShowWindow(win, b, ...)
     if type(win) == "number" then
         win = self:FindWindow(win)
     end
     if win then
         if b then
-            win:OnShow()
+            win:OnShow(...)
             win:setVisible(true)
         else
-            win:OnHiden()
+            win:OnHiden(...)
             win:setVisible(false)
         end
     end
