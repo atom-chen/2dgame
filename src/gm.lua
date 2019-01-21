@@ -1,9 +1,7 @@
 -- press 'z' will do this file
 
--- zcg.logTable(cc.Scheduler, "d:/a.txt")
-
-
--- zcg.logTable(debug.getregistry(), "d:/reg.txt")
+-- zcg.logTable(_G, "d:/g.txt")
+-- zcg.logTable(debug.getregistry(), "d:/reg.lua")
 -- print("+++", type(cc.Node), cc.Node[".isclass"])
 
 
