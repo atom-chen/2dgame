@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-˜
+í
 
 game.protomsg"#
 PlayerDataRequest
@@ -48,7 +48,7 @@ game.protomsg"#
 PlayerDataResponse
 acct (	Racct
 name (	Rname
-pid (Rpid
+pid (	Rpid
 sid (Rsid
 id (Rid
 level (Rlevel
@@ -161,4 +161,27 @@ error_code (R	errorCode"B
 error_code (R	errorCode
 result (Rresult"7
 HeroInfoUpdateResponse
-hero (2	.msg.HeroRherobproto3
+hero (2	.msg.HeroRhero"/
+	QuestData
+key (Rkey
+val (Rval"S
+	QuestInfo
+id (Rid
+task (Rtask"
+data (2.msg.QuestDataRdata"
+QuestListRequest";
+QuestListResponse&
+quests (2.msg.QuestInfoRquests">
+QuestOpRequest
+id (Rid
+op (Rop
+r (Rr"„
+QuestOpResponse
+id (Rid
+op (Rop
+r (Rr
+
+error_code (R	errorCode$
+quest (2.msg.QuestInfoRquest"5
+QuestUpdate&
+Quests (2.msg.QuestInfoRQuestsbproto3
