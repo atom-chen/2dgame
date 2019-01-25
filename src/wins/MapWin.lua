@@ -37,7 +37,7 @@ end
 
 function MapUnit:onTouch()
     print("ontouch:", self.proto.name, self.proto.id)
-    WinManager:CreateWindow(7, self.proto.id)
+    WinManager:CreateWindow("NpcMenuWin", self.proto.id)
 end
 
 

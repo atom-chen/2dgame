@@ -84,7 +84,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1600, -100)
     btn:addClickEventListener(function()
-        WinManager:CreateWindow(3)
+        WinManager:CreateWindow("ModelWin")
     end)
     -- BagWin
     local btn = ccui.Button:create("public_button_001.png")
@@ -94,7 +94,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1400, -100)
     btn:addClickEventListener(function()
-        WinManager:CreateWindow(4)
+        WinManager:CreateWindow("BagWin")
     end)
     -- HeroWin
     local btn = ccui.Button:create("public_button_001.png")
@@ -104,7 +104,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1200, -100)
     btn:addClickEventListener(function()
-        WinManager:CreateWindow(5)
+        WinManager:CreateWindow("HeroWin")
     end)
     -- 播放战斗
     local btn = ccui.Button:create("public_button_001.png")
@@ -144,19 +144,19 @@ function MainScene:ctor()
         local function btn_callback(ref, type)
             if type == ccui.TouchEventType.ended then
                 if i == 1 then
-                    WinManager:CreateWindow(1)
+                    WinManager:CreateWindow("ToolbarWin")
                 elseif i == 2 then
-                    WinManager:DestroyWindow(1)
+                    WinManager:DestroyWindow("ToolbarWin")
                 elseif i == 3 then
-                    WinManager:ShowWindow(1, true)
+                    WinManager:ShowWindow("ToolbarWin", true)
                 elseif i == 4 then
-                    local win = WinManager:FindWindow(1)
+                    local win = WinManager:FindWindow("ToolbarWin")
                     if win then WinManager:ShowWindow(win, false) end
                 else
 --                    local DebugWin = require "wins.DebugWin"
 --                    local dbg = DebugWin:create("preboy.ZHANG")
 --                    self:addChild(dbg)
-                    WinManager:CreateWindow(6, 2001)
+                    WinManager:CreateWindow("MapWin", 2001)
                 end
             end
         end

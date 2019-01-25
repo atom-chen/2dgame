@@ -1,19 +1,20 @@
 
 local windows =
 {
-    [1] = { "wins.ToolbarWin",      },      -- 这个东西迟早要被替换的
-    [2] = { "wins.BattleWin",       },      -- 战斗界面： 播放战斗
-    [3] = { "wins.ModelWin",        },      -- 模型列表： 查看所选择的模型以及技能效果
-    [4] = { "wins.BagWin",          },      -- 道具界面
-    [5] = { "wins.HeroWin",         },      -- 英雄界面
-    [6] = { "wins.MapWin",          },      -- 地图界面
-    [7] = { "wins.NpcMenuWin",      },      -- 地图Npc菜单界面
+    ToolbarWin      = {},   -- 这个东西迟早要被替换的
+    BattleWin       = {},   -- 战斗界面： 播放战斗
+    ModelWin        = {},   -- 模型列表： 查看所选择的模型以及技能效果
+    BagWin          = {},   -- 道具界面
+    HeroWin         = {},   -- 英雄界面
+    MapWin          = {},   -- 地图界面
+    NpcMenuWin      = {},   -- 地图Npc菜单界面
 }
 
-for _, v in pairs(windows) do
-    v[2] = require(v[1])
+for k, v in pairs(windows) do
+    local path = "wins." .. k
+    v[1] = path
+    v[2] = require(path)
 end
-
 
 cc.exports.WinManager =
 {
@@ -44,6 +45,8 @@ end
 
 function WinManager:_release_window(id)
     local v = windows[id]
+    if not v then return end
+
     local s = v[1]
     package.loaded[s] = nil
     v[2] = require(s)
@@ -67,15 +70,18 @@ function WinManager:CreateWindow(id, ...)
         self._win_whole[id] = win
         win:OnCreate(...)
     end
+
     self:ShowWindow(win, true, ...)
+
     return win
 end
 
 
 function WinManager:DestroyWindow(win)
-    if type(win) == "number" then
+    if type(win) == "string" then
         win = self:FindWindow(win)
     end
+
     if win then
         self:ShowWindow(win, false)
         win:OnDestroy()
@@ -91,7 +97,7 @@ end
 
 
 function WinManager:ShowWindow(win, b, ...)
-    if type(win) == "number" then
+    if type(win) == "string" then
         win = self:FindWindow(win)
     end
     if win then
