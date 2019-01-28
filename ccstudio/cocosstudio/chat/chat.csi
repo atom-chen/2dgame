@@ -1,0 +1,21 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="chat" Type="Plist" ID="a419ce82-aa44-45a4-b008-37be20d8d427" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="chat/liaotian-biaoqing.png" />
+      <FilePathData Path="chat/liaotian-biaoqingdi.png" />
+      <FilePathData Path="chat/liaotian-biaoqingfenge.png" />
+      <FilePathData Path="chat/liaotian-fengexian.png" />
+      <FilePathData Path="chat/liaotian-gonghui.png" />
+      <FilePathData Path="chat/liaotian-kuang.png" />
+      <FilePathData Path="chat/liaotian-qipao.png" />
+      <FilePathData Path="chat/liaotian-shijie.png" />
+      <FilePathData Path="chat/liaotian-suopin1.png" />
+      <FilePathData Path="chat/liaotian-suopin2.png" />
+      <FilePathData Path="chat/liaotian-zidi1.png" />
+      <FilePathData Path="chat/liaotian-zidi2.png" />
+      <FilePathData Path="chat/liaotian-zidi3.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

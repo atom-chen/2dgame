@@ -1,0 +1,28 @@
+<Solution>
+  <PropertyGroup Name="2dgame" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="chat">
+          <PlistInfo Name="chat.csi" Type="Plist" />
+          <Image Name="liaotian-biaoqing.png" />
+          <Image Name="liaotian-biaoqingdi.png" />
+          <Image Name="liaotian-biaoqingfenge.png" />
+          <Image Name="liaotian-fengexian.png" />
+          <Image Name="liaotian-gonghui.png" />
+          <Image Name="liaotian-kuang.png" />
+          <Image Name="liaotian-qipao.png" />
+          <Image Name="liaotian-shijie.png" />
+          <Image Name="liaotian-suopin1.png" />
+          <Image Name="liaotian-suopin2.png" />
+          <Image Name="liaotian-zidi1.png" />
+          <Image Name="liaotian-zidi2.png" />
+          <Image Name="liaotian-zidi3.png" />
+        </Folder>
+        <Folder Name="layer">
+          <Project Name="chat.csd" Type="Layer" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>chat/liaotian-biaoqing.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{110,608},{38,38}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{38,38}</string>
+			</dict>
+			<key>chat/liaotian-biaoqingdi.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,608},{78,74}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,74}</string>
+			</dict>
+			<key>chat/liaotian-biaoqingfenge.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{41,764},{2,89}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{2,89}</string>
+			</dict>
+			<key>chat/liaotian-fengexian.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{41,762},{166,2}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{166,2}</string>
+			</dict>
+			<key>chat/liaotian-gonghui.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,773},{42,65}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{42,65}</string>
+			</dict>
+			<key>chat/liaotian-kuang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{568,608}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{568,608}</string>
+			</dict>
+			<key>chat/liaotian-qipao.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,686},{87,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{87,41}</string>
+			</dict>
+			<key>chat/liaotian-shijie.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{41,686},{42,55}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{42,55}</string>
+			</dict>
+			<key>chat/liaotian-suopin1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{83,676},{29,30}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{29,30}</string>
+			</dict>
+			<key>chat/liaotian-suopin2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{83,706},{29,30}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{29,30}</string>
+			</dict>
+			<key>chat/liaotian-zidi1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{74,651},{50,25}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{50,25}</string>
+			</dict>
+			<key>chat/liaotian-zidi2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{74,608},{43,36}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{43,36}</string>
+			</dict>
+			<key>chat/liaotian-zidi3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{41,741},{73,21}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{73,21}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>chat.png</string>
+			<key>realTextureFileName</key>
+			<string>chat.png</string>
+			<key>size</key>
+			<string>{568,838}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>568</integer>
+			<key>height</key>
+			<integer>838</integer>
+		</dict>
+	</dict>
+</plist>
