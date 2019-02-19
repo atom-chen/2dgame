@@ -1,4 +1,8 @@
 
+local config        = require "configs_grace"
+local MapUnit       = require "wins.MapUnit"
+-- local NpcMenuWin    = require "wins.NpcMenuWin"
+
 local WinManager = require "core.WinManager"
 
 
@@ -14,6 +18,8 @@ function MainScene:ctor()
     layer:setContentSize(bg_size)
     layer:setPosition(bg_size.width/2, bg_size.height/2)
     layer:addTo(self)
+
+    self._layer = layer
 
     -- 加触摸事件
     local beginLocation = nil
@@ -178,6 +184,7 @@ function MainScene:ctor()
     layer:addChild(sf1)
 
     WinManager:AttachScene(self)
+
 end
 
 
@@ -188,6 +195,7 @@ function MainScene:OnEnter()
         id = 2
     })
 
+    self:render_world()
 end
 
 
@@ -195,4 +203,19 @@ function MainScene:OnLeave()
     print("MainScene:OnLeave")
 end
 
+-------------------------------------------------------------------------------
+function MainScene:render_world()
+    -- todo
+
+    self.objs = {}
+    for _, v in pairs(config.GetSceneObjects(2000)) do
+        local obj = MapUnit:create(v, self)
+        self.objs[v.id] = obj
+        self._layer:addChild(obj._root)
+    end
+
+end
+
+
+-------------------------------------------------------------------------------
 return MainScene
