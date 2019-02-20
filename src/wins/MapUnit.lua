@@ -36,7 +36,21 @@ end
 
 function MapUnit:onTouch()
     print("ontouch:", self.proto.name, self.proto.id)
-    WinManager:CreateWindow("NpcMenuWin", self.proto.id)
+
+    if self.proto.type == 1 then
+        -- 小地图入口
+        WinManager:CreateWindow("MapWin", self.proto.param1[1])
+    elseif self.proto.type == 2 then
+        -- NPC
+        WinManager:CreateWindow("NpcMenuWin", self.proto.id)
+    elseif self.proto.type == 3 then
+        -- 怪物
+    elseif self.proto.type == 4 then
+        -- 采集物
+    else
+        -- 装饰物件
+    end
+
 end
 
 

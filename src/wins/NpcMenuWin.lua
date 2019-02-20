@@ -72,10 +72,10 @@ function NpcMenuWin:Show(npcid)
         return
     end
 
-    local n = #npcconf.def_text
+    local n = #npcconf.param3
     if n > 0 then
         n = math.random(n)
-        self._text:setString(npcconf.def_text[n])
+        self._text:setString(npcconf.param3[n])
     end
 
     -- 寻找可以接的任务

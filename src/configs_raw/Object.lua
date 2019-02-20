@@ -4,117 +4,135 @@ local data =
 		id = 1001,
 		name = "枯木老人",
 		title = "我是一个NPC",
-		type = 1,
+		type = 2,
 		sceneId = 2001,
 		limit_lv = 1,
 		x = 20,
 		y = 20,
 		model = "caocao",
-		def_text = { "不要问我从哪里来", "我的故乡在远方", },
+		param1 = 0,
+		param2 = {},
+		param3 = { "不要问我从哪里来", "我的故乡在远方", },
 	},
 
 	[2] = {
 		id = 1002,
 		name = "衍悔",
 		title = "NPC_得道高僧",
-		type = 1,
+		type = 2,
 		sceneId = 2002,
 		limit_lv = 10,
 		x = 80,
 		y = 80,
 		model = "caocao",
-		def_text = { "数组文字", "没文本", },
+		param1 = 0,
+		param2 = {},
+		param3 = { "数组文字", "没文本", },
 	},
 
 	[3] = {
 		id = 1003,
 		name = "百晓生",
 		title = "NPC_江湖记者",
-		type = 1,
+		type = 2,
 		sceneId = 2003,
 		limit_lv = 10,
 		x = 140,
 		y = 140,
 		model = "caocao",
-		def_text = { "数组文字", "不知道", },
+		param1 = 0,
+		param2 = {},
+		param3 = { "数组文字", "不知道", },
 	},
 
 	[4] = {
 		id = 1004,
 		name = "万事通",
 		title = "NPC_消息贩子",
-		type = 1,
+		type = 2,
 		sceneId = 2004,
 		limit_lv = 2,
 		x = 200,
 		y = 200,
 		model = "caocao",
-		def_text = { "数组文字", },
+		param1 = 0,
+		param2 = {},
+		param3 = { "数组文字", },
 	},
 
 	[5] = {
 		id = 1005,
 		name = "愚公",
 		title = "我是怪物",
-		type = 2,
+		type = 3,
 		sceneId = 2005,
 		limit_lv = 1,
 		x = 260,
 		y = 260,
 		model = "caocao",
-		def_text = { "11", },
+		param1 = 0,
+		param2 = {},
+		param3 = {},
 	},
 
 	[6] = {
 		id = 1006,
 		name = "状元郎",
 		title = "我是怪物",
-		type = 2,
+		type = 3,
 		sceneId = 2006,
 		limit_lv = 2,
 		x = 0,
 		y = 0,
 		model = "sunquan",
-		def_text = { "sunquan", },
+		param1 = 0,
+		param2 = {},
+		param3 = {},
 	},
 
 	[7] = {
 		id = 1007,
 		name = "算死天",
 		title = "我是可采集的",
-		type = 3,
+		type = 4,
 		sceneId = 2007,
 		limit_lv = 1,
 		x = 100,
 		y = 100,
 		model = "sunquan",
-		def_text = { "23", },
+		param1 = 0,
+		param2 = {},
+		param3 = {},
 	},
 
 	[8] = {
 		id = 1008,
 		name = "日破天",
 		title = "我是可采集的",
-		type = 3,
+		type = 4,
 		sceneId = 2008,
 		limit_lv = 2,
 		x = 200,
 		y = 200,
 		model = "sunquan",
-		def_text = {},
+		param1 = 0,
+		param2 = {},
+		param3 = {},
 	},
 
 	[9] = {
 		id = 1009,
 		name = "叶倾城",
 		title = "我是未定义类型的",
-		type = 4,
+		type = 0,
 		sceneId = 2009,
 		limit_lv = 1,
 		x = 300,
 		y = 300,
 		model = "sunquan",
-		def_text = { "sunquan", },
+		param1 = 0,
+		param2 = {},
+		param3 = {},
 	},
 
 	[10] = {
@@ -127,7 +145,9 @@ local data =
 		x = 0,
 		y = 0,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2001,
+		param2 = {},
+		param3 = {},
 	},
 
 	[11] = {
@@ -140,7 +160,9 @@ local data =
 		x = 30,
 		y = 30,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2002,
+		param2 = {},
+		param3 = {},
 	},
 
 	[12] = {
@@ -153,7 +175,9 @@ local data =
 		x = 60,
 		y = 60,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2003,
+		param2 = {},
+		param3 = {},
 	},
 
 	[13] = {
@@ -166,7 +190,9 @@ local data =
 		x = 90,
 		y = 90,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2004,
+		param2 = {},
+		param3 = {},
 	},
 
 	[14] = {
@@ -179,7 +205,9 @@ local data =
 		x = 120,
 		y = 120,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2005,
+		param2 = {},
+		param3 = {},
 	},
 
 	[15] = {
@@ -192,7 +220,9 @@ local data =
 		x = 150,
 		y = 150,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2006,
+		param2 = {},
+		param3 = {},
 	},
 
 	[16] = {
@@ -205,7 +235,9 @@ local data =
 		x = 180,
 		y = 180,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2007,
+		param2 = {},
+		param3 = {},
 	},
 
 	[17] = {
@@ -218,7 +250,9 @@ local data =
 		x = 210,
 		y = 210,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2008,
+		param2 = {},
+		param3 = {},
 	},
 
 	[18] = {
@@ -231,7 +265,9 @@ local data =
 		x = 240,
 		y = 240,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2009,
+		param2 = {},
+		param3 = {},
 	},
 
 	[19] = {
@@ -244,7 +280,9 @@ local data =
 		x = 270,
 		y = 270,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2010,
+		param2 = {},
+		param3 = {},
 	},
 
 	[20] = {
@@ -257,7 +295,9 @@ local data =
 		x = 300,
 		y = 300,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2011,
+		param2 = {},
+		param3 = {},
 	},
 
 	[21] = {
@@ -270,7 +310,9 @@ local data =
 		x = 330,
 		y = 330,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2012,
+		param2 = {},
+		param3 = {},
 	},
 
 	[22] = {
@@ -283,7 +325,9 @@ local data =
 		x = 360,
 		y = 360,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2013,
+		param2 = {},
+		param3 = {},
 	},
 
 	[23] = {
@@ -296,7 +340,9 @@ local data =
 		x = 390,
 		y = 390,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2014,
+		param2 = {},
+		param3 = {},
 	},
 
 	[24] = {
@@ -309,7 +355,9 @@ local data =
 		x = 420,
 		y = 420,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2015,
+		param2 = {},
+		param3 = {},
 	},
 
 	[25] = {
@@ -322,7 +370,9 @@ local data =
 		x = 450,
 		y = 450,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2016,
+		param2 = {},
+		param3 = {},
 	},
 
 	[26] = {
@@ -335,7 +385,9 @@ local data =
 		x = 480,
 		y = 480,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2017,
+		param2 = {},
+		param3 = {},
 	},
 
 	[27] = {
@@ -348,7 +400,9 @@ local data =
 		x = 510,
 		y = 510,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2018,
+		param2 = {},
+		param3 = {},
 	},
 
 	[28] = {
@@ -361,7 +415,9 @@ local data =
 		x = 540,
 		y = 540,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2019,
+		param2 = {},
+		param3 = {},
 	},
 
 	[29] = {
@@ -374,7 +430,9 @@ local data =
 		x = 570,
 		y = 570,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2020,
+		param2 = {},
+		param3 = {},
 	},
 
 	[30] = {
@@ -387,7 +445,9 @@ local data =
 		x = 600,
 		y = 600,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2021,
+		param2 = {},
+		param3 = {},
 	},
 
 	[31] = {
@@ -400,7 +460,9 @@ local data =
 		x = 630,
 		y = 630,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2022,
+		param2 = {},
+		param3 = {},
 	},
 
 	[32] = {
@@ -413,7 +475,9 @@ local data =
 		x = 660,
 		y = 660,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2023,
+		param2 = {},
+		param3 = {},
 	},
 
 	[33] = {
@@ -426,7 +490,9 @@ local data =
 		x = 690,
 		y = 690,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2024,
+		param2 = {},
+		param3 = {},
 	},
 
 	[34] = {
@@ -439,7 +505,9 @@ local data =
 		x = 720,
 		y = 720,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2025,
+		param2 = {},
+		param3 = {},
 	},
 
 	[35] = {
@@ -452,7 +520,9 @@ local data =
 		x = 750,
 		y = 750,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2026,
+		param2 = {},
+		param3 = {},
 	},
 
 	[36] = {
@@ -465,7 +535,9 @@ local data =
 		x = 780,
 		y = 780,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2027,
+		param2 = {},
+		param3 = {},
 	},
 
 	[37] = {
@@ -478,7 +550,9 @@ local data =
 		x = 810,
 		y = 810,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2028,
+		param2 = {},
+		param3 = {},
 	},
 
 	[38] = {
@@ -491,7 +565,9 @@ local data =
 		x = 840,
 		y = 840,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2029,
+		param2 = {},
+		param3 = {},
 	},
 
 	[39] = {
@@ -504,7 +580,9 @@ local data =
 		x = 870,
 		y = 870,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2030,
+		param2 = {},
+		param3 = {},
 	},
 
 	[40] = {
@@ -517,7 +595,9 @@ local data =
 		x = 900,
 		y = 900,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2031,
+		param2 = {},
+		param3 = {},
 	},
 
 	[41] = {
@@ -530,7 +610,9 @@ local data =
 		x = 930,
 		y = 930,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2032,
+		param2 = {},
+		param3 = {},
 	},
 
 	[42] = {
@@ -543,7 +625,9 @@ local data =
 		x = 960,
 		y = 960,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2033,
+		param2 = {},
+		param3 = {},
 	},
 
 	[43] = {
@@ -556,7 +640,9 @@ local data =
 		x = 990,
 		y = 990,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2034,
+		param2 = {},
+		param3 = {},
 	},
 
 	[44] = {
@@ -569,7 +655,9 @@ local data =
 		x = 1020,
 		y = 1020,
 		model = "sunquan",
-		def_text = {},
+		param1 = 2035,
+		param2 = {},
+		param3 = {},
 	},
 
 }

@@ -72,6 +72,9 @@ function MainScene:ctor()
         beginLocation = nil
         beginX = nil
         beginY = nil
+
+        local p = layer:convertToNodeSpace(touch:getLocation())
+        print("currLocation:", p.x, p.y)
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
@@ -80,7 +83,7 @@ function MainScene:ctor()
     listener:registerScriptHandler(onTouchEnded, cc.Handler.EVENT_TOUCH_ENDED)
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
-    
+
     --------------------------- GM功能按钮 ---------------------------
     -- HeroModel
     local btn = ccui.Button:create("public_button_001.png")
