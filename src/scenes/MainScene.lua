@@ -208,8 +208,6 @@ end
 
 -------------------------------------------------------------------------------
 function MainScene:render_world()
-    -- todo
-
     self.objs = {}
     for _, v in pairs(config.GetSceneObjects(2000)) do
         local obj = MapUnit:create(v, self)

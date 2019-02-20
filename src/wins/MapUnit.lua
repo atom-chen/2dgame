@@ -16,7 +16,7 @@ function MapUnit:ctor(conf, parent)
     self._root  = cc.Node:create()
 
     local arm = Armature:create(conf.model, "idle")
-    arm:setPosition(conf.x, conf.y)
+    -- arm:setPosition(conf.x, conf.y)
     arm:EnableTouchEvent(handler(self, self.onTouch))
     self._root:addChild(arm)
     self._arm = arm
@@ -39,7 +39,7 @@ function MapUnit:onTouch()
 
     if self.proto.type == 1 then
         -- 小地图入口
-        WinManager:CreateWindow("MapWin", self.proto.param1[1])
+        WinManager:CreateWindow("MapWin", self.proto.param1)
     elseif self.proto.type == 2 then
         -- NPC
         WinManager:CreateWindow("NpcMenuWin", self.proto.id)

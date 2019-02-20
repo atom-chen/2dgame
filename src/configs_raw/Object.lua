@@ -136,14 +136,14 @@ local data =
 	},
 
 	[10] = {
-		id = 1100,
-		name = "巴蜀",
+		id = 1101,
+		name = "峨眉山",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 1,
-		x = 0,
-		y = 0,
+		x = -544,
+		y = -153,
 		model = "sunquan",
 		param1 = 2001,
 		param2 = {},
@@ -151,14 +151,14 @@ local data =
 	},
 
 	[11] = {
-		id = 1101,
-		name = "峨眉山",
+		id = 1102,
+		name = "青城山",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 1,
-		x = 30,
-		y = 30,
+		x = -739,
+		y = 67,
 		model = "sunquan",
 		param1 = 2002,
 		param2 = {},
@@ -166,14 +166,14 @@ local data =
 	},
 
 	[12] = {
-		id = 1102,
-		name = "青城山",
+		id = 1103,
+		name = "巫山",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 1,
-		x = 60,
-		y = 60,
+		x = -215,
+		y = -39,
 		model = "sunquan",
 		param1 = 2003,
 		param2 = {},
@@ -181,14 +181,14 @@ local data =
 	},
 
 	[13] = {
-		id = 1103,
-		name = "巫山",
+		id = 1104,
+		name = "神女峰",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 1,
-		x = 90,
-		y = 90,
+		x = -751,
+		y = 315,
 		model = "sunquan",
 		param1 = 2004,
 		param2 = {},
@@ -196,14 +196,14 @@ local data =
 	},
 
 	[14] = {
-		id = 1104,
-		name = "神女峰",
+		id = 1105,
+		name = "大理",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 1,
-		x = 120,
-		y = 120,
+		x = -527,
+		y = -241,
 		model = "sunquan",
 		param1 = 2005,
 		param2 = {},
@@ -211,14 +211,14 @@ local data =
 	},
 
 	[15] = {
-		id = 1105,
-		name = "大理",
+		id = 1106,
+		name = "烟雨楼",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 1,
-		x = 150,
-		y = 150,
+		x = 1168,
+		y = -83,
 		model = "sunquan",
 		param1 = 2006,
 		param2 = {},
@@ -226,14 +226,14 @@ local data =
 	},
 
 	[16] = {
-		id = 1106,
-		name = "烟雨楼",
+		id = 1107,
+		name = "西湖",
 		title = "",
 		type = 1,
 		sceneId = 2000,
-		limit_lv = 1,
-		x = 180,
-		y = 180,
+		limit_lv = 10,
+		x = 395,
+		y = 224,
 		model = "sunquan",
 		param1 = 2007,
 		param2 = {},
@@ -241,14 +241,14 @@ local data =
 	},
 
 	[17] = {
-		id = 1107,
-		name = "西湖",
+		id = 1108,
+		name = "扬州",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 10,
-		x = 210,
-		y = 210,
+		x = 608,
+		y = -377,
 		model = "sunquan",
 		param1 = 2008,
 		param2 = {},
@@ -256,14 +256,14 @@ local data =
 	},
 
 	[18] = {
-		id = 1108,
-		name = "扬州",
+		id = 1109,
+		name = "京城",
 		title = "",
 		type = 1,
 		sceneId = 2000,
 		limit_lv = 10,
-		x = 240,
-		y = 240,
+		x = 1269,
+		y = 53,
 		model = "sunquan",
 		param1 = 2009,
 		param2 = {},
@@ -271,21 +271,6 @@ local data =
 	},
 
 	[19] = {
-		id = 1109,
-		name = "金陵",
-		title = "",
-		type = 1,
-		sceneId = 2000,
-		limit_lv = 10,
-		x = 270,
-		y = 270,
-		model = "sunquan",
-		param1 = 2010,
-		param2 = {},
-		param3 = {},
-	},
-
-	[20] = {
 		id = 1110,
 		name = "洛阳",
 		title = "",
@@ -295,12 +280,12 @@ local data =
 		x = 300,
 		y = 300,
 		model = "sunquan",
-		param1 = 2011,
+		param1 = 2010,
 		param2 = {},
 		param3 = {},
 	},
 
-	[21] = {
+	[20] = {
 		id = 1111,
 		name = "长安",
 		title = "",
@@ -310,12 +295,12 @@ local data =
 		x = 330,
 		y = 330,
 		model = "sunquan",
-		param1 = 2012,
+		param1 = 2011,
 		param2 = {},
 		param3 = {},
 	},
 
-	[22] = {
+	[21] = {
 		id = 1112,
 		name = "武当山",
 		title = "",
@@ -325,12 +310,12 @@ local data =
 		x = 360,
 		y = 360,
 		model = "sunquan",
-		param1 = 2013,
+		param1 = 2012,
 		param2 = {},
 		param3 = {},
 	},
 
-	[23] = {
+	[22] = {
 		id = 1113,
 		name = "少林寺",
 		title = "",
@@ -340,12 +325,12 @@ local data =
 		x = 390,
 		y = 390,
 		model = "sunquan",
-		param1 = 2014,
+		param1 = 2013,
 		param2 = {},
 		param3 = {},
 	},
 
-	[24] = {
+	[23] = {
 		id = 1114,
 		name = "太湖",
 		title = "",
@@ -355,12 +340,12 @@ local data =
 		x = 420,
 		y = 420,
 		model = "sunquan",
-		param1 = 2015,
+		param1 = 2014,
 		param2 = {},
 		param3 = {},
 	},
 
-	[25] = {
+	[24] = {
 		id = 1115,
 		name = "昆仑山",
 		title = "",
@@ -370,12 +355,12 @@ local data =
 		x = 450,
 		y = 450,
 		model = "sunquan",
-		param1 = 2016,
+		param1 = 2015,
 		param2 = {},
 		param3 = {},
 	},
 
-	[26] = {
+	[25] = {
 		id = 1116,
 		name = "天山",
 		title = "",
@@ -385,12 +370,12 @@ local data =
 		x = 480,
 		y = 480,
 		model = "sunquan",
-		param1 = 2017,
+		param1 = 2016,
 		param2 = {},
 		param3 = {},
 	},
 
-	[27] = {
+	[26] = {
 		id = 1117,
 		name = "波斯",
 		title = "",
@@ -400,12 +385,12 @@ local data =
 		x = 510,
 		y = 510,
 		model = "sunquan",
-		param1 = 2018,
+		param1 = 2017,
 		param2 = {},
 		param3 = {},
 	},
 
-	[28] = {
+	[27] = {
 		id = 1118,
 		name = "西夏",
 		title = "",
@@ -415,12 +400,12 @@ local data =
 		x = 540,
 		y = 540,
 		model = "sunquan",
-		param1 = 2019,
+		param1 = 2018,
 		param2 = {},
 		param3 = {},
 	},
 
-	[29] = {
+	[28] = {
 		id = 1119,
 		name = "精绝城",
 		title = "",
@@ -430,12 +415,12 @@ local data =
 		x = 570,
 		y = 570,
 		model = "sunquan",
-		param1 = 2020,
+		param1 = 2019,
 		param2 = {},
 		param3 = {},
 	},
 
-	[30] = {
+	[29] = {
 		id = 1120,
 		name = "楼兰",
 		title = "",
@@ -445,12 +430,12 @@ local data =
 		x = 600,
 		y = 600,
 		model = "sunquan",
-		param1 = 2021,
+		param1 = 2020,
 		param2 = {},
 		param3 = {},
 	},
 
-	[31] = {
+	[30] = {
 		id = 1121,
 		name = "敦煌",
 		title = "",
@@ -460,12 +445,12 @@ local data =
 		x = 630,
 		y = 630,
 		model = "sunquan",
-		param1 = 2022,
+		param1 = 2021,
 		param2 = {},
 		param3 = {},
 	},
 
-	[32] = {
+	[31] = {
 		id = 1122,
 		name = "玉门关",
 		title = "",
@@ -475,12 +460,12 @@ local data =
 		x = 660,
 		y = 660,
 		model = "sunquan",
-		param1 = 2023,
+		param1 = 2022,
 		param2 = {},
 		param3 = {},
 	},
 
-	[33] = {
+	[32] = {
 		id = 1123,
 		name = "塞外",
 		title = "",
@@ -490,12 +475,12 @@ local data =
 		x = 690,
 		y = 690,
 		model = "sunquan",
-		param1 = 2024,
+		param1 = 2023,
 		param2 = {},
 		param3 = {},
 	},
 
-	[34] = {
+	[33] = {
 		id = 1124,
 		name = "突厥部落",
 		title = "",
@@ -505,12 +490,12 @@ local data =
 		x = 720,
 		y = 720,
 		model = "sunquan",
-		param1 = 2025,
+		param1 = 2024,
 		param2 = {},
 		param3 = {},
 	},
 
-	[35] = {
+	[34] = {
 		id = 1125,
 		name = "阴山",
 		title = "",
@@ -520,12 +505,12 @@ local data =
 		x = 750,
 		y = 750,
 		model = "sunquan",
-		param1 = 2026,
+		param1 = 2025,
 		param2 = {},
 		param3 = {},
 	},
 
-	[36] = {
+	[35] = {
 		id = 1126,
 		name = "龙门",
 		title = "",
@@ -535,12 +520,12 @@ local data =
 		x = 780,
 		y = 780,
 		model = "sunquan",
-		param1 = 2027,
+		param1 = 2026,
 		param2 = {},
 		param3 = {},
 	},
 
-	[37] = {
+	[36] = {
 		id = 1127,
 		name = "天池",
 		title = "",
@@ -550,12 +535,12 @@ local data =
 		x = 810,
 		y = 810,
 		model = "sunquan",
-		param1 = 2028,
+		param1 = 2027,
 		param2 = {},
 		param3 = {},
 	},
 
-	[38] = {
+	[37] = {
 		id = 1128,
 		name = "天涯海阁",
 		title = "",
@@ -565,12 +550,12 @@ local data =
 		x = 840,
 		y = 840,
 		model = "sunquan",
-		param1 = 2029,
+		param1 = 2028,
 		param2 = {},
 		param3 = {},
 	},
 
-	[39] = {
+	[38] = {
 		id = 1129,
 		name = "南海诸岛",
 		title = "",
@@ -580,12 +565,12 @@ local data =
 		x = 870,
 		y = 870,
 		model = "sunquan",
-		param1 = 2030,
+		param1 = 2029,
 		param2 = {},
 		param3 = {},
 	},
 
-	[40] = {
+	[39] = {
 		id = 1130,
 		name = "桃花岛",
 		title = "",
@@ -595,12 +580,12 @@ local data =
 		x = 900,
 		y = 900,
 		model = "sunquan",
-		param1 = 2031,
+		param1 = 2030,
 		param2 = {},
 		param3 = {},
 	},
 
-	[41] = {
+	[40] = {
 		id = 1131,
 		name = "山海关",
 		title = "",
@@ -610,12 +595,12 @@ local data =
 		x = 930,
 		y = 930,
 		model = "sunquan",
-		param1 = 2032,
+		param1 = 2031,
 		param2 = {},
 		param3 = {},
 	},
 
-	[42] = {
+	[41] = {
 		id = 1132,
 		name = "倭寇岛",
 		title = "",
@@ -625,12 +610,12 @@ local data =
 		x = 960,
 		y = 960,
 		model = "sunquan",
-		param1 = 2033,
+		param1 = 2032,
 		param2 = {},
 		param3 = {},
 	},
 
-	[43] = {
+	[42] = {
 		id = 1133,
 		name = "风凌古渡",
 		title = "",
@@ -640,12 +625,12 @@ local data =
 		x = 990,
 		y = 990,
 		model = "sunquan",
-		param1 = 2034,
+		param1 = 2033,
 		param2 = {},
 		param3 = {},
 	},
 
-	[44] = {
+	[43] = {
 		id = 1134,
 		name = "绝天崖",
 		title = "",
@@ -655,7 +640,7 @@ local data =
 		x = 1020,
 		y = 1020,
 		model = "sunquan",
-		param1 = 2035,
+		param1 = 2034,
 		param2 = {},
 		param3 = {},
 	},
