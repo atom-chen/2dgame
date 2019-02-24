@@ -74,7 +74,7 @@ end
 
 function MapWin:render_objects(conf)
     self.objs = {}
-    for _, v in pairs(config.GetSceneObjects(conf.id)) do
+    for _, v in pairs(config.GetSceneObjects(conf.id) or {}) do
         local obj = MapUnit:create(v, self)
         self.objs[v.id] = obj
         self.bg:addChild(obj._root)

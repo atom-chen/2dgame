@@ -14,10 +14,10 @@ end
 ------------------------------ inhert from WinBase ------------------------------
 
 function ToolbarWin:OnCreate()
-    local skeletonNode = AnimLoader:loadSpine("ui_map_feilong")
-    skeletonNode:setAnimation(0, "dabaoxiang_anim1", true)
+    local skeletonNode = AnimLoader:loadSpine("zhandoukaishi")
+    skeletonNode:setAnimation(0, "idle2", true)
     -- local skeletonNode = AnimLoader:loadSpine("spineboy")
-    skeletonNode:setPosition(cc.p(0, -300))
+    skeletonNode:setPosition(cc.p(0, -200))
     self:addChild(skeletonNode)
     skeletonNode:setScaleX(-1)
 
