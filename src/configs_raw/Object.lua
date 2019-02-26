@@ -2,128 +2,8 @@ local data =
 {
 	[1] = {
 		id = 1001,
-		name = "枯木老人",
-		title = "我是一个NPC",
-		type = 2,
-		sceneId = 2001,
-		limit_lv = 1,
-		x = 20,
-		y = 20,
-		model = "caocao",
-		param1 = 0,
-		param2 = {},
-		param3 = { "不要问我从哪里来", "我的故乡在远方", },
-	},
-
-	[2] = {
-		id = 1002,
-		name = "衍悔",
-		title = "NPC_得道高僧",
-		type = 2,
-		sceneId = 2002,
-		limit_lv = 10,
-		x = 80,
-		y = 80,
-		model = "caocao",
-		param1 = 0,
-		param2 = {},
-		param3 = { "数组文字", "没文本", },
-	},
-
-	[3] = {
-		id = 1003,
-		name = "百晓生",
-		title = "NPC_江湖记者",
-		type = 2,
-		sceneId = 2003,
-		limit_lv = 10,
-		x = 140,
-		y = 140,
-		model = "caocao",
-		param1 = 0,
-		param2 = {},
-		param3 = { "数组文字", "不知道", },
-	},
-
-	[4] = {
-		id = 1004,
-		name = "万事通",
-		title = "NPC_消息贩子",
-		type = 2,
-		sceneId = 2004,
-		limit_lv = 2,
-		x = 200,
-		y = 200,
-		model = "caocao",
-		param1 = 0,
-		param2 = {},
-		param3 = { "数组文字", },
-	},
-
-	[5] = {
-		id = 1005,
-		name = "愚公",
-		title = "我是怪物",
-		type = 3,
-		sceneId = 2005,
-		limit_lv = 1,
-		x = 260,
-		y = 260,
-		model = "caocao",
-		param1 = 0,
-		param2 = {},
-		param3 = {},
-	},
-
-	[6] = {
-		id = 1006,
-		name = "状元郎",
-		title = "我是怪物",
-		type = 3,
-		sceneId = 2006,
-		limit_lv = 2,
-		x = 0,
-		y = 0,
-		model = "sunquan",
-		param1 = 0,
-		param2 = {},
-		param3 = {},
-	},
-
-	[7] = {
-		id = 1007,
-		name = "算死天",
-		title = "我是可采集的",
-		type = 4,
-		sceneId = 2007,
-		limit_lv = 1,
-		x = 100,
-		y = 100,
-		model = "sunquan",
-		param1 = 0,
-		param2 = {},
-		param3 = {},
-	},
-
-	[8] = {
-		id = 1008,
-		name = "日破天",
-		title = "我是可采集的",
-		type = 4,
-		sceneId = 2008,
-		limit_lv = 2,
-		x = 200,
-		y = 200,
-		model = "sunquan",
-		param1 = 0,
-		param2 = {},
-		param3 = {},
-	},
-
-	[9] = {
-		id = 1009,
-		name = "叶倾城",
-		title = "我是未定义类型的",
+		name = "小花",
+		title = "我是装饰用的",
 		type = 0,
 		sceneId = 2009,
 		limit_lv = 1,
@@ -135,7 +15,22 @@ local data =
 		param3 = {},
 	},
 
-	[10] = {
+	[2] = {
+		id = 1002,
+		name = "绿叶",
+		title = "点我没用",
+		type = 0,
+		sceneId = 2009,
+		limit_lv = 1,
+		x = 300,
+		y = 300,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[3] = {
 		id = 1101,
 		name = "峨眉山",
 		title = "",
@@ -150,7 +45,7 @@ local data =
 		param3 = {},
 	},
 
-	[11] = {
+	[4] = {
 		id = 1102,
 		name = "青城山",
 		title = "",
@@ -165,7 +60,7 @@ local data =
 		param3 = {},
 	},
 
-	[12] = {
+	[5] = {
 		id = 1103,
 		name = "巫山",
 		title = "",
@@ -180,7 +75,7 @@ local data =
 		param3 = {},
 	},
 
-	[13] = {
+	[6] = {
 		id = 1104,
 		name = "神女峰",
 		title = "",
@@ -195,7 +90,7 @@ local data =
 		param3 = {},
 	},
 
-	[14] = {
+	[7] = {
 		id = 1105,
 		name = "大理",
 		title = "",
@@ -210,7 +105,7 @@ local data =
 		param3 = {},
 	},
 
-	[15] = {
+	[8] = {
 		id = 1106,
 		name = "烟雨楼",
 		title = "",
@@ -225,7 +120,7 @@ local data =
 		param3 = {},
 	},
 
-	[16] = {
+	[9] = {
 		id = 1107,
 		name = "西湖",
 		title = "",
@@ -240,7 +135,7 @@ local data =
 		param3 = {},
 	},
 
-	[17] = {
+	[10] = {
 		id = 1108,
 		name = "扬州",
 		title = "",
@@ -255,7 +150,7 @@ local data =
 		param3 = {},
 	},
 
-	[18] = {
+	[11] = {
 		id = 1109,
 		name = "京城",
 		title = "",
@@ -270,7 +165,7 @@ local data =
 		param3 = {},
 	},
 
-	[19] = {
+	[12] = {
 		id = 1110,
 		name = "洛阳",
 		title = "",
@@ -285,7 +180,7 @@ local data =
 		param3 = {},
 	},
 
-	[20] = {
+	[13] = {
 		id = 1111,
 		name = "长安",
 		title = "",
@@ -300,7 +195,7 @@ local data =
 		param3 = {},
 	},
 
-	[21] = {
+	[14] = {
 		id = 1112,
 		name = "武当山",
 		title = "",
@@ -315,7 +210,7 @@ local data =
 		param3 = {},
 	},
 
-	[22] = {
+	[15] = {
 		id = 1113,
 		name = "少林寺",
 		title = "",
@@ -330,7 +225,7 @@ local data =
 		param3 = {},
 	},
 
-	[23] = {
+	[16] = {
 		id = 1114,
 		name = "太湖",
 		title = "",
@@ -345,7 +240,7 @@ local data =
 		param3 = {},
 	},
 
-	[24] = {
+	[17] = {
 		id = 1115,
 		name = "昆仑山",
 		title = "",
@@ -360,7 +255,7 @@ local data =
 		param3 = {},
 	},
 
-	[25] = {
+	[18] = {
 		id = 1116,
 		name = "天山",
 		title = "",
@@ -375,7 +270,7 @@ local data =
 		param3 = {},
 	},
 
-	[26] = {
+	[19] = {
 		id = 1117,
 		name = "波斯",
 		title = "",
@@ -390,7 +285,7 @@ local data =
 		param3 = {},
 	},
 
-	[27] = {
+	[20] = {
 		id = 1118,
 		name = "西夏",
 		title = "",
@@ -405,7 +300,7 @@ local data =
 		param3 = {},
 	},
 
-	[28] = {
+	[21] = {
 		id = 1119,
 		name = "精绝城",
 		title = "",
@@ -420,7 +315,7 @@ local data =
 		param3 = {},
 	},
 
-	[29] = {
+	[22] = {
 		id = 1120,
 		name = "楼兰",
 		title = "",
@@ -435,7 +330,7 @@ local data =
 		param3 = {},
 	},
 
-	[30] = {
+	[23] = {
 		id = 1121,
 		name = "敦煌",
 		title = "",
@@ -450,7 +345,7 @@ local data =
 		param3 = {},
 	},
 
-	[31] = {
+	[24] = {
 		id = 1122,
 		name = "玉门关",
 		title = "",
@@ -465,7 +360,7 @@ local data =
 		param3 = {},
 	},
 
-	[32] = {
+	[25] = {
 		id = 1123,
 		name = "塞外",
 		title = "",
@@ -480,7 +375,7 @@ local data =
 		param3 = {},
 	},
 
-	[33] = {
+	[26] = {
 		id = 1124,
 		name = "突厥部落",
 		title = "",
@@ -495,7 +390,7 @@ local data =
 		param3 = {},
 	},
 
-	[34] = {
+	[27] = {
 		id = 1125,
 		name = "阴山",
 		title = "",
@@ -510,7 +405,7 @@ local data =
 		param3 = {},
 	},
 
-	[35] = {
+	[28] = {
 		id = 1126,
 		name = "龙门",
 		title = "",
@@ -525,7 +420,7 @@ local data =
 		param3 = {},
 	},
 
-	[36] = {
+	[29] = {
 		id = 1127,
 		name = "天池",
 		title = "",
@@ -540,7 +435,7 @@ local data =
 		param3 = {},
 	},
 
-	[37] = {
+	[30] = {
 		id = 1128,
 		name = "天涯海阁",
 		title = "",
@@ -555,7 +450,7 @@ local data =
 		param3 = {},
 	},
 
-	[38] = {
+	[31] = {
 		id = 1129,
 		name = "南海诸岛",
 		title = "",
@@ -570,7 +465,7 @@ local data =
 		param3 = {},
 	},
 
-	[39] = {
+	[32] = {
 		id = 1130,
 		name = "桃花岛",
 		title = "",
@@ -585,7 +480,7 @@ local data =
 		param3 = {},
 	},
 
-	[40] = {
+	[33] = {
 		id = 1131,
 		name = "山海关",
 		title = "",
@@ -600,7 +495,7 @@ local data =
 		param3 = {},
 	},
 
-	[41] = {
+	[34] = {
 		id = 1132,
 		name = "倭寇岛",
 		title = "",
@@ -615,7 +510,7 @@ local data =
 		param3 = {},
 	},
 
-	[42] = {
+	[35] = {
 		id = 1133,
 		name = "风凌古渡",
 		title = "",
@@ -630,7 +525,7 @@ local data =
 		param3 = {},
 	},
 
-	[43] = {
+	[36] = {
 		id = 1134,
 		name = "绝天崖",
 		title = "",
@@ -641,6 +536,276 @@ local data =
 		y = 1020,
 		model = "sunquan",
 		param1 = 2034,
+		param2 = {},
+		param3 = {},
+	},
+
+	[37] = {
+		id = 1201,
+		name = "枯木老人",
+		title = "我是一个NPC",
+		type = 2,
+		sceneId = 2001,
+		limit_lv = 1,
+		x = 20,
+		y = 20,
+		model = "caocao",
+		param1 = 0,
+		param2 = {},
+		param3 = { "不要问我从哪里来", "我的故乡在远方", },
+	},
+
+	[38] = {
+		id = 1202,
+		name = "衍悔",
+		title = "NPC_得道高僧",
+		type = 2,
+		sceneId = 2002,
+		limit_lv = 10,
+		x = 80,
+		y = 80,
+		model = "caocao",
+		param1 = 0,
+		param2 = {},
+		param3 = { "数组文字", "没文本", },
+	},
+
+	[39] = {
+		id = 1203,
+		name = "百晓生",
+		title = "NPC_江湖记者",
+		type = 2,
+		sceneId = 2003,
+		limit_lv = 10,
+		x = 140,
+		y = 140,
+		model = "caocao",
+		param1 = 0,
+		param2 = {},
+		param3 = { "数组文字", "不知道", },
+	},
+
+	[40] = {
+		id = 1204,
+		name = "万事通",
+		title = "NPC_消息贩子",
+		type = 2,
+		sceneId = 2004,
+		limit_lv = 2,
+		x = 200,
+		y = 200,
+		model = "caocao",
+		param1 = 0,
+		param2 = {},
+		param3 = { "数组文字", },
+	},
+
+	[41] = {
+		id = 1205,
+		name = "愚公",
+		title = "我是怪物",
+		type = 2,
+		sceneId = 2005,
+		limit_lv = 1,
+		x = 260,
+		y = 260,
+		model = "caocao",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[42] = {
+		id = 1206,
+		name = "状元郎",
+		title = "我是怪物",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 2,
+		x = 0,
+		y = 0,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[43] = {
+		id = 1207,
+		name = "黄衫女",
+		title = "就是少年郭襄",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 20,
+		y = 20,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[44] = {
+		id = 1208,
+		name = "摸金校尉",
+		title = "",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 40,
+		y = 40,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[45] = {
+		id = 1209,
+		name = "算死天",
+		title = "相士",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 60,
+		y = 60,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[46] = {
+		id = 1210,
+		name = "月满天",
+		title = "",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 80,
+		y = 80,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[47] = {
+		id = 1211,
+		name = "血长空",
+		title = "",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 100,
+		y = 100,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[48] = {
+		id = 1212,
+		name = "日破天",
+		title = "",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 120,
+		y = 120,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[49] = {
+		id = 1213,
+		name = "日破城",
+		title = "",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 140,
+		y = 140,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[50] = {
+		id = 1214,
+		name = "叶倾城",
+		title = "",
+		type = 2,
+		sceneId = 2006,
+		limit_lv = 1,
+		x = 160,
+		y = 160,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[51] = {
+		id = 0,
+		name = "",
+		title = "",
+		type = 0,
+		sceneId = 0,
+		limit_lv = 0,
+		x = 0,
+		y = 0,
+		model = "",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[52] = {
+		id = 1501,
+		name = "地鼠",
+		title = "来打我啊",
+		type = 3,
+		sceneId = 2000,
+		limit_lv = 20,
+		x = 100,
+		y = 200,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[53] = {
+		id = 1901,
+		name = "优昙仙花",
+		title = "此物最相思",
+		type = 4,
+		sceneId = 2007,
+		limit_lv = 1,
+		x = 100,
+		y = 100,
+		model = "sunquan",
+		param1 = 0,
+		param2 = {},
+		param3 = {},
+	},
+
+	[54] = {
+		id = 1902,
+		name = "地火之精",
+		title = "炼武器材料",
+		type = 4,
+		sceneId = 2008,
+		limit_lv = 2,
+		x = 200,
+		y = 200,
+		model = "sunquan",
+		param1 = 0,
 		param2 = {},
 		param3 = {},
 	},
