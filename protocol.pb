@@ -15,9 +15,12 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-í
+¤
 
-game.protomsg"#
+game.protomsg"5
+PlayerLvExpUpdate
+lv (Rlv
+exp (Rexp"#
 PlayerDataRequest
 id (Rid"<
 Item

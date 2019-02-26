@@ -40,6 +40,15 @@ Opcode.MSG_SC_HeroRefine        = 0x0017
 
 Opcode.MSG_SC_HeroInfoUpdate    = 0x0018
 
+Opcode.MSG_CS_QuestList         = 0x0020
+Opcode.MSG_SC_QuestList         = 0x0021
+Opcode.MSG_CS_QuestOp           = 0x0022
+Opcode.MSG_SC_QuestOp           = 0x0023
+Opcode.MSG_SC_QuestUpdate       = 0x0024
+
+Opcode.MSG_SC_PlayerLvExpUpdate = 0x0025
+
+
 
 
 --------- protobuf map: message & name -----------------------------------------------------------
@@ -77,4 +86,12 @@ MsgName[Opcode.MSG_SC_HeroLevelup]  = "msg.HeroLevelupResponse"
 MsgName[Opcode.MSG_CS_HeroRefine]   = "msg.HeroRefineRequest"
 MsgName[Opcode.MSG_SC_HeroRefine]   = "msg.HeroRefineResponse"
 
-MsgName[Opcode.MSG_SC_HeroInfoUpdate]   = "msg.HeroInfoUpdateResponse"
+MsgName[Opcode.MSG_SC_HeroInfoUpdate]    = "msg.HeroInfoUpdateResponse"
+
+MsgName[Opcode.MSG_CS_QuestList]         = "msg.QuestListRequest"
+MsgName[Opcode.MSG_SC_QuestList]         = "msg.QuestListResponse"
+MsgName[Opcode.MSG_CS_QuestOp]           = "msg.QuestOpRequest"
+MsgName[Opcode.MSG_SC_QuestOp]           = "msg.QuestOpResponse"
+MsgName[Opcode.MSG_SC_QuestUpdate]       = "msg.QuestUpdate"
+
+MsgName[Opcode.MSG_SC_PlayerLvExpUpdate] = "msg.PlayerLvExpUpdate"
