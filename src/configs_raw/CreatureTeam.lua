@@ -3,66 +3,73 @@ local data =
 	[1] = {
 		id = 1,
 		desc = "一级怪物",
-		l_pioneer = {
+		row11 = {
 			{
 				id = 10001,
 				lv = 1,
 			},
 		},
-		r_pioneer = {
+		row12 = {
 			{
 				id = 10002,
 				lv = 1,
 			},
 		},
-		commander = {
+		row13 = {
 			{
 				id = 10003,
 				lv = 1,
 			},
 		},
-		l_guarder = {
+		row21 = {
 			{
 				id = 10004,
 				lv = 1,
 			},
 		},
-		r_guarder = {
+		row22 = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
+		row23 = {},
 	},
 
 	[2] = {
 		id = 2,
 		desc = "二级怪物",
-		l_pioneer = {
+		row11 = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		r_pioneer = {
+		row12 = {
 			{
 				id = 10007,
 				lv = 1,
 			},
 		},
-		commander = {
+		row13 = {
 			{
 				id = 10008,
 				lv = 1,
 			},
 		},
-		l_guarder = {
+		row21 = {
 			{
 				id = 10009,
 				lv = 1,
 			},
 		},
-		r_guarder = {
+		row22 = {
+			{
+				id = 10010,
+				lv = 1,
+			},
+		},
+		row23 = {
 			{
 				id = 10010,
 				lv = 1,
@@ -73,21 +80,27 @@ local data =
 	[3] = {
 		id = 3,
 		desc = "3级怪物",
-		l_pioneer = {},
-		r_pioneer = {
+		row11 = {},
+		row12 = {
 			{
 				id = 10003,
 				lv = 1,
 			},
 		},
-		commander = {
+		row13 = {
 			{
 				id = 10003,
 				lv = 1,
 			},
 		},
-		l_guarder = {},
-		r_guarder = {
+		row21 = {},
+		row22 = {
+			{
+				id = 10003,
+				lv = 1,
+			},
+		},
+		row23 = {
 			{
 				id = 10003,
 				lv = 1,
@@ -98,21 +111,27 @@ local data =
 	[4] = {
 		id = 4,
 		desc = "4级怪物",
-		l_pioneer = {},
-		r_pioneer = {
+		row11 = {},
+		row12 = {
 			{
 				id = 10004,
 				lv = 1,
 			},
 		},
-		commander = {
+		row13 = {
 			{
 				id = 10004,
 				lv = 1,
 			},
 		},
-		l_guarder = {},
-		r_guarder = {
+		row21 = {},
+		row22 = {
+			{
+				id = 10004,
+				lv = 1,
+			},
+		},
+		row23 = {
 			{
 				id = 10004,
 				lv = 1,
@@ -123,31 +142,37 @@ local data =
 	[5] = {
 		id = 5,
 		desc = "5级怪物",
-		l_pioneer = {
+		row11 = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
-		r_pioneer = {
+		row12 = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
-		commander = {
+		row13 = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
-		l_guarder = {
+		row21 = {
 			{
 				id = 10005,
 				lv = 1,
 			},
 		},
-		r_guarder = {
+		row22 = {
+			{
+				id = 10005,
+				lv = 1,
+			},
+		},
+		row23 = {
 			{
 				id = 10005,
 				lv = 1,
@@ -158,36 +183,37 @@ local data =
 	[6] = {
 		id = 6,
 		desc = "6级怪物",
-		l_pioneer = {
+		row11 = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		r_pioneer = {
+		row12 = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		commander = {
+		row13 = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		l_guarder = {
+		row21 = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
-		r_guarder = {
+		row22 = {
 			{
 				id = 10006,
 				lv = 1,
 			},
 		},
+		row23 = {},
 	},
 
 }
