@@ -1,4 +1,4 @@
-local data = 
+local data =
 {
 	name = "fuckyou",
 	gID = 10001,

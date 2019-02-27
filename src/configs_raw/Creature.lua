@@ -1,4 +1,4 @@
-local data = 
+local data =
 {
 	[1] = {
 		id = 10001,
