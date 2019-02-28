@@ -15,18 +15,18 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-¤
+• 
 
-game.protomsg"5
+game.protomsg"<
+Item
+flag (Rflag
+id (Rid
+cnt (Rcnt"5
 PlayerLvExpUpdate
 lv (Rlv
 exp (Rexp"#
 PlayerDataRequest
-id (Rid"<
-Item
-flag (Rflag
-id (Rid
-cnt (Rcnt"-
+id (Rid"-
 Skill
 id (Rid
 level (Rlevel",
@@ -187,4 +187,25 @@ error_code (R	errorCode
 error_code (R	errorCode$
 quest (2.msg.QuestInfoRquest"5
 QuestUpdate&
-Quests (2.msg.QuestInfoRQuestsbproto3
+Quests (2.msg.QuestInfoRQuests"
+ChapterInfo"
+ChapterInfoRequest"Z
+ChapterInfoResponse
+
+error_code (R	errorCode$
+info (2.msg.ChapterInfoRinfo"
+ChapterFightingRequest"•
+ChapterFightingResponse
+
+error_code (R	errorCode
+win (Rwin#
+rewards (2	.msg.ItemRrewards$
+info (2.msg.ChapterInfoRinfo"'
+ChapterRewardsRequest
+id (Rid"’
+ChapterRewardsResponse
+
+error_code (R	errorCode
+id (Rid#
+rewards (2	.msg.ItemRrewards$
+info (2.msg.ChapterInfoRinfobproto3
