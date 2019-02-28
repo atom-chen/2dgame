@@ -8,8 +8,8 @@ local md         = MessageDispatcher
 local Opcode     = Opcode
 
 
-md[Opcode.QuestListResponse] = function(tab)
-    print("msg: QuestListResponse")
+md[Opcode.MSG_SC_QuestList] = function(tab)
+    print("msg: MSG_SC_QuestList")
 end
 
 

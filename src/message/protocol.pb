@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-• 
+†!
 
 game.protomsg"<
 Item
@@ -208,4 +208,9 @@ error_code (R	errorCode
 error_code (R	errorCode
 id (Rid#
 rewards (2	.msg.ItemRrewards$
-info (2.msg.ChapterInfoRinfobproto3
+info (2.msg.ChapterInfoRinfo"
+ChapterLootRequest"Y
+ChapterLootResponse
+
+error_code (R	errorCode#
+rewards (2	.msg.ItemRrewardsbproto3

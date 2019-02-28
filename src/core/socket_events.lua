@@ -8,7 +8,7 @@ local Event     = require "core.event"
 local EventMgr  = require "core.event_mgr"
 
 
-protobuf.register(cc.FileUtils:getInstance():getDataFromFile("protocol.pb"))
+protobuf.register(cc.FileUtils:getInstance():getDataFromFile("src/message/protocol.pb"))
 
 cc.exports.Socket = {}
 cc.exports.MessageDispatcher = {}

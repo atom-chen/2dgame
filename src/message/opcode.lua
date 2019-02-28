@@ -49,6 +49,16 @@ Opcode.MSG_SC_QuestUpdate       = 0x0024
 Opcode.MSG_SC_PlayerLvExpUpdate = 0x0025
 
 
+Opcode.MSG_CS_ChapterInfo       = 0x0026
+Opcode.MSG_SC_ChapterInfo       = 0x0027
+Opcode.MSG_CS_ChapterFighting   = 0x0028
+Opcode.MSG_SC_ChapterFighting   = 0x0029
+Opcode.MSG_CS_ChapterRewards    = 0x0030
+Opcode.MSG_SC_ChapterRewards    = 0x0031
+Opcode.MSG_CS_ChapterLoot       = 0x0032
+Opcode.MSG_SC_ChapterLoot       = 0x0033
+
+
 
 
 --------- protobuf map: message & name -----------------------------------------------------------
@@ -88,10 +98,19 @@ MsgName[Opcode.MSG_SC_HeroRefine]   = "msg.HeroRefineResponse"
 
 MsgName[Opcode.MSG_SC_HeroInfoUpdate]    = "msg.HeroInfoUpdateResponse"
 
-MsgName[Opcode.MSG_CS_QuestList]         = "msg.QuestListRequest"
-MsgName[Opcode.MSG_SC_QuestList]         = "msg.QuestListResponse"
-MsgName[Opcode.MSG_CS_QuestOp]           = "msg.QuestOpRequest"
-MsgName[Opcode.MSG_SC_QuestOp]           = "msg.QuestOpResponse"
-MsgName[Opcode.MSG_SC_QuestUpdate]       = "msg.QuestUpdate"
+MsgName[Opcode.MSG_CS_QuestList]        = "msg.QuestListRequest"
+MsgName[Opcode.MSG_SC_QuestList]        = "msg.QuestListResponse"
+MsgName[Opcode.MSG_CS_QuestOp]          = "msg.QuestOpRequest"
+MsgName[Opcode.MSG_SC_QuestOp]          = "msg.QuestOpResponse"
+MsgName[Opcode.MSG_SC_QuestUpdate]      = "msg.QuestUpdate"
 
 MsgName[Opcode.MSG_SC_PlayerLvExpUpdate] = "msg.PlayerLvExpUpdate"
+
+MsgName[Opcode.MSG_CS_ChapterInfo]      = "msg.ChapterInfoRequest"
+MsgName[Opcode.MSG_SC_ChapterInfo]      = "msg.ChapterInfoResponse"
+MsgName[Opcode.MSG_CS_ChapterFighting]  = "msg.ChapterFightingRequest"
+MsgName[Opcode.MSG_SC_ChapterFighting]  = "msg.ChapterFightingResponse"
+MsgName[Opcode.MSG_CS_ChapterRewards]   = "msg.ChapterRewardsRequest"
+MsgName[Opcode.MSG_SC_ChapterRewards]   = "msg.ChapterRewardsResponse"
+MsgName[Opcode.MSG_CS_ChapterLoot]      = "msg.ChapterLootRequest"
+MsgName[Opcode.MSG_SC_ChapterLoot]      = "msg.ChapterLootResponse"
