@@ -1,5 +1,6 @@
 
 cc.FileUtils:getInstance():setPopupNotify(false)
+cc.FileUtils:getInstance():addSearchPath("res/ccs")
 
 require "config"
 require "cocos.init"
@@ -15,6 +16,8 @@ local SceneMgr = require "scenes.SceneMgr"
 
 
 local function main()
+
+
     -- require("app.MyApp"):create():run()
 
     local director = cc.Director:getInstance()

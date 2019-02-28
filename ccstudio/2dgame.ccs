@@ -21,6 +21,10 @@
         </Folder>
         <Folder Name="layer">
           <Project Name="chat.csd" Type="Layer" />
+          <Project Name="battle.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="battle">
+          <Image Name="bg.jpg" />
         </Folder>
       </RootFolder>
     </Group>

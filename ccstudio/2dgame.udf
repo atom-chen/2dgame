@@ -5,7 +5,7 @@
         <LuaIsEncrypt Value="False" />
         <LuaEncryptKey Value="" />
         <LuaEncryptSign Value="" />
-        <Android_PackageName Value="org.cocos.2dgame" />
+        <Android_PackageName Value="org.cocos.game" />
         <AndroidkeyStore Value="" />
         <AndroidVersion Value="" />
         <iOS_Target Value="2dgame-mobile" />
@@ -14,6 +14,9 @@
         <RunPlatform Value="Windows" />
         <FrameworkVersion Value="cocos2d-x-3.10" />
         <IsDebugKeystore Value="True" />
+        <KeystorePassword Value="" />
+        <KeystoreAliasName Value="" />
+        <KeystoreAliasPassword Value="" />
         <EnableSourceMap Value="False" />
         <EnableHTML5Advanced Value="False" />
       </Value>
@@ -23,14 +26,6 @@
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Windows" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="layer/chat.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="layer/chat.csd" />
       </Value>
     </Item>
   </Properties>

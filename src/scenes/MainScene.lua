@@ -162,10 +162,12 @@ function MainScene:ctor()
                     local win = WinManager:FindWindow("ToolbarWin")
                     if win then WinManager:ShowWindow(win, false) end
                 else
---                    local DebugWin = require "wins.DebugWin"
---                    local dbg = DebugWin:create("preboy.ZHANG")
---                    self:addChild(dbg)
-                    WinManager:CreateWindow("MapWin", 2001)
+                    -- none
+                    -- local DebugWin = require "wins.DebugWin"
+                    -- local dbg = DebugWin:create("preboy.ZHANG")
+                    -- self:addChild(dbg)
+                    -- WinManager:CreateWindow("MapWin", 2001)
+                    WinManager:CreateWindow("BattleTeamWin")
                 end
             end
         end

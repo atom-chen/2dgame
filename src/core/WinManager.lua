@@ -8,6 +8,7 @@ local windows =
     HeroWin         = {},   -- 英雄界面
     MapWin          = {},   -- 地图界面
     NpcMenuWin      = {},   -- 地图Npc菜单界面
+    BattleTeamWin   = {},   -- 设置战斗队伍界面
 }
 
 for k, v in pairs(windows) do
