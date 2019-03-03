@@ -140,6 +140,10 @@ function PlayerHero.GetHero(id)
     return _heros[id]
 end
 
+function PlayerHero.GetHeros()
+    return _heros
+end
+
 
 function PlayerHero.Dump()
     for _, hero in pairs(_heros) do

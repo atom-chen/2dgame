@@ -1,9 +1,10 @@
 
-local WinBase = class("WinBase", cc.Layer)
+local WinBase = class("WinBase", cc.load("mvc").ViewBase)
 
 
 function WinBase:ctor()
     print("WinBase:ctor")
+    
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(handler(self, self.OnTouchBegan),       cc.Handler.EVENT_TOUCH_BEGAN)

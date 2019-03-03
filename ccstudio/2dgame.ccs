@@ -3,6 +3,19 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="0.public">
+          <Image Name="btn_close.png" />
+          <Image Name="start.png" />
+          <Image Name="win_frame.png" />
+        </Folder>
+        <Folder Name="1.layer">
+          <Project Name="battle.csd" Type="Layer" />
+          <Project Name="chat.csd" Type="Layer" />
+          <Project Name="hero_select.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="battle">
+          <Image Name="bg.jpg" />
+        </Folder>
         <Folder Name="chat">
           <PlistInfo Name="chat.csi" Type="Plist" />
           <Image Name="liaotian-biaoqing.png" />
@@ -18,13 +31,6 @@
           <Image Name="liaotian-zidi1.png" />
           <Image Name="liaotian-zidi2.png" />
           <Image Name="liaotian-zidi3.png" />
-        </Folder>
-        <Folder Name="layer">
-          <Project Name="chat.csd" Type="Layer" />
-          <Project Name="battle.csd" Type="Layer" />
-        </Folder>
-        <Folder Name="battle">
-          <Image Name="bg.jpg" />
         </Folder>
       </RootFolder>
     </Group>
