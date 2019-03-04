@@ -1,5 +1,7 @@
+local Armature      = require "core.armature"
 local WinBase       = require "core.WinBase"
 local PlayerItem    = require "model.player_item"
+local PlayerHero    = require "model.player_hero"
 local config        = require "configs_grace"
 
 
@@ -11,6 +13,8 @@ function BattleTeamWin:ctor()
     print("BattleTeamWin:ctor")
 
     WinBase.ctor(self)
+
+    self.selected = {}
 
     self.shieldLayer_ = cc.LayerColor:create(cc.c4b(0,0,0,200)):addTo(self, -1)
     self.shieldLayer_:setIgnoreAnchorPointForPosition(false)    
@@ -35,32 +39,34 @@ function BattleTeamWin:ctor()
         end 
     end)
 
-    local m1 = ccui.ImageView:create("0.public/hero-hole.png")
-    self.resourceNode_:getChildByName("row11"):addChild(m1)
-    m1:setTouchEnabled(true)
-    m1:onTouch(function(event)
-        if event.name == "ended" then
-            WinManager:CreateWindow("HeroSelectWin", function()
-                -- self.resourceNode_:getChildByName("row11"):addChild(m1)
-            end)                    
+    for i = 1, 2 do
+        for j = 1, 3 do
+            local name = "row" .. i .. j
+            local root = self.resourceNode_:getChildByName(name)
+            local k = (i-1) * 3 + j
+            local m = ccui.ImageView:create("0.public/hero-hole.png")
+            root:addChild(m)
+
+            m:setTouchEnabled(true)
+            m:onTouch(function(event)
+                if event.name == "ended" then
+                    WinManager:CreateWindow("HeroSelectWin", function(id)
+                        self.selected.name = id
+                        m:removeChildByTag(k)
+                        
+                        if id == 0 then return end
+
+                        local tab = PlayerHero.GetHero(id)
+                        local arm = Armature:create(tab.proto.model)
+                        m:removeChildByTag(k)
+                        m:addChild(arm, 1, k)
+                    end)                    
+                end
+            end)
+
         end
-    end)
+    end
 
-
-    local m2 = ccui.ImageView:create("0.public/hero-hole.png")
-    self.resourceNode_:getChildByName("row12"):addChild(m2)
-
-    local m3 = ccui.ImageView:create("0.public/hero-hole.png")
-    self.resourceNode_:getChildByName("row13"):addChild(m3)
-
-    local m4 = ccui.ImageView:create("0.public/hero-hole.png")
-    self.resourceNode_:getChildByName("row21"):addChild(m4)
-
-    local m5 = ccui.ImageView:create("0.public/hero-hole.png")
-    self.resourceNode_:getChildByName("row22"):addChild(m5)
-
-    local m6 = ccui.ImageView:create("0.public/hero-hole.png")
-    self.resourceNode_:getChildByName("row23"):addChild(m6)
 end
 
 

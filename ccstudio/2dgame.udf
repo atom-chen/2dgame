@@ -28,5 +28,13 @@
         <LastRunType Value="Windows" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="1.layer/hero_select.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="1.layer/hero_select.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

@@ -4,10 +4,21 @@ local PlayerHero    = require "model.player_hero"
 local WinBase       = require "core.WinBase"
 
 
+
+local function item_on_touch(event)
+    local item = event.target
+    if event.name == "ended" then
+        item.owner:OnSelected(item)
+    end
+end
+
+
 local HeroSelectWin = class("HeroSelectWin", WinBase)
 
 function HeroSelectWin:ctor(onOK)
     WinBase.ctor(self)
+
+    self.selected_hero_id = 0
 
     self.resourceNode_ = cc.CSLoader:createNode("1.layer/hero_select.csb")
     self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
@@ -15,17 +26,19 @@ function HeroSelectWin:ctor(onOK)
     self:addChild(self.resourceNode_)        
 
 
-    local btn = self.resourceNode_:getChildByName("btnOK")
-    btn:addClickEventListener(function(onOK)
-        local id = 0
-
-        self.list.
-
-        onOK(id)
+    local btn = self.resourceNode_:getChildByName("btnSet")
+    btn:addClickEventListener(function()
+        onOK(self.selected_hero_id)
         self:Close()
     end)
 
     local btn = self.resourceNode_:getChildByName("btnCancel")
+    btn:addClickEventListener(function()
+        onOK(0)
+        self:Close()
+    end)
+
+    local btn = self.resourceNode_:getChildByName("btnClose")
     btn:addClickEventListener(function()
         self:Close()
     end)
@@ -35,25 +48,37 @@ function HeroSelectWin:ctor(onOK)
 
     local idx = 0
     for i, tab in pairs(PlayerHero.GetHeros()) do
-        local arm = Armature:create(tab.proto.model)
-        arm:setPosition(idx * 200 + 100, 100)
         idx = idx + 1
-        print("ffff", i, arm)
-        arm:addTo(list)
-        -- list:pushBackCustomItem(arm)
+
+        local widget = ccui.Widget:create()
+        widget:setContentSize(cc.size(400,400))
+        widget:setAnchorPoint(display.LEFT_BOTTOM)
+
+        local bg = ccui.ImageView:create("public_item_bg.png")
+        bg:setScale9Enabled(true)
+        bg:ignoreContentAdaptWithSize(false)
+        bg:setCapInsets(cc.rect(40, 30, 2, 2))
+        bg:setContentSize(400, 400)
+        bg:setAnchorPoint(display.LEFT_BOTTOM)
+
+        widget:addChild(bg)
+
+        list:pushBackCustomItem(widget)
+
+        local arm = Armature:create(tab.proto.model)
+        arm:setPosition(200, 100)
+        widget:addChild(arm)
+
+        widget:setTouchEnabled(true)
+        widget.owner = self
+        widget.heroid = i
+        widget:onTouch(item_on_touch)
     end
-
-     local function test(sender,_type)
-           print("--index--11111111111111")
-
-        if _type == 1 then
-           local index = sender:getCurSelectedIndex()
-           print("--index--",index)
-        end
-    end
-    list:addEventListener(test)
+end
 
 
+function HeroSelectWin:OnSelected(item)
+    self.selected_hero_id = item.heroid
 end
 
 
