@@ -39,6 +39,14 @@ function BattleTeamWin:ctor()
         end 
     end)
 
+    -- 战斗
+    local btn_fight = self.resourceNode_:getChildByName("btnFight")
+    btn:addClickEventListener(function()
+        -- 发送消息
+        -- todo
+        self:Close()
+    end)
+
     for i = 1, 2 do
         for j = 1, 3 do
             local name = "row" .. i .. j

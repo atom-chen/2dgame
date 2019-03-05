@@ -15,7 +15,7 @@ error_code (R	errorCode"
 EnterGameResponse
 
 error_code (R	errorCodebproto3
-†!
+ä!
 
 game.protomsg"<
 Item
@@ -187,30 +187,30 @@ error_code (R	errorCode
 error_code (R	errorCode$
 quest (2.msg.QuestInfoRquest"5
 QuestUpdate&
-Quests (2.msg.QuestInfoRQuests"
-ChapterInfo"
-ChapterInfoRequest"Z
-ChapterInfoResponse
-
-error_code (R	errorCode$
-info (2.msg.ChapterInfoRinfo"
-ChapterFightingRequest"•
-ChapterFightingResponse
-
-error_code (R	errorCode
-win (Rwin#
-rewards (2	.msg.ItemRrewards$
-info (2.msg.ChapterInfoRinfo"'
+quests (2.msg.QuestInfoRquests"[
+ChapterInfo
+LootTs (RLootTs
+BreakId (RBreakId
+Chapters (RChapters"
+ChapterInfoRequest"Y
+ChapterInfoResponse
+	ErrorCode (R	ErrorCode$
+Info (2.msg.ChapterInfoRInfo",
+ChapterFightingRequest
+Team (RTeam"”
+ChapterFightingResponse
+	ErrorCode (R	ErrorCode
+Win (RWin#
+Rewards (2	.msg.ItemRRewards$
+Info (2.msg.ChapterInfoRInfo"'
 ChapterRewardsRequest
-id (Rid"’
-ChapterRewardsResponse
-
-error_code (R	errorCode
-id (Rid#
-rewards (2	.msg.ItemRrewards$
-info (2.msg.ChapterInfoRinfo"
-ChapterLootRequest"Y
-ChapterLootResponse
-
-error_code (R	errorCode#
-rewards (2	.msg.ItemRrewardsbproto3
+Id (RId"‘
+ChapterRewardsResponse
+	ErrorCode (R	ErrorCode
+Id (RId#
+Rewards (2	.msg.ItemRRewards$
+Info (2.msg.ChapterInfoRInfo"
+ChapterLootRequest"X
+ChapterLootResponse
+	ErrorCode (R	ErrorCode#
+Rewards (2	.msg.ItemRRewardsbproto3
