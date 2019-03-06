@@ -14,7 +14,7 @@ local gm_str =
     [4] = "hero_up 5001 5002",          -- 增加英雄 英雄ID
 }
 
-MSG.SendGMCommand(gm_str[2])
+-- MSG.SendGMCommand(gm_str[2])
 
 
 -- 发送通知
@@ -28,3 +28,6 @@ MSG.SendGMCommand(gm_str[2])
 -- 使用道具（有脚本的那种）
 -- MSG.SendItemUse(4105, 2)
 
+
+-- 获取关卡信息
+Socket.SendPacket(Opcode.MSG_CS_ChapterInfo, {})

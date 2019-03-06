@@ -9,7 +9,7 @@ local Opcode    = Opcode
 
 
 md[Opcode.MSG_SC_ENTER_GAME] = function(tab)
-    if tab.error_code == 0 then
+    if tab.ErrorCode == 0 then
         EventMgr.Emit(Event.EnterGameOk)
     else
         EventMgr.Emit(Event.EnterGameFailed)

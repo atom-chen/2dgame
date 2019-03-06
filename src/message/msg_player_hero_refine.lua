@@ -9,8 +9,8 @@ local Opcode     = Opcode
 
 
 md[Opcode.MSG_SC_HeroRefine] = function(tab)
-    if tab.error_code ~= 0 then
-        print("精炼失败！", tab.error_code)
+    if tab.ErrorCode ~= 0 then
+        print("精炼失败！", tab.ErrorCode)
     else
         print("精炼完成：是否成功:", tab.result)
     end

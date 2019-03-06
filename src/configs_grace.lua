@@ -16,6 +16,10 @@ local RefineNormal  = require "configs_raw.RefineNormal"
 local Object        = require "configs_raw.Object"
 local Scene         = require "configs_raw.Scene"
 
+local Chapter       = require "configs_raw.Chapter"
+local Break         = require "configs_raw.Break"
+
+
 
 local M = {}
 local _configs = {}
@@ -111,6 +115,14 @@ map_by__id(_configs.Object, Object)
 _configs.Scene = {}
 map_by__id(_configs.Scene, Scene)
 
+-- Chapter
+_configs.Chapter = {}
+map_by__id(_configs.Chapter, Chapter)
+
+-- Break
+_configs.Break = {}
+map_by__id(_configs.Break, Break)
+
 
 --------------------------------------------------------------------------------
 -- 需要特殊处理的配置
@@ -143,6 +155,9 @@ M.GetItemProto      = get_by__id(_configs.ItemProto)
 M.GetCreatureTeam   = get_by__id(_configs.CreatureTeam)
 M.GetObject         = get_by__id(_configs.Object)
 M.GetScene          = get_by__id(_configs.Scene)
+M.GetChapter        = get_by__id(_configs.Chapter)
+M.GetBreak          = get_by__id(_configs.Break)
+
 
 M.GetMarketConf     = get_by__index(MarketConf)
 M.GetRefineSuper    = get_by__index(RefineSuper)

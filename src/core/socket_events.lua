@@ -46,8 +46,14 @@ cc.exports.g_on_message = function(code, data, size)
     local tab, err = protobuf.decode(name, data, size); assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
     protobuf.extract(tab)
 
-    local undisposed = false
+    -- error dispose
+    local ErrorCode = rawget(tab, "ErrorCode")
+    if ErrorCode ~= nil and ErrorCode ~= 0 then
+        zcg.logError("OpCode = %d, ErrorCode = %d", code, ErrorCode)
+    end
+
     -- message dispose
+    local undisposed = false
     local func = md[code]
     if func then
         func(tab)

@@ -1,5 +1,5 @@
 
-“
+‘
 session.protomsg"!
 PingRequest
 time (Rtime""
@@ -7,15 +7,13 @@
 time (Rtime"6
 LoginRequest
 acct (	Racct
-pass (	Rpass".
-LoginResponse
-
-error_code (R	errorCode"
-EnterGameRequest"2
-EnterGameResponse
-
-error_code (R	errorCodebproto3
-ä!
+pass (	Rpass"-
+LoginResponse
+	ErrorCode (R	ErrorCode"
+EnterGameRequest"1
+EnterGameResponse
+	ErrorCode (R	ErrorCodebproto3
+à!
 
 game.protomsg"<
 Item
@@ -147,21 +145,18 @@ BattleUnit
 info (2.msg.ItemCntInfoRinfo">
 MarketBuyRequest
 index (Rindex
-count (Rcount"2
-MarketBuyResponse
-
-error_code (R	errorCode"-
+count (Rcount"1
+MarketBuyResponse
+	ErrorCode (R	ErrorCode"-
 HeroLevelupRequest
-hero_id (RheroId"4
-HeroLevelupResponse
-
-error_code (R	errorCode"B
+hero_id (RheroId"3
+HeroLevelupResponse
+	ErrorCode (R	ErrorCode"B
 HeroRefineRequest
 hero_id (RheroId
-super (Rsuper"K
-HeroRefineResponse
-
-error_code (R	errorCode
+super (Rsuper"J
+HeroRefineResponse
+	ErrorCode (R	ErrorCode
 result (Rresult"7
 HeroInfoUpdateResponse
 hero (2	.msg.HeroRhero"/
@@ -178,13 +173,12 @@ error_code (R	errorCode
 QuestOpRequest
 id (Rid
 op (Rop
-r (Rr"„
+r (Rr"ƒ
 QuestOpResponse
 id (Rid
 op (Rop
-r (Rr
-
-error_code (R	errorCode$
+r (Rr
+	ErrorCode (R	ErrorCode$
 quest (2.msg.QuestInfoRquest"5
 QuestUpdate&
 quests (2.msg.QuestInfoRquests"[

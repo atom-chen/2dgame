@@ -1,7 +1,7 @@
 local data =
 {
 	[1] = {
-		breakId = 1,
+		id = 1,
 		name = "少林寺1",
 		openLv = 1,
 		teamId = 100,
@@ -12,7 +12,7 @@ local data =
 	},
 
 	[2] = {
-		breakId = 2,
+		id = 2,
 		name = "少林寺2",
 		openLv = 1,
 		teamId = 200,
@@ -23,7 +23,7 @@ local data =
 	},
 
 	[3] = {
-		breakId = 3,
+		id = 3,
 		name = "少林寺3",
 		openLv = 2,
 		teamId = 300,
@@ -34,7 +34,7 @@ local data =
 	},
 
 	[4] = {
-		breakId = 4,
+		id = 4,
 		name = "武当山1",
 		openLv = 3,
 		teamId = 400,
@@ -45,7 +45,7 @@ local data =
 	},
 
 	[5] = {
-		breakId = 5,
+		id = 5,
 		name = "武当山2",
 		openLv = 3,
 		teamId = 500,
@@ -56,7 +56,7 @@ local data =
 	},
 
 	[6] = {
-		breakId = 6,
+		id = 6,
 		name = "武当山3",
 		openLv = 3,
 		teamId = 600,
@@ -67,7 +67,7 @@ local data =
 	},
 
 	[7] = {
-		breakId = 7,
+		id = 7,
 		name = "武当山4",
 		openLv = 4,
 		teamId = 700,
@@ -78,7 +78,7 @@ local data =
 	},
 
 	[8] = {
-		breakId = 8,
+		id = 8,
 		name = "论剑1",
 		openLv = 5,
 		teamId = 700,
@@ -89,7 +89,7 @@ local data =
 	},
 
 	[9] = {
-		breakId = 9,
+		id = 9,
 		name = "论剑2",
 		openLv = 5,
 		teamId = 700,
@@ -100,7 +100,7 @@ local data =
 	},
 
 	[10] = {
-		breakId = 10,
+		id = 10,
 		name = "论剑3",
 		openLv = 6,
 		teamId = 700,

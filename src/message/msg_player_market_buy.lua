@@ -9,5 +9,5 @@ local Opcode     = Opcode
 
 
 md[Opcode.MSG_SC_MarketBuy] = function(tab)
-    print("集市购买结果:", tab.error_code)
+    print("集市购买结果:", tab.ErrorCode)
 end

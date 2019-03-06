@@ -1,15 +1,17 @@
 
 require "message.opcode"
 
-local Event      = require "core.event"
-local EventMgr   = require "core.event_mgr"
+local Event             = require "core.event"
+local EventMgr          = require "core.event_mgr"
+local PlayerChapter     = require "model.player_chapter"
+
 
 local md         = MessageDispatcher
 local Opcode     = Opcode
 
 
 md[Opcode.MSG_SC_ChapterInfo] = function(tab)
-    print("msg: MSG_SC_ChapterInfo:", tab)
+    PlayerChapter.MsgUpdate(tab)
 end
 
 md[Opcode.MSG_SC_ChapterFighting] = function(tab)

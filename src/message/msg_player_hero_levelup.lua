@@ -10,9 +10,9 @@ local Opcode     = Opcode
 
 
 md[Opcode.MSG_SC_HeroLevelup] = function(tab)
-    if tab.error_code == 0 then
-        print("英雄升级成功:", tab.error_code)
+    if tab.ErrorCode == 0 then
+        print("英雄升级成功:", tab.ErrorCode)
     else
-        print("英雄升级失败:", tab.error_code)
+        print("英雄升级失败:", tab.ErrorCode)
     end
 end
