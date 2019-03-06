@@ -11,11 +11,13 @@ local Opcode     = Opcode
 
 
 md[Opcode.MSG_SC_ChapterInfo] = function(tab)
-    PlayerChapter.MsgUpdate(tab)
+    if tab.ErrorCode == 0 then
+        PlayerChapter.Update(tab.Info)
+    end
 end
 
 md[Opcode.MSG_SC_ChapterFighting] = function(tab)
-    print("msg: MSG_SC_ChapterInfo:", tab)
+    print("msg: MSG_SC_ChapterFighting:", tab.ErrorCode)
 end
 
 md[Opcode.MSG_SC_ChapterRewards] = function(tab)

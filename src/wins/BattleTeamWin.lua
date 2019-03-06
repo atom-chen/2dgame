@@ -40,10 +40,19 @@ function BattleTeamWin:ctor()
     end)
 
     -- 战斗
-    local btn_fight = self.resourceNode_:getChildByName("btnFight")
-    btn:addClickEventListener(function()
-        -- 发送消息
-        -- todo
+    local btn_fight = self.resourceNode_:getChildByName("btn_fight")
+    btn_fight:addClickEventListener(function()
+        -- 发送攻打关卡消息
+        local msg = { Team = {} }
+        for i = 1, 2 do
+            for j = 1, 3 do
+                local name = "row" .. i .. j
+                local id = self.selected[name]
+                if not id then id = 0 end 
+                table.insert(msg.Team, id)
+            end
+        end
+        Socket.SendPacket(Opcode.MSG_CS_ChapterFighting, msg)
         self:Close()
     end)
 
@@ -58,8 +67,8 @@ function BattleTeamWin:ctor()
             m:setTouchEnabled(true)
             m:onTouch(function(event)
                 if event.name == "ended" then
-                    WinManager:CreateWindow("HeroSelectWin", function(id)
-                        self.selected.name = id
+                    WinManager:CreateWindow("HeroSelectWin", self.selected, function(id)
+                        self.selected[name] = id
                         m:removeChildByTag(k)
                         
                         if id == 0 then return end

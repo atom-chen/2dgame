@@ -1,7 +1,6 @@
 
 local config        = require "configs_grace"
 
-
 local _chapter      = {}
 local PlayerChapter = {}
 
@@ -18,10 +17,11 @@ function PlayerChapter.Clear()
 end
 
 -- update from server
-function PlayerChapter.MsgUpdate(tab)
-    print("dddddd", tab)
-    for k, v in pairs(tab.Info) do
-        print("item", k, v)
+function PlayerChapter.Update(info)
+    _chapter.LootTs  = info.LootTs
+    _chapter.BreakId = info.BreakId
+    for _, v in pairs(info.Chapters) do
+        table.insert(_chapter.Chapters, v)
     end
 end
 
