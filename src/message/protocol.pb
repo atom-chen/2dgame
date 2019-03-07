@@ -1,18 +1,4 @@
 
-‘
-session.protomsg"!
-PingRequest
-time (Rtime""
-PingResponse
-time (Rtime"6
-LoginRequest
-acct (	Racct
-pass (	Rpass"-
-LoginResponse
-	ErrorCode (R	ErrorCode"
-EnterGameRequest"1
-EnterGameResponse
-	ErrorCode (R	ErrorCodebproto3
 à!
 
 game.protomsg"<
@@ -208,3 +194,17 @@ BattleUnit
 ChapterLootResponse
 	ErrorCode (R	ErrorCode#
 Rewards (2	.msg.ItemRRewardsbproto3
+‘
+session.protomsg"!
+PingRequest
+time (Rtime""
+PingResponse
+time (Rtime"6
+LoginRequest
+acct (	Racct
+pass (	Rpass"-
+LoginResponse
+	ErrorCode (R	ErrorCode"
+EnterGameRequest"1
+EnterGameResponse
+	ErrorCode (R	ErrorCodebproto3
