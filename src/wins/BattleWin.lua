@@ -62,17 +62,17 @@ function BattleUnit:ctor(u, b)
     self._u         = u
     self._b         = b
 
-    self._type      = u.type
-    self._id        = u.id
-    self._lv        = u.lv
-    self._hp        = u.hp
-    self._pos       = u.pos
-    self._apm       = u.apm
-    self._atk       = u.atk
-    self._def       = u.def
-    self._crit      = u.crit
-    self._hurt      = u.hurt
-    self._attacker  = u.attacker
+    self._type      = u.Type
+    self._id        = u.Id
+    self._lv        = u.Lv
+    self._hp        = u.Hp
+    self._pos       = u.Pos
+    self._apm       = u.Apm
+    self._atk       = u.Atk
+    self._def       = u.Def
+    self._crit      = u.Crit
+    self._hurt      = u.Hurt
+    self._attacker  = u.Attacker
 
     self._skill_curr = nil
     self._skill_comm = nil
@@ -83,17 +83,17 @@ function BattleUnit:ctor(u, b)
     self._auras = {}
     self._skills= {}
 
-    local v = u.comm
-    if v.id ~= 0 then
+    local v = u.Comm
+    if v.Id ~= 0 then
         table.insert(self._skills, {
-            proto = config.GetSkillProto(v.id, v.lv)
+            proto = config.GetSkillProto(v.Id, v.Lv)
         })
     end
 
-    for k, v in ipairs(u.skill) do
-        if v.id ~= 0 then
+    for k, v in ipairs(u.Skill) do
+        if v.Id ~= 0 then
             table.insert(self._skills, {
-                proto = config.GetSkillProto(v.id, v.lv)
+                proto = config.GetSkillProto(v.Id, v.Lv)
             })
         end
     end
@@ -262,7 +262,7 @@ function BattleWin:ctor(r)
     -- 初始化所有战斗参与者
     self._result = r
     self._units = {}
-    for _, v in ipairs(r.units) do
+    for _, v in ipairs(r.Units) do
         local u = BattleUnit:create(v, self)
         local p = actor_info[u._pos]
         u._root:setPosition(p[1], p[2])
@@ -270,25 +270,24 @@ function BattleWin:ctor(r)
         self._units[u._pos] = u
     end
 
-
     -- 初始化播放事件
     local events = {}
     self._events = events
-    for _, v in ipairs(r.aura) do
+    for _, v in ipairs(r.Aura) do
         v.__type = EVENT_AURA
-        __append(events, v.time, v)
+        __append(events, v.Time, v)
     end
-    for _, v in ipairs(r.hurt) do
+    for _, v in ipairs(r.Hurt) do
         v.__type = EVENT_HURT
-        __append(events, v.time, v)
+        __append(events, v.Time, v)
     end
-    for _, v in ipairs(r.skill) do
+    for _, v in ipairs(r.Skill) do
         v.__type = EVENT_SKILL
-        __append(events, v.time, v)
+        __append(events, v.Time, v)
     end
-    for _, v in ipairs(r.effect) do
+    for _, v in ipairs(r.Effect) do
         v.__type = EVENT_EFFECT
-        __append(events, v.time, v)
+        __append(events, v.Time, v)
     end
 
     self._max_time = 0
@@ -297,7 +296,6 @@ function BattleWin:ctor(r)
             self._max_time = t
         end
     end
-
 end
 
 

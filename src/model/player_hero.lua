@@ -14,16 +14,16 @@ end
 
 
 function Hero:Init(tab)
-    self.proto          = config.GetHeroProto(tab.id, tab.level)
-    self.id             = tab.id
-    self.level          = tab.level
-    self.refineLv       = tab.refineLv
-    self.refineTimes    = tab.refineTimes
-    self.refineSuper    = tab.refineSuper
-    self.power          = tab.power
-    self.status         = tab.status
-    self.lifePoint      = tab.lifePoint
-    self.lifePointMax   = tab.lifePointMax
+    self.proto          = config.GetHeroProto(tab.Id, tab.Level)
+    self.id             = tab.Id
+    self.level          = tab.Level
+    self.refineLv       = tab.RefineLv
+    self.refineTimes    = tab.RefineTimes
+    self.refineSuper    = tab.RefineSuper
+    self.power          = tab.Power
+    self.status         = tab.Status
+    self.lifePoint      = tab.LifePoint
+    self.lifePointMax   = tab.LifePointMax
 
     self.active         = {}
     self.passive        = {}
@@ -31,16 +31,16 @@ function Hero:Init(tab)
     for i = 1, 2 do
         self.active[i] =
         {
-            id      = tab.active[i].id,
-            level   = tab.active[i].level,
+            id      = tab.Active[i].Id,
+            level   = tab.Active[i].Level,
         }
     end
 
     for i = 1, 4 do
         self.passive[i] =
         {
-            id      = tab.passive[i].id,
-            level   = tab.passive[i].level,
+            id      = tab.Passive[i].Id,
+            level   = tab.Passive[i].Level,
         }
     end
 

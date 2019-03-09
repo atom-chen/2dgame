@@ -68,7 +68,7 @@ function LoginScene:__enter_game()
 
     EventMgr.Register(self, {Event.EnterGameOk,Event.EnterGameFailed}, _on_event_enter_game)
 
-    Socket.SendPacket(Opcode.MSG_CS_ENTER_GAME, {
+    Socket.SendPacket(Opcode.MSG_CS_EnterGameRequest, {
     })
 end
 
@@ -86,9 +86,9 @@ function LoginScene:__login()
     EventMgr.Register(self, {Event.LoginOK,Event.LoginFailed}, _on_event_login)
 
     -- 发送登录包
-    Socket.SendPacket(Opcode.MSG_CS_LOGIN, {
-        acct = "test001",
-        pass = "1",
+    Socket.SendPacket(Opcode.MSG_CS_LoginRequest, {
+        Acct = "test001",
+        Pass = "1",
     })
 end
 

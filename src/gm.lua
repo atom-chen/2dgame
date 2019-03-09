@@ -17,10 +17,6 @@ local gm_str =
 -- MSG.SendGMCommand(gm_str[2])
 
 
--- 发送通知
--- MSG.SendNotice("fuck you, can i ?")
-
-
 -- 集市购买
 -- MSG.SendMarketBuy(1, 3)
 
@@ -30,4 +26,4 @@ local gm_str =
 
 
 -- 获取关卡信息
-Socket.SendPacket(Opcode.MSG_CS_ChapterInfo, {})
+Socket.SendPacket(Opcode.MSG_CS_ChapterInfoRequest, {})

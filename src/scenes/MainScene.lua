@@ -123,7 +123,7 @@ function MainScene:ctor()
     btn:getTitleLabel():setSystemFontSize(24)
     btn:setPosition(-1000, -100)
     btn:addClickEventListener(function()
-        Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { id = 1, })
+        -- Socket.SendPacket(Opcode.MSG_CS_MakeBattle, { Id = 1,})
     end)
 
     --------------------------- GM功能按钮 END ---------------------------
@@ -196,8 +196,8 @@ end
 function MainScene:OnEnter()
     print("MainScene:OnEnter")
     -- 拉取玩家数据
-    Socket.SendPacket(Opcode.MSG_CS_PlayerData, {
-        id = 2
+    Socket.SendPacket(Opcode.MSG_CS_PlayerDataRequest, {
+        Id = 2,
     })
 
     self:render_world()

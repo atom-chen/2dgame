@@ -52,7 +52,7 @@ function BattleTeamWin:ctor()
                 table.insert(msg.Team, id)
             end
         end
-        Socket.SendPacket(Opcode.MSG_CS_ChapterFighting, msg)
+        Socket.SendPacket(Opcode.MSG_CS_ChapterFightingRequest, msg)
         self:Close()
     end)
 

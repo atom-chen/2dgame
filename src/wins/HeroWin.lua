@@ -71,8 +71,8 @@ function HeroWin:ctor()
     button:addClickEventListener(function()
         if self.curr_index then
             local hero = PlayerHero.GetHeroByIndex(self.curr_index)
-            Socket.SendPacket(Opcode.MSG_CS_HeroLevelup, {
-                hero_id = hero.id
+            Socket.SendPacket(Opcode.MSG_CS_HeroLevelupRequest, {
+                Id = hero.id,
             })
         end
     end)
@@ -142,9 +142,9 @@ function HeroWin:ctor()
     button:addClickEventListener(function()
         if self.curr_index then
             local hero = PlayerHero.GetHeroByIndex(self.curr_index)
-            Socket.SendPacket(Opcode.MSG_CS_HeroRefine, {
-                hero_id = hero.id,
-                super = 0,
+            Socket.SendPacket(Opcode.MSG_CS_HeroRefineRequest, {
+                Id = hero.id,
+                Flag = 0,
             })
         end
     end)
@@ -156,9 +156,9 @@ function HeroWin:ctor()
     button:addClickEventListener(function()
         if self.curr_index then
             local hero = PlayerHero.GetHeroByIndex(self.curr_index)
-            Socket.SendPacket(Opcode.MSG_CS_HeroRefine, {
-                hero_id = hero.id,
-                super = 1,
+            Socket.SendPacket(Opcode.MSG_CS_HeroRefineRequest, {
+                Id = hero.id,
+                Flag = 1,
             })
         end
     end)
