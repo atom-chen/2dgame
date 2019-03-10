@@ -10,6 +10,8 @@ local windows =
     NpcMenuWin      = {},   -- 地图Npc菜单界面
     BattleTeamWin   = {},   -- 设置战斗队伍界面
     HeroSelectWin   = {},   -- 出战英雄选择界面
+    ChapterWin      = {},   -- 章节关卡界面
+    GmWin           = {},   -- gm界面
 }
 
 for k, v in pairs(windows) do

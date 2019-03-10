@@ -5,6 +5,9 @@
       <RootFolder Name=".">
         <Folder Name="0.public">
           <Image Name="btn_close.png" />
+          <Image Name="btn_disabled.png" />
+          <Image Name="btn_normal.png" />
+          <Image Name="btn_pressd.png" />
           <Image Name="start.png" />
           <Image Name="win_frame.png" />
         </Folder>
@@ -12,6 +15,9 @@
           <Project Name="battle.csd" Type="Layer" />
           <Project Name="chat.csd" Type="Layer" />
           <Project Name="hero_select.csd" Type="Layer" />
+          <Project Name="chapter.csd" Type="Layer" />
+          <Project Name="toolbar.csd" Type="Layer" />
+          <Project Name="gm.csd" Type="Layer" />
         </Folder>
         <Folder Name="battle">
           <Image Name="bg.jpg" />
@@ -31,6 +37,22 @@
           <Image Name="liaotian-zidi1.png" />
           <Image Name="liaotian-zidi2.png" />
           <Image Name="liaotian-zidi3.png" />
+        </Folder>
+        <Folder Name="chapter">
+          <Image Name="bg.jpg" />
+        </Folder>
+        <Folder Name="toolbar">
+          <Image Name="map_button_03.png" />
+          <Image Name="map_button_04.png" />
+          <Image Name="map_button_05.png" />
+          <Image Name="map_button_06.png" />
+          <Image Name="map-xianshiwanfa.png" />
+        </Folder>
+        <Folder Name="gm">
+          <Image Name="bg.jpg" />
+          <Image Name="public_button_001.png" />
+          <Image Name="public_button_002.png" />
+          <Image Name="public_button_003.png" />
         </Folder>
       </RootFolder>
     </Group>

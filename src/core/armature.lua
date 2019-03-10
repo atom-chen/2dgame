@@ -69,14 +69,21 @@ end
 function Armature:onTouchBegan(touch, event)
     local p = self:convertToNodeSpace(touch:getLocation())
     local b = self:getBoundingBox()
-    return cc.rectContainsPoint(b, p)
+
+    if cc.rectContainsPoint(b, p) then
+        self._touch = true
+        return true
+    end
+
+    return false
 end
 
 function Armature:onTouchMoved(touch, event)
+    self._touch = false
 end
 
 function Armature:onTouchEnded(touch, event)
-    if self.on_touch then
+    if self._touch and self.on_touch then
         self.on_touch()
     end
 end

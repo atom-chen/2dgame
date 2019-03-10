@@ -7,49 +7,48 @@ local ToolbarWin    = class("ToolbarWin", WinBase)
 
 
 function ToolbarWin:ctor()
-    -- WinBase.ctor(self)
+    self.resourceNode_ = cc.CSLoader:createNode("1.layer/toolbar.csb")
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setAnchorPoint(0.5, 0.5)
+    self:addChild(self.resourceNode_)
+
+    local root = self.resourceNode_:getChildByName("root")
+
+    -- 横排，从右往左
+    root:getChildByName("btn_1"):addClickEventListener(function()
+        WinManager:CreateWindow("ModelWin")
+    end)
+
+    root:getChildByName("btn_2"):addClickEventListener(function()
+        WinManager:CreateWindow("BagWin")
+    end)
+
+    root:getChildByName("btn_3"):addClickEventListener(function()
+        WinManager:CreateWindow("HeroWin")
+    end)
+
+    root:getChildByName("btn_4"):addClickEventListener(function()
+        WinManager:CreateWindow("GmWin")
+    end)
+
+    -- 竖排，从下往上
+    root:getChildByName("btn_5"):addClickEventListener(function()
+    end)
+
+    root:getChildByName("btn_6"):addClickEventListener(function()
+    end)
+
 end
 
 
 ------------------------------ inhert from WinBase ------------------------------
 
 function ToolbarWin:OnCreate()
-    local skeletonNode = AnimLoader:loadSpine("zhandoukaishi")
-    skeletonNode:setAnimation(0, "idle2", true)
-    -- local skeletonNode = AnimLoader:loadSpine("spineboy")
-    skeletonNode:setPosition(cc.p(0, -200))
-    self:addChild(skeletonNode)
-    skeletonNode:setScaleX(-1)
-
-    local arm = Armature:create("caocao", "attack")
-    arm:setPosition(cc.p(240, 150))
-    self:addChild(arm)
-
-    local times = 0
-    local function _on_timer()
-        times = times + 1
-        local r = math.random(0x1000)
-        Socket.SendPacket(Opcode.MSG_CS_PingRequest, {
-            Time = r,
-        }, function(tab)
-            print("ping response:", times, r, tab.Time)
-        end)
-    end
-
-    -- test
-    local particle = cc.ParticleSystemQuad:create("particle/getitem.plist")
-    particle:setPositionType(cc.POSITION_TYPE_RELATIVE)
-    particle:setPosition(cc.p(360,0))
-    self:addChild(particle)
-
-    local s = self:getScheduler()
-    self.timer_id = s:scheduleScriptFunc(_on_timer, 1, false)
 end
 
 
 function ToolbarWin:OnDestroy()
     print("ToolbarWin:OnDestroy")
-    self:getScheduler():unscheduleScriptEntry(self.timer_id)
 end
 
 

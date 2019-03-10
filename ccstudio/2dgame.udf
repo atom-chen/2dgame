@@ -31,10 +31,11 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="1.layer/hero_select.csd" />
-          <FilePathData Path="1.layer/battle.csd" />
+          <FilePathData Path="1.layer/toolbar.csd" />
+          <FilePathData Path="1.layer/gm.csd" />
+          <FilePathData Path="1.layer/chapter.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="1.layer/battle.csd" />
+        <ActiveDocument Path="1.layer/gm.csd" />
       </Value>
     </Item>
   </Properties>

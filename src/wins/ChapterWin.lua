@@ -14,23 +14,36 @@ local ChapterWin = class("ChapterWin", WinBase)
 function ChapterWin:ctor()
     WinBase.ctor(self)
 
-    -- 关闭按钮
-    local winSize   = cc.Director:getInstance():getWinSize()
-    local btn_image = ccui.Scale9Sprite:create("unKnown.png")
-    local btn_close = cc.ControlButton:create(btn_image)
-    btn_close:setPreferredSize(btn_image:getPreferredSize())
-    btn_close:setPosition(cc.p(winSize.width/2, winSize.height/2))
-    btn_close:registerControlEventHandler(function()
+    self.resourceNode_ = cc.CSLoader:createNode("1.layer/chapter.csb")
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setAnchorPoint(0.5, 0.5)
+    self:addChild(self.resourceNode_)
+
+    -- 关闭
+    local btn = self.resourceNode_:getChildByName("btn_close")
+    btn:addClickEventListener(function()
         self:Close()
-    end, 32)
-    self:addChild(btn_close, 1)
+    end)
+
+    -- 挂机奖励
+    local btn = self.resourceNode_:getChildByName("btn_loot")
+    btn:addClickEventListener(function()
+        self:Close()
+    end)
+
+    -- 章节奖励
+    local btn = self.resourceNode_:getChildByName("btn_chapter")
+    btn:addClickEventListener(function()
+        self:Close()
+    end)
+    
 end
 
 
 ------------------------------ inhert from WinBase ----------------------------
 
-function ChapterWin:OnCreate(mapid)
-    self:ShowMap(mapid)
+function ChapterWin:OnCreate()
+    self:update_view()    
 end
 
 
@@ -50,17 +63,8 @@ end
 
 -------------------------------------------------------------------------------
 
-function ChapterWin:update_window()
-
-    local conf = config.GetScene(mapid)
-    assert(conf, "ChapterWin:ShowMap:mapid" .. tostring(mapid))
-
-    self.mapid = mapid
-
-    self:render_background(conf)
-    self:render_objects(conf)
-
-    return true
+function ChapterWin:update_view()
+    -- todo
 end
 
 return ChapterWin
