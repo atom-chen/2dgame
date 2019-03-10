@@ -33,6 +33,7 @@ function ToolbarWin:ctor()
 
     -- 竖排，从下往上
     root:getChildByName("btn_5"):addClickEventListener(function()
+        WinManager:CreateWindow("ChapterWin")
     end)
 
     root:getChildByName("btn_6"):addClickEventListener(function()
