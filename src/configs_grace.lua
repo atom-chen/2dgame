@@ -124,24 +124,10 @@ _configs.Break = {}
 map_by__id(_configs.Break, Break)
 
 
---------------------------------------------------------------------------------
--- 需要特殊处理的配置
---------------------------------------------------------------------------------
-
-
-_configs.objects_in_scene = {}
-for _, v in pairs(_configs.Object) do
-    local sid = v.sceneId
-    local tmp = _configs.objects_in_scene[sid]
-    if not tmp then
-        tmp = {}
-        _configs.objects_in_scene[sid] = tmp
-    end
-    tmp[v.id] = v
-end
-
 
 --------------------------------------------------------------------------------
+
+M.AllObjects        = function(name) return _configs[name] end
 
 M.Global            = Global
 M.MarketConf        = MarketConf
@@ -158,14 +144,25 @@ M.GetScene          = get_by__id(_configs.Scene)
 M.GetChapter        = get_by__id(_configs.Chapter)
 M.GetBreak          = get_by__id(_configs.Break)
 
-
 M.GetMarketConf     = get_by__index(MarketConf)
 M.GetRefineSuper    = get_by__index(RefineSuper)
 M.GetRefineNormal   = get_by__index(RefineNormal)
 
 
 --------------------------------------------------------------------------------
+-- 需要特殊处理的配置
+--------------------------------------------------------------------------------
 
+_configs.objects_in_scene = {}
+for _, v in pairs(_configs.Object) do
+    local sid = v.sceneId
+    local tmp = _configs.objects_in_scene[sid]
+    if not tmp then
+        tmp = {}
+        _configs.objects_in_scene[sid] = tmp
+    end
+    tmp[v.id] = v
+end
 
 -- 获取场景内所有的对象
 M.GetSceneObjects = function(sid)

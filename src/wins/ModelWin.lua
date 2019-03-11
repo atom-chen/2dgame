@@ -55,7 +55,7 @@ function ModelWin:ctor()
         "skill2",
     }
     for i = 1, #btn_text do
-        local btn = ccui.Button:create("public_button_001.png", "public_button_002.png", "public_button_003.png")
+        local btn = ccui.Button:create("ccs/gm/public_button_001.png", "ccs/gm/public_button_002.png", "ccs/gm/public_button_003.png")
         local function btn_callback(ref, type)
             if type == ccui.TouchEventType.ended then
                 if self._arm then

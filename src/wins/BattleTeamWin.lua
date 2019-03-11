@@ -48,7 +48,7 @@ function BattleTeamWin:ctor()
             for j = 1, 3 do
                 local name = "row" .. i .. j
                 local id = self.selected[name]
-                if not id then id = 0 end 
+                if not id then id = 0 end
                 table.insert(msg.Team, id)
             end
         end
