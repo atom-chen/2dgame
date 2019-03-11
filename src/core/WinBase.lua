@@ -33,6 +33,7 @@ end
 
 function WinBase:OnDestroy()
     print("WinBase:OnDestroy")
+    EventMgr.Unregister(self)
 end
 
 --------------------------------------------------

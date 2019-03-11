@@ -7,6 +7,8 @@ setmetatable(_data, {
     __mode = "k",
 })
 
+-- collectgarbage
+
 
 function EventMgr.Emit(evt, args)
     for _, tab in pairs(_data) do

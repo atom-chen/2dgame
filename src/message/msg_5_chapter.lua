@@ -10,26 +10,31 @@ local Opcode     = Opcode
 local PlayerChapter = require "model.player_chapter"
 
 
-md[Opcode.MSG_SC_ChapterInfoResponse] = function(tab)
+local function MSG_SC_ChapterInfoResponse(tab)
     print("msg:MSG_SC_ChapterInfoResponse")
     if tab.ErrorCode == 0 then
         PlayerChapter.Update(tab.Info)
     end
 end
+md[Opcode.MSG_SC_ChapterInfoResponse] = MSG_SC_ChapterInfoResponse
 
 
-md[Opcode.MSG_SC_ChapterFightingResponse] = function(tab)
+local function MSG_SC_ChapterFightingResponse(tab)
     print("msg:MSG_SC_ChapterFightingResponse")
     PlayBattle(tab.Br)
 end
+md[Opcode.MSG_SC_ChapterFightingResponse] = MSG_SC_ChapterFightingResponse
 
 
-md[Opcode.MSG_SC_ChapterRewardsResponse] = function(tab)
+local function MSG_SC_ChapterRewardsResponse(tab)
     print("msg:MSG_SC_ChapterRewardsResponse")
     -- TODO
 end
+md[Opcode.MSG_SC_ChapterRewardsResponse] = MSG_SC_ChapterRewardsResponse
 
 
-md[Opcode.MSG_SC_ChapterLootResponse] = function(tab)
+local function MSG_SC_ChapterLootResponse(tab)
     print("msg:MSG_SC_ChapterLootResponse")
+    -- TODO
 end
+md[Opcode.MSG_SC_ChapterLootResponse] = MSG_SC_ChapterLootResponse

@@ -97,6 +97,9 @@ function MainScene:OnEnter()
     })
 
     self:render_world()
+
+    -- 拉取功能模块数据
+    self:get_func_data()
 end
 
 
@@ -105,6 +108,7 @@ function MainScene:OnLeave()
 end
 
 -------------------------------------------------------------------------------
+
 function MainScene:render_world()
     self.objs = {}
     for _, v in pairs(config.GetSceneObjects(2000)) do
@@ -112,9 +116,12 @@ function MainScene:render_world()
         self.objs[v.id] = obj
         self._layer:addChild(obj._root)
     end
-
 end
 
+function MainScene:get_func_data()
+    Socket.SendPacket(Opcode.MSG_CS_QuestListRequest, {})
+    Socket.SendPacket(Opcode.MSG_CS_ChapterInfoRequest, {})
+end
 
 -------------------------------------------------------------------------------
 return MainScene

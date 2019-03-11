@@ -12,7 +12,7 @@ local PlayerItem = require "model.player_item"
 local PlayerHero = require "model.player_hero"
 
 
-md[Opcode.MSG_SC_PlayerDataResponse] = function(tab)
+local function MSG_SC_PlayerDataResponse(tab)
     print("msg:MSG_SC_PlayerDataResponse")
     
     local base      = PlayerBase.GetBase()
@@ -42,25 +42,29 @@ md[Opcode.MSG_SC_PlayerDataResponse] = function(tab)
     -- PlayerItem.Dump()
     -- PlayerHero.Dump()
 end
+md[Opcode.MSG_SC_PlayerDataResponse] = MSG_SC_PlayerDataResponse
 
 
-md[Opcode.MSG_SC_GMCommandResponse] = function(tab)
+local function MSG_SC_GMCommandResponse(tab)
     print("msg:MSG_SC_GMCommandResponse")
     -- TODO
 end
+md[Opcode.MSG_SC_GMCommandResponse] = MSG_SC_GMCommandResponse
 
 
-md[Opcode.MSG_SC_UseItemResponse] = function(tab)
+local function MSG_SC_UseItemResponse(tab)
     print("msg:您使用了道具的结果", tab.Result)
 end
+md[Opcode.MSG_SC_UseItemResponse] = MSG_SC_UseItemResponse
 
 
-md[Opcode.MSG_SC_MarketBuyResponse] = function(tab)
+local function MSG_SC_MarketBuyResponse(tab)
     print("msg:MSG_SC_MarketBuyResponse, 集市购买结果", tab.ErrorCode)
 end
+md[Opcode.MSG_SC_MarketBuyResponse] = MSG_SC_MarketBuyResponse
 
 
-md[Opcode.MSG_SC_ItemUpdate] = function(tab)
+local function MSG_SC_ItemUpdate(tab)
     print("msg:MSG_SC_ItemUpdate")
     
     for _, v in ipairs(tab.Items) do
@@ -72,15 +76,18 @@ md[Opcode.MSG_SC_ItemUpdate] = function(tab)
         print("道具数量发生变化：", v.Flag, v.Id, v.Cnt)
     end
 end
+md[Opcode.MSG_SC_ItemUpdate] = MSG_SC_ItemUpdate
 
 
-md[Opcode.MSG_SC_PlayerExpUpdate] = function(tab)
+local function MSG_SC_PlayerExpUpdate(tab)
     print("msg:MSG_SC_PlayerExpUpdate")
     -- TODO
 end
+md[Opcode.MSG_SC_PlayerExpUpdate] = MSG_SC_PlayerExpUpdate
 
 
-md[Opcode.MSG_SC_NoticeUpdate] = function(tab)
+local function MSG_SC_NoticeUpdate(tab)
     zcg.logInfo("msg:MSG_SC_NoticeResponse: %d - %s", tab.Flag, tab.Notice)
     -- TODO
 end
+md[Opcode.MSG_SC_NoticeUpdate] = MSG_SC_NoticeUpdate

@@ -55,7 +55,7 @@ function LoginScene:__enter_game()
     self:SetLoginStatus("进入游戏...")
 
     local _on_event_enter_game = function(event, args)
-        if event == Event.EnterGameOk then
+        if event == Event.EnterGameOK then
             self:SetLoginStatus("进入游戏成功，加载场景。。。")
             scheduler.Once(function()
                 -- 进入主场景
@@ -66,7 +66,7 @@ function LoginScene:__enter_game()
         end
     end
 
-    EventMgr.Register(self, {Event.EnterGameOk,Event.EnterGameFailed}, _on_event_enter_game)
+    EventMgr.Register(self, {Event.EnterGameOK,Event.EnterGameFailed}, _on_event_enter_game)
 
     Socket.SendPacket(Opcode.MSG_CS_EnterGameRequest, {
     })

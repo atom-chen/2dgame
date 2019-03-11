@@ -1,5 +1,6 @@
 
 local _seq = 1
+
 local function seq()
     _seq = _seq + 1
     return _seq
@@ -16,7 +17,7 @@ local Event =
     LoginFailed         = seq(),        -- 登录失败
 
     -- 进入游戏
-    EnterGameOk         = seq(),
+    EnterGameOK         = seq(),
     EnterGameFailed     = seq(),
 }
 

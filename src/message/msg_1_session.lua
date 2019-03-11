@@ -10,12 +10,13 @@ local Opcode     = Opcode
 local PlayerHero = require "model.player_hero"
 
 
-md[Opcode.MSG_SC_PingResponse] = function(tab)
+local function MSG_SC_PingResponse(tab)
     print("msg:MSG_SC_PingResponse", tab.Time)
 end
+md[Opcode.MSG_SC_PingResponse] = MSG_SC_PingResponse
 
 
-md[Opcode.MSG_SC_LoginResponse] = function(tab)
+local function MSG_SC_LoginResponse(tab)
     print("msg:MSG_SC_LoginResponse", tab.ErrorCode)
     
     if tab.ErrorCode == 0 then
@@ -24,14 +25,16 @@ md[Opcode.MSG_SC_LoginResponse] = function(tab)
         EventMgr.Emit(Event.LoginFailed)
     end
 end
+md[Opcode.MSG_SC_LoginResponse] = MSG_SC_LoginResponse
 
 
-md[Opcode.MSG_SC_EnterGameResponse] = function(tab)
+local function MSG_SC_EnterGameResponse(tab)
     print("msg:MSG_SC_EnterGameResponse")
     
     if tab.ErrorCode == 0 then
-        EventMgr.Emit(Event.EnterGameOk)
+        EventMgr.Emit(Event.EnterGameOK)
     else
         EventMgr.Emit(Event.EnterGameFailed)
     end
 end
+md[Opcode.MSG_SC_EnterGameResponse] = MSG_SC_EnterGameResponse

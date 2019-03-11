@@ -7,19 +7,22 @@ local md         = MessageDispatcher
 local Opcode     = Opcode
 
 
-md[Opcode.MSG_SC_QuestListResponse] = function(tab)
+local function MSG_SC_QuestListResponse(tab)
     print("msg:MSG_SC_QuestListResponse")
     -- TODO
 end
+md[Opcode.MSG_SC_QuestListResponse] = MSG_SC_QuestListResponse
 
 
-md[Opcode.MSG_SC_QuestOpResponse] = function(tab)
+local function MSG_SC_QuestOpResponse(tab)
     print("msg:MSG_SC_QuestOpResponse")
     -- TODO
 end
+md[Opcode.MSG_SC_QuestOpResponse] = MSG_SC_QuestOpResponse
 
 
-md[Opcode.MSG_SC_QuestUpdate] = function(tab)
+local function MSG_SC_QuestUpdate(tab)
     print("msg:MSG_SC_QuestUpdate")
     -- TODO
 end
+md[Opcode.MSG_SC_QuestUpdate] = MSG_SC_QuestUpdate
