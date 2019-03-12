@@ -46,7 +46,7 @@ function HeroSelectWin:ctor(selected, onOK)
     local list = self.resourceNode_:getChildByName("ListView_1")
     self.list = list
 
-    for i, tab in pairs(PlayerHero.GetHeros()) do
+    for i, tab in pairs(PlayerHero:GetHeros()) do
         if not table.exist_val(i, selected) then
             local widget = ccui.Widget:create()
             widget:setContentSize(cc.size(400,400))
@@ -86,7 +86,6 @@ end
 
 
 function HeroSelectWin:OnDestroy()
-    PlayerHero.UnRegister(self)
 end
 
 

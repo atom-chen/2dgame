@@ -3,15 +3,15 @@ local PlayerBase    = NewModel({_model_name="PlayerBase"})
 
 -------------------------------------------------------------------
 
-function PlayerBase.Clear()
+function PlayerBase:Clear()
     _base = {}
 end
 
-function PlayerBase.GetBase()
+function PlayerBase:GetBase()
     return _base
 end
 
-function PlayerBase.Dump()
+function PlayerBase:Dump()
     table.print_r(_base, "player base")
 end
 

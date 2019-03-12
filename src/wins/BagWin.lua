@@ -102,13 +102,11 @@ end
 
 
 function ItemWin:OnCreate()
-    PlayerItem.Register(self)
+    self:RegisterNotice("PlayerItem", "on_player_item")
 end
 
 
 function ItemWin:OnDestroy()
-    PlayerItem.UnRegister(self)
-    self:RegisterNotice("PlayerItem", "on_player_item")
 end
 
 
@@ -134,7 +132,7 @@ function ItemWin:Refresh()
     local scrollView = self.scrollView
     scrollView:removeAllChildren()
 
-    local items = PlayerItem.GetAllItems()
+    local items = PlayerItem:GetAllItems()
     local count = #items
 
     local rows

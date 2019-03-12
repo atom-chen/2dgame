@@ -15,7 +15,7 @@ local PlayerHero = require "model.player_hero"
 local function MSG_SC_PlayerDataResponse(tab)
     print("msg:MSG_SC_PlayerDataResponse")
     
-    local base      = PlayerBase.GetBase()
+    local base      = PlayerBase:GetBase()
     base.acct       = tab.Acct
     base.name       = tab.Name
     base.pid        = tab.Pid
@@ -27,20 +27,20 @@ local function MSG_SC_PlayerDataResponse(tab)
 
     for _, v in ipairs(tab.Items) do
         if v.Flag == 0 then
-            PlayerItem.SetItemCount(v.Id, v.Cnt)
+            PlayerItem:SetItemCount(v.Id, v.Cnt)
         else
-            PlayerItem.ChgItemCount(v.Id, v.Cnt)
+            PlayerItem:ChgItemCount(v.Id, v.Cnt)
         end
     end
 
     for _, v in ipairs(tab.Heros) do
-        PlayerHero.UpdateHero(v.Id, v)
+        PlayerHero:UpdateHero(v.Id, v)
     end
-    PlayerHero.Sort()
+    PlayerHero:Sort()
 
-    -- PlayerBase.Dump()
-    -- PlayerItem.Dump()
-    -- PlayerHero.Dump()
+    -- PlayerBase:Dump()
+    -- PlayerItem:Dump()
+    -- PlayerHero:Dump()
 end
 md[Opcode.MSG_SC_PlayerDataResponse] = MSG_SC_PlayerDataResponse
 
@@ -69,9 +69,9 @@ local function MSG_SC_ItemUpdate(tab)
     
     for _, v in ipairs(tab.Items) do
         if v.Flag == 0 then
-            PlayerItem.SetItemCount(v.Id, v.Cnt)
+            PlayerItem:SetItemCount(v.Id, v.Cnt)
         elseif v.Flag == 1 then
-            PlayerItem.ChgItemCount(v.Id, v.Cnt)
+            PlayerItem:ChgItemCount(v.Id, v.Cnt)
         end
         print("道具数量发生变化：", v.Flag, v.Id, v.Cnt)
     end

@@ -13,7 +13,7 @@ local PlayerChapter = require "model.player_chapter"
 local function MSG_SC_ChapterInfoResponse(tab)
     print("msg:MSG_SC_ChapterInfoResponse", tab.ErrorCode)
     if tab.ErrorCode == 0 then
-        PlayerChapter.Update(tab.Info)
+        PlayerChapter:Update(tab.Info)
     end
 end
 md[Opcode.MSG_SC_ChapterInfoResponse] = MSG_SC_ChapterInfoResponse
@@ -26,7 +26,7 @@ local function MSG_SC_ChapterFightingResponse(tab)
     end
     
     if tab.ErrorCode == 0 then
-        PlayerChapter.Update(tab.Info)
+        PlayerChapter:Update(tab.Info)
     end
     PlayBattle(tab.Br)
 end
@@ -36,7 +36,7 @@ md[Opcode.MSG_SC_ChapterFightingResponse] = MSG_SC_ChapterFightingResponse
 local function MSG_SC_ChapterRewardsResponse(tab)
     print("msg:MSG_SC_ChapterRewardsResponse", tab.ErrorCode)
     if tab.ErrorCode == 0 then
-        PlayerChapter.Update(tab.Info)
+        PlayerChapter:Update(tab.Info)
     end
 end
 md[Opcode.MSG_SC_ChapterRewardsResponse] = MSG_SC_ChapterRewardsResponse

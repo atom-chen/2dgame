@@ -5,16 +5,16 @@ local PlayerItem    = NewModel({_model_name="PlayerItem"})
 
 -------------------------------------------------------------------
 
-function PlayerItem.Clear()
+function PlayerItem:Clear()
     _items = {}
 end
 
-function PlayerItem.GetItemCount(id)
+function PlayerItem:GetItemCount(id)
     return _items[id] or 0
 end
 
 -- 道具数量变更
-function PlayerItem.ChgItemCount(id, cnt)
+function PlayerItem:ChgItemCount(id, cnt)
     local val = _items[id]
     if not val or val == 0 then
         _items[id] = cnt
@@ -31,7 +31,7 @@ function PlayerItem.ChgItemCount(id, cnt)
 end
 
 -- 设置道具数量
-function PlayerItem.SetItemCount(id, cnt)
+function PlayerItem:SetItemCount(id, cnt)
     local val = _items[id]
     _items[id] = cnt
     if not val or val == 0 then
@@ -45,12 +45,12 @@ function PlayerItem.SetItemCount(id, cnt)
     end
 end
 
-function PlayerItem.Dump()
+function PlayerItem:Dump()
     table.print_r(_items, "player item")
 end
 
 -- 所有道具
-function PlayerItem.GetAllItems()
+function PlayerItem:GetAllItems()
     local tab = {}
     for id, cnt in pairs(_items) do
         table.insert(tab, {id,cnt})

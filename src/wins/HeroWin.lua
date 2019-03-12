@@ -45,7 +45,7 @@ function HeroWin:ctor()
     button:getTitleLabel():setSystemFontSize(16)
     button:setPosition(-240, 240)
     button:addClickEventListener(function()
-        if self.curr_index < PlayerHero.GetHeroCount() then
+        if self.curr_index < PlayerHero:GetHeroCount() then
             self:ShowHeroDetail(self.curr_index+1)
         end
     end)
@@ -70,7 +70,7 @@ function HeroWin:ctor()
     button:setPosition(-200, -100)
     button:addClickEventListener(function()
         if self.curr_index then
-            local hero = PlayerHero.GetHeroByIndex(self.curr_index)
+            local hero = PlayerHero:GetHeroByIndex(self.curr_index)
             Socket.SendPacket(Opcode.MSG_CS_HeroLevelupRequest, {
                 Id = hero.id,
             })
@@ -141,7 +141,7 @@ function HeroWin:ctor()
     button:setPosition(260, 100)
     button:addClickEventListener(function()
         if self.curr_index then
-            local hero = PlayerHero.GetHeroByIndex(self.curr_index)
+            local hero = PlayerHero:GetHeroByIndex(self.curr_index)
             Socket.SendPacket(Opcode.MSG_CS_HeroRefineRequest, {
                 Id = hero.id,
                 Flag = 0,
@@ -155,7 +155,7 @@ function HeroWin:ctor()
     button:setPosition(440, 100)
     button:addClickEventListener(function()
         if self.curr_index then
-            local hero = PlayerHero.GetHeroByIndex(self.curr_index)
+            local hero = PlayerHero:GetHeroByIndex(self.curr_index)
             Socket.SendPacket(Opcode.MSG_CS_HeroRefineRequest, {
                 Id = hero.id,
                 Flag = 1,
@@ -183,13 +183,12 @@ end
 
 
 function HeroWin:OnCreate()
-    PlayerHero.Register(self)
+    PlayerHero:Register(self)
     self:RegisterNotice("PlayerHero", "on_player_hero")
 end
 
 
 function HeroWin:OnDestroy()
-    PlayerHero.UnRegister(self)
 end
 
 
@@ -208,7 +207,7 @@ function HeroWin:ShowHeroDetail(index)
     end
     self.curr_index = index
 
-    local hero = PlayerHero.GetHeroByIndex(index)
+    local hero = PlayerHero:GetHeroByIndex(index)
     if not hero then
         return
     end
@@ -276,7 +275,7 @@ function HeroWin:on_player_hero(type, id)
     print("HeroWin:Notice____", type, id)
 
     if type == 0 and self.curr_index then
-        local hero = PlayerHero.GetHeroByIndex(self.curr_index)
+        local hero = PlayerHero:GetHeroByIndex(self.curr_index)
         if hero.id == id then
             print("updateing.......")
             local index = self.curr_index

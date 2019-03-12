@@ -73,7 +73,7 @@ function BattleTeamWin:ctor()
                         
                         if id == 0 then return end
 
-                        local tab = PlayerHero.GetHero(id)
+                        local tab = PlayerHero:GetHero(id)
                         local arm = Armature:create(tab.proto.model)
                         m:removeChildByTag(k)
                         m:addChild(arm, 1, k)

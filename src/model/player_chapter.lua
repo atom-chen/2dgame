@@ -5,7 +5,7 @@ local PlayerChapter = NewModel({_model_name="PlayerChapter"})
 
 ---------------------------------------------------------------------------------
 
-function PlayerChapter.Clear()
+function PlayerChapter:Clear()
     _chapter =
     {
         LootTs   = 0,   -- 上次领取挂机奖励的时间
@@ -15,7 +15,7 @@ function PlayerChapter.Clear()
 end
 
 -- update from server
-function PlayerChapter.Update(info)
+function PlayerChapter:Update(info)
     _chapter.LootTs  = info.LootTs
     _chapter.BreakId = info.BreakId
     for _, v in pairs(info.Chapters) do
@@ -26,11 +26,11 @@ function PlayerChapter.Update(info)
     print("_chapter:", _chapter.LootTs, _chapter.BreakId)
 end
 
-function PlayerChapter.Data()
+function PlayerChapter:Data()
     return _chapter
 end
 
 -------------------------------------------------------------------------------
-PlayerChapter.Clear()
+PlayerChapter:Clear()
 
 return PlayerChapter

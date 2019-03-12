@@ -42,7 +42,7 @@ end
 ------------------------------ inhert from WinBase ----------------------------
 
 function ChapterWin:OnCreate()
-    self:update_view(2)
+    self:update_view(1)
 end
 
 
@@ -84,7 +84,7 @@ end
 function ChapterWin:update_view(chapter_id)
     local seq  = 0
     local conf = config.GetChapter(chapter_id)
-    local data = PlayerChapter.Data()
+    local data = PlayerChapter:Data()
 
     self.resourceNode_:getChildByName("txt_name"):setText(conf.name)
 

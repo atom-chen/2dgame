@@ -11,7 +11,7 @@ local function MSG_SC_HeroLevelupResponse(tab)
     print("msg:MSG_SC_HeroLevelupResponse")
     
     local v = tab.Hero
-    PlayerHero.UpdateHero(v.id, v)
+    PlayerHero:UpdateHero(v.id, v)
 
     if tab.ErrorCode == 0 then
         print("英雄升级成功:", tab.ErrorCode)

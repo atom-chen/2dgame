@@ -83,7 +83,7 @@ function NpcMenuWin:Show(npcid)
 
     local quests = conf_quest.GetNpcQuests(npcid)
     for _, q in pairs(quests or {}) do
-        if PlayerQuest.Acceptable(q) then
+        if PlayerQuest:Acceptable(q) then
             table.insert(qs, {q.title, 1})
         end
     end

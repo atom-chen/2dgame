@@ -36,7 +36,7 @@ end
 
 -------------------------------------------------------------------------------
 
-function PlayerQuest.Clear()
+function PlayerQuest:Clear()
     _quests =
     {
         lastId      = 0,        -- 上一个完成的任务(主线)
@@ -46,12 +46,12 @@ function PlayerQuest.Clear()
 end
 
 -- 任务同步
-function PlayerQuest.UpdateQuest(q)
+function PlayerQuest:UpdateQuest(q)
 
 end
 
 -- 任务是否可接
-function PlayerQuest.Acceptable(qconf)
+function PlayerQuest:Acceptable(qconf)
     local pass = false
 
     repeat
@@ -84,6 +84,6 @@ function PlayerQuest.Acceptable(qconf)
 end
 
 -------------------------------------------------------------------------------
-PlayerQuest.Clear()
+PlayerQuest:Clear()
 
 return PlayerQuest

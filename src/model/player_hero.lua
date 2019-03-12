@@ -110,11 +110,11 @@ end
 
 -------------------------------------------------------------------------------
 
-function PlayerHero.Clear()
+function PlayerHero:Clear()
     _heros = {}
 end
 
-function PlayerHero.UpdateHero(id, tab)
+function PlayerHero:UpdateHero(id, tab)
     local hero = _heros[id]
     if not hero then
         hero = Hero:new(id)
@@ -126,21 +126,21 @@ function PlayerHero.UpdateHero(id, tab)
     hero:Init(tab)
 end
 
-function PlayerHero.GetHero(id)
+function PlayerHero:GetHero(id)
     return _heros[id]
 end
 
-function PlayerHero.GetHeros()
+function PlayerHero:GetHeros()
     return _heros
 end
 
-function PlayerHero.Dump()
+function PlayerHero:Dump()
     for _, hero in pairs(_heros) do
         hero:Dump()
     end
 end
 
-function PlayerHero.Sort()
+function PlayerHero:Sort()
     _heros_index = {}
     for _, hero in pairs(_heros) do
         table.insert(_heros_index, hero)
@@ -153,11 +153,11 @@ function PlayerHero.Sort()
     end
 end
 
-function PlayerHero.GetHeroCount()
+function PlayerHero:GetHeroCount()
     return #_heros_index
 end
 
-function PlayerHero.GetHeroByIndex(index)
+function PlayerHero:GetHeroByIndex(index)
     return _heros_index[index]
 end
 
