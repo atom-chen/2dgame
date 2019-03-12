@@ -184,6 +184,7 @@ end
 
 function HeroWin:OnCreate()
     PlayerHero.Register(self)
+    self:RegisterNotice("PlayerHero", "on_player_hero")
 end
 
 
@@ -271,7 +272,7 @@ end
 
 
 -- type    0: 英雄信息变化  1: 新增英雄
-function HeroWin:Notice(type, id)
+function HeroWin:on_player_hero(type, id)
     print("HeroWin:Notice____", type, id)
 
     if type == 0 and self.curr_index then

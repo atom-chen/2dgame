@@ -1,9 +1,7 @@
-
 local config        = require "configs_grace"
 
 local _chapter      = {}
-local PlayerChapter = {}
-
+local PlayerChapter = NewModel({_model_name="PlayerChapter"})
 
 ---------------------------------------------------------------------------------
 

@@ -1,12 +1,8 @@
-
+local const         = require "const"
 local conf_quest    = require "configs_json.quest"
 
-local const         = require "const"
-
-
 local _quests       = {}
-local PlayerQuest   = {}
-
+local PlayerQuest   = NewModel({_model_name="PlayerQuest"})
 
 -------------------------------------------------------------------------------
 
@@ -38,7 +34,6 @@ local quest_cond_check = function(cond)
     return true
 end
 
-
 -------------------------------------------------------------------------------
 
 function PlayerQuest.Clear()
@@ -50,12 +45,10 @@ function PlayerQuest.Clear()
     }
 end
 
-
 -- 任务同步
 function PlayerQuest.UpdateQuest(q)
 
 end
-
 
 -- 任务是否可接
 function PlayerQuest.Acceptable(qconf)
@@ -89,7 +82,6 @@ function PlayerQuest.Acceptable(qconf)
 
     return true
 end
-
 
 -------------------------------------------------------------------------------
 PlayerQuest.Clear()

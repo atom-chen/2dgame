@@ -82,7 +82,6 @@ end
 
 
 function HeroSelectWin:OnCreate()
-    PlayerHero.Register(self)
 end
 
 

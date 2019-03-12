@@ -7,9 +7,10 @@ require "cocos.init"
 
 
 require "base.init"
+require "model.init"
 require "core.init"
 require "message.init"
-require "game"
+require "utils"
 
 
 local SceneMgr = require "scenes.SceneMgr"

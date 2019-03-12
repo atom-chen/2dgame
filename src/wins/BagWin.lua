@@ -108,6 +108,7 @@ end
 
 function ItemWin:OnDestroy()
     PlayerItem.UnRegister(self)
+    self:RegisterNotice("PlayerItem", "on_player_item")
 end
 
 
@@ -122,7 +123,7 @@ end
 ---------------------------------------------------------
 
 -- type    0: 数量变化  1: 新增道具  2: 删除道具
-function ItemWin:Notice(type, id, cnt)
+function ItemWin:on_player_item(type, id, cnt)
     --费了这么大的事，是不是比较直接？
     self.sel_item = nil
     self:Refresh()
