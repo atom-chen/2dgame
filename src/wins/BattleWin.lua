@@ -62,6 +62,8 @@ function BattleUnit:ctor(u, b)
     self._u         = u
     self._b         = b
 
+    print("in create:", u.Type, u.Id, u.Lv)
+
     self._type      = u.Type
     self._id        = u.Id
     self._lv        = u.Lv
@@ -141,7 +143,7 @@ function BattleUnit:UpdateHp(val)
             self._root:setVisible(false)
         end
     end
-    local v = self._hp*100 / self._u.hp
+    local v = self._hp*100 / self._u.Hp
     local s = string.format("%.2f%%", v)
     self._node_hp:setString(s)
     if v > 70 then
@@ -174,21 +176,21 @@ end
 
 
 function BattleUnit:OnAura(event)
-    if event.obtain then
-        print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, event.time))
+    if event.Obtain then
+        print(string.format("%s 得到光环: %d/%d   [%d]", self:Name(), event.Aura.Id, event.Aura.Lv, event.Time))
     else
-        print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), event.aura.id, event.aura.lv, event.time))
+        print(string.format("%s 失去光环: %d/%d   [%d]", self:Name(), event.Aura.Id, event.Aura.Lv, event.Time))
     end
 end
 
 
 function BattleUnit:OnHurt(event)
-    self:UpdateHp(-event.hurt)
+    self:UpdateHp(-event.Hurt)
     local text
-    if event.crit == 1 then
-        text = string.format("%d 暴击", -event.hurt)
+    if event.Crit == 1 then
+        text = string.format("%d 暴击", -event.Hurt)
     else
-        text = string.format("%d", -event.hurt)
+        text = string.format("%d", -event.Hurt)
     end
     self._b:AddCloudText(self, text, false)
     self._anim:PlayHit()
@@ -196,29 +198,29 @@ end
 
 
 function BattleUnit:OnSkill(event)
-    local id = event.skill.id
-    local lv = event.skill.lv
+    local id = event.Skill.Id
+    local lv = event.Skill.Lv
     local skill = self:GetSkill(id, lv)
     if not skill then
         return
     end
     local model = skill.proto.model
     self._anim:Play(model)
-    print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, event.time))
+    print(string.format("%s 释放技能: %d/%d   [%d]", self:Name(), id, lv, event.Time))
 end
 
 
 function BattleUnit:OnEffect(event)
-    if event.type == AET_PropChanged then
-        local ptype = event.arg1
-        local pval  = event.arg2
+    if event.Type == AET_PropChanged then
+        local ptype = event.Arg1
+        local pval  = event.Arg2
         local text  = string.format("%d %s", pval, PropName[ptype])
         self._b:AddCloudText(self, text, pval>0)
         if ptype == PropType_HP then
             self:UpdateHp(pval)
         end
     else
-        print("BattleUnit:OnEffect, unknown event.type", event.type)
+        print("BattleUnit:OnEffect, unknown event.type", event.Type)
     end
 end
 
@@ -259,12 +261,17 @@ function BattleWin:ctor(r)
 
     ---------- for battle data --------------------------------
 
+    print("ssss", r.Win, #r.Units)
+
     -- 初始化所有战斗参与者
     self._result = r
     self._units = {}
     for _, v in ipairs(r.Units) do
         local u = BattleUnit:create(v, self)
         local p = actor_info[u._pos]
+
+        print("u, ", p)
+
         u._root:setPosition(p[1], p[2])
         self:addChild(u._root)
         self._units[u._pos] = u
@@ -382,7 +389,7 @@ function BattleWin:init_battle()
     self._stop = false
     -- 显示所有角色以及恢复HP
     for _, u in pairs(self._units) do
-        u._hp = u._u.hp
+        u._hp = u._u.Hp
         u._root:setVisible(true)
     end
 end
@@ -415,22 +422,22 @@ end
 
 function BattleWin:play_event(event)
     if event.__type == EVENT_AURA then
-        local u = self._units[event.owner]
+        local u = self._units[event.Owner]
         u:OnAura(event)
     end
 
     if event.__type == EVENT_HURT then
-        local u = self._units[event.target]
+        local u = self._units[event.Target]
         u:OnHurt(event)
     end
 
     if event.__type == EVENT_SKILL then
-        local u = self._units[event.caster]
+        local u = self._units[event.Caster]
         u:OnSkill(event)
     end
 
     if event.__type == EVENT_EFFECT then
-        local u = self._units[event.owner]
+        local u = self._units[event.Owner]
         u:OnEffect(event)
     end
 end
