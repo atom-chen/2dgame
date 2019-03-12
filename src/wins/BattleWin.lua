@@ -62,8 +62,6 @@ function BattleUnit:ctor(u, b)
     self._u         = u
     self._b         = b
 
-    print("in create:", u.Type, u.Id, u.Lv)
-
     self._type      = u.Type
     self._id        = u.Id
     self._lv        = u.Lv
@@ -226,7 +224,9 @@ end
 
 
 
---------------------- BattleWin -------------------------------------------------
+-------------------------------------------------------------------------------
+-- BattleWin
+
 local function __append(tab, key, val)
     if not tab[key] then
         tab[key] = {}
@@ -261,16 +261,12 @@ function BattleWin:ctor(r)
 
     ---------- for battle data --------------------------------
 
-    print("ssss", r.Win, #r.Units)
-
     -- 初始化所有战斗参与者
     self._result = r
     self._units = {}
     for _, v in ipairs(r.Units) do
         local u = BattleUnit:create(v, self)
         local p = actor_info[u._pos]
-
-        print("u, ", p)
 
         u._root:setPosition(p[1], p[2])
         self:addChild(u._root)
@@ -406,10 +402,17 @@ function BattleWin:play_battle()
         end
 
         time = time + 100
-        if time >= self._max_time then
-            self._stop = true
+
+        if time == self._max_time then
+            -- 胜利者播放胜利
+            for _, u in pairs(self._units) do
+                u._anim:Play("shengli", 1)
+            end
         end
 
+        if time >= self._max_time + 2000 then
+            self._stop = true
+        end
 
         if self._stop then
             self:OnBattleEnd()
