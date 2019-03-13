@@ -8,6 +8,7 @@
           <Image Name="btn_disabled.png" />
           <Image Name="btn_normal.png" />
           <Image Name="btn_pressd.png" />
+          <Image Name="btn_return.png" />
           <Image Name="start.png" />
           <Image Name="win_frame.png" />
         </Folder>
@@ -18,6 +19,7 @@
           <Project Name="gm.csd" Type="Layer" />
           <Project Name="hero_select.csd" Type="Layer" />
           <Project Name="toolbar.csd" Type="Layer" />
+          <Project Name="map.csd" Type="Layer" />
         </Folder>
         <Folder Name="battle">
           <Image Name="bg.jpg" />

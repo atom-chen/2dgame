@@ -7,6 +7,8 @@ local ToolbarWin    = class("ToolbarWin", WinBase)
 
 
 function ToolbarWin:ctor()
+    -- WinBase.ctor(self)
+
     self.resourceNode_ = cc.CSLoader:createNode("1.layer/toolbar.csb")
     self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
     self.resourceNode_:setAnchorPoint(0.5, 0.5)

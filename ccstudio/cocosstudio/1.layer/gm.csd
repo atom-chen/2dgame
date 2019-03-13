@@ -17,13 +17,13 @@
             <FileData Type="Normal" Path="gm/bg.jpg" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_close" ActionTag="101216162" Tag="68" IconVisible="False" LeftMargin="1041.6387" RightMargin="6.3613" TopMargin="7.1016" BottomMargin="541.8984" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="58" Scale9Height="69" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btn_close" ActionTag="101216162" Tag="68" IconVisible="False" LeftMargin="1048.6381" RightMargin="-0.6381" TopMargin="-0.8984" BottomMargin="549.8984" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="58" Scale9Height="69" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="88.0000" Y="91.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1085.6387" Y="587.3984" />
+            <Position X="1092.6381" Y="595.3984" />
             <Scale ScaleX="1.1155" ScaleY="1.1034" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9557" Y="0.9178" />
+            <PrePosition X="0.9618" Y="0.9303" />
             <PreSize X="0.0775" Y="0.1422" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
@@ -47,7 +47,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Text_1" ActionTag="-476719884" Tag="71" IconVisible="False" LeftMargin="75.9060" RightMargin="868.0941" TopMargin="3.7342" BottomMargin="572.2658" FontSize="64" LabelText="我是GM" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="Text_1" ActionTag="-476719884" Tag="71" IconVisible="False" LeftMargin="75.9060" RightMargin="868.0940" TopMargin="3.7342" BottomMargin="572.2658" FontSize="64" LabelText="我是GM" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="192.0000" Y="64.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="171.9060" Y="604.2658" />

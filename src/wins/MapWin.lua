@@ -17,16 +17,15 @@ local MapWin = class("MapWin", WinBase)
 function MapWin:ctor()
     WinBase.ctor(self)
 
-    -- 关闭按钮
-    local winSize   = cc.Director:getInstance():getWinSize()
-    local btn_image = ccui.Scale9Sprite:create("unKnown.png")
-    local btn_close = cc.ControlButton:create(btn_image)
-    btn_close:setPreferredSize(btn_image:getPreferredSize())
-    btn_close:setPosition(cc.p(winSize.width/2, winSize.height/2))
-    btn_close:registerControlEventHandler(function()
+    self.resourceNode_ = cc.CSLoader:createNode("1.layer/map.csb")
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setAnchorPoint(0.5, 0.5)
+    self:addChild(self.resourceNode_)
+    
+    local btn = self.resourceNode_:getChildByName("btn_close")
+    btn:addClickEventListener(function()
         self:Close()
-    end, 32)
-    self:addChild(btn_close, 1)
+    end)
 end
 
 
@@ -67,8 +66,12 @@ end
 
 
 function MapWin:render_background(conf)
-    self.bg = cc.Sprite:create(conf.img_bg)
-    self:addChild(self.bg)
+    local bg = self.resourceNode_:getChildByName("bg")
+    bg:removeAllChildren()
+    self.sprite = cc.Sprite:create(conf.img_bg)
+    bg:addChild(self.sprite)
+
+    self.resourceNode_:getChildByName("map_name"):setText(conf.name)    
 end
 
 
@@ -77,7 +80,7 @@ function MapWin:render_objects(conf)
     for _, v in pairs(config.GetSceneObjects(conf.id) or {}) do
         local obj = MapUnit:create(v, self)
         self.objs[v.id] = obj
-        self.bg:addChild(obj._root)
+        self.sprite:addChild(obj._root)
     end
 end
 

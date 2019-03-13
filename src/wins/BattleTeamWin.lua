@@ -9,9 +9,8 @@ local config        = require "configs_grace"
 
 local BattleTeamWin = class("BattleTeamWin", WinBase)
 
-function BattleTeamWin:ctor()
-    print("BattleTeamWin:ctor")
 
+function BattleTeamWin:ctor()
     WinBase.ctor(self)
 
     self.selected = {}
