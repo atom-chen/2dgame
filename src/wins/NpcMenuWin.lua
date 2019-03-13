@@ -8,6 +8,9 @@ local config        = require "configs_grace"
 
 local PlayerQuest   = require "model.player_quest"
 
+local MapUnit       = require "wins.MapUnit"
+
+
 -------------------------------------------------------------------------------
 
 local NpcMenuWin    = class("NpcMenuWin", WinBase)
@@ -16,8 +19,8 @@ local NpcMenuWin    = class("NpcMenuWin", WinBase)
 function NpcMenuWin:ctor(...)
     WinBase.ctor(self)
 
-    local width  = 200
-    local height = 100
+    local width  = 800
+    local height = 540
 
     local bg = ccui.Scale9Sprite:create("bg_scale9.png")
     bg:setCapInsets(cc.rect(6, 6, 52, 52))
@@ -28,9 +31,9 @@ function NpcMenuWin:ctor(...)
 
     self:setContentSize(cc.size(width, height))
 
-    self._text = cc.Label:createWithSystemFont("x", "Arial", 20)
+    self._text = cc.Label:createWithSystemFont("", "Arial", 20)
     self._text:setColor(cc.RED)
-    self._text:setPosition(0, 0)
+    self._text:setPosition(80, 160)
     self:addChild(self._text)
 end
 
@@ -71,6 +74,11 @@ function NpcMenuWin:Show(npcid)
     if not npcconf then
         return
     end
+
+    -- 创建npc
+    self._npc = MapUnit:create(npcconf, self)
+    self._npc._root:setPosition(-300, 120)
+    self:addChild(self._npc._root)
 
     local n = #npcconf.param3
     if n > 0 then

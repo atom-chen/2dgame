@@ -5,7 +5,7 @@ local Armature      = require "core.armature"
 
 local config        = require "configs_grace"
 
-local MapUnit        = require "wins.MapUnit"
+local MapUnit       = require "wins.MapUnit"
 
 
 

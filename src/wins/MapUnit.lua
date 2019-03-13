@@ -1,4 +1,3 @@
-
 local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
@@ -38,17 +37,17 @@ function MapUnit:onTouch()
     print("ontouch:", self.proto.name, self.proto.id)
 
     if self.proto.type == 1 then
-        -- Ğ¡µØÍ¼Èë¿Ú
+        -- å°åœ°å›¾å…¥å£
         WinManager:CreateWindow("MapWin", self.proto.param1)
     elseif self.proto.type == 2 then
         -- NPC
         WinManager:CreateWindow("NpcMenuWin", self.proto.id)
     elseif self.proto.type == 3 then
-        -- ¹ÖÎï
+        -- æ€ªç‰©
     elseif self.proto.type == 4 then
-        -- ²É¼¯Îï
+        -- é‡‡é›†ç‰©
     else
-        -- ×°ÊÎÎï¼ş
+        -- è£…é¥°ç‰©ä»¶
     end
 
 end
