@@ -25,7 +25,6 @@ function NpcMenuWin:ctor(...)
     local bg = ccui.Scale9Sprite:create("bg_scale9.png")
     bg:setCapInsets(cc.rect(6, 6, 52, 52))
 
-    -- bg:setContentSize(cc.size(display.width, display.height))
     bg:setContentSize(cc.size(width, height))
     self:addChild(bg)
 
@@ -35,6 +34,15 @@ function NpcMenuWin:ctor(...)
     self._text:setColor(cc.RED)
     self._text:setPosition(80, 160)
     self:addChild(self._text)
+
+    -- listview
+    self.list = ccui.ListView:create()
+    self.list:setContentSize(180, 400)
+    self.list:setPosition(-300, -70)
+    self.list:setDirection(ccui.ListViewDirection.vertical)
+    self.list:setItemsMargin(0)
+    self.list:setBounceEnabled(true)
+    self.list:setInertiaScrollEnabled(true)
 end
 
 
@@ -106,6 +114,34 @@ function NpcMenuWin:Show(npcid)
 
     -- 添加到列表框供选择
 
+    self.list:pushBackCustomItem("这里添加需要加入的子节点")
+
+    for i = 1, 3 do
+        local widget = ccui.Widget:create()
+            widget:setContentSize(cc.size(400,400))
+            widget:setAnchorPoint(display.LEFT_BOTTOM)
+
+            local bg = cc.Sprite:create("bg.jpg")
+
+            bg:setScale9Enabled(true)
+            bg:ignoreContentAdaptWithSize(false)
+            bg:setCapInsets(cc.rect(40, 30, 2, 2))
+            bg:setContentSize(400, 400)
+            bg:setAnchorPoint(display.LEFT_BOTTOM)
+
+            widget:addChild(bg)
+
+            list:pushBackCustomItem(widget)
+
+            local arm = Armature:create(tab.proto.model)
+            arm:setPosition(200, 100)
+            widget:addChild(arm)
+
+            widget:setTouchEnabled(true)
+            widget.owner = self
+            widget.heroid = i
+            widget:onTouch(item_on_touch)
+    end
 end
 
 
