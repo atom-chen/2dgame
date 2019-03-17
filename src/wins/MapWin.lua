@@ -71,7 +71,7 @@ function MapWin:render_background(conf)
     self.sprite = cc.Sprite:create(conf.img_bg)
     bg:addChild(self.sprite)
 
-    self.resourceNode_:getChildByName("map_name"):setText(conf.name)    
+    self.resourceNode_:getChildByName("map_name"):setString(conf.name)    
 end
 
 

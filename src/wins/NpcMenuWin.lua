@@ -1,4 +1,3 @@
-
 local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
@@ -36,15 +35,20 @@ function NpcMenuWin:ctor(...)
     self:addChild(self._text)
 
     -- listview
+    local width, height = 200, 360
     self.list = ccui.ListView:create()
-    self.list:setContentSize(200, 360)
-    self.list:setPosition(-320, -260)
+    self.list:setContentSize(width, height)
+    self.list:setPosition(-360, -250)
     self.list:setDirection(ccui.ListViewDirection.vertical)
     self.list:setItemsMargin(0)
     self.list:setBounceEnabled(true)
     self.list:setInertiaScrollEnabled(true)
-
     self:addChild(self.list)
+    -- local bg = ccui.Scale9Sprite:create("bg_scale9.png")
+    -- bg:setCapInsets(cc.rect(6, 6, 52, 52))
+    -- bg:setContentSize(cc.size(width, height))
+    -- bg:setAnchorPoint(0, 0)
+    -- self.list:addChild(bg)  
 
     -- 接收任务
     local button
@@ -65,14 +69,32 @@ function NpcMenuWin:ctor(...)
     self:addChild(button)
     self.btn_cancel = button
 
-    local str = "sdfasdfasdlkfjqweofjasdofjapsoweofjasdofjapsodvgfapsodivfnapsodfjapwoeifapsodfnawpoefaW"
-    local detail = cc.Label:create()
-    detail:setPosition(cc.p(150, -100))
-    detail:setContentSize(400, 300)
-    detail:setDimensions(400, 300)
-    detail:setString(str)
-    detail:setColor(cc.YELLOW)
-    self:addChild(detail)
+    -- 任务描述区
+    local container = ccui.ListView:create()
+    local width, height = 520, 300
+    container:setContentSize(width, height)
+    container:setPosition(-150, -190)
+    container:setDirection(ccui.ListViewDirection.vertical)
+    container:setItemsMargin(0)
+    container:setBounceEnabled(true)
+    container:setInertiaScrollEnabled(true)
+    self:addChild(container)
+
+    -- local bg = ccui.Scale9Sprite:create("bg_scale9.png")
+    -- bg:setCapInsets(cc.rect(6, 6, 52, 52))
+    -- bg:setContentSize(cc.size(width, height))
+    -- bg:setAnchorPoint(0, 0)
+    -- container:addChild(bg)
+
+    local text = ""
+    local detail = ccui.Text:create()
+    detail:setString(text)
+    detail:setFontName("font/SIMYOU.TTF")
+    detail:setFontSize(20)
+    detail:setTextColor(cc.YELLOW)
+    detail:setTextAreaSize(cc.size(450,0))
+    detail:setPosition(120, 0)
+    container:addChild(detail)
     self.detail = detail
 end
 

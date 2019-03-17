@@ -86,7 +86,7 @@ function ChapterWin:update_view(chapter_id)
     local conf = config.GetChapter(chapter_id)
     local data = PlayerChapter:Data()
 
-    self.resourceNode_:getChildByName("txt_name"):setText(conf.name)
+    self.resourceNode_:getChildByName("txt_name"):setString(conf.name)
 
     for i = conf.breakStart, conf.breakEnd do   
         seq = seq + 1
