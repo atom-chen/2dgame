@@ -5,8 +5,9 @@ cc.FileUtils:getInstance():addSearchPath("res/ccs")
 require "config"
 require "cocos.init"
 
-
 require "base.init"
+
+require "configs_json.init"
 require "model.init"
 require "core.init"
 require "message.init"

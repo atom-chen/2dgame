@@ -1,24 +1,38 @@
 
 local M = {}
 
---------------------------------------------------------------------------------
--- json
-
-local _tab = zcg.LoadFromJson("src/configs_json/Quest.json")
-
-
 local _quests       = {}
 local _npc_quests   = {}
 
+-------------------------------------------------------------------------------
+-- json
 
-for _, v in pairs(_tab) do
-    _quests[v.id] = v
+-- 如果蛋疼的话，可以搞成自动生成列表
+local quest_files =
+{
+    "src/configs_json/quests/3001.json",
+}
 
-    local npcid = v.accept_id
-    if not _npc_quests[npcid] then
-        _npc_quests[npcid] = {}
+
+-------------------------------------------------------------------------------
+-- load quests
+
+for _, name in pairs(quest_files) do
+    local tab = zcg.LoadFromJson(name)
+    if tab == nil then
+        zcg.logError("LoadFromJson failed: %s", name)
+        tab = {}
     end
-    _npc_quests[npcid][v.id] = v
+
+    for _, v in pairs(tab) do
+        _quests[v.id] = v
+
+        local npcid = v.accept_id
+        if not _npc_quests[npcid] then
+            _npc_quests[npcid] = {}
+        end
+        _npc_quests[npcid][v.id] = v
+    end
 end
 
 
