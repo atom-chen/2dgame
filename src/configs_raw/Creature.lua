@@ -18,11 +18,38 @@ local data =
 			},
 		},
 		aura = {},
-		atk = 100,
-		def = 20,
-		hp = 2400,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 100,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 	},
 
 	[2] = {
@@ -43,11 +70,38 @@ local data =
 			},
 		},
 		aura = {},
-		atk = 120,
-		def = 22,
-		hp = 2500,
-		crit = 6,
-		crit_hurt = 42,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2500,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 120,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 42,
+			},
+		},
 	},
 
 	[3] = {
@@ -73,11 +127,38 @@ local data =
 				lv = 2,
 			},
 		},
-		atk = 140,
-		def = 24,
-		hp = 2600,
-		crit = 7,
-		crit_hurt = 44,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2600,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 140,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 44,
+			},
+		},
 	},
 
 	[4] = {
@@ -93,11 +174,38 @@ local data =
 		},
 		skill_extra = {},
 		aura = {},
-		atk = 160,
-		def = 26,
-		hp = 2700,
-		crit = 8,
-		crit_hurt = 46,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2700,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 160,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 46,
+			},
+		},
 	},
 
 	[5] = {
@@ -113,11 +221,38 @@ local data =
 		},
 		skill_extra = {},
 		aura = {},
-		atk = 180,
-		def = 28,
-		hp = 2800,
-		crit = 9,
-		crit_hurt = 48,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2800,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 180,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 48,
+			},
+		},
 	},
 
 	[6] = {
@@ -138,11 +273,38 @@ local data =
 			},
 		},
 		aura = {},
-		atk = 100,
-		def = 20,
-		hp = 2400,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 100,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 	},
 
 	[7] = {
@@ -163,11 +325,38 @@ local data =
 			},
 		},
 		aura = {},
-		atk = 120,
-		def = 22,
-		hp = 2500,
-		crit = 6,
-		crit_hurt = 42,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2500,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 120,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 42,
+			},
+		},
 	},
 
 	[8] = {
@@ -193,11 +382,38 @@ local data =
 				lv = 1,
 			},
 		},
-		atk = 140,
-		def = 24,
-		hp = 2600,
-		crit = 7,
-		crit_hurt = 44,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2600,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 140,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 44,
+			},
+		},
 	},
 
 	[9] = {
@@ -213,11 +429,38 @@ local data =
 		},
 		skill_extra = {},
 		aura = {},
-		atk = 160,
-		def = 26,
-		hp = 2700,
-		crit = 8,
-		crit_hurt = 46,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2700,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 160,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 46,
+			},
+		},
 	},
 
 	[10] = {
@@ -233,11 +476,38 @@ local data =
 		},
 		skill_extra = {},
 		aura = {},
-		atk = 180,
-		def = 28,
-		hp = 2800,
-		crit = 9,
-		crit_hurt = 48,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2800,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 180,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 48,
+			},
+		},
 	},
 
 	[11] = {
@@ -253,11 +523,38 @@ local data =
 		},
 		skill_extra = {},
 		aura = {},
-		atk = 300,
-		def = 40,
-		hp = 3400,
-		crit = 15,
-		crit_hurt = 60,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 3400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 300,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 15,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 60,
+			},
+		},
 	},
 
 	[12] = {
@@ -273,11 +570,38 @@ local data =
 		},
 		skill_extra = {},
 		aura = {},
-		atk = 320,
-		def = 42,
-		hp = 3500,
-		crit = 16,
-		crit_hurt = 62,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 3500,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 320,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 16,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 62,
+			},
+		},
 	},
 
 }

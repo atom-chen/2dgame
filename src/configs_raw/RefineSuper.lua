@@ -2,11 +2,33 @@ local data =
 {
 	[1] = {
 		level = 1,
-		atk = 10,
-		def = 2,
-		hp = 20,
-		crit = 2,
-		crit_hurt = 10,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 10,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 2,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 2,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 10,
+			},
+		},
 		count = 1,
 		prob = 30,
 		insure = 50,
@@ -14,11 +36,33 @@ local data =
 
 	[2] = {
 		level = 2,
-		atk = 13,
-		def = 4,
-		hp = 30,
-		crit = 3,
-		crit_hurt = 12,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 25,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 12,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 3,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 2,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 11,
+			},
+		},
 		count = 1,
 		prob = 29,
 		insure = 60,
@@ -26,11 +70,33 @@ local data =
 
 	[3] = {
 		level = 3,
-		atk = 16,
-		def = 6,
-		hp = 40,
-		crit = 4,
-		crit_hurt = 14,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 14,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 4,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 3,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 12,
+			},
+		},
 		count = 1,
 		prob = 28,
 		insure = 70,
@@ -38,11 +104,33 @@ local data =
 
 	[4] = {
 		level = 4,
-		atk = 19,
-		def = 8,
-		hp = 50,
-		crit = 5,
-		crit_hurt = 16,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 35,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 16,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 3,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 13,
+			},
+		},
 		count = 2,
 		prob = 27,
 		insure = 80,
@@ -50,11 +138,33 @@ local data =
 
 	[5] = {
 		level = 5,
-		atk = 22,
-		def = 10,
-		hp = 60,
-		crit = 6,
-		crit_hurt = 18,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 40,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 18,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 4,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 14,
+			},
+		},
 		count = 2,
 		prob = 26,
 		insure = 90,
@@ -62,11 +172,33 @@ local data =
 
 	[6] = {
 		level = 6,
-		atk = 25,
-		def = 12,
-		hp = 70,
-		crit = 7,
-		crit_hurt = 20,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 45,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 4,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 15,
+			},
+		},
 		count = 2,
 		prob = 25,
 		insure = 100,
@@ -74,11 +206,33 @@ local data =
 
 	[7] = {
 		level = 7,
-		atk = 28,
-		def = 14,
-		hp = 80,
-		crit = 8,
-		crit_hurt = 22,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 50,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 16,
+			},
+		},
 		count = 3,
 		prob = 24,
 		insure = 110,
@@ -86,11 +240,33 @@ local data =
 
 	[8] = {
 		level = 8,
-		atk = 31,
-		def = 16,
-		hp = 90,
-		crit = 9,
-		crit_hurt = 24,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 55,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 17,
+			},
+		},
 		count = 3,
 		prob = 23,
 		insure = 120,
@@ -98,11 +274,33 @@ local data =
 
 	[9] = {
 		level = 9,
-		atk = 34,
-		def = 18,
-		hp = 100,
-		crit = 10,
-		crit_hurt = 26,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 60,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 10,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 18,
+			},
+		},
 		count = 3,
 		prob = 22,
 		insure = 130,
@@ -110,11 +308,33 @@ local data =
 
 	[10] = {
 		level = 10,
-		atk = 37,
-		def = 20,
-		hp = 110,
-		crit = 11,
-		crit_hurt = 28,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 65,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 11,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 19,
+			},
+		},
 		count = 4,
 		prob = 21,
 		insure = 140,
@@ -122,11 +342,33 @@ local data =
 
 	[11] = {
 		level = 11,
-		atk = 40,
-		def = 22,
-		hp = 120,
-		crit = 12,
-		crit_hurt = 30,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 70,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 12,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 20,
+			},
+		},
 		count = 4,
 		prob = 20,
 		insure = 150,
@@ -134,11 +376,33 @@ local data =
 
 	[12] = {
 		level = 12,
-		atk = 43,
-		def = 24,
-		hp = 130,
-		crit = 13,
-		crit_hurt = 32,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 75,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 32,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 13,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 21,
+			},
+		},
 		count = 4,
 		prob = 19,
 		insure = 160,
@@ -146,11 +410,33 @@ local data =
 
 	[13] = {
 		level = 13,
-		atk = 46,
-		def = 26,
-		hp = 140,
-		crit = 14,
-		crit_hurt = 34,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 80,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 34,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 14,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 22,
+			},
+		},
 		count = 5,
 		prob = 18,
 		insure = 170,
@@ -158,11 +444,33 @@ local data =
 
 	[14] = {
 		level = 14,
-		atk = 49,
-		def = 28,
-		hp = 150,
-		crit = 15,
-		crit_hurt = 36,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 85,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 36,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 15,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 23,
+			},
+		},
 		count = 5,
 		prob = 17,
 		insure = 180,
@@ -170,11 +478,33 @@ local data =
 
 	[15] = {
 		level = 15,
-		atk = 52,
-		def = 30,
-		hp = 160,
-		crit = 16,
-		crit_hurt = 38,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 90,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 38,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 16,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 24,
+			},
+		},
 		count = 6,
 		prob = 16,
 		insure = 190,
@@ -182,11 +512,33 @@ local data =
 
 	[16] = {
 		level = 16,
-		atk = 55,
-		def = 32,
-		hp = 170,
-		crit = 17,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 95,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 40,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 17,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 25,
+			},
+		},
 		count = 6,
 		prob = 15,
 		insure = 200,
@@ -194,11 +546,33 @@ local data =
 
 	[17] = {
 		level = 17,
-		atk = 58,
-		def = 34,
-		hp = 180,
-		crit = 18,
-		crit_hurt = 42,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 100,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 42,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 18,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 10,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 26,
+			},
+		},
 		count = 7,
 		prob = 14,
 		insure = 210,
@@ -206,11 +580,33 @@ local data =
 
 	[18] = {
 		level = 18,
-		atk = 61,
-		def = 36,
-		hp = 190,
-		crit = 19,
-		crit_hurt = 44,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 105,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 44,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 19,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 10,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 27,
+			},
+		},
 		count = 7,
 		prob = 13,
 		insure = 220,
@@ -218,11 +614,33 @@ local data =
 
 	[19] = {
 		level = 19,
-		atk = 64,
-		def = 38,
-		hp = 200,
-		crit = 20,
-		crit_hurt = 46,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 110,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 46,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 15,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 28,
+			},
+		},
 		count = 8,
 		prob = 12,
 		insure = 230,
@@ -230,11 +648,33 @@ local data =
 
 	[20] = {
 		level = 20,
-		atk = 67,
-		def = 40,
-		hp = 210,
-		crit = 21,
-		crit_hurt = 48,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 115,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 48,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 21,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 15,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 29,
+			},
+		},
 		count = 9,
 		prob = 11,
 		insure = 240,

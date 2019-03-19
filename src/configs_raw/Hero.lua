@@ -13,11 +13,38 @@ local data =
 		},
 		skill_1 = 1002,
 		skill_2 = 1003,
-		atk = 100,
-		def = 80,
-		hp = 1000,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 200,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 50,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -39,11 +66,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 120,
-		def = 90,
-		hp = 1100,
-		crit = 5,
-		crit_hurt = 45,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 250,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 55,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 45,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -65,11 +119,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 140,
-		def = 100,
-		hp = 1200,
-		crit = 5,
-		crit_hurt = 50,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 300,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 60,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 50,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -91,11 +172,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 160,
-		def = 110,
-		hp = 1300,
-		crit = 5,
-		crit_hurt = 55,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 350,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 65,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 55,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -117,11 +225,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 180,
-		def = 120,
-		hp = 1400,
-		crit = 5,
-		crit_hurt = 60,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 70,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 60,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -143,11 +278,38 @@ local data =
 		},
 		skill_1 = 1002,
 		skill_2 = 1003,
-		atk = 100,
-		def = 80,
-		hp = 1000,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 200,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 50,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -169,11 +331,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 120,
-		def = 90,
-		hp = 1100,
-		crit = 5,
-		crit_hurt = 45,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 250,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 55,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 45,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -195,11 +384,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 140,
-		def = 100,
-		hp = 1200,
-		crit = 5,
-		crit_hurt = 50,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 300,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 60,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 50,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -221,11 +437,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 160,
-		def = 110,
-		hp = 1300,
-		crit = 5,
-		crit_hurt = 55,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 350,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 65,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 55,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -247,11 +490,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 180,
-		def = 120,
-		hp = 1400,
-		crit = 5,
-		crit_hurt = 60,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 70,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 60,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -273,11 +543,38 @@ local data =
 		},
 		skill_1 = 1002,
 		skill_2 = 1004,
-		atk = 100,
-		def = 80,
-		hp = 1000,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 200,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 50,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -299,11 +596,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 120,
-		def = 90,
-		hp = 1100,
-		crit = 5,
-		crit_hurt = 45,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 250,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 55,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 45,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -325,11 +649,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 140,
-		def = 100,
-		hp = 1200,
-		crit = 5,
-		crit_hurt = 50,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 300,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 60,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 50,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -351,11 +702,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 160,
-		def = 110,
-		hp = 1300,
-		crit = 5,
-		crit_hurt = 55,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 350,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 65,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 55,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -377,11 +755,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 180,
-		def = 120,
-		hp = 1400,
-		crit = 5,
-		crit_hurt = 60,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 70,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 60,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -403,11 +808,38 @@ local data =
 		},
 		skill_1 = 1003,
 		skill_2 = 1004,
-		atk = 100,
-		def = 80,
-		hp = 1000,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 200,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 50,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -429,11 +861,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 120,
-		def = 90,
-		hp = 1100,
-		crit = 5,
-		crit_hurt = 45,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 250,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 55,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 45,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -455,11 +914,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 140,
-		def = 100,
-		hp = 1200,
-		crit = 5,
-		crit_hurt = 50,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 300,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 60,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 50,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -481,11 +967,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 160,
-		def = 110,
-		hp = 1300,
-		crit = 5,
-		crit_hurt = 55,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 350,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 65,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 55,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -507,11 +1020,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 180,
-		def = 120,
-		hp = 1400,
-		crit = 5,
-		crit_hurt = 60,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 70,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 60,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -533,11 +1073,38 @@ local data =
 		},
 		skill_1 = 1002,
 		skill_2 = 1004,
-		atk = 100,
-		def = 80,
-		hp = 1000,
-		crit = 5,
-		crit_hurt = 40,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 200,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 50,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 5,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 40,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -559,11 +1126,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 120,
-		def = 90,
-		hp = 1100,
-		crit = 5,
-		crit_hurt = 45,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 250,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 55,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 22,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 6,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 45,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -585,11 +1179,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 140,
-		def = 100,
-		hp = 1200,
-		crit = 5,
-		crit_hurt = 50,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 300,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 60,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 24,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 7,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 50,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -611,11 +1232,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 160,
-		def = 110,
-		hp = 1300,
-		crit = 5,
-		crit_hurt = 55,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 350,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 65,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 26,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 8,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 55,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
@@ -637,11 +1285,38 @@ local data =
 		},
 		skill_1 = 0,
 		skill_2 = 0,
-		atk = 180,
-		def = 120,
-		hp = 1400,
-		crit = 5,
-		crit_hurt = 60,
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 400,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 70,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 28,
+			},
+			{
+				id = 4,
+				part = 0,
+				val = 9,
+			},
+			{
+				id = 5,
+				part = 0,
+				val = 60,
+			},
+		},
 		needs = {
 			{
 				id = 4113,
