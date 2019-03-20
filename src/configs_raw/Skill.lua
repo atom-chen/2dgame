@@ -16,16 +16,12 @@ local data =
 		ratio_major = 0.5,
 		extra_major = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 100,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 10,
-			},
-			{
-				typ = 5,
-				val = 20,
 			},
 		},
 		aura_major = {},
@@ -33,16 +29,12 @@ local data =
 		ratio_minor = 0,
 		extra_minor = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 100,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 10,
-			},
-			{
-				typ = 5,
-				val = 20,
 			},
 		},
 		aura_minor = {},
@@ -198,16 +190,12 @@ local data =
 		ratio_major = 0.85,
 		extra_major = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 100,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 10,
-			},
-			{
-				typ = 5,
-				val = 20,
 			},
 		},
 		aura_major = {
@@ -221,16 +209,12 @@ local data =
 		ratio_minor = 0.55,
 		extra_minor = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 100,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 10,
-			},
-			{
-				typ = 5,
-				val = 20,
 			},
 		},
 		aura_minor = {
@@ -267,16 +251,12 @@ local data =
 		ratio_major = 1,
 		extra_major = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 110,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 15,
-			},
-			{
-				typ = 5,
-				val = 25,
 			},
 		},
 		aura_major = {
@@ -290,16 +270,12 @@ local data =
 		ratio_minor = 0.6,
 		extra_minor = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 110,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 15,
-			},
-			{
-				typ = 5,
-				val = 25,
 			},
 		},
 		aura_minor = {
@@ -336,16 +312,12 @@ local data =
 		ratio_major = 1.15,
 		extra_major = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 120,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 20,
-			},
-			{
-				typ = 5,
-				val = 30,
 			},
 		},
 		aura_major = {
@@ -359,16 +331,12 @@ local data =
 		ratio_minor = 0.65,
 		extra_minor = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 120,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 20,
-			},
-			{
-				typ = 5,
-				val = 30,
 			},
 		},
 		aura_minor = {
@@ -405,16 +373,12 @@ local data =
 		ratio_major = 1.3,
 		extra_major = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 130,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 25,
-			},
-			{
-				typ = 5,
-				val = 35,
 			},
 		},
 		aura_major = {
@@ -428,16 +392,12 @@ local data =
 		ratio_minor = 0.7,
 		extra_minor = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 130,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 25,
-			},
-			{
-				typ = 5,
-				val = 35,
 			},
 		},
 		aura_minor = {
@@ -474,16 +434,12 @@ local data =
 		ratio_major = 1.45,
 		extra_major = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 140,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 30,
-			},
-			{
-				typ = 5,
-				val = 40,
 			},
 		},
 		aura_major = {
@@ -497,16 +453,12 @@ local data =
 		ratio_minor = 0.75,
 		extra_minor = {
 			{
-				typ = 2,
+				typ = 1,
 				val = 140,
 			},
 			{
-				typ = 4,
+				typ = 2,
 				val = 30,
-			},
-			{
-				typ = 5,
-				val = 40,
 			},
 		},
 		aura_minor = {
@@ -750,53 +702,11 @@ local data =
 		aura_caster = {},
 		target_major = {},
 		ratio_major = 0,
-		extra_major = {
-			{
-				typ = 1,
-				val = 10,
-			},
-			{
-				typ = 2,
-				val = 20,
-			},
-			{
-				typ = 3,
-				val = 30,
-			},
-			{
-				typ = 4,
-				val = 4,
-			},
-			{
-				typ = 5,
-				val = 5,
-			},
-		},
+		extra_major = {},
 		aura_major = {},
 		target_minor = {},
 		ratio_minor = 0,
-		extra_minor = {
-			{
-				typ = 1,
-				val = 10,
-			},
-			{
-				typ = 2,
-				val = 20,
-			},
-			{
-				typ = 3,
-				val = 30,
-			},
-			{
-				typ = 4,
-				val = 4,
-			},
-			{
-				typ = 5,
-				val = 5,
-			},
-		},
+		extra_minor = {},
 		aura_minor = {},
 		prop_passive = {
 			{
@@ -854,53 +764,11 @@ local data =
 		aura_caster = {},
 		target_major = {},
 		ratio_major = 0,
-		extra_major = {
-			{
-				typ = 1,
-				val = 20,
-			},
-			{
-				typ = 2,
-				val = 22,
-			},
-			{
-				typ = 3,
-				val = 40,
-			},
-			{
-				typ = 4,
-				val = 6,
-			},
-			{
-				typ = 5,
-				val = 10,
-			},
-		},
+		extra_major = {},
 		aura_major = {},
 		target_minor = {},
 		ratio_minor = 0,
-		extra_minor = {
-			{
-				typ = 1,
-				val = 20,
-			},
-			{
-				typ = 2,
-				val = 22,
-			},
-			{
-				typ = 3,
-				val = 40,
-			},
-			{
-				typ = 4,
-				val = 6,
-			},
-			{
-				typ = 5,
-				val = 10,
-			},
-		},
+		extra_minor = {},
 		aura_minor = {},
 		prop_passive = {
 			{
@@ -958,53 +826,11 @@ local data =
 		aura_caster = {},
 		target_major = {},
 		ratio_major = 0,
-		extra_major = {
-			{
-				typ = 1,
-				val = 30,
-			},
-			{
-				typ = 2,
-				val = 24,
-			},
-			{
-				typ = 3,
-				val = 50,
-			},
-			{
-				typ = 4,
-				val = 8,
-			},
-			{
-				typ = 5,
-				val = 15,
-			},
-		},
+		extra_major = {},
 		aura_major = {},
 		target_minor = {},
 		ratio_minor = 0,
-		extra_minor = {
-			{
-				typ = 1,
-				val = 30,
-			},
-			{
-				typ = 2,
-				val = 24,
-			},
-			{
-				typ = 3,
-				val = 50,
-			},
-			{
-				typ = 4,
-				val = 8,
-			},
-			{
-				typ = 5,
-				val = 15,
-			},
-		},
+		extra_minor = {},
 		aura_minor = {},
 		prop_passive = {
 			{
@@ -1062,53 +888,11 @@ local data =
 		aura_caster = {},
 		target_major = {},
 		ratio_major = 0,
-		extra_major = {
-			{
-				typ = 1,
-				val = 40,
-			},
-			{
-				typ = 2,
-				val = 25,
-			},
-			{
-				typ = 3,
-				val = 60,
-			},
-			{
-				typ = 4,
-				val = 10,
-			},
-			{
-				typ = 5,
-				val = 20,
-			},
-		},
+		extra_major = {},
 		aura_major = {},
 		target_minor = {},
 		ratio_minor = 0,
-		extra_minor = {
-			{
-				typ = 1,
-				val = 40,
-			},
-			{
-				typ = 2,
-				val = 25,
-			},
-			{
-				typ = 3,
-				val = 60,
-			},
-			{
-				typ = 4,
-				val = 10,
-			},
-			{
-				typ = 5,
-				val = 20,
-			},
-		},
+		extra_minor = {},
 		aura_minor = {},
 		prop_passive = {
 			{
@@ -1166,53 +950,11 @@ local data =
 		aura_caster = {},
 		target_major = {},
 		ratio_major = 0,
-		extra_major = {
-			{
-				typ = 1,
-				val = 50,
-			},
-			{
-				typ = 2,
-				val = 26,
-			},
-			{
-				typ = 3,
-				val = 70,
-			},
-			{
-				typ = 4,
-				val = 12,
-			},
-			{
-				typ = 5,
-				val = 25,
-			},
-		},
+		extra_major = {},
 		aura_major = {},
 		target_minor = {},
 		ratio_minor = 0,
-		extra_minor = {
-			{
-				typ = 1,
-				val = 50,
-			},
-			{
-				typ = 2,
-				val = 26,
-			},
-			{
-				typ = 3,
-				val = 70,
-			},
-			{
-				typ = 4,
-				val = 12,
-			},
-			{
-				typ = 5,
-				val = 25,
-			},
-		},
+		extra_minor = {},
 		aura_minor = {},
 		prop_passive = {
 			{
