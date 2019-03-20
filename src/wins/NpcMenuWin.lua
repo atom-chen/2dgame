@@ -158,7 +158,7 @@ function NpcMenuWin:Show(npcid)
     -- 寻找可以接的任务
     local qs = {}
 
-    local quests = conf_quest.GetNpcQuests(1001)    -- npcid
+    local quests = conf_quest.GetNpcQuests(npcid)
     for _, q in pairs(quests or {}) do
         if PlayerQuest:Acceptable(q) then
             table.insert(qs, {q.title, 1})
