@@ -1,6 +1,7 @@
 local Armature      = require "core.armature"
 local config        = require "configs_grace"
 local PlayerHero    = require "model.player_hero"
+local Property      = require "model.property"
 local WinBase       = require "core.WinBase"
 local HeroWin       = class("HeroWin", WinBase)
 
@@ -230,26 +231,25 @@ function HeroWin:ShowHeroDetail(index)
     label:setString(string.format("战斗力: %d", hero.power))
 
     label = self:getChildByName("atk")
-    label:setString(string.format("攻击: %d", hero.atk))
+    label:setString(string.format("攻击: %d", hero.props:Value(Property.PropType_Atk)))
 
     label = self:getChildByName("def")
-    label:setString(string.format("防御: %d", hero.def))
+    label:setString(string.format("防御: %d", hero.props:Value(Property.PropType_Def)))
 
     label = self:getChildByName("hp")
-    label:setString(string.format("HP: %d", hero.hp))
+    label:setString(string.format("HP: %d", hero.props:Value(Property.PropType_HP)))
 
     label = self:getChildByName("crit")
-    label:setString(string.format("暴击: %d", hero.crit))
+    label:setString(string.format("暴击: %d", hero.props:Value(Property.PropType_Crit)))
 
     label = self:getChildByName("crit_hurt")
-    label:setString(string.format("暴伤: %d", hero.crit_hurt))
+    label:setString(string.format("暴伤: %d", hero.props:Value(Property.PropType_Hurt)))
 
     label = self:getChildByName("refine_lv")
     label:setString(string.format("精炼等级: %d", hero.refineLv))
 
     label = self:getChildByName("refine_type")
     local str = "超级精炼:否"
-    print("ssss", str, hero.refineSuper)
     if hero.refineSuper then
         str = "超级精炼:是"
     end
