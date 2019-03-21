@@ -63,7 +63,7 @@ function Property:Calc()
     end
 
     self.daity = false
-    self.total = self.base * (1 + self.perc) + self.extra
+    self.total = self.base * (1 + self.perc/100) + self.extra
 
     if self.total < 0 then
         zcg.logError("Property:Calc ERROR: %f %f %f %f", self.base, self.perc, self.extra, self.total)
