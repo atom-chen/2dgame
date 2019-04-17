@@ -83,19 +83,18 @@ BattleUnit
 Aura (2.msg.BattleEventAuraRAura(
 Hurt (2.msg.BattleEventHurtRHurt2
 Effect (2.msg.BattleEventAuraEffectREffectbproto3
-“
+ö
 1_session.protomsg"!
 PingRequest
 Time (RTime""
 PingResponse
-Time (RTime"6
-LoginRequest
-Acct (	RAcct
-Pass (	RPass"-
+Time (RTime"`
+LoginRequest
+Pseudo (	RPseudo
+Token (	RToken
+Sdk (	RSdk
+Svr (	RSvr"-
 LoginResponse
-	ErrorCode (R	ErrorCode"
-EnterGameRequest"1
-EnterGameResponse
 	ErrorCode (R	ErrorCodebproto3
 á
 2_player.protomsg0.type.proto"#

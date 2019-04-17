@@ -73,7 +73,32 @@ function LoginScene:__enter_game()
 end
 
 
-function LoginScene:__login()
+function LoginScene:__login_sdk()
+    local url = "http://118.24.48.149:8100/acct/login"
+
+    local xhr = cc.XMLHttpRequest:new()
+    xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
+    xhr:open("POST", url)
+    
+    local data = string.format("acct=%s&passwd=%s", "zcg", "1")
+    local function onReadyStateChanged()
+        xhr:unregisterScriptHandler()
+        
+        local res = json.decode(xhr.response)
+        if not res.ret then
+            print("登录失败")
+            return
+        else
+            self:__login_game(res)
+        end
+    end
+
+    xhr:registerScriptHandler(onReadyStateChanged)
+    xhr:send(data)
+end
+
+
+function LoginScene:__login_game(res)
     local _on_event_login = function(event, args)
         if event == Event.LoginOK then
             self:SetLoginStatus("登录成功，准备进入游戏。。。")
@@ -87,8 +112,10 @@ function LoginScene:__login()
 
     -- 发送登录包
     Socket.SendPacket(Opcode.MSG_CS_LoginRequest, {
-        Acct = "test001",
-        Pass = "1",
+        Pseudo  = res.pseudo,
+        Token   = res.token,
+        Sdk     = "dx_and",
+        Svr     = "game1",
     })
 end
 
@@ -107,8 +134,8 @@ function LoginScene:__connect()
 
     EventMgr.Register(self, {Event.ConnectOK,Event.ConnectFailed}, _on_event_connect)
 
-    Socket.Connect("127.0.0.1", 4040)
-    -- Socket.Connect("118.24.48.149", 4040)
+    Socket.Connect("127.0.0.1", 9001)
+    -- Socket.Connect("118.24.48.149", 9002)
 end
 
 
