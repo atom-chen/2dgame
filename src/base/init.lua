@@ -48,13 +48,13 @@ function zcg.log2File(filename, str)
 end
 
 
---------------------- dump table ----------------------
+-------------------------------------------------------------------------------
+-- dump table
+
 local max_depth = 16
 
 local function _print_prefix(str, n)
-    for i = 1, n do
-        io.write("    ")
-    end
+    io.write(string.rep(" ", 4*n))
     io.write(str)
 end
 
@@ -79,7 +79,9 @@ local function _print_table(tab, depth, e)
         else
             key = string.format("'%s'", k)
         end
+
         _print_prefix(key .. " = ", depth + 1)
+
         local type_ = type(v)
         if type_ == "number" then
             io.write(v .. ",\n")
@@ -98,9 +100,11 @@ local function _print_table(tab, depth, e)
             io.write(string.format("[%s],\n", tostring(v)))
         end
     end
+
     _print_prefix("},", depth)
     io.write("\n")
 end
+
 
 -- print table to output or file
 zcg.logTable = function(tab, filename, print_exist_table)
@@ -118,10 +122,12 @@ zcg.logTable = function(tab, filename, print_exist_table)
     else
         io.output(io.stdout)
     end
+
     if not tab then
         io.write("tab = nil\n")
         return
     end
+
     local type_ = type(tab)
     if type_ ~= "table" then
         io.write(string.format("%s\n", tostring(tab)))
@@ -139,7 +145,9 @@ zcg.logTable = function(tab, filename, print_exist_table)
 end
 
 
---------------------- dump table ----------------------
+-------------------------------------------------------------------------------
+-- dump table
+
 -- dump local variables in lua stack
 zcg.dump_local = function(n)
     local idx = 1
@@ -154,7 +162,8 @@ zcg.dump_local = function(n)
 end
 
 
--------------------- another class --------------------
+-------------------------------------------------------------------------------
+-- another class
 
 cc.exports.Class = Class or
 {
@@ -193,7 +202,7 @@ cc.exports.Class = Class or
 }
 
 
--------------------- another class --------------------
+-------------------------------------------------------------------------------
 
 zcg.LoadFromJson = function(filename)
     local f = io.input(filename)

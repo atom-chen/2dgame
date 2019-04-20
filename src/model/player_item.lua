@@ -46,7 +46,7 @@ function PlayerItem:SetItemCount(id, cnt)
 end
 
 function PlayerItem:Dump()
-    table.print_r(_items, "player item")
+    table.print(_items, "player item")
 end
 
 -- 所有道具

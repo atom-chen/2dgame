@@ -34,7 +34,7 @@ function LoginScene:ctor()
     self._notice = notice
 
     -- 定时器
-    scheduler.Once(function() self:__connect() end, 0.5)
+    scheduler.Once(function() self:__login() end, 0.5)
 
     WinManager:AttachScene(self)
 end
@@ -51,72 +51,42 @@ function LoginScene:OnLeave()
 end
 
 
-function LoginScene:__enter_game()
-    self:SetLoginStatus("进入游戏...")
-
-    local _on_event_enter_game = function(event, args)
-        if event == Event.EnterGameOK then
-            self:SetLoginStatus("进入游戏成功，加载场景。。。")
-            scheduler.Once(function()
-                -- 进入主场景
-                SceneMgr.RunScene("MainScene")
-            end, 0.5)
-        else
-            self:SetLoginStatus("进入游戏失败，你登录过了吗？")
-        end
-    end
-
-    EventMgr.Register(self, {Event.EnterGameOK,Event.EnterGameFailed}, _on_event_enter_game)
-
-    Socket.SendPacket(Opcode.MSG_CS_EnterGameRequest, {
-    })
+function LoginScene:SetLoginStatus(text)
+    self._notice:setString(text)
 end
 
 
-function LoginScene:__login_sdk()
+function LoginScene:__login()
+    self:SetLoginStatus("登录SDK中...")
+
     local url = "http://118.24.48.149:8100/acct/login"
 
     local xhr = cc.XMLHttpRequest:new()
     xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
     xhr:open("POST", url)
-    
-    local data = string.format("acct=%s&passwd=%s", "zcg", "1")
-    local function onReadyStateChanged()
+
+    local data = string.format("acct=%s&passwd=%s", "a1", "3333")
+    local function on_auth()
         xhr:unregisterScriptHandler()
-        
         local res = json.decode(xhr.response)
+
         if not res.ret then
-            print("登录失败")
+            print("登录失败:", res.msg)
             return
         else
-            self:__login_game(res)
+            self.data = {
+                pseudo  = res.pseudo,
+                token   = res.token,
+                sdk     = "dx_and",
+                svr     = "game1",
+            }
+
+            self:__connect(res)
         end
     end
 
-    xhr:registerScriptHandler(onReadyStateChanged)
+    xhr:registerScriptHandler(on_auth)
     xhr:send(data)
-end
-
-
-function LoginScene:__login_game(res)
-    local _on_event_login = function(event, args)
-        if event == Event.LoginOK then
-            self:SetLoginStatus("登录成功，准备进入游戏。。。")
-            scheduler.Once(function() self:__enter_game() end, 0.5)
-        else
-            self:SetLoginStatus("登录失败，请检查用户名密码。")
-        end
-    end
-
-    EventMgr.Register(self, {Event.LoginOK,Event.LoginFailed}, _on_event_login)
-
-    -- 发送登录包
-    Socket.SendPacket(Opcode.MSG_CS_LoginRequest, {
-        Pseudo  = res.pseudo,
-        Token   = res.token,
-        Sdk     = "dx_and",
-        Svr     = "game1",
-    })
 end
 
 
@@ -126,7 +96,7 @@ function LoginScene:__connect()
     local _on_event_connect = function(event, args)
         if event == Event.ConnectOK then
             self:SetLoginStatus("连接服务器成功，准备登录。。。")
-            scheduler.Once(function() self:__login() end, 0.5)
+            scheduler.Once(function() self:__auth() end, 0.5)
         else
             self:SetLoginStatus("连接服务器失败")
         end
@@ -139,9 +109,28 @@ function LoginScene:__connect()
 end
 
 
-function LoginScene:SetLoginStatus(text)
-    self._notice:setString(text)
-end
+function LoginScene:__auth(res)
+    local _on_event_login = function(event, args)
+        if event == Event.LoginOK then
+            self:SetLoginStatus("验证成功，进入游戏成功，加载场景。。。")
+            scheduler.Once(function()
+                -- 进入主场景
+                SceneMgr.RunScene("MainScene")
+            end, 0.5)
+        else
+            self:SetLoginStatus("验证失败")
+        end
+    end
 
+    EventMgr.Register(self, {Event.LoginOK,Event.LoginFailed}, _on_event_login)
+
+    -- 发送登录包
+    Socket.SendPacket(Opcode.MSG_CS_LoginRequest, {
+        Pseudo  = self.data.pseudo,
+        Token   = self.data.token,
+        Sdk     = self.data.sdk,
+        Svr     = self.data.svr,
+    })
+end
 
 return LoginScene
