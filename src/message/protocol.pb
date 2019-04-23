@@ -96,18 +96,18 @@ BattleUnit
 Svr (	RSvr"-
 LoginResponse
 	ErrorCode (R	ErrorCodebproto3
-á
+Ó
 2_player.protomsg0.type.proto"#
 PlayerDataRequest
-Id (RId"™
+Id (RId"‹
 PlayerDataResponse
 Acct (	RAcct
 Name (	RName
 Pid (	RPid
-Sid (RSid
-Id (RId
-Level (RLevel
-VipLevel (RVipLevel
+Sid (RSid
+Exp (RExp
+Lv (RLv
+Vip (RVip
 Male (RMale
 Items	 (2	.msg.ItemRItems
 Heros

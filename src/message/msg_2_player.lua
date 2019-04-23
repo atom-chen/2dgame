@@ -21,8 +21,8 @@ local function MSG_SC_PlayerDataResponse(tab)
     base.pid        = tab.Pid
     base.sid        = tab.Sid
     base.id         = tab.Id
-    base.level      = tab.Level
-    base.vipLevel   = tab.VipLevel
+    base.lv         = tab.Lv
+    base.vip        = tab.Vip
     base.male       = tab.Male
 
     for _, v in ipairs(tab.Items) do
