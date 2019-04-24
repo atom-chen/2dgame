@@ -14,13 +14,12 @@ local PlayerHero = require "model.player_hero"
 
 local function MSG_SC_PlayerDataResponse(tab)
     print("msg:MSG_SC_PlayerDataResponse")
-    
+
     local base      = PlayerBase:GetBase()
     base.acct       = tab.Acct
     base.name       = tab.Name
     base.pid        = tab.Pid
     base.sid        = tab.Sid
-    base.id         = tab.Id
     base.lv         = tab.Lv
     base.vip        = tab.Vip
     base.male       = tab.Male
@@ -66,7 +65,7 @@ md[Opcode.MSG_SC_MarketBuyResponse] = MSG_SC_MarketBuyResponse
 
 local function MSG_SC_ItemUpdate(tab)
     print("msg:MSG_SC_ItemUpdate")
-    
+
     for _, v in ipairs(tab.Items) do
         if v.Flag == 0 then
             PlayerItem:SetItemCount(v.Id, v.Cnt)
