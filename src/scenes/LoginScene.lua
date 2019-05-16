@@ -11,6 +11,8 @@ local SceneMgr      = require "scenes.SceneMgr"
 local LoginScene = class("LoginScene", cc.Scene)
 
 
+-------------------------------------------------------------------------------
+
 function LoginScene:ctor()
     -- add text label
     local layer = cc.Layer:create()
@@ -33,8 +35,11 @@ function LoginScene:ctor()
 
     self._notice = notice
 
-    -- 定时器
-    scheduler.Once(function() self:__login() end, 0.5)
+    scheduler.NextTick(
+        function()
+            WinManager:CreateWindow("LoginWin")
+        end
+    )
 
     WinManager:AttachScene(self)
 end
@@ -56,37 +61,29 @@ function LoginScene:SetLoginStatus(text)
 end
 
 
-function LoginScene:__login()
-    self:SetLoginStatus("登录SDK中...")
+function LoginScene:OnAuth(pseudo, token)
+    self.data = {
+        pseudo  = pseudo,
+        token   = token,
+        sdk     = "dx_and",
+    }
 
-    local url = "http://118.24.48.149:8100/acct/login"
-
-    local xhr = cc.XMLHttpRequest:new()
-    xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
-    xhr:open("POST", url)
-
-    local data = string.format("acct=%s&passwd=%s", "a1", "3333")
-    local function on_auth()
-        xhr:unregisterScriptHandler()
-        local res = json.decode(xhr.response)
-
-        if not res.ret then
-            print("登录失败:", res.msg)
-            return
-        else
-            self.data = {
-                pseudo  = res.pseudo,
-                token   = res.token,
-                sdk     = "dx_and",
-                svr     = "game1",
-            }
-
-            self:__connect(res)
+    scheduler.NextTick(
+        function()
+            WinManager:CreateWindow("ServerListWin")
         end
-    end
+    )
+end
 
-    xhr:registerScriptHandler(on_auth)
-    xhr:send(data)
+
+function LoginScene:OnSelected(svr)
+    self.data.svr = svr
+
+    scheduler.NextTick(
+        function()
+            self:__connect()
+        end
+    )
 end
 
 
@@ -104,8 +101,8 @@ function LoginScene:__connect()
 
     EventMgr.Register(self, {Event.ConnectOK,Event.ConnectFailed}, _on_event_connect)
 
-    Socket.Connect("127.0.0.1", 9001)
-    -- Socket.Connect("118.24.48.149", 9002)
+    local svr = self.data.svr
+    Socket.Connect(svr.ip, svr.port)
 end
 
 
@@ -129,8 +126,11 @@ function LoginScene:__auth(res)
         Pseudo  = self.data.pseudo,
         Token   = self.data.token,
         Sdk     = self.data.sdk,
-        Svr     = self.data.svr,
+        Svr     = self.data.svr.svr,
     })
 end
+
+
+-------------------------------------------------------------------------------
 
 return LoginScene

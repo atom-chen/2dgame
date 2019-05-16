@@ -35,7 +35,7 @@ function ModelWin:ctor()
                 if self._arm then
                     self._arm:removeFromParent()
                     self._arm = nil
-                end           
+                end
                 self._arm = Armature:create(str, "attack")
                 self:addChild(self._arm)
             end

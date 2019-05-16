@@ -12,6 +12,8 @@ local windows =
     HeroSelectWin   = {},   -- 出战英雄选择界面
     ChapterWin      = {},   -- 章节关卡界面
     GmWin           = {},   -- gm界面
+    LoginWin        = {},   -- 登录界面
+    ServerListWin   = {},   -- 服务器列表界面
 }
 
 for k, v in pairs(windows) do

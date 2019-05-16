@@ -128,7 +128,7 @@ end
 
 table.print = function(tab, tag)
     if tag then
-        print(string.format("\"%s\" =", tag))
+        print(string.format("%s =", tag))
     end
     __print_table(tab, 0)
 end

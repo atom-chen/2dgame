@@ -15,7 +15,7 @@ function ChapterWin:ctor()
     WinBase.ctor(self)
 
     self.resourceNode_ = cc.CSLoader:createNode("1.layer/chapter.csb")
-    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)
     self.resourceNode_:setAnchorPoint(0.5, 0.5)
     self:addChild(self.resourceNode_)
 
@@ -81,6 +81,8 @@ local function btn_callback(ref, type)
     end
 end
 
+-------------------------------------------------------------------------------
+
 function ChapterWin:update_view(chapter_id)
     local seq  = 0
     local conf = config.GetChapter(chapter_id)
@@ -88,15 +90,15 @@ function ChapterWin:update_view(chapter_id)
 
     self.resourceNode_:getChildByName("txt_name"):setString(conf.name)
 
-    for i = conf.breakStart, conf.breakEnd do   
+    for i = conf.breakStart, conf.breakEnd do
         seq = seq + 1
 
         local btn = ccui.Button:create(
-            "ccs/gm/public_button_001.png", 
-            "ccs/gm/public_button_002.png", 
+            "ccs/gm/public_button_001.png",
+            "ccs/gm/public_button_002.png",
             "ccs/gm/public_button_003.png")
         btn:setPosition(get_position(seq))
-        
+
         local c = config.GetBreak(i)
         local text
         if data.BreakId > i then
@@ -111,7 +113,7 @@ function ChapterWin:update_view(chapter_id)
         self:addChild(btn)
     end
 
-    self.curr_chapter_id = chapter_id  
+    self.curr_chapter_id = chapter_id
 end
 
 return ChapterWin

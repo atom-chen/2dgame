@@ -8,16 +8,21 @@ local sharedScheduler = cc.Director:getInstance():getScheduler()
 function scheduler.ScheduleN(func, interval, N, immediate)
     local sid
     local times = 1
+
     sid = sharedScheduler:scheduleScriptFunc(function()
         if times >= N then
             sharedScheduler:unscheduleScriptEntry(sid)
         end
+
         func(times)
+
         times = times + 1
     end, interval, false)
+
     if immediate then
         func(0)
     end
+
     return sid
 end
 
@@ -40,12 +45,12 @@ function scheduler.Until(func, interval)
 end
 
 
--- 立即执行，一次性定时器
-function scheduler.Now(func)
+-- 延迟执行，下一个tick
+function scheduler.NextTick(func)
     local sid
     sid = sharedScheduler:scheduleScriptFunc(function()
-        func()
         sharedScheduler:unscheduleScriptEntry(sid)
+        func()
     end, 0, false)
     return sid
 end
