@@ -20,8 +20,8 @@
           <Project Name="hero_select.csd" Type="Layer" />
           <Project Name="login.csd" Type="Layer" />
           <Project Name="map.csd" Type="Layer" />
-          <Project Name="toolbar.csd" Type="Layer" />
           <Project Name="serverlist.csd" Type="Layer" />
+          <Project Name="toolbar.csd" Type="Layer" />
         </Folder>
         <Folder Name="battle">
           <Image Name="bg.jpg" />
@@ -54,15 +54,15 @@
         <Folder Name="login">
           <Image Name="bg.jpg" />
         </Folder>
+        <Folder Name="serverlist">
+          <Image Name="bg.jpg" />
+        </Folder>
         <Folder Name="toolbar">
           <Image Name="map_button_03.png" />
           <Image Name="map_button_04.png" />
           <Image Name="map_button_05.png" />
           <Image Name="map_button_06.png" />
           <Image Name="map-xianshiwanfa.png" />
-        </Folder>
-        <Folder Name="serverlist">
-          <Image Name="bg.jpg" />
         </Folder>
       </RootFolder>
     </Group>

@@ -1,8 +1,7 @@
-local WinBase = class("WinBase", cc.load("mvc").ViewBase)
+local EventMgr  = require "core.event_mgr"
+local WinBase   = class("WinBase", cc.load("mvc").ViewBase)
 
 function WinBase:ctor()
-    print("WinBase:ctor")
-    
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(handler(self, self.OnTouchBegan),       cc.Handler.EVENT_TOUCH_BEGAN)
@@ -16,6 +15,20 @@ function WinBase:ctor()
     self._model_handlers = {}
 end
 
+function WinBase:destroy()
+    -- event system
+    EventMgr.Unregister(self)
+
+    -- model notice system
+    for name, model in pairs(self._model_handlers) do
+        local m = FindModel(name)
+        for _, h in ipairs(model) do
+            m:Unregister(h)
+        end
+    end
+
+    self:OnDestroy()
+end
 
 function WinBase:OnShow()
     print("WinBase:OnShow")
@@ -31,15 +44,6 @@ end
 
 function WinBase:OnDestroy()
     print("WinBase:OnDestroy")
-    EventMgr.Unregister(self)
-
-    -- model notice system
-    for name, model in pairs(self._model_handlers) do
-        local m = FindModel(name)
-        for _, h in ipairs(model) do
-            m:Unregister(h)
-        end
-    end
 end
 
 -------------------------------------------------------------------------------
@@ -77,8 +81,8 @@ end
 function WinBase:RegisterNotice(model_name, func_name)
     local h = handler(self, self[func_name])
     local m = FindModel(model_name)
-    
-    assert(m, "NOT exist model: " .. model_name)
+
+    assert(m, "NOT EXIST model: " .. model_name)
 
     m:Register(h)
 
@@ -87,6 +91,7 @@ function WinBase:RegisterNotice(model_name, func_name)
         model = {}
         self._model_handlers[model_name] = model
     end
+
     table.insert(model, h)
 end
 

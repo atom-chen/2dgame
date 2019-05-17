@@ -90,7 +90,7 @@ function WinManager:DestroyWindow(win)
 
     if win then
         self:ShowWindow(win, false)
-        win:OnDestroy()
+        win:destroy()
         self._win_whole[win._id] = nil
         self._layer:removeChild(win)
     end

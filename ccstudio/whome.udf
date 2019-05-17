@@ -33,6 +33,13 @@
         <OpenedDocuments>
           <FilePathData Path="1.layer/serverlist.csd" />
           <FilePathData Path="1.layer/login.csd" />
+          <FilePathData Path="1.layer/battle.csd" />
+          <FilePathData Path="1.layer/chapter.csd" />
+          <FilePathData Path="1.layer/chat.csd" />
+          <FilePathData Path="1.layer/gm.csd" />
+          <FilePathData Path="1.layer/hero_select.csd" />
+          <FilePathData Path="1.layer/map.csd" />
+          <FilePathData Path="1.layer/toolbar.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="1.layer/login.csd" />
       </Value>

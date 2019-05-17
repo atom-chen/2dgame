@@ -9,8 +9,10 @@ function parent:Unregister(h)
 end
 
 function parent:Notify(...)
-    for h, _ in pairs(self._handlers) do
-        h(...)
+    for h, v in pairs(self._handlers) do
+        if v then
+            h(...)
+        end
     end
 end
 
@@ -25,7 +27,7 @@ local mt = {
 }
 
 cc.exports.NewModel = function(tab)
-    assert(tab._model_name, "NOT exist '_model_name'")
+    assert(tab._model_name, "NOT EXIST '_model_name'")
     models[tab._model_name] = tab
     setmetatable(tab, mt)
     if not tab._handlers then

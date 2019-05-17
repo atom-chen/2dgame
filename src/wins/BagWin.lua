@@ -121,7 +121,7 @@ end
 ---------------------------------------------------------
 
 -- type    0: 数量变化  1: 新增道具  2: 删除道具
-function ItemWin:on_player_item(type, id, cnt)
+function ItemWin:on_player_item(typ, id, cnt)
     --费了这么大的事，是不是比较直接？
     self.sel_item = nil
     self:Refresh()
