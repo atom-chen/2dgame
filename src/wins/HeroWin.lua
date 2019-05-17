@@ -29,7 +29,7 @@ function HeroWin:ctor()
     local button
 
     -- 上一个
-    button = ccui.Button:create("public_button_001.png")
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("上一个")
     button:getTitleLabel():setSystemFontSize(16)
     button:setPosition(-440, 240)
@@ -41,7 +41,7 @@ function HeroWin:ctor()
     self:addChild(button)
 
     -- 下一个
-    button = ccui.Button:create("public_button_001.png")
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("下一个")
     button:getTitleLabel():setSystemFontSize(16)
     button:setPosition(-240, 240)
@@ -65,7 +65,7 @@ function HeroWin:ctor()
     label:setName("level")
     label:setPosition(-360, -100)
     self:addChild(label)
-    button = ccui.Button:create("public_button_001.png")
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("升级")
     button:getTitleLabel():setSystemFontSize(16)
     button:setPosition(-200, -100)
@@ -136,7 +136,7 @@ function HeroWin:ctor()
     label:setName("refine_lv")
     label:setPosition(100, 100)
     self:addChild(label)
-    button = ccui.Button:create("public_button_001.png")
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("普通精炼")
     button:getTitleLabel():setSystemFontSize(16)
     button:setPosition(260, 100)
@@ -150,7 +150,7 @@ function HeroWin:ctor()
         end
     end)
     self:addChild(button)
-    button = ccui.Button:create("public_button_001.png")
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("超级精炼")
     button:getTitleLabel():setSystemFontSize(16)
     button:setPosition(440, 100)
@@ -179,12 +179,10 @@ function HeroWin:ctor()
 
 
     self:ShowHeroDetail(1)
-
 end
 
 
 function HeroWin:OnCreate()
-    PlayerHero:Register(self)
     self:RegisterNotice("PlayerHero", "on_player_hero")
 end
 
@@ -271,13 +269,10 @@ end
 
 
 -- type    0: 英雄信息变化  1: 新增英雄
-function HeroWin:on_player_hero(type, id)
-    print("HeroWin:Notice____", type, id)
-
-    if type == 0 and self.curr_index then
+function HeroWin:on_player_hero(typ, id)
+    if typ == 0 and self.curr_index then
         local hero = PlayerHero:GetHeroByIndex(self.curr_index)
         if hero.id == id then
-            print("updateing.......")
             local index = self.curr_index
             self.curr_index = nil
             self:ShowHeroDetail(index)
