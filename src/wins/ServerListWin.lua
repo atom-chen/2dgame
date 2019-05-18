@@ -13,13 +13,13 @@ function ServerListWin:ctor()
     self.resourceNode_:setIgnoreAnchorPointForPosition(false)
     self.resourceNode_:setAnchorPoint(0.5, 0.5)
     self:addChild(self.resourceNode_)
-
-    self:get_server_list()
 end
 
 -------------------------------------------------------------------------------
 
-function ServerListWin:OnCreate()
+function ServerListWin:OnCreate(pseudo)
+    self:get_server_list()
+    self:get_player_list(pseudo)
 end
 
 
@@ -39,6 +39,31 @@ end
 
 -------------------------------------------------------------------------------
 
+function ServerListWin:get_player_list(pseudo)
+
+    local url = string.format("http://118.24.48.149:8400/plr_list?pseudo=%s", pseudo)
+    local xhr = cc.XMLHttpRequest:new()
+
+    xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
+    xhr:open("GET", url)
+
+    local function callback()
+        xhr:unregisterScriptHandler()
+
+        print(xhr.response)
+
+        local res = json.decode(xhr.response)
+        if res then
+            self.plr_list = res
+            self:show_server_list()
+        end
+    end
+
+    xhr:registerScriptHandler(callback)
+    xhr:send()
+end
+
+
 function ServerListWin:get_server_list()
 
     local scene = display.getRunningScene()
@@ -55,7 +80,8 @@ function ServerListWin:get_server_list()
 
         local res = json.decode(xhr.response)
         if res then
-            self:show_server_list(res)
+            self.svr_list = res
+            self:show_server_list()
         end
     end
 
@@ -78,18 +104,25 @@ end
 
 -------------------------------------------------------------------------------
 
-function ServerListWin:show_server_list(svrs)
+function ServerListWin:show_server_list()
+    if not self.svr_list or not self.plr_list then
+        return
+    end
+
+    for _, v in ipairs(self.plr_list) do
+        self.svr_list[v.svr].plr_name = v.name
+    end
 
     local btn_callback = function(ref, type)
         if type == ccui.TouchEventType.ended then
             local scene = display.getRunningScene()
-            scene:OnSelected(svrs[ref.svr])
+            scene:OnSelected(self.svr_list[ref.svr])
             self:Close()
         end
     end
 
     local seq = 0
-    for k, v in pairs(svrs) do
+    for k, v in pairs(self.svr_list) do
         seq = seq + 1
 
         local btn = ccui.Button:create(
@@ -100,7 +133,13 @@ function ServerListWin:show_server_list(svrs)
         btn:setPosition(get_position(seq))
 
         btn.svr = k
-        btn:setTitleText(v.name)
+
+        local str = v.name
+        if v.plr_name then
+            str = str .. ":" .. v.plr_name
+        end
+
+        btn:setTitleText(str)
         btn:addTouchEventListener(btn_callback)
         self:addChild(btn)
     end

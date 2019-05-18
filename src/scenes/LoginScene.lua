@@ -70,7 +70,7 @@ function LoginScene:OnAuth(pseudo, token)
 
     scheduler.NextTick(
         function()
-            WinManager:CreateWindow("ServerListWin")
+            WinManager:CreateWindow("ServerListWin", pseudo)
         end
     )
 end
