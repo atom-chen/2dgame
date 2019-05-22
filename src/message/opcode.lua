@@ -10,8 +10,6 @@ Opcode.MSG_CS_PingRequest                     = 100;		MsgName[Opcode.MSG_CS_Ping
 Opcode.MSG_SC_PingResponse                    = 101;		MsgName[Opcode.MSG_SC_PingResponse]                    = "msg.PingResponse";
 Opcode.MSG_CS_LoginRequest                    = 102;		MsgName[Opcode.MSG_CS_LoginRequest]                    = "msg.LoginRequest";
 Opcode.MSG_SC_LoginResponse                   = 103;		MsgName[Opcode.MSG_SC_LoginResponse]                   = "msg.LoginResponse";
-Opcode.MSG_CS_EnterGameRequest                = 104;		MsgName[Opcode.MSG_CS_EnterGameRequest]                = "msg.EnterGameRequest";
-Opcode.MSG_SC_EnterGameResponse               = 105;		MsgName[Opcode.MSG_SC_EnterGameResponse]               = "msg.EnterGameResponse";
 Opcode.MSG_CS_PlayerDataRequest               = 200;		MsgName[Opcode.MSG_CS_PlayerDataRequest]               = "msg.PlayerDataRequest";
 Opcode.MSG_SC_PlayerDataResponse              = 201;		MsgName[Opcode.MSG_SC_PlayerDataResponse]              = "msg.PlayerDataResponse";
 Opcode.MSG_CS_GMCommandRequest                = 202;		MsgName[Opcode.MSG_CS_GMCommandRequest]                = "msg.GMCommandRequest";

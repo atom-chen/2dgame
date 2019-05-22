@@ -50,8 +50,6 @@ function ServerListWin:get_player_list(pseudo)
     local function callback()
         xhr:unregisterScriptHandler()
 
-        print(xhr.response)
-
         local res = json.decode(xhr.response)
         if res then
             self.plr_list = res
