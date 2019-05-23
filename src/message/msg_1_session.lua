@@ -18,7 +18,7 @@ md[Opcode.MSG_SC_PingResponse] = MSG_SC_PingResponse
 
 local function MSG_SC_LoginResponse(tab)
     print("msg:MSG_SC_LoginResponse", tab.ErrorCode)
-    
+
     if tab.ErrorCode == 0 then
         EventMgr.Emit(Event.LoginOK)
     else
@@ -26,15 +26,3 @@ local function MSG_SC_LoginResponse(tab)
     end
 end
 md[Opcode.MSG_SC_LoginResponse] = MSG_SC_LoginResponse
-
-
-local function MSG_SC_EnterGameResponse(tab)
-    print("msg:MSG_SC_EnterGameResponse")
-    
-    if tab.ErrorCode == 0 then
-        EventMgr.Emit(Event.EnterGameOK)
-    else
-        EventMgr.Emit(Event.EnterGameFailed)
-    end
-end
-md[Opcode.MSG_SC_EnterGameResponse] = MSG_SC_EnterGameResponse
