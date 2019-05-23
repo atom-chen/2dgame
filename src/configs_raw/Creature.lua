@@ -3,51 +3,16 @@ local data =
 	[1] = {
 		id = 10001,
 		level = 1,
-		name = "鼠",
+		name = "木桩",
 		model = "caocao",
-		skill_common = {
-			{
-				id = 1001,
-				lv = 1,
-			},
-		},
-		skill_extra = {
-			{
-				id = 1002,
-				lv = 1,
-			},
-		},
+		skill_common = {},
+		skill_extra = {},
 		aura = {},
 		props = {
 			{
 				id = 0,
 				part = 0,
-				val = 2400,
-			},
-			{
-				id = 1,
-				part = 0,
-				val = 30,
-			},
-			{
-				id = 2,
-				part = 0,
-				val = 100,
-			},
-			{
-				id = 3,
-				part = 0,
-				val = 20,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 5,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 40,
+				val = 200,
 			},
 		},
 	},
@@ -55,7 +20,7 @@ local data =
 	[2] = {
 		id = 10002,
 		level = 1,
-		name = "牛",
+		name = "野兔",
 		model = "caopi",
 		skill_common = {
 			{
@@ -63,18 +28,13 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1004,
-				lv = 1,
-			},
-		},
+		skill_extra = {},
 		aura = {},
 		props = {
 			{
 				id = 0,
 				part = 0,
-				val = 2500,
+				val = 400,
 			},
 			{
 				id = 1,
@@ -84,22 +44,7 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 120,
-			},
-			{
-				id = 3,
-				part = 0,
-				val = 22,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 6,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 42,
+				val = 20,
 			},
 		},
 	},
@@ -107,7 +52,7 @@ local data =
 	[3] = {
 		id = 10003,
 		level = 1,
-		name = "虎(主帅)",
+		name = "凶狼",
 		model = "caoren",
 		skill_common = {
 			{
@@ -115,23 +60,13 @@ local data =
 				lv = 1,
 			},
 		},
-		skill_extra = {
-			{
-				id = 1003,
-				lv = 3,
-			},
-		},
-		aura = {
-			{
-				id = 2001,
-				lv = 2,
-			},
-		},
+		skill_extra = {},
+		aura = {},
 		props = {
 			{
 				id = 0,
 				part = 0,
-				val = 2600,
+				val = 600,
 			},
 			{
 				id = 1,
@@ -141,22 +76,12 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 140,
+				val = 25,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 24,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 7,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 44,
+				val = 10,
 			},
 		},
 	},
@@ -164,154 +89,8 @@ local data =
 	[4] = {
 		id = 10004,
 		level = 1,
-		name = "兔",
+		name = "阿幺",
 		model = "daqiao",
-		skill_common = {
-			{
-				id = 1001,
-				lv = 1,
-			},
-		},
-		skill_extra = {},
-		aura = {},
-		props = {
-			{
-				id = 0,
-				part = 0,
-				val = 2700,
-			},
-			{
-				id = 1,
-				part = 0,
-				val = 30,
-			},
-			{
-				id = 2,
-				part = 0,
-				val = 160,
-			},
-			{
-				id = 3,
-				part = 0,
-				val = 26,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 8,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 46,
-			},
-		},
-	},
-
-	[5] = {
-		id = 10005,
-		level = 1,
-		name = "龙",
-		model = "zhugeliang",
-		skill_common = {
-			{
-				id = 1001,
-				lv = 1,
-			},
-		},
-		skill_extra = {},
-		aura = {},
-		props = {
-			{
-				id = 0,
-				part = 0,
-				val = 2800,
-			},
-			{
-				id = 1,
-				part = 0,
-				val = 30,
-			},
-			{
-				id = 2,
-				part = 0,
-				val = 180,
-			},
-			{
-				id = 3,
-				part = 0,
-				val = 28,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 9,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 48,
-			},
-		},
-	},
-
-	[6] = {
-		id = 10006,
-		level = 1,
-		name = "蛇",
-		model = "zhangfei",
-		skill_common = {
-			{
-				id = 1001,
-				lv = 1,
-			},
-		},
-		skill_extra = {
-			{
-				id = 1004,
-				lv = 1,
-			},
-		},
-		aura = {},
-		props = {
-			{
-				id = 0,
-				part = 0,
-				val = 2400,
-			},
-			{
-				id = 1,
-				part = 0,
-				val = 30,
-			},
-			{
-				id = 2,
-				part = 0,
-				val = 100,
-			},
-			{
-				id = 3,
-				part = 0,
-				val = 20,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 5,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 40,
-			},
-		},
-	},
-
-	[7] = {
-		id = 10007,
-		level = 1,
-		name = "马",
-		model = "liubei",
 		skill_common = {
 			{
 				id = 1001,
@@ -321,7 +100,7 @@ local data =
 		skill_extra = {
 			{
 				id = 1002,
-				lv = 2,
+				lv = 1,
 			},
 		},
 		aura = {},
@@ -329,7 +108,7 @@ local data =
 			{
 				id = 0,
 				part = 0,
-				val = 2500,
+				val = 1000,
 			},
 			{
 				id = 1,
@@ -339,22 +118,128 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 120,
+				val = 30,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 22,
+				val = 20,
+			},
+		},
+	},
+
+	[5] = {
+		id = 10005,
+		level = 1,
+		name = "强盗",
+		model = "zhugeliang",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {
+			{
+				id = 1004,
+				lv = 1,
+			},
+		},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 600,
 			},
 			{
-				id = 4,
+				id = 1,
 				part = 0,
-				val = 6,
+				val = 30,
 			},
 			{
-				id = 5,
+				id = 2,
 				part = 0,
-				val = 42,
+				val = 30,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+		},
+	},
+
+	[6] = {
+		id = 10006,
+		level = 1,
+		name = "土匪",
+		model = "zhangfei",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 800,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
+			},
+		},
+	},
+
+	[7] = {
+		id = 10007,
+		level = 1,
+		name = "土匪头目",
+		model = "liubei",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 1000,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 40,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 20,
 			},
 		},
 	},
@@ -362,7 +247,7 @@ local data =
 	[8] = {
 		id = 10008,
 		level = 1,
-		name = "羊(主帅)",
+		name = "阿顺",
 		model = "guojia",
 		skill_common = {
 			{
@@ -376,17 +261,12 @@ local data =
 				lv = 3,
 			},
 		},
-		aura = {
-			{
-				id = 2004,
-				lv = 1,
-			},
-		},
+		aura = {},
 		props = {
 			{
 				id = 0,
 				part = 0,
-				val = 2600,
+				val = 2000,
 			},
 			{
 				id = 1,
@@ -396,22 +276,12 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 140,
+				val = 80,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 24,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 7,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 44,
+				val = 40,
 			},
 		},
 	},
@@ -419,7 +289,7 @@ local data =
 	[9] = {
 		id = 10009,
 		level = 1,
-		name = "猴",
+		name = "家仆",
 		model = "huanggai",
 		skill_common = {
 			{
@@ -433,7 +303,7 @@ local data =
 			{
 				id = 0,
 				part = 0,
-				val = 2700,
+				val = 1000,
 			},
 			{
 				id = 1,
@@ -443,22 +313,12 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 160,
+				val = 50,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 26,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 8,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 46,
+				val = 20,
 			},
 		},
 	},
@@ -466,7 +326,7 @@ local data =
 	[10] = {
 		id = 10010,
 		level = 1,
-		name = "鸡",
+		name = "打手",
 		model = "jushou",
 		skill_common = {
 			{
@@ -480,7 +340,7 @@ local data =
 			{
 				id = 0,
 				part = 0,
-				val = 2800,
+				val = 1200,
 			},
 			{
 				id = 1,
@@ -490,22 +350,12 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 180,
+				val = 60,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 28,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 9,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 48,
+				val = 30,
 			},
 		},
 	},
@@ -513,7 +363,7 @@ local data =
 	[11] = {
 		id = 10011,
 		level = 1,
-		name = "狗",
+		name = "管家",
 		model = "jiaxu",
 		skill_common = {
 			{
@@ -527,7 +377,7 @@ local data =
 			{
 				id = 0,
 				part = 0,
-				val = 3400,
+				val = 1500,
 			},
 			{
 				id = 1,
@@ -537,22 +387,12 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 300,
+				val = 60,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 20,
-			},
-			{
-				id = 4,
-				part = 0,
-				val = 15,
-			},
-			{
-				id = 5,
-				part = 0,
-				val = 60,
+				val = 40,
 			},
 		},
 	},
@@ -560,7 +400,49 @@ local data =
 	[12] = {
 		id = 10012,
 		level = 1,
-		name = "猪",
+		name = "吴财道",
+		model = "lvbu",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {
+			{
+				id = 1003,
+				lv = 3,
+			},
+		},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2000,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 90,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 100,
+			},
+		},
+	},
+
+	[13] = {
+		id = 10013,
+		level = 1,
+		name = "衙役",
 		model = "lvbu",
 		skill_common = {
 			{
@@ -574,7 +456,7 @@ local data =
 			{
 				id = 0,
 				part = 0,
-				val = 3500,
+				val = 1200,
 			},
 			{
 				id = 1,
@@ -584,22 +466,128 @@ local data =
 			{
 				id = 2,
 				part = 0,
-				val = 320,
+				val = 60,
 			},
 			{
 				id = 3,
 				part = 0,
-				val = 22,
+				val = 30,
+			},
+		},
+	},
+
+	[14] = {
+		id = 10014,
+		level = 1,
+		name = "衙役头目",
+		model = "lvbu",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 1500,
 			},
 			{
-				id = 4,
+				id = 1,
 				part = 0,
-				val = 16,
+				val = 30,
 			},
 			{
-				id = 5,
+				id = 2,
 				part = 0,
-				val = 62,
+				val = 80,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 40,
+			},
+		},
+	},
+
+	[15] = {
+		id = 10015,
+		level = 1,
+		name = "师爷",
+		model = "lvbu",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 2000,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 100,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 40,
+			},
+		},
+	},
+
+	[16] = {
+		id = 10016,
+		level = 1,
+		name = "汪诗书",
+		model = "lvbu",
+		skill_common = {
+			{
+				id = 1001,
+				lv = 1,
+			},
+		},
+		skill_extra = {
+			{
+				id = 1003,
+				lv = 3,
+			},
+		},
+		aura = {},
+		props = {
+			{
+				id = 0,
+				part = 0,
+				val = 3000,
+			},
+			{
+				id = 1,
+				part = 0,
+				val = 30,
+			},
+			{
+				id = 2,
+				part = 0,
+				val = 200,
+			},
+			{
+				id = 3,
+				part = 0,
+				val = 60,
 			},
 		},
 	},
