@@ -1,6 +1,3 @@
-
--- require "core.socket_events"
-
 local scheduler     = require "core.scheduler"
 local WinManager    = require "core.WinManager"
 local Event         = require "core.event"
@@ -84,6 +81,8 @@ function LoginScene:OnSelected(svr)
             self:__connect()
         end
     )
+
+    RuntimeData.svr = svr.svr
 end
 
 

@@ -46,6 +46,11 @@ cc.exports.g_on_message = function(code, data, size)
     local tab, err = protobuf.decode(name, data, size); assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
     protobuf.extract(tab)
 
+    local ErrorCode = rawget(tab, "ErrorCode")
+    if ErrorCode and ErrorCode ~= 0 then
+        ShowPromptText(string.format("请求返回错误: OP = %d, ERR = %d", code, ErrorCode))
+    end
+
     -- message dispose
     local undisposed = false
     local func = md[code]

@@ -31,6 +31,18 @@ __G__TRACKBACK__ = function(msg)
     preboy:set_console_color(CONSOLE_COLOR.FOREGROUND_PINK)
     print(msg)
     preboy:set_console_color()
+
+    -- report stack error to server
+    do
+        local key = string.format("%s-%s", RuntimeData.svr, RuntimeData.pid)
+        local url = "http://118.24.48.149:8500/stack"
+        local xhr = cc.XMLHttpRequest:new()
+
+        xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
+        xhr:open("POST", url)
+        xhr:send(string.format("key=%s&msg=%s", key, msg))
+    end
+
     return msg
 end
 

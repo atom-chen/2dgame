@@ -76,8 +76,15 @@ end
 
 local function btn_callback(ref, type)
     if type == ccui.TouchEventType.ended then
-        print("1111:", ref.break_id)
-        WinManager:CreateWindow("BattleTeamWin")
+        local pass = PlayerChapter:Data().BreakId
+
+        if ref.break_id <= pass then
+            ShowPromptText("该关卡已通关", cc.RED)
+        elseif ref.break_id > pass+1 then
+            ShowPromptText("请依次通过关卡", cc.RED)
+        else
+            WinManager:CreateWindow("BattleTeamWin")
+        end
     end
 end
 
@@ -101,7 +108,7 @@ function ChapterWin:update_view(chapter_id)
 
         local c = config.GetBreak(i)
         local text
-        if data.BreakId > i then
+        if data.BreakId >= i then
             text = c.name .. " <已通关>"
         else
             text = c.name .. " <未通关>"

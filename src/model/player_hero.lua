@@ -90,6 +90,7 @@ end
 
 function PlayerHero:UpdateHero(id, tab)
     local hero = _heros[id]
+
     if not hero then
         hero = Hero:new(id)
         _heros[id] = hero
@@ -97,6 +98,7 @@ function PlayerHero:UpdateHero(id, tab)
     else
         self:Notify(0, id)
     end
+
     hero:Init(tab)
 end
 
@@ -124,7 +126,7 @@ function PlayerHero:Sort()
     table.sort(_heros_index, function(l, r)
         return l.props:Value(Property.PropType_HP) > r.props:Value(Property.PropType_HP)
     end)
-    
+
     for i, v in ipairs(_heros_index) do
         v.sort_index = i
     end

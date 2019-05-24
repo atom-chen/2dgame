@@ -12,7 +12,7 @@ function PlayerBase:GetBase()
 end
 
 function PlayerBase:Dump()
-    table.print(_base, "player base")
+    table.print(_base, "PLAYER BASE")
 end
 
 -------------------------------------------------------------------

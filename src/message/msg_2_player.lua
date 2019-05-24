@@ -13,8 +13,6 @@ local PlayerHero = require "model.player_hero"
 
 
 local function MSG_SC_PlayerDataResponse(tab)
-    print("msg:MSG_SC_PlayerDataResponse")
-
     local base      = PlayerBase:GetBase()
     base.acct       = tab.Acct
     base.name       = tab.Name
@@ -40,6 +38,8 @@ local function MSG_SC_PlayerDataResponse(tab)
     -- PlayerBase:Dump()
     -- PlayerItem:Dump()
     -- PlayerHero:Dump()
+
+    RuntimeData.pid = base.pid
 end
 md[Opcode.MSG_SC_PlayerDataResponse] = MSG_SC_PlayerDataResponse
 

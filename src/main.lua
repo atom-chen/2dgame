@@ -12,13 +12,13 @@ require "model.init"
 require "core.init"
 require "message.init"
 require "utils"
+require "runtime"
 
 
 local SceneMgr = require "scenes.SceneMgr"
 
 
 local function main()
-
 
     -- require("app.MyApp"):create():run()
 

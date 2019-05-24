@@ -18,12 +18,10 @@ end
 function PlayerChapter:Update(info)
     _chapter.LootTs  = info.LootTs
     _chapter.BreakId = info.BreakId
+
     for _, v in pairs(info.Chapters) do
         table.insert(_chapter.Chapters, v)
-        print("info.Chapters:", v)
     end
-
-    print("_chapter:", _chapter.LootTs, _chapter.BreakId)
 end
 
 function PlayerChapter:Data()

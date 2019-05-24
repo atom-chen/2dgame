@@ -46,20 +46,23 @@ function PlayerItem:SetItemCount(id, cnt)
 end
 
 function PlayerItem:Dump()
-    table.print(_items, "player item")
+    table.print(_items, "PLAYER ITEM")
 end
 
 -- 所有道具
 function PlayerItem:GetAllItems()
     local tab = {}
+
     for id, cnt in pairs(_items) do
         table.insert(tab, {id,cnt})
     end
+
     table.sort(tab, function(l,r)
         local proto_l = config.GetItemProto(l[1])
         local proto_r = config.GetItemProto(r[1])
         return proto_l.id > proto_r.id -- 暂时先将就比ID
     end)
+
     return tab
 end
 
