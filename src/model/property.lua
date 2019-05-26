@@ -51,7 +51,7 @@ function Property:add(part, val, add)
     elseif part == _M.PartPerc then
         self.perc = self.perc + val
     elseif part == _M.PartExtra then
-        self.extra = self.extra + val        
+        self.extra = self.extra + val
     end
 
     self.daity = true
@@ -86,7 +86,7 @@ local PropertyGroup = class("PropertyGroup")
 _M.PropertyGroup = PropertyGroup
 
 function PropertyGroup:ctor()
-    self._props = 
+    self._props =
     {
         [_M.PropType_HP]   = Property:create(),
         [_M.PropType_Apm]  = Property:create(),
@@ -95,6 +95,20 @@ function PropertyGroup:ctor()
         [_M.PropType_Crit] = Property:create(),
         [_M.PropType_Hurt] = Property:create(),
     }
+end
+
+function PropertyGroup:AddProp(id, part, val)
+    local m = self._props[id]
+    if m then
+        m:add(id, val, true)
+    end
+end
+
+function PropertyGroup:SubProp(id, part, val)
+    local m = self._props[id]
+    if m then
+        m:add(id, val, false)
+    end
 end
 
 function PropertyGroup:AddProps(props)

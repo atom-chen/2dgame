@@ -17,6 +17,7 @@ function Hero:Init(tab)
     self.id             = tab.Id
     self.lv             = tab.Lv
     self.apm            = tab.Apm
+    self.talent         = tab.Talent
     self.aptitude       = tab.Aptitude
     self.refineLv       = tab.RefineLv
     self.refineTimes    = tab.RefineTimes
@@ -53,10 +54,33 @@ end
 
 function Hero:Calc()
 
-    local proto = config.GetHeroProp(self.id, self.lv)
+    local proto = config.GetHero(self.id)
 
+    -- speed
     self.props:AddProps({{id=1, part=0, val=self.apm}})
-    self.props:AddProps(proto.props)
+
+    do
+        local prop_conf = config.GetHeroProp(self.id, self.lv)
+
+        -- base
+        self.props:AddProps(prop_conf.props)
+
+        -- aptitude
+        if self.aptitude > 0 then
+            local rate = self.aptitude / 100
+            for _, v in prop_conf.props do
+                self.props:AddProp(v.id, 2, v.val*rate)
+            end
+        end
+    end
+
+    -- talent
+    do
+        if self.talent > 0 then
+            local talent_conf = config.GetHeroTalent(self.id, self.talent)
+            self.props:AddProps(talent_conf.props)
+        end
+    end
 
     -- refine
     local conf

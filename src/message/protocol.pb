@@ -1,5 +1,5 @@
 
-Ž
+¦
 0.type.protomsg"<
 Item
 Flag (RFlag
@@ -10,24 +10,25 @@
 Lv (RLv"&
 Aura
 Id (RId
-Lv (RLv"î
+Lv (RLv"†
 Hero
 Id (RId
 Lv (RLv
-Apm (RApm
-Aptitude (RAptitude
-RefineLv (RRefineLv 
-RefineTimes (RRefineTimes 
-RefineSuper (RRefineSuper"
-Active (2
+Apm (RApm
+Talent (RTalent
+Aptitude (RAptitude
+RefineLv (RRefineLv 
+RefineTimes (RRefineTimes 
+RefineSuper (RRefineSuper"
+Active	 (2
 .msg.SkillRActive$
-Passive	 (2
+Passive
+ (2
 .msg.SkillRPassive
-Power
- (RPower
-Status (RStatus
-	LifePoint (R	LifePoint"
-LifePointMax (RLifePointMax"-
+Power (RPower
+Status (RStatus
+	LifePoint (R	LifePoint"
+LifePointMax (RLifePointMax"-
 BattleSkill
 Id (RId
 Lv (RLv",

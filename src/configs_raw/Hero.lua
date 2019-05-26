@@ -5,6 +5,7 @@ local data =
 		name = "曹操",
 		model = "caocao",
 		apm = 30,
+		talent = 1,
 		aptitude = 100,
 		skill_common = {
 			{
@@ -21,6 +22,7 @@ local data =
 		name = "孙权",
 		model = "sunquan",
 		apm = 30,
+		talent = 2,
 		aptitude = 100,
 		skill_common = {
 			{
@@ -37,6 +39,7 @@ local data =
 		name = "关羽",
 		model = "guanyu",
 		apm = 30,
+		talent = 3,
 		aptitude = 100,
 		skill_common = {
 			{
@@ -53,6 +56,7 @@ local data =
 		name = "魏延",
 		model = "weiyan",
 		apm = 30,
+		talent = 4,
 		aptitude = 100,
 		skill_common = {
 			{
@@ -69,6 +73,7 @@ local data =
 		name = "周瑜",
 		model = "zhouyu",
 		apm = 30,
+		talent = 5,
 		aptitude = 100,
 		skill_common = {
 			{

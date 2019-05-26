@@ -12,9 +12,10 @@ local gm_str =
     [2] = "item 4111|1 4112|1 4113|10",         -- 增加道具 道具ID|数量
     [3] = "hero 5001 5002",                     -- 增加英雄 英雄ID
     [4] = "hero_up 5001 5002",                  -- 增加英雄 英雄ID
+    [5] = "prop",                               -- 查看所有英雄的属性
 }
 
-MSG.SendGMCommand(gm_str[3])
+MSG.SendGMCommand(gm_str[5])
 
 
 -- 集市购买

@@ -4,6 +4,7 @@ local CreatureProto = require "configs_raw.Creature"
 local CreatureTeam  = require "configs_raw.CreatureTeam"
 local HeroProto     = require "configs_raw.Hero"
 local HeroProp      = require "configs_raw.HeroProp"
+local HeroTalent    = require "configs_raw.HeroTalent"
 local ItemProto     = require "configs_raw.Item"
 local SkillProto    = require "configs_raw.Skill"
 
@@ -99,6 +100,10 @@ map_by__id(_configs.HeroProto, HeroProto)
 _configs.HeroProp = {}
 map_by__id_level(_configs.HeroProp, HeroProp)
 
+-- HeroTalent
+_configs.HeroTalent = {}
+map_by__id_level(_configs.HeroTalent, HeroTalent)
+
 -- ItemProto
 _configs.ItemProto = {}
 map_by__id(_configs.ItemProto, ItemProto)
@@ -138,6 +143,7 @@ M.MarketConf        = MarketConf
 M.GetAuraProto      = get_by__id_level(_configs.AuraProto)
 M.GetSkillProto     = get_by__id_level(_configs.SkillProto)
 M.GetHeroProp       = get_by__id_level(_configs.HeroProp)
+M.GetHeroTalent     = get_by__id_level(_configs.HeroTalent)
 
 M.GetCreatureProto  = get_by__id(_configs.CreatureProto)
 M.GetHeroProto      = get_by__id(_configs.HeroProto)
