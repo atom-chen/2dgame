@@ -13,9 +13,11 @@ function Hero:ctor()
 end
 
 function Hero:Init(tab)
-    self.proto          = config.GetHeroProto(tab.Id, tab.Level)
+    self.proto          = config.GetHeroProto(tab.Id, tab.Lv)
     self.id             = tab.Id
-    self.level          = tab.Level
+    self.lv             = tab.Lv
+    self.apm            = tab.Apm
+    self.aptitude       = tab.Aptitude
     self.refineLv       = tab.RefineLv
     self.refineTimes    = tab.RefineTimes
     self.refineSuper    = tab.RefineSuper
@@ -30,16 +32,16 @@ function Hero:Init(tab)
     for i = 1, 2 do
         self.active[i] =
         {
-            id      = tab.Active[i].Id,
-            level   = tab.Active[i].Level,
+            id  = tab.Active[i].Id,
+            lv  = tab.Active[i].Lv,
         }
     end
 
     for i = 1, 4 do
         self.passive[i] =
         {
-            id      = tab.Passive[i].Id,
-            level   = tab.Passive[i].Level,
+            id  = tab.Passive[i].Id,
+            lv  = tab.Passive[i].Lv,
         }
     end
 
@@ -50,8 +52,10 @@ function Hero:Init(tab)
 end
 
 function Hero:Calc()
-    local proto     = self.proto
 
+    local proto = config.GetHeroProp(self.id, self.lv)
+
+    self.props:AddProps({{id=1, part=0, val=self.apm}})
     self.props:AddProps(proto.props)
 
     -- refine
@@ -69,7 +73,7 @@ function Hero:Calc()
     -- passive skill
     for i = 1, 4 do
         local v = self.passive[i]
-        local proto = config.GetSkillProto(v.id, v.level)
+        local proto = config.GetSkillProto(v.id, v.lv)
         if proto and proto.passive == 1 then
             self.props:AddProps(proto.prop_passive)
         end

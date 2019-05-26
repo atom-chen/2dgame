@@ -3,6 +3,7 @@ local AuraProto     = require "configs_raw.Aura"
 local CreatureProto = require "configs_raw.Creature"
 local CreatureTeam  = require "configs_raw.CreatureTeam"
 local HeroProto     = require "configs_raw.Hero"
+local HeroProp      = require "configs_raw.HeroProp"
 local ItemProto     = require "configs_raw.Item"
 local SkillProto    = require "configs_raw.Skill"
 
@@ -20,7 +21,6 @@ local Chapter       = require "configs_raw.Chapter"
 local Break         = require "configs_raw.Break"
 
 
-
 local M = {}
 local _configs = {}
 
@@ -34,7 +34,7 @@ local map_by__id_level = function(cfg, tab)
             tmp = {}
             cfg[v.id] = tmp
         end
-        tmp[v.level] = v
+        tmp[v.lv] = v
     end
 end
 
@@ -83,7 +83,7 @@ map_by__id_level(_configs.AuraProto, AuraProto)
 
 -- CreatureProto
 _configs.CreatureProto = {}
-map_by__id_level(_configs.CreatureProto, CreatureProto)
+map_by__id(_configs.CreatureProto, CreatureProto)
 
 
 -- CreatureTeam
@@ -93,8 +93,11 @@ map_by__id(_configs.CreatureTeam, CreatureTeam)
 
 -- HeroProto
 _configs.HeroProto = {}
-map_by__id_level(_configs.HeroProto, HeroProto)
+map_by__id(_configs.HeroProto, HeroProto)
 
+-- HeroProp
+_configs.HeroProp = {}
+map_by__id_level(_configs.HeroProp, HeroProp)
 
 -- ItemProto
 _configs.ItemProto = {}
@@ -134,9 +137,10 @@ M.MarketConf        = MarketConf
 
 M.GetAuraProto      = get_by__id_level(_configs.AuraProto)
 M.GetSkillProto     = get_by__id_level(_configs.SkillProto)
-M.GetHeroProto      = get_by__id_level(_configs.HeroProto)
-M.GetCreatureProto  = get_by__id_level(_configs.CreatureProto)
+M.GetHeroProp       = get_by__id_level(_configs.HeroProp)
 
+M.GetCreatureProto  = get_by__id(_configs.CreatureProto)
+M.GetHeroProto      = get_by__id(_configs.HeroProto)
 M.GetItemProto      = get_by__id(_configs.ItemProto)
 M.GetCreatureTeam   = get_by__id(_configs.CreatureTeam)
 M.GetObject         = get_by__id(_configs.Object)

@@ -1,7 +1,7 @@
 local data =
 {
 	[1] = {
-		level = 1,
+		lv = 1,
 		props = {
 			{
 				id = 0,
@@ -35,7 +35,7 @@ local data =
 	},
 
 	[2] = {
-		level = 2,
+		lv = 2,
 		props = {
 			{
 				id = 0,
@@ -69,7 +69,7 @@ local data =
 	},
 
 	[3] = {
-		level = 3,
+		lv = 3,
 		props = {
 			{
 				id = 0,
@@ -103,7 +103,7 @@ local data =
 	},
 
 	[4] = {
-		level = 4,
+		lv = 4,
 		props = {
 			{
 				id = 0,
@@ -137,7 +137,7 @@ local data =
 	},
 
 	[5] = {
-		level = 5,
+		lv = 5,
 		props = {
 			{
 				id = 0,
@@ -171,7 +171,7 @@ local data =
 	},
 
 	[6] = {
-		level = 6,
+		lv = 6,
 		props = {
 			{
 				id = 0,
@@ -205,7 +205,7 @@ local data =
 	},
 
 	[7] = {
-		level = 7,
+		lv = 7,
 		props = {
 			{
 				id = 0,
@@ -239,7 +239,7 @@ local data =
 	},
 
 	[8] = {
-		level = 8,
+		lv = 8,
 		props = {
 			{
 				id = 0,
@@ -273,7 +273,7 @@ local data =
 	},
 
 	[9] = {
-		level = 9,
+		lv = 9,
 		props = {
 			{
 				id = 0,
@@ -307,7 +307,7 @@ local data =
 	},
 
 	[10] = {
-		level = 10,
+		lv = 10,
 		props = {
 			{
 				id = 0,
@@ -341,7 +341,7 @@ local data =
 	},
 
 	[11] = {
-		level = 11,
+		lv = 11,
 		props = {
 			{
 				id = 0,
@@ -375,7 +375,7 @@ local data =
 	},
 
 	[12] = {
-		level = 12,
+		lv = 12,
 		props = {
 			{
 				id = 0,
@@ -409,7 +409,7 @@ local data =
 	},
 
 	[13] = {
-		level = 13,
+		lv = 13,
 		props = {
 			{
 				id = 0,
@@ -443,7 +443,7 @@ local data =
 	},
 
 	[14] = {
-		level = 14,
+		lv = 14,
 		props = {
 			{
 				id = 0,
@@ -477,7 +477,7 @@ local data =
 	},
 
 	[15] = {
-		level = 15,
+		lv = 15,
 		props = {
 			{
 				id = 0,
@@ -511,7 +511,7 @@ local data =
 	},
 
 	[16] = {
-		level = 16,
+		lv = 16,
 		props = {
 			{
 				id = 0,
@@ -545,7 +545,7 @@ local data =
 	},
 
 	[17] = {
-		level = 17,
+		lv = 17,
 		props = {
 			{
 				id = 0,
@@ -579,7 +579,7 @@ local data =
 	},
 
 	[18] = {
-		level = 18,
+		lv = 18,
 		props = {
 			{
 				id = 0,
@@ -613,7 +613,7 @@ local data =
 	},
 
 	[19] = {
-		level = 19,
+		lv = 19,
 		props = {
 			{
 				id = 0,
@@ -647,7 +647,7 @@ local data =
 	},
 
 	[20] = {
-		level = 20,
+		lv = 20,
 		props = {
 			{
 				id = 0,

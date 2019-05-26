@@ -2,7 +2,7 @@ local data =
 {
 	[1] = {
 		id = 2001,
-		level = 1,
+		lv = 1,
 		name = "回春",
 		last_t = 3000,
 		itv_t = 1000,
@@ -17,7 +17,7 @@ local data =
 
 	[2] = {
 		id = 2001,
-		level = 2,
+		lv = 2,
 		name = "回春",
 		last_t = 4000,
 		itv_t = 1000,
@@ -32,7 +32,7 @@ local data =
 
 	[3] = {
 		id = 2001,
-		level = 3,
+		lv = 3,
 		name = "回春",
 		last_t = 5000,
 		itv_t = 1000,
@@ -47,7 +47,7 @@ local data =
 
 	[4] = {
 		id = 2001,
-		level = 4,
+		lv = 4,
 		name = "回春",
 		last_t = 6000,
 		itv_t = 1000,
@@ -62,7 +62,7 @@ local data =
 
 	[5] = {
 		id = 2001,
-		level = 5,
+		lv = 5,
 		name = "回春",
 		last_t = 7000,
 		itv_t = 1000,
@@ -77,7 +77,7 @@ local data =
 
 	[6] = {
 		id = 2002,
-		level = 1,
+		lv = 1,
 		name = "狂燥",
 		last_t = 4500,
 		itv_t = 0,
@@ -98,7 +98,7 @@ local data =
 
 	[7] = {
 		id = 2002,
-		level = 2,
+		lv = 2,
 		name = "狂燥",
 		last_t = 4500,
 		itv_t = 0,
@@ -119,7 +119,7 @@ local data =
 
 	[8] = {
 		id = 2002,
-		level = 3,
+		lv = 3,
 		name = "狂燥",
 		last_t = 4500,
 		itv_t = 0,
@@ -140,7 +140,7 @@ local data =
 
 	[9] = {
 		id = 2002,
-		level = 4,
+		lv = 4,
 		name = "狂燥",
 		last_t = 4500,
 		itv_t = 0,
@@ -161,7 +161,7 @@ local data =
 
 	[10] = {
 		id = 2002,
-		level = 5,
+		lv = 5,
 		name = "狂燥",
 		last_t = 4500,
 		itv_t = 0,
@@ -182,7 +182,7 @@ local data =
 
 	[11] = {
 		id = 2003,
-		level = 1,
+		lv = 1,
 		name = "合欢散",
 		last_t = 5000,
 		itv_t = 0,
@@ -197,7 +197,7 @@ local data =
 
 	[12] = {
 		id = 2003,
-		level = 2,
+		lv = 2,
 		name = "合欢散",
 		last_t = 6000,
 		itv_t = 0,
@@ -212,7 +212,7 @@ local data =
 
 	[13] = {
 		id = 2003,
-		level = 3,
+		lv = 3,
 		name = "合欢散",
 		last_t = 7000,
 		itv_t = 0,
@@ -227,7 +227,7 @@ local data =
 
 	[14] = {
 		id = 2003,
-		level = 4,
+		lv = 4,
 		name = "合欢散",
 		last_t = 8000,
 		itv_t = 0,
@@ -242,7 +242,7 @@ local data =
 
 	[15] = {
 		id = 2003,
-		level = 5,
+		lv = 5,
 		name = "合欢散",
 		last_t = 9000,
 		itv_t = 0,
@@ -257,7 +257,7 @@ local data =
 
 	[16] = {
 		id = 2004,
-		level = 1,
+		lv = 1,
 		name = "吸血光环",
 		last_t = 4000,
 		itv_t = 0,
@@ -272,7 +272,7 @@ local data =
 
 	[17] = {
 		id = 2004,
-		level = 2,
+		lv = 2,
 		name = "吸血光环",
 		last_t = 4000,
 		itv_t = 0,
@@ -287,7 +287,7 @@ local data =
 
 	[18] = {
 		id = 2004,
-		level = 3,
+		lv = 3,
 		name = "吸血光环",
 		last_t = 4000,
 		itv_t = 0,
@@ -302,7 +302,7 @@ local data =
 
 	[19] = {
 		id = 2004,
-		level = 4,
+		lv = 4,
 		name = "吸血光环",
 		last_t = 4000,
 		itv_t = 0,
@@ -317,7 +317,7 @@ local data =
 
 	[20] = {
 		id = 2004,
-		level = 5,
+		lv = 5,
 		name = "吸血光环",
 		last_t = 4000,
 		itv_t = 0,
@@ -332,7 +332,7 @@ local data =
 
 	[21] = {
 		id = 2005,
-		level = 1,
+		lv = 1,
 		name = "掉防光环",
 		last_t = 3000,
 		itv_t = 0,
@@ -353,7 +353,7 @@ local data =
 
 	[22] = {
 		id = 2005,
-		level = 2,
+		lv = 2,
 		name = "掉防光环",
 		last_t = 3000,
 		itv_t = 0,
@@ -374,7 +374,7 @@ local data =
 
 	[23] = {
 		id = 2005,
-		level = 3,
+		lv = 3,
 		name = "掉防光环",
 		last_t = 3000,
 		itv_t = 0,
@@ -395,7 +395,7 @@ local data =
 
 	[24] = {
 		id = 2005,
-		level = 4,
+		lv = 4,
 		name = "掉防光环",
 		last_t = 3000,
 		itv_t = 0,
@@ -416,7 +416,7 @@ local data =
 
 	[25] = {
 		id = 2005,
-		level = 5,
+		lv = 5,
 		name = "掉防光环",
 		last_t = 3000,
 		itv_t = 0,

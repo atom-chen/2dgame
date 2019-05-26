@@ -99,9 +99,9 @@ function BattleUnit:ctor(u, b)
     end
 
     if self._type == 1 then
-        self._proto = config.GetHeroProto(self._id, self._lv)
+        self._proto = config.GetHeroProto(self._id)
     else
-        self._proto = config.GetCreatureProto(self._id, self._lv)
+        self._proto = config.GetCreatureProto(self._id)
     end
 
     self._root = cc.Node:create()
@@ -166,7 +166,7 @@ end
 
 function BattleUnit:GetSkill(id, lv)
     for _, v in ipairs(self._skills) do
-        if v.proto.id == id and v.proto.level == lv then
+        if v.proto.id == id and v.proto.lv == lv then
             return v
         end
     end

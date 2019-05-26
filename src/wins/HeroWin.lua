@@ -220,7 +220,7 @@ function HeroWin:ShowHeroDetail(index)
 
 
     label = self:getChildByName("level")
-    label:setString(string.format("%s %d 级", hero.proto.name, hero.level))
+    label:setString(string.format("%s %d 级", hero.proto.name, hero.lv))
 
     label = self:getChildByName("life")
     label:setString(string.format("生命点: %d/%d", hero.lifePoint, hero.lifePointMax))
@@ -257,8 +257,8 @@ function HeroWin:ShowHeroDetail(index)
     node:removeAllChildren()
     for i = 1, 2 do
         local v = hero.active[i]
-        if v.id ~= 0 and v.level ~= 0 then
-            local proto = config.GetSkillProto(v.id, v.level)
+        if v.id ~= 0 and v.lv ~= 0 then
+            local proto = config.GetSkillProto(v.id, v.lv)
             local image = ccui.ImageView:create(proto.icon)
             image:setPosition(i*150, 0)
             node:addChild(image)

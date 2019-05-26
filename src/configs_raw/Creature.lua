@@ -2,7 +2,6 @@ local data =
 {
 	[1] = {
 		id = 10001,
-		level = 1,
 		name = "木桩",
 		model = "caocao",
 		skill_common = {},
@@ -19,7 +18,6 @@ local data =
 
 	[2] = {
 		id = 10002,
-		level = 1,
 		name = "野兔",
 		model = "caopi",
 		skill_common = {
@@ -51,7 +49,6 @@ local data =
 
 	[3] = {
 		id = 10003,
-		level = 1,
 		name = "凶狼",
 		model = "caoren",
 		skill_common = {
@@ -88,7 +85,6 @@ local data =
 
 	[4] = {
 		id = 10004,
-		level = 1,
 		name = "阿幺",
 		model = "daqiao",
 		skill_common = {
@@ -130,7 +126,6 @@ local data =
 
 	[5] = {
 		id = 10005,
-		level = 1,
 		name = "强盗",
 		model = "zhugeliang",
 		skill_common = {
@@ -172,7 +167,6 @@ local data =
 
 	[6] = {
 		id = 10006,
-		level = 1,
 		name = "土匪",
 		model = "zhangfei",
 		skill_common = {
@@ -209,7 +203,6 @@ local data =
 
 	[7] = {
 		id = 10007,
-		level = 1,
 		name = "土匪头目",
 		model = "liubei",
 		skill_common = {
@@ -246,7 +239,6 @@ local data =
 
 	[8] = {
 		id = 10008,
-		level = 1,
 		name = "阿顺",
 		model = "guojia",
 		skill_common = {
@@ -288,7 +280,6 @@ local data =
 
 	[9] = {
 		id = 10009,
-		level = 1,
 		name = "家仆",
 		model = "huanggai",
 		skill_common = {
@@ -325,7 +316,6 @@ local data =
 
 	[10] = {
 		id = 10010,
-		level = 1,
 		name = "打手",
 		model = "jushou",
 		skill_common = {
@@ -362,7 +352,6 @@ local data =
 
 	[11] = {
 		id = 10011,
-		level = 1,
 		name = "管家",
 		model = "jiaxu",
 		skill_common = {
@@ -399,7 +388,6 @@ local data =
 
 	[12] = {
 		id = 10012,
-		level = 1,
 		name = "吴财道",
 		model = "lvbu",
 		skill_common = {
@@ -441,7 +429,6 @@ local data =
 
 	[13] = {
 		id = 10013,
-		level = 1,
 		name = "衙役",
 		model = "lvbu",
 		skill_common = {
@@ -478,7 +465,6 @@ local data =
 
 	[14] = {
 		id = 10014,
-		level = 1,
 		name = "衙役头目",
 		model = "lvbu",
 		skill_common = {
@@ -515,7 +501,6 @@ local data =
 
 	[15] = {
 		id = 10015,
-		level = 1,
 		name = "师爷",
 		model = "lvbu",
 		skill_common = {
@@ -552,7 +537,6 @@ local data =
 
 	[16] = {
 		id = 10016,
-		level = 1,
 		name = "汪诗书",
 		model = "lvbu",
 		skill_common = {

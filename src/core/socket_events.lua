@@ -46,6 +46,8 @@ cc.exports.g_on_message = function(code, data, size)
     local tab, err = protobuf.decode(name, data, size); assert(tab, string.format("protobuf.decode failed for opcode=%d, err=%s", code, err))
     protobuf.extract(tab)
 
+    print(string.format("RecvPacket:opcode=%d", code))
+
     local ErrorCode = rawget(tab, "ErrorCode")
     if ErrorCode and ErrorCode ~= 0 then
         ShowPromptText(string.format("请求返回错误: OP = %d, ERR = %d", code, ErrorCode))
@@ -113,6 +115,8 @@ Socket.SendPacket = function(code, tab, func)
         end
         __callback[code+1] = func
     end
+
+    print(string.format("SendPacket:opcode=%d", code))
 end
 
 

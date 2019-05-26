@@ -2,7 +2,7 @@ local data =
 {
 	[1] = {
 		id = 1001,
-		level = 1,
+		lv = 1,
 		name = "英雄之刃",
 		model = "attack",
 		icon = "icon/skill/skill_1001.png",
@@ -45,7 +45,7 @@ local data =
 
 	[2] = {
 		id = 1002,
-		level = 1,
+		lv = 1,
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
@@ -70,7 +70,7 @@ local data =
 
 	[3] = {
 		id = 1002,
-		level = 2,
+		lv = 2,
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
@@ -95,7 +95,7 @@ local data =
 
 	[4] = {
 		id = 1002,
-		level = 3,
+		lv = 3,
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
@@ -120,7 +120,7 @@ local data =
 
 	[5] = {
 		id = 1002,
-		level = 4,
+		lv = 4,
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
@@ -145,7 +145,7 @@ local data =
 
 	[6] = {
 		id = 1002,
-		level = 5,
+		lv = 5,
 		name = "美人斩",
 		model = "skill1",
 		icon = "icon/skill/skill_1002.png",
@@ -170,7 +170,7 @@ local data =
 
 	[7] = {
 		id = 1003,
-		level = 1,
+		lv = 1,
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
@@ -231,7 +231,7 @@ local data =
 
 	[8] = {
 		id = 1003,
-		level = 2,
+		lv = 2,
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
@@ -292,7 +292,7 @@ local data =
 
 	[9] = {
 		id = 1003,
-		level = 3,
+		lv = 3,
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
@@ -353,7 +353,7 @@ local data =
 
 	[10] = {
 		id = 1003,
-		level = 4,
+		lv = 4,
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
@@ -414,7 +414,7 @@ local data =
 
 	[11] = {
 		id = 1003,
-		level = 5,
+		lv = 5,
 		name = "蛇蝎心",
 		model = "skill2",
 		icon = "icon/skill/skill_1003.png",
@@ -475,7 +475,7 @@ local data =
 
 	[12] = {
 		id = 1004,
-		level = 1,
+		lv = 1,
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
@@ -518,7 +518,7 @@ local data =
 
 	[13] = {
 		id = 1004,
-		level = 2,
+		lv = 2,
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
@@ -561,7 +561,7 @@ local data =
 
 	[14] = {
 		id = 1004,
-		level = 3,
+		lv = 3,
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
@@ -604,7 +604,7 @@ local data =
 
 	[15] = {
 		id = 1004,
-		level = 4,
+		lv = 4,
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
@@ -647,7 +647,7 @@ local data =
 
 	[16] = {
 		id = 1004,
-		level = 5,
+		lv = 5,
 		name = "貂蝉之吻",
 		model = "skill2",
 		icon = "icon/skill/skill_1004.png",
@@ -690,7 +690,7 @@ local data =
 
 	[17] = {
 		id = 1005,
-		level = 1,
+		lv = 1,
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
@@ -752,7 +752,7 @@ local data =
 
 	[18] = {
 		id = 1005,
-		level = 2,
+		lv = 2,
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
@@ -814,7 +814,7 @@ local data =
 
 	[19] = {
 		id = 1005,
-		level = 3,
+		lv = 3,
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
@@ -876,7 +876,7 @@ local data =
 
 	[20] = {
 		id = 1005,
-		level = 4,
+		lv = 4,
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",
@@ -938,7 +938,7 @@ local data =
 
 	[21] = {
 		id = 1005,
-		level = 5,
+		lv = 5,
 		name = "天使圣光",
 		model = "",
 		icon = "icon/skill/skill_1005.png",

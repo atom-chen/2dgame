@@ -14,7 +14,7 @@ local gm_str =
     [4] = "hero_up 5001 5002",                  -- 增加英雄 英雄ID
 }
 
-MSG.SendGMCommand(gm_str[2])
+MSG.SendGMCommand(gm_str[3])
 
 
 -- 集市购买
