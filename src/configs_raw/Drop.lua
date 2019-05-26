@@ -5,36 +5,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 3,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 3,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 3,
 			},
 		},
@@ -46,36 +46,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 4,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 4,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 4,
 			},
 		},
@@ -87,36 +87,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 5,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 5,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 5,
 			},
 		},
@@ -128,36 +128,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 6,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 6,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 6,
 			},
 		},
@@ -169,36 +169,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 7,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 7,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 7,
 			},
 		},
@@ -210,36 +210,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 8,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 8,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 8,
 			},
 		},
@@ -251,36 +251,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 9,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 9,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 9,
 			},
 		},
@@ -292,36 +292,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 10,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 10,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 10,
 			},
 		},
@@ -333,36 +333,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 11,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 11,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 11,
 			},
 		},
@@ -374,36 +374,36 @@ local data =
 		prob = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 12,
 			},
 		},
 		weight = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 12,
 			},
 		},
 		cond = {
 			{
 				prob = 1000,
-				id = 100,
+				id = 4002,
 				cnt = 1,
 			},
 			{
 				prob = 2000,
-				id = 200,
+				id = 4013,
 				cnt = 12,
 			},
 		},

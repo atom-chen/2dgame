@@ -53,8 +53,7 @@ function Hero:Init(tab)
 end
 
 function Hero:Calc()
-
-    local proto = config.GetHero(self.id)
+    local proto = config.GetHeroProto(self.id)
 
     -- speed
     self.props:AddProps({{id=1, part=0, val=self.apm}})
@@ -68,7 +67,7 @@ function Hero:Calc()
         -- aptitude
         if self.aptitude > 0 then
             local rate = self.aptitude / 100
-            for _, v in prop_conf.props do
+            for _, v in pairs(prop_conf.props) do
                 self.props:AddProp(v.id, 2, v.val*rate)
             end
         end
@@ -77,7 +76,7 @@ function Hero:Calc()
     -- talent
     do
         if self.talent > 0 then
-            local talent_conf = config.GetHeroTalent(self.id, self.talent)
+            local talent_conf = config.GetHeroTalent(proto.talent, self.talent)
             self.props:AddProps(talent_conf.props)
         end
     end
@@ -121,13 +120,13 @@ function PlayerHero:UpdateHero(id, tab)
 
     if not hero then
         hero = Hero:new(id)
+        hero:Init(tab)
         _heros[id] = hero
         self:Notify(1, id)
     else
+        hero:Init(tab)
         self:Notify(0, id)
     end
-
-    hero:Init(tab)
 end
 
 function PlayerHero:GetHero(id)

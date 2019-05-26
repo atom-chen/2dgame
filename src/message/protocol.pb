@@ -141,7 +141,7 @@ ItemUpdate
 NoticeUpdate
 Flag (RFlag
 Notice (	RNoticebproto3
-Â
+¨
 3_hero.protomsg0.type.proto"$
 HeroLevelupRequest
 Id (RId"3
@@ -151,6 +151,16 @@ ItemUpdate
 Id (RId
 Flag (RFlag"J
 HeroRefineResponse
+	ErrorCode (R	ErrorCode
+Result (RResult"%
+HeroAptitudeRequest
+Id (RId"L
+HeroAptitudeResponse
+	ErrorCode (R	ErrorCode
+Result (RResult"#
+HeroTalentRequest
+Id (RId"J
+HeroTalentResponse
 	ErrorCode (R	ErrorCode
 Result (RResult"7
 HeroInfoUpdateResponse

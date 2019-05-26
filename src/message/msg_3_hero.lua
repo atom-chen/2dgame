@@ -33,3 +33,15 @@ local function MSG_SC_HeroInfoUpdateResponse(tab)
     PlayerHero:UpdateHero(v.Id, v)
 end
 md[Opcode.MSG_SC_HeroInfoUpdateResponse] = MSG_SC_HeroInfoUpdateResponse
+
+local function MSG_SC_HeroAptitudeResponse(tab)
+    print("msg:MSG_SC_HeroAptitudeResponse")
+    -- TODO
+end
+md[Opcode.MSG_SC_HeroAptitudeResponse] = MSG_SC_HeroAptitudeResponse
+
+local function MSG_SC_HeroTalentResponse(tab)
+    print("msg:MSG_SC_HeroTalentResponse")
+    -- TODO
+end
+md[Opcode.MSG_SC_HeroTalentResponse] = MSG_SC_HeroTalentResponse

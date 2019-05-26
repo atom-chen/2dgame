@@ -25,6 +25,10 @@ Opcode.MSG_CS_HeroLevelupRequest              = 300;		MsgName[Opcode.MSG_CS_Hero
 Opcode.MSG_SC_HeroLevelupResponse             = 301;		MsgName[Opcode.MSG_SC_HeroLevelupResponse]             = "msg.HeroLevelupResponse";
 Opcode.MSG_CS_HeroRefineRequest               = 302;		MsgName[Opcode.MSG_CS_HeroRefineRequest]               = "msg.HeroRefineRequest";
 Opcode.MSG_SC_HeroRefineResponse              = 303;		MsgName[Opcode.MSG_SC_HeroRefineResponse]              = "msg.HeroRefineResponse";
+Opcode.MSG_CS_HeroAptitudeRequest             = 304;		MsgName[Opcode.MSG_CS_HeroAptitudeRequest]             = "msg.HeroAptitudeRequest";
+Opcode.MSG_SC_HeroAptitudeResponse            = 305;		MsgName[Opcode.MSG_SC_HeroAptitudeResponse]            = "msg.HeroAptitudeResponse";
+Opcode.MSG_CS_HeroTalentRequest               = 306;		MsgName[Opcode.MSG_CS_HeroTalentRequest]               = "msg.HeroTalentRequest";
+Opcode.MSG_SC_HeroTalentResponse              = 307;		MsgName[Opcode.MSG_SC_HeroTalentResponse]              = "msg.HeroTalentResponse";
 Opcode.MSG_SC_HeroInfoUpdateResponse          = 380;		MsgName[Opcode.MSG_SC_HeroInfoUpdateResponse]          = "msg.HeroInfoUpdateResponse";
 Opcode.MSG_CS_QuestListRequest                = 400;		MsgName[Opcode.MSG_CS_QuestListRequest]                = "msg.QuestListRequest";
 Opcode.MSG_SC_QuestListResponse               = 401;		MsgName[Opcode.MSG_SC_QuestListResponse]               = "msg.QuestListResponse";

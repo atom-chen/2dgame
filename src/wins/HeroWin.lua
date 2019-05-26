@@ -98,27 +98,32 @@ function HeroWin:ctor()
     -- 生命
     label = cc.Label:createWithSystemFont("hp", "Arial", 16)
     label:setName("hp")
-    label:setPosition(-140, 150)
+    label:setPosition(-140, 170)
+    self:addChild(label)
+    -- 速度
+    label = cc.Label:createWithSystemFont("速度", "Arial", 16)
+    label:setName("apm")
+    label:setPosition(-140, 140)
     self:addChild(label)
     -- 攻击
     label = cc.Label:createWithSystemFont("atk", "Arial", 16)
     label:setName("atk")
-    label:setPosition(-140, 100)
+    label:setPosition(-140, 110)
     self:addChild(label)
     -- 防御
     label = cc.Label:createWithSystemFont("def", "Arial", 16)
     label:setName("def")
-    label:setPosition(-140, 50)
+    label:setPosition(-140, 80)
     self:addChild(label)
     -- 暴击
     label = cc.Label:createWithSystemFont("crit", "Arial", 16)
     label:setName("crit")
-    label:setPosition(-140, 0)
+    label:setPosition(-140, 50)
     self:addChild(label)
     -- 暴伤
     label = cc.Label:createWithSystemFont("crit_hurt", "Arial", 16)
     label:setName("crit_hurt")
-    label:setPosition(-140, -50)
+    label:setPosition(-140, 20)
     self:addChild(label)
 
     ------------ 右侧 ------------
@@ -127,19 +132,19 @@ function HeroWin:ctor()
     label:setPosition(80, 200)
     self:addChild(label)
     -- 精炼类型
-    label = cc.Label:createWithSystemFont("refine_type", "Arial", 16)
+    label = cc.Label:createWithSystemFont("精炼类型", "Arial", 16)
     label:setName("refine_type")
-    label:setPosition(100, 150)
+    label:setPosition(100, 155)
     self:addChild(label)
     -- 精炼等级
-    label = cc.Label:createWithSystemFont("refine_lv", "Arial", 16)
+    label = cc.Label:createWithSystemFont("精炼等级", "Arial", 16)
     label:setName("refine_lv")
-    label:setPosition(100, 100)
+    label:setPosition(100, 125)
     self:addChild(label)
     button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("普通精炼")
     button:getTitleLabel():setSystemFontSize(16)
-    button:setPosition(260, 100)
+    button:setPosition(260, 140)
     button:addClickEventListener(function()
         if self.curr_index then
             local hero = PlayerHero:GetHeroByIndex(self.curr_index)
@@ -153,7 +158,7 @@ function HeroWin:ctor()
     button = ccui.Button:create("ccs/gm/public_button_001.png")
     button:setTitleText("超级精炼")
     button:getTitleLabel():setSystemFontSize(16)
-    button:setPosition(440, 100)
+    button:setPosition(440, 140)
     button:addClickEventListener(function()
         if self.curr_index then
             local hero = PlayerHero:GetHeroByIndex(self.curr_index)
@@ -165,18 +170,56 @@ function HeroWin:ctor()
     end)
     self:addChild(button)
 
+    -- 资质
+    label = cc.Label:createWithSystemFont("资质等级", "Arial", 16)
+    label:setName("aptitude")
+    label:setPosition(100, 80)
+    self:addChild(label)
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
+    button:setTitleText("提升资质")
+    button:getTitleLabel():setSystemFontSize(16)
+    button:setPosition(260, 80)
+    button:addClickEventListener(function()
+        if self.curr_index then
+            local hero = PlayerHero:GetHeroByIndex(self.curr_index)
+            Socket.SendPacket(Opcode.MSG_CS_HeroAptitudeRequest, {
+                Id = hero.id,
+            })
+        end
+    end)
+    self:addChild(button)
+
+    -- 天赋
+    label = cc.Label:createWithSystemFont("天赋等级", "Arial", 16)
+    label:setName("talent")
+    label:setPosition(100, 20)
+    self:addChild(label)
+    button = ccui.Button:create("ccs/gm/public_button_001.png")
+    button:setTitleText("提升资质")
+    button:getTitleLabel():setSystemFontSize(16)
+    button:setPosition(260, 20)
+    button:addClickEventListener(function()
+        if self.curr_index then
+            local hero = PlayerHero:GetHeroByIndex(self.curr_index)
+            Socket.SendPacket(Opcode.MSG_CS_HeroTalentRequest, {
+                Id = hero.id,
+            })
+        end
+    end)
+    self:addChild(button)
+
     -- 主动技能
     label = cc.Label:createWithSystemFont("技能：", "Arial", 16)
-    label:setPosition(80, 0)
+    label:setPosition(80, -50)
     self:addChild(label)
 
     node = cc.Node:create()
     node:setName("skill")
-    node:setPosition(80, -20)
+    node:setPosition(80, -70)
     self:addChild(node)
 
     -- 被动技能
-
+    -- TODO
 
     self:ShowHeroDetail(1)
 end
@@ -237,6 +280,9 @@ function HeroWin:ShowHeroDetail(index)
     label = self:getChildByName("hp")
     label:setString(string.format("HP: %d", hero.props:Value(Property.PropType_HP)))
 
+    label = self:getChildByName("apm")
+    label:setString(string.format("速度: %d", hero.props:Value(Property.PropType_Apm)))
+
     label = self:getChildByName("crit")
     label:setString(string.format("暴击: %d", hero.props:Value(Property.PropType_Crit)))
 
@@ -265,6 +311,11 @@ function HeroWin:ShowHeroDetail(index)
         end
     end
 
+    label = self:getChildByName("aptitude")
+    label:setString(string.format("资质等级: %d", hero.aptitude))
+
+    label = self:getChildByName("talent")
+    label:setString(string.format("天赋等级: %d", hero.talent))
 end
 
 
