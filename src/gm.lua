@@ -4,6 +4,7 @@
 -- zcg.logTable(debug.getregistry(), "d:/reg.lua")
 -- print("+++", type(cc.Node), cc.Node[".isclass"])
 
+local PlayerHero = require "model.player_hero"
 
 -- GM请求
 local gm_str =
@@ -15,7 +16,11 @@ local gm_str =
     [5] = "prop",                               -- 查看所有英雄的属性
 }
 
-MSG.SendGMCommand(gm_str[5])
+-- MSG.SendGMCommand(gm_str[5])
+
+
+-- 客户端计算英雄属性
+PlayerHero.Dump()
 
 
 -- 集市购买
@@ -27,4 +32,4 @@ MSG.SendGMCommand(gm_str[5])
 
 
 -- 获取关卡信息
-Socket.SendPacket(Opcode.MSG_CS_ChapterInfoRequest, {})
+-- Socket.SendPacket(Opcode.MSG_CS_ChapterInfoRequest, {})

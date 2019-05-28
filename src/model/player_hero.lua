@@ -105,7 +105,7 @@ end
 
 function Hero:Dump()
     print("============ Hero Start:", self.proto.name, self.id)
-    table.print(self)
+    print(self.props:Dump())
     print("============ Hero End! ==========")
 end
 

@@ -18,6 +18,14 @@ _M.PropType_Hurt = 5    -- 暴伤
 -- 属性总数量
 _M.C_Property_Number = 6
 
+local type_name = {
+    [0] = "hp",
+    [1] = "apm",
+    [2] = "atk",
+    [3] = "def",
+    [4] = "crit",
+    [5] = "hurt",
+}
 
 -------------------------------------------------------------------------------
 
@@ -141,6 +149,20 @@ function PropertyGroup:Value(id)
     end
 
     return self._props[id]:Value()
+end
+
+function PropertyGroup:Dump()
+    local ret = "{\n"
+
+    for i = _M.PropType_HP, _M.PropType_Hurt do
+        local m = self._props[i]
+        ret = ret .. string.format("\t{ %s\t= %-20.2f[%-20.2f %-20.2f %-20.2f]},\n",
+            type_name[i], m:Value(), m.base, m.perc, m.extra)
+    end
+
+    ret = ret .. "},\n"
+
+    return ret
 end
 
 -------------------------------------------------------------------------------
