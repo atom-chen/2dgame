@@ -87,6 +87,6 @@ md[Opcode.MSG_SC_PlayerExpUpdate] = MSG_SC_PlayerExpUpdate
 
 local function MSG_SC_NoticeUpdate(tab)
     ShowPromptText(string.format("NOTICE: %s", tab.Notice))
-    zcg.logInfo("msg:MSG_SC_NoticeResponse: %d - %s", tab.Flag, tab.Notice)
+    zcg.logInfo(tab.Notice)
 end
 md[Opcode.MSG_SC_NoticeUpdate] = MSG_SC_NoticeUpdate
