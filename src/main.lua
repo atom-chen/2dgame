@@ -34,13 +34,7 @@ local function main()
         local function onKeyboardPressed(keyCode, event)
             keyCode = tonumber(keyCode)
             if keyCode == cc.KeyCode.KEY_Z then
-                preboy:set_console_color(CONSOLE_COLOR.FOREGROUND_GREEN)
-                print("---------- zcg everywhere:", os.time())
-                preboy:set_console_color()
-                dofile("src/gm.lua")
-                preboy:set_console_color(CONSOLE_COLOR.FOREGROUND_GREEN)
-                print("---------- zcg end.")
-                preboy:set_console_color()
+                WinManager:CreateWindow("GmWin")
             elseif keyCode == cc.KeyCode.KEY_T then
                 -- WinManager:CreateWindow("ModelWin")
             elseif keyCode == cc.KeyCode.KEY_C then
