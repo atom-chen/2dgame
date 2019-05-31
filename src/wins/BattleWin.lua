@@ -2,7 +2,7 @@
 local scheduler     = require "core.scheduler"
 local WinBase       = require "core.WinBase"
 local Armature      = require "core.armature"
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 local BattleUnit    = class("BattleUnit")
 local BattleWin     = class("BattleWin", WinBase)

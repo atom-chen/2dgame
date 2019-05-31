@@ -7,7 +7,7 @@ require "cocos.init"
 
 require "base.init"
 
-require "configs_json.init"
+require "config.init"
 require "model.init"
 require "core.init"
 require "message.init"

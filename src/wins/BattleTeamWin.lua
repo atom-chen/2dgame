@@ -2,7 +2,7 @@ local Armature      = require "core.armature"
 local WinBase       = require "core.WinBase"
 local PlayerItem    = require "model.player_item"
 local PlayerHero    = require "model.player_hero"
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 
 ------------------------------------------------------------------------------------
@@ -16,11 +16,11 @@ function BattleTeamWin:ctor()
     self.selected = {}
 
     self.shieldLayer_ = cc.LayerColor:create(cc.c4b(0,0,0,200)):addTo(self, -1)
-    self.shieldLayer_:setIgnoreAnchorPointForPosition(false)    
+    self.shieldLayer_:setIgnoreAnchorPointForPosition(false)
     self.shieldLayer_:setAnchorPoint(0.5, 0.5)
 
     self.resourceNode_ = cc.CSLoader:createNode("1.layer/battle.csb")
-    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)
     self.resourceNode_:setAnchorPoint(0.5, 0.5)
     self:addChild(self.resourceNode_)
 
@@ -35,7 +35,7 @@ function BattleTeamWin:ctor()
     img:onTouch(function(event)
         if event.name == "ended" then
             self:Close()
-        end 
+        end
     end)
 
     -- 战斗
@@ -69,14 +69,14 @@ function BattleTeamWin:ctor()
                     WinManager:CreateWindow("HeroSelectWin", self.selected, function(id)
                         self.selected[name] = id
                         m:removeChildByTag(k)
-                        
+
                         if id == 0 then return end
 
                         local tab = PlayerHero:GetHero(id)
                         local arm = Armature:create(tab.proto.model)
                         m:removeChildByTag(k)
                         m:addChild(arm, 1, k)
-                    end)                    
+                    end)
                 end
             end)
 

@@ -2,7 +2,7 @@ local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
 
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 
 -------------------------------------------------------------------------------

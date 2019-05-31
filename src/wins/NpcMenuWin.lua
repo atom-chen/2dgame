@@ -2,8 +2,8 @@ local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
 
-local conf_quest    = require "configs_json.quest"
-local config        = require "configs_grace"
+local conf_quest    = require "config.quest"
+local config        = require "config.loader"
 
 local PlayerQuest   = require "model.player_quest"
 
@@ -48,7 +48,7 @@ function NpcMenuWin:ctor(...)
     -- bg:setCapInsets(cc.rect(6, 6, 52, 52))
     -- bg:setContentSize(cc.size(width, height))
     -- bg:setAnchorPoint(0, 0)
-    -- self.list:addChild(bg)  
+    -- self.list:addChild(bg)
 
     -- 接收任务
     local button

@@ -10,7 +10,7 @@ local _npc_quests   = {}
 -- 如果蛋疼的话，可以搞成自动生成列表
 local quest_files =
 {
-    "src/configs_json/quests/3001.json",
+    "src/config/quests/3001.json",
 }
 
 

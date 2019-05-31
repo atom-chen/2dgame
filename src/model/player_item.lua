@@ -1,4 +1,4 @@
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 local _items        = {}
 local PlayerItem    = NewModel({_model_name="PlayerItem"})

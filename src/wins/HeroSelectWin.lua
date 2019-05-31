@@ -1,5 +1,5 @@
 local Armature      = require "core.armature"
-local config        = require "configs_grace"
+local config        = require "config.loader"
 local PlayerHero    = require "model.player_hero"
 local WinBase       = require "core.WinBase"
 
@@ -21,9 +21,9 @@ function HeroSelectWin:ctor(selected, onOK)
     self.selected_hero_id = 0
 
     self.resourceNode_ = cc.CSLoader:createNode("1.layer/hero_select.csb")
-    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)
     self.resourceNode_:setAnchorPoint(0.5, 0.5)
-    self:addChild(self.resourceNode_)        
+    self:addChild(self.resourceNode_)
 
 
     local btn = self.resourceNode_:getChildByName("btnSet")

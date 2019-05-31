@@ -1,5 +1,5 @@
 local const         = require "const"
-local conf_quest    = require "configs_json.quest"
+local conf_quest    = require "config.quest"
 
 local _quests       = {}
 local PlayerQuest   = NewModel({_model_name="PlayerQuest"})

@@ -1,6 +1,6 @@
 local WinBase       = require "core.WinBase"
 local PlayerItem    = require "model.player_item"
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 
 ------------------------------------------------------------------------------------

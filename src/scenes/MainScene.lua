@@ -1,5 +1,5 @@
 
-local config        = require "configs_grace"
+local config        = require "config.loader"
 local MapUnit       = require "wins.MapUnit"
 -- local NpcMenuWin    = require "wins.NpcMenuWin"
 

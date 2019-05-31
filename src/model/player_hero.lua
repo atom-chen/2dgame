@@ -5,7 +5,7 @@ local Hero          = class("Hero")
 
 local Property      = require "model.property"
 
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 -------------------------------------------------------------------
 

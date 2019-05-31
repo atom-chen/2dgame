@@ -1,5 +1,5 @@
 local Armature      = require "core.armature"
-local config        = require "configs_grace"
+local config        = require "config.loader"
 local PlayerHero    = require "model.player_hero"
 local Property      = require "model.property"
 local WinBase       = require "core.WinBase"

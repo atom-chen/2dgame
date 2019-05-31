@@ -3,7 +3,7 @@ local WinBase       = require "core.WinBase"
 local AnimLoader    = require "core.AnimLoader"
 local Armature      = require "core.armature"
 
-local config        = require "configs_grace"
+local config        = require "config.loader"
 
 local MapUnit       = require "wins.MapUnit"
 
@@ -18,10 +18,10 @@ function MapWin:ctor()
     WinBase.ctor(self)
 
     self.resourceNode_ = cc.CSLoader:createNode("1.layer/map.csb")
-    self.resourceNode_:setIgnoreAnchorPointForPosition(false)    
+    self.resourceNode_:setIgnoreAnchorPointForPosition(false)
     self.resourceNode_:setAnchorPoint(0.5, 0.5)
     self:addChild(self.resourceNode_)
-    
+
     local btn = self.resourceNode_:getChildByName("btn_close")
     btn:addClickEventListener(function()
         self:Close()
@@ -71,7 +71,7 @@ function MapWin:render_background(conf)
     self.sprite = cc.Sprite:create(conf.img_bg)
     bg:addChild(self.sprite)
 
-    self.resourceNode_:getChildByName("map_name"):setString(conf.name)    
+    self.resourceNode_:getChildByName("map_name"):setString(conf.name)
 end
 
 

@@ -1,25 +1,24 @@
 
-local AuraProto     = require "configs_raw.Aura"
-local CreatureProto = require "configs_raw.Creature"
-local CreatureTeam  = require "configs_raw.CreatureTeam"
-local HeroProto     = require "configs_raw.Hero"
-local HeroProp      = require "configs_raw.HeroProp"
-local HeroTalent    = require "configs_raw.HeroTalent"
-local ItemProto     = require "configs_raw.Item"
-local SkillProto    = require "configs_raw.Skill"
+local AuraProto     = require "config.excel.Aura"
+local CreatureProto = require "config.excel.Creature"
+local CreatureTeam  = require "config.excel.CreatureTeam"
+local HeroProto     = require "config.excel.Hero"
+local HeroProp      = require "config.excel.HeroProp"
+local HeroTalent    = require "config.excel.HeroTalent"
+local ItemProto     = require "config.excel.Item"
+local SkillProto    = require "config.excel.Skill"
 
-local Global        = require "configs_raw.Global"
-local MarketConf    = require "configs_raw.Market"
+local Global        = require "config.excel.Global"
+local MarketConf    = require "config.excel.Market"
 
-local RefineSuper   = require "configs_raw.RefineSuper"
-local RefineNormal  = require "configs_raw.RefineNormal"
+local RefineSuper   = require "config.excel.RefineSuper"
+local RefineNormal  = require "config.excel.RefineNormal"
 
+local Object        = require "config.excel.Object"
+local Scene         = require "config.excel.Scene"
 
-local Object        = require "configs_raw.Object"
-local Scene         = require "configs_raw.Scene"
-
-local Chapter       = require "configs_raw.Chapter"
-local Break         = require "configs_raw.Break"
+local Chapter       = require "config.excel.Chapter"
+local Break         = require "config.excel.Break"
 
 
 local M = {}
