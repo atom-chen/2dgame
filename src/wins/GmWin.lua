@@ -89,7 +89,14 @@ function GmWin:ctor()
         Socket.SendPacket(Opcode.MSG_CS_ChapterInfoRequest, {})
     end)
 
-
+    -- 改角色名
+    local btn = self.resourceNode_:getChildByName("btn_10")
+    btn:setTitleText("改角色名")
+    :addClickEventListener(function()
+        Socket.SendPacket(Opcode.MSG_CS_ChangeNameRequest, {
+            Name = "天赋二姐",
+        })
+    end)
 
 end
 

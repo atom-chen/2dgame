@@ -99,7 +99,7 @@ BattleUnit
 Svr (	RSvr"-
 LoginResponse
 	ErrorCode (R	ErrorCodebproto3
-Ó
+°
 2_player.protomsg0.type.proto"#
 PlayerDataRequest
 Id (RId"‹
@@ -131,6 +131,10 @@ BattleUnit
 Index (RIndex
 Count (RCount"1
 MarketBuyResponse
+	ErrorCode (R	ErrorCode"'
+ChangeNameRequest
+Name (	RName"2
+ChangeNameResponse
 	ErrorCode (R	ErrorCode"-
 
 ItemUpdate

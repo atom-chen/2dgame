@@ -18,6 +18,8 @@ Opcode.MSG_CS_UseItemRequest                  = 204;		MsgName[Opcode.MSG_CS_UseI
 Opcode.MSG_SC_UseItemResponse                 = 205;		MsgName[Opcode.MSG_SC_UseItemResponse]                 = "msg.UseItemResponse";
 Opcode.MSG_CS_MarketBuyRequest                = 206;		MsgName[Opcode.MSG_CS_MarketBuyRequest]                = "msg.MarketBuyRequest";
 Opcode.MSG_SC_MarketBuyResponse               = 207;		MsgName[Opcode.MSG_SC_MarketBuyResponse]               = "msg.MarketBuyResponse";
+Opcode.MSG_CS_ChangeNameRequest               = 208;		MsgName[Opcode.MSG_CS_ChangeNameRequest]               = "msg.ChangeNameRequest";
+Opcode.MSG_SC_ChangeNameResponse              = 209;		MsgName[Opcode.MSG_SC_ChangeNameResponse]              = "msg.ChangeNameResponse";
 Opcode.MSG_SC_ItemUpdate                      = 280;		MsgName[Opcode.MSG_SC_ItemUpdate]                      = "msg.ItemUpdate";
 Opcode.MSG_SC_PlayerExpUpdate                 = 281;		MsgName[Opcode.MSG_SC_PlayerExpUpdate]                 = "msg.PlayerExpUpdate";
 Opcode.MSG_SC_NoticeUpdate                    = 282;		MsgName[Opcode.MSG_SC_NoticeUpdate]                    = "msg.NoticeUpdate";

@@ -90,3 +90,9 @@ local function MSG_SC_NoticeUpdate(tab)
     zcg.logInfo(tab.Notice)
 end
 md[Opcode.MSG_SC_NoticeUpdate] = MSG_SC_NoticeUpdate
+
+local function MSG_SC_ChangeNameResponse(tab)
+    print("msg:MSG_SC_ChangeNameResponse")
+    -- TODO
+end
+md[Opcode.MSG_SC_ChangeNameResponse] = MSG_SC_ChangeNameResponse
