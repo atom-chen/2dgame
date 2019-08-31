@@ -205,9 +205,13 @@ cc.exports.Class = Class or
 -------------------------------------------------------------------------------
 
 zcg.LoadFromJson = function(filename)
-    local f = io.input(filename)
-    local c = io.read("*a")
-    local t = json.decode(c)
-    f:close()
-    return t
+    local str = cc.FileUtils:getInstance():getStringFromFile(filename)
+    local ok, tab = pcall(function() return json.decode(str) end)
+    return tab
+
+    -- local f = io.input(filename)
+    -- local c = io.read("*a")
+    -- local t = json.decode(c)
+    -- f:close()
+    -- return t
 end
